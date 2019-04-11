@@ -1,0 +1,9 @@
+version: '2'
+
+services:
+  jupyter:
+    build:
+      context: ./jupyter-docker
+      dockerfile: ./jupyter.Dockerfile
+    ports:
+      - 8888:8888
