@@ -7,9 +7,27 @@ services:
       dockerfile: ./jupyter.Dockerfile
     ports:
       - 8888:8888
+    depends_on:
+      - rocketchat
+
   mongo:
     image: mongo:3.2
     restart: unless-stopped
     volumes:
       - ./data/db:/data/db
     command: mongod --smallfiles --oplogSize 128
+
+  rocketchat:
+    image: rocket.chat:latest
+    restart: unless-stopped
+    environment:
+      - PORT=3000
+      - ROOT_URL=http://localhost:3000
+      - MONGO_URL=mongodb://mongo:27017/rocketchat
+      - ADMIN_USERNAME=admin
+      - ADMIN_PASS=admin
+    ports:
+      - 3000:3000
+    depends_on:
+      - mongo
+
