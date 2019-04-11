@@ -7,3 +7,9 @@ services:
       dockerfile: ./jupyter.Dockerfile
     ports:
       - 8888:8888
+  mongo:
+    image: mongo:3.2
+    restart: unless-stopped
+    volumes:
+      - ./data/db:/data/db
+    command: mongod --smallfiles --oplogSize 128
