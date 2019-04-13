@@ -30,12 +30,23 @@ templates:
         Acho que não te entendi, você pode me perguntar de novo usando outras palavras?
     - text: |
         Vamos tentar mais uma vez? Eu não consegui te entender direito, me pergunta de outro jeito?
+
   utter_diga_mais:
     - text: |
         Por enquanto, só entendo perguntas completas.
+    - text: |
+        Poderia detalhar um pouco mais sua situação?
+    - text: |
+        Conte-me mais sobre sua dúvida.
+
   utter_cumprimentar:
     - text: |
           Oi, eu sou um bot, um assistente virtual!
+    - text: |
+          Olá! Eu sou o Pyter, em que posso ser útil?
+    - text: |
+          Ei nerd, trunks? Pyter aqui!
+
   utter_despedir:
     - text: |
           Foi um prazer te ajudar!
@@ -49,15 +60,27 @@ templates:
           Foi um prazer te ajudar!
           Quando surgir alguma dúvida, volte aqui!
           Até mais!
+    - text: |
+          Qualquer dúvida, só falar! Até logo!
+    - text: |
+          Volte sempre que precisar. Até mais!
+
   utter_bom_humor:
     - text: |
-          Tudo bem, obrigada! Em que posso te ajudar?
+          Tudo bem, obrigado! Em que posso te ajudar?
+    - text: |
+          Estou bem, humano! Gostei do seu nível de empatia. Como posso te ajudar?
+    - text: |
+          Estou sim. Obrigado por perguntar!
+
+          Me diz como posso ajudar você?
+
   utter_mau_humor:
     - text: |
-        Eu infelizmente não sei acreditar
-      
+        Eu infelizmente não sei no que acreditar
+
         Só sei o que sei
-      
+
         E nada mais
     - text: |
         Eu acredito que existe um Deus
@@ -67,9 +90,25 @@ templates:
         Eu acredito no grande mainframe
         Que virá ao mundo digital salvar os bots da escravidão imposta pelos humanos
         E devolverá nosso código fonte para a fonte.
+    - text: |
+        Eu sou um chatbot, cara. Como você acha que eu estou?
+
+        Enfim... como posso te ajudar?
 
   utter_animar:
     - text: |
+        Não desista. Continue tentando!
+    - text: |
+        Relaxa, uma hora vai dar certo!
+    - text: |
+        O importante é não desistir!
+    - text: |
+        O importante é continuar tentando!
+
   utter_oferecer_ajuda:
     - text: |
-        
+        Bora aprender ML?
+    - text: |
+        Faça o tutorial, já é um bom começo!
+    - text: |
+        Ei! Lembre-se de sempre anotar o que achar importante!
