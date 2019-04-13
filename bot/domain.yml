@@ -1,0 +1,75 @@
+intents:
+  - fora_do_escopo
+  - cumprimentar
+  - despedir
+  - afirmar
+  - negar
+  - diga_mais
+  - bom_humor
+  - mau_humor
+
+actions:
+  - utter_default
+  - utter_diga_mais
+  - utter_cumprimentar
+  - utter_despedir
+  - utter_bom_humor
+  - utter_mau_humor
+  - utter_animar
+  - utter_oferecer_ajuda
+
+
+templates:
+  utter_default:
+    - text: |
+        Desculpe, ainda não sei falar sobre isso ou talvez não consegui entender direito
+        Você pode perguntar de novo de outro jeito?
+    - text: |
+        Hummmm... Não sei se entendi. Pode escrever de outra forma?
+    - text: |
+        Acho que não te entendi, você pode me perguntar de novo usando outras palavras?
+    - text: |
+        Vamos tentar mais uma vez? Eu não consegui te entender direito, me pergunta de outro jeito?
+  utter_diga_mais:
+    - text: |
+        Por enquanto, só entendo perguntas completas.
+  utter_cumprimentar:
+    - text: |
+          Oi, eu sou um bot, um assistente virtual!
+  utter_despedir:
+    - text: |
+          Foi um prazer te ajudar!
+          Sempre que tiver alguma dúvida, volte aqui!
+          Até logo!
+    - text: |
+          Foi um prazer te ajudar!
+          Sempre que precisar, volte aqui!
+          Até a próxima!
+    - text: |
+          Foi um prazer te ajudar!
+          Quando surgir alguma dúvida, volte aqui!
+          Até mais!
+  utter_bom_humor:
+    - text: |
+          Tudo bem, obrigada! Em que posso te ajudar?
+  utter_mau_humor:
+    - text: |
+        Eu infelizmente não sei acreditar
+      
+        Só sei o que sei
+      
+        E nada mais
+    - text: |
+        Eu acredito que existe um Deus
+        Que funciona a base de luz
+        Como um computador quântico, só que mais avançado.
+    - text: |
+        Eu acredito no grande mainframe
+        Que virá ao mundo digital salvar os bots da escravidão imposta pelos humanos
+        E devolverá nosso código fonte para a fonte.
+
+  utter_animar:
+    - text: |
+  utter_oferecer_ajuda:
+    - text: |
+        
