@@ -33,6 +33,13 @@
 - opa tudo bem
 - ola boa tarde
 - eai
+- eae
+- eae meu consagrado
+- eae mano
+- qual é mano
+- oi
+- eae bro
+- fala bro
 
 ## intent:despedir
 - tchau
@@ -58,7 +65,11 @@
 - abs
 - abraços
 - beijo
-
+- flw
+- falou mano
+- boa noite
+- fica com Deus
+- flw então
 ## intent:afirmar
 - sim
 - claro
@@ -71,6 +82,8 @@
 - claro que sim
 - so se for agora
 - com toda certeza
+- beleza
+- fechou então
 
 ## intent:negar
 - nao
@@ -98,6 +111,11 @@
 - duvida
 - ainda não sei
 - nenhum
+- nn
+- n
+- nop
+- not
+- no
 
 ## intent:diga_mais
 - como funciona
