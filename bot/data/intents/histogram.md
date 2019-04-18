@@ -1,11 +1,7 @@
 ## intent:entender_histograma
 - o que e um histograma
-- o que sao dados quantitativos
 - para que serve um histograma
-- o que e um dataset
 - por que usar um histograma
-- dataset
-- para que usar um dataset
 - histograma
 
 ## intent:criar_histograma
