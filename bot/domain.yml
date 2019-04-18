@@ -8,6 +8,11 @@ intents:
   - bom_humor
   - mau_humor
 
+
+  - entender_dados_faltantes
+  - iniciar_a_deteccao
+  - corrigir_a_detecao
+
 actions:
   - utter_default
   - utter_diga_mais
@@ -18,6 +23,9 @@ actions:
   - utter_animar
   - utter_oferecer_ajuda
 
+  - utter_entender_dados_faltantes
+  - utter_iniciar_a_deteccao
+  - utter_corrigir_a_detecao
 
 templates:
   utter_default:
@@ -112,3 +120,39 @@ templates:
         Faça o tutorial, já é um bom começo!
     - text: |
         Ei! Lembre-se de sempre anotar o que achar importante!
+
+ utter_entender_dados_faltantes:
+    - text: |
+        Consiste em valores vazios ou inesperados encontrados em um dataset antes da fase de pré processamento.
+    - text: |
+        Dentre os motivos: Houve esquecimento no preenchimento de um campo por um usuário. Dados perdidos quando transferidos manualmente de uma base de dados. Erro no programa.
+    - text: |
+         Dentro do tratamento de dados para pré-processamento, a correção de dados faltantes é uma das tarefas que demandam maior tempo para preparação do modelo. Depois de coletado o dataset, é necessário essa limpeza de dados para que as predições sejam corretas posteriormente.
+    - text: |
+        Vamos tentar mais uma vez? Eu não consegui te entender direito, me pergunta de outro jeito?
+    - text: |
+        Trate-se de cada tópico do Dataset. Geralmente representado pelas colunas.
+
+utter_iniciar_a_deteccao:
+    - text: |
+        As features sao representadas pelas colunas que representam cada tipo de dado no dataset.
+    - text: |
+        Os dados esperados são aqueles que semânticamente estão de acordo com o que o dataset assume. Como por exemplo, se no Dataset há uma coluna indicando "nomes", espera-se como dado strings, e não dados numéricos.
+    - text: |
+        Para checar o Dataset, importe a biblioteca pandas e realize os comandos
+    - text: |
+        A biblioteca pandas, apenas, identifica dados faltantes padronizados,geralmente, representados por "NaN"
+    -text: |
+        A função isnull do pandas retorna um valor booleano indicando se há valor faltante no dataset
+    - text: |
+        Para dados não padronizados, é necessário criar uma lista com tipo de valores faltantes
+
+utter_corrigindo_dados_faltantes:
+    - text: |
+        Para corrigir problemas de dados faltantes, é necessário a utilização de métodos como substuição por connstante, substituição baseada no lugar e substituição por mediana
+    - text: |
+        Substituindo por contante, add image
+    - text: |
+        Imputação baseada no lugar
+    - text: |
+        - substituição por mediana
