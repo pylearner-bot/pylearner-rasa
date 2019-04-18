@@ -7,6 +7,8 @@ intents:
   - diga_mais
   - bom_humor
   - mau_humor
+  - entender_histograma
+  - criar_histograma
 
 actions:
   - utter_default
@@ -17,6 +19,8 @@ actions:
   - utter_mau_humor
   - utter_animar
   - utter_oferecer_ajuda
+  - utter_entender_histograma
+  - utter_criar_histograma
 
 
 templates:
@@ -112,3 +116,37 @@ templates:
         Faça o tutorial, já é um bom começo!
     - text: |
         Ei! Lembre-se de sempre anotar o que achar importante!
+
+  utter_entender_histograma:
+    - text: |
+        Histograma é uma representação gráfica
+        de dados quantitativos 
+        previamente tabulado e dividido em 
+        classes uniformes ou não uniformes.
+    - text: |
+        Dados quantitativos é tudo o que pode ser medido e contado
+        Como por exemplo quantas pessoas tem em uma sala 
+        E quantas dessas pessoas sao mulheres.
+    - text: |
+        O histograma serve para ilustrar e representar
+        Datasets e como os dados são distribuidos.
+    - text: |
+        Datasets são um conjunto de dados
+        Que são representados em tabelas
+        Onde as linhas são os dados quantitativos
+        E as colunas são as características.
+
+  utter_criar_histograma:
+    - text: |
+        Para carregar um dataset que seja um .csv 
+        Basta usar as funções de carregar arquivo csv 
+    - text: |
+        Para plotar o histograma usando o seaborn
+        Usa a função sns.distplot(a=file['column'],kde=False)
+        Onde o primeiro parametro é qual coluna do dataset quer plotar
+    - text: |
+        Se quiser um histograma com curvas mais suaves pode usar
+        A função sns.kdeplot(a=file['column'],shade=True)
+        Onde o primeiro parametro é qual coluna do dataset quer plotar
+        E shade = True preenche a area abaixo da curva
+        
