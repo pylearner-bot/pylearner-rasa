@@ -159,3 +159,10 @@ templates:
         Pois se você está aqui,provavelmente está interessado em aprender Machine Learning,certo?A biblioteca pandas é muito utilizado em Deep Learning,Data Science e Machine Learning.
     - text: |
         O 'rb' significa Read in Binary mode,que vai se aplicar pra maioria dos casos de abertura de arquivos. 
+    - text: |
+        
+        Antes de tudo você precisa importar a biblioteca csv,depois você cria uma váriavel que vai armazenar o retorno da
+        função open('nome_do_arquivo', 'rb')
+    - text: |
+        Primeiro,é necessário importar a biblioteca pandas,depois crie uma váriavel pra armazenar o retorno dda
+        função read_csv('nome_do_arquivo').Só isso,facil né?! ;D 
