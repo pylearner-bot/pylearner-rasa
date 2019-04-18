@@ -11,7 +11,7 @@ intents:
 
   - entender_dados_faltantes
   - iniciar_a_deteccao
-  - corrigir_a_detecao
+  - corrigir_a_deteccao
 
 actions:
   - utter_default
@@ -25,7 +25,7 @@ actions:
 
   - utter_entender_dados_faltantes
   - utter_iniciar_a_deteccao
-  - utter_corrigir_a_detecao
+  - utter_corrigir_a_deteccao
 
 templates:
   utter_default:

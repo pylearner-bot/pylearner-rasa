@@ -8,7 +8,7 @@
 - radoes para o dataset ter erros
 - o que e uma feature
 
-## iniciar_a_detecçao
+## intent: iniciar_a_detecçao
 - quais sao as features
 - quais sao os tipos de dados esperados
 - ha dados faltantes
