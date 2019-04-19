@@ -70,6 +70,7 @@
 - boa noite
 - fica com Deus
 - flw então
+
 ## intent:afirmar
 - sim
 - claro
@@ -84,6 +85,13 @@
 - com toda certeza
 - beleza
 - fechou então
+- ja instalei sim
+- instalei
+- sim quero aprender o método dos Pandas
+- sim quero sim
+- quero sim
+- sim obrigado
+
 
 ## intent:negar
 - nao
@@ -116,6 +124,17 @@
 - nop
 - not
 - no
+- nao Obrigado
+- nao vlw
+- nao flw
+- quero nao
+- quero n
+- n quero
+- nao tenho instalado
+- n nao tenho instalado
+- n instalei ainda
+- n quero instalar
+
 
 ## intent:diga_mais
 - como funciona

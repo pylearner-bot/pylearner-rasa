@@ -7,6 +7,7 @@ intents:
   - diga_mais
   - bom_humor
   - mau_humor
+  - importar_json
 
 actions:
   - utter_default
@@ -17,6 +18,7 @@ actions:
   - utter_mau_humor
   - utter_animar
   - utter_oferecer_ajuda
+  - utter_importar_json
 
 
 templates:
@@ -112,3 +114,69 @@ templates:
         Faça o tutorial, já é um bom começo!
     - text: |
         Ei! Lembre-se de sempre anotar o que achar importante!
+
+  utter_importar_json:
+    - text: |
+        Vamos lá! O primeiro passo para aprender arquivos json é importar a biblioteca!
+        Para importar é simples basta escrever:
+
+        import json
+
+        O próximo passo é abrir e ler o arquivo desejado atribuindo a uma variavel! Dessa forma:
+
+        conteudo = open('diretorio/arquivo.json')
+
+        Agora vamos tratar todo o conteúdo do arquivo json como um conjunto de dados pelo comando:
+
+        objeto = json.loads(conteudo)
+
+        Enfim a manipulação dos dados é com você, jovem hehe Boa sorte!
+        Ah! Antes que eu me esqueça tem mais um método utilizando Pandas! Deseja aprender?
+
+  utter_importar_json_pandas:
+    - text: |
+        Quer aprender mesmo? kkkkkk
+        Ok né! Vamos aprender a importar json (dnv) só que utilizando Pandas
+        O primeiro passo talvez seja baixar a biblioteca Pandas! Abra o terminal e digite:
+        pip install pandas
+        Eae já tem instalado?
+
+  utter_importar_json_pandas1:
+    - text: |
+        Então vamos continuar!
+        O próximo passo é importar as bibliotecas! Só copiar e colar:
+
+        import json
+        import pandas as pd
+        from pandas.io.json import json_normalize
+
+        Agora vamos ler os dados do arquivo que você deseja e setá-lo em uma variável, bem assim:
+
+        with open('diretorio/arquivo.json') as info:
+        data = json.load(info)
+
+        Agora você vai "Pandarizar" os dados da seguinte forma também com o auxilio de uma variável:
+
+        aux = json_normalize(data)
+
+        Pronto! Se você printar essa variável aux vai ver seus dados bem mais organizados :D
+
+  utter_importar_json_pandas2:
+    - text: |
+        Blz! Enquanto você faz o teu download vou te adiantar o necessário!
+        O próximo passo, após o download, é importar as bibliotecas! Só copiar e colar:
+
+        import json
+        import pandas as pd
+        from pandas.io.json import json_normalize
+
+        Agora vamos ler os dados do arquivo que você deseja e setá-lo em uma variável, bem assim:
+
+        with open('diretorio/arquivo.json') as info:
+        data = json.load(info)
+
+        Agora você vai "Pandarizar" os dados da seguinte forma também com o auxilio de uma variável:
+
+        aux = json_normalize(data)
+
+        Pronto! Se você printar essa variável aux vai ver seus dados bem mais organizados :D
