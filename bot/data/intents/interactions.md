@@ -173,9 +173,9 @@
 - muito triste
 
 ## intent:importar_json
-- Como importar dados json?
+- Como importar dados json
 - importar json
-- Como importar json?
+- Como importar json
 - dados json
 - importar dados json
 - importar dados json
@@ -185,10 +185,10 @@
 - importar json utilizando pandas
 - ensina-me a importar dados json
 - desejo importar dados de arquivos json
-- Como eu posso importar arquivos json?
+- Como eu posso importar arquivos json
 - Extraindo informações de arquivos json
-- Como importar dados de arquivos json?
-- Como tratar dados de arquivos de json?
+- Como importar dados de arquivos json
+- Como tratar dados de arquivos de json
 - Como podemos fazer requisição de dados em arquivos json
 - Me ensine a mexer com arquivos json
 - me ensine a mexer em dados com json
