@@ -1,0 +1,161 @@
+intents:
+  - fora_do_escopo
+  - cumprimentar
+  - despedir
+  - afirmar
+  - negar
+  - diga_mais
+  - bom_humor
+  - mau_humor
+
+
+  - entender_dados_faltantes
+  - iniciar_a_deteccao
+  - corrigir_a_deteccao
+
+actions:
+  - utter_default
+  - utter_diga_mais
+  - utter_cumprimentar
+  - utter_despedir
+  - utter_bom_humor
+  - utter_mau_humor
+  - utter_animar
+  - utter_oferecer_ajuda
+
+  - utter_entender_dados_faltantes
+  - utter_iniciar_a_deteccao
+  - utter_corrigir_a_deteccao
+
+templates:
+  utter_default:
+    - text: |
+        Desculpe, ainda não sei falar sobre isso ou talvez não consegui entender direito
+        Você pode perguntar de novo de outro jeito?
+    - text: |
+        Hummmm... Não sei se entendi. Pode escrever de outra forma?
+    - text: |
+        Acho que não te entendi, você pode me perguntar de novo usando outras palavras?
+    - text: |
+        Vamos tentar mais uma vez? Eu não consegui te entender direito, me pergunta de outro jeito?
+
+  utter_diga_mais:
+    - text: |
+        Por enquanto, só entendo perguntas completas.
+    - text: |
+        Poderia detalhar um pouco mais sua situação?
+    - text: |
+        Conte-me mais sobre sua dúvida.
+
+  utter_cumprimentar:
+    - text: |
+          Oi, eu sou um bot, um assistente virtual!
+    - text: |
+          Olá! Eu sou o Pyter, em que posso ser útil?
+    - text: |
+          Ei nerd, trunks? Pyter aqui!
+
+  utter_despedir:
+    - text: |
+          Foi um prazer te ajudar!
+          Sempre que tiver alguma dúvida, volte aqui!
+          Até logo!
+    - text: |
+          Foi um prazer te ajudar!
+          Sempre que precisar, volte aqui!
+          Até a próxima!
+    - text: |
+          Foi um prazer te ajudar!
+          Quando surgir alguma dúvida, volte aqui!
+          Até mais!
+    - text: |
+          Qualquer dúvida, só falar! Até logo!
+    - text: |
+          Volte sempre que precisar. Até mais!
+
+  utter_bom_humor:
+    - text: |
+          Tudo bem, obrigado! Em que posso te ajudar?
+    - text: |
+          Estou bem, humano! Gostei do seu nível de empatia. Como posso te ajudar?
+    - text: |
+          Estou sim. Obrigado por perguntar!
+
+          Me diz como posso ajudar você?
+
+  utter_mau_humor:
+    - text: |
+        Eu infelizmente não sei no que acreditar
+
+        Só sei o que sei
+
+        E nada mais
+    - text: |
+        Eu sou um chatbot, cara. Como você acha que eu estou?
+
+        Enfim... como posso te ajudar?
+    - text: |
+        Opa opa, como posso te ajudar?
+    - text: |
+        Não se precupe meu cosagrado, tudo vai ficar bem!
+
+  utter_animar:
+    - text: |
+        Não desista. Continue tentando!
+    - text: |
+        Relaxa, uma hora vai dar certo!
+    - text: |
+        O importante é não desistir!
+    - text: |
+        O importante é continuar tentando!
+
+  utter_oferecer_ajuda:
+    - text: |
+        Bora aprender ML?
+    - text: |
+        Faça o tutorial, já é um bom começo!
+    - text: |
+        Ei! Lembre-se de sempre anotar o que achar importante!
+
+ utter_entender_dados_faltantes:
+    - text: |
+        Consiste em valores vazios ou inesperados encontrados em um dataset antes da fase de pré processamento.
+    - text: |
+        Dentre os motivos, houve esquecimento no preenchimento de um campo por um usuário, dados perdidos quando transferidos manualmente de uma base de dados ou Erro no programa.
+    - text: |
+         Dentro do tratamento de dados para pré-processamento, a correção de dados faltantes é uma das tarefas que demandam maior tempo para preparação do modelo. Depois de coletado o dataset, é necessário essa limpeza de dados para que as predições sejam corretas posteriormente.
+    - text: |
+        Vamos tentar mais uma vez? Eu não consegui te entender direito, me pergunta de outro jeito?
+    - text: |
+        Trate-se de cada tópico do Dataset. Geralmente representado pelas colunas.
+
+utter_iniciar_a_deteccao:
+    - text: |
+        As features sao representadas pelas colunas que representam cada tipo de dado no dataset.
+    - text: |
+        Os dados esperados são aqueles que semânticamente estão de acordo com o que o dataset assume. Como por exemplo, se no Dataset há uma coluna indicando "nomes", espera-se como dado strings, e não dados numéricos.
+    - text: |
+        Para checar o Dataset a partir de um CSV, importe a biblioteca pandas e realize os comandos
+      image: "https://i.imgur.com/4Z066UA.png"
+    - text: |
+        A biblioteca pandas, apenas, identifica dados faltantes padronizados,geralmente, representados por "NaN"
+      image: "https://i.imgur.com/BORLI3C.png"
+    - text: |
+        A função isnull do pandas retorna um valor booleano indicando se há valor faltante no dataset
+      image: "https://i.imgur.com/DmIvt29.png"
+    - text: |
+        Para dados não padronizados, é necessário criar uma lista com tipo de valores faltantes
+      image: "https://i.imgur.com/6U0BSlY.png"
+
+utter_corrigindo_dados_faltantes:
+    - text: |
+        Para corrigir problemas de dados faltantes, é necessário a utilização de métodos como substuição por connstante, substituição baseada no lugar e substituição por mediana
+    - text: |
+        Substituindo por contante, add image
+      image: "https://i.imgur.com/WLKrITO.png"
+    - text: |
+        Imputação baseada no lugar
+      image: "https://i.imgur.com/kX2ivBO.png"
+    - text: |
+        Substituição por mediana
+      image: "https://i.imgur.com/2IAjyk5.png"

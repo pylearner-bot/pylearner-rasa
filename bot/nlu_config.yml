@@ -1,4 +1,4 @@
-language: "pt"
+language : "pt"
 pipeline:
   - name: "tokenizer_whitespace"
   - name: "ner_crf"
