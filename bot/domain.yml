@@ -13,6 +13,9 @@ intents:
   - iniciar_a_deteccao
   - corrigir_a_deteccao
 
+  - entender_correlaçao
+  - calcular_correlaçao
+
 actions:
   - utter_default
   - utter_diga_mais
@@ -26,6 +29,9 @@ actions:
   - utter_entender_dados_faltantes
   - utter_iniciar_a_deteccao
   - utter_corrigir_a_deteccao
+
+  - utter_entender_correlaçao
+  - utter_calcular_correlaçao
 
 templates:
   utter_default:
@@ -117,45 +123,29 @@ templates:
     - text: |
         Ei! Lembre-se de sempre anotar o que achar importante!
 
- utter_entender_dados_faltantes:
-    - text: |
-        Consiste em valores vazios ou inesperados encontrados em um dataset antes da fase de pré processamento.
-    - text: |
-        Dentre os motivos, houve esquecimento no preenchimento de um campo por um usuário, dados perdidos quando transferidos manualmente de uma base de dados ou Erro no programa.
-    - text: |
-         Dentro do tratamento de dados para pré-processamento, a correção de dados faltantes é uma das tarefas que demandam maior tempo para preparação do modelo. Depois de coletado o dataset, é necessário essa limpeza de dados para que as predições sejam corretas posteriormente.
-    - text: |
-        Vamos tentar mais uma vez? Eu não consegui te entender direito, me pergunta de outro jeito?
-    - text: |
-        Trate-se de cada tópico do Dataset. Geralmente representado pelas colunas.
+    utter_entender_correlaçao:
+        - text: |
+            A Correlação indica interdependência entre duas ou mais variáveis, e serve para determinar a intensidade da relação entre essas variáveis.
+        - text: |
+            A Matriz de Correlação serve para determinarmos a intensidade da relação com uma quantidade maior de valores com um grau de complexidade maior.
+        - text: |
+            Existem diversos índices usados para se calcular correlação, mas iremos começar usando o mais clássico, o coeficiente de Pearson, que é dado pela seguinte expressão matemática 
+            
+            image: "https://imgur.com/bX1AUFn.png"
 
-utter_iniciar_a_deteccao:
-    - text: |
-        As features sao representadas pelas colunas que representam cada tipo de dado no dataset.
-    - text: |
-        Os dados esperados são aqueles que semânticamente estão de acordo com o que o dataset assume. Como por exemplo, se no Dataset há uma coluna indicando "nomes", espera-se como dado strings, e não dados numéricos.
-    - text: |
-        Para checar o Dataset a partir de um CSV, importe a biblioteca pandas e realize os comandos
-      image: "https://i.imgur.com/4Z066UA.png"
-    - text: |
-        A biblioteca pandas, apenas, identifica dados faltantes padronizados,geralmente, representados por "NaN"
-      image: "https://i.imgur.com/BORLI3C.png"
-    - text: |
-        A função isnull do pandas retorna um valor booleano indicando se há valor faltante no dataset
-      image: "https://i.imgur.com/DmIvt29.png"
-    - text: |
-        Para dados não padronizados, é necessário criar uma lista com tipo de valores faltantes
-      image: "https://i.imgur.com/6U0BSlY.png"
+            Existem outros como o de Spearman e Kendall, que também é possível fazer usando o Pandas
+        
+    utter_calcular_correlaçao:
+        - text: |
+            Primeiramente, vamos importar a biblioteca Pandas
 
-utter_corrigindo_dados_faltantes:
-    - text: |
-        Para corrigir problemas de dados faltantes, é necessário a utilização de métodos como substuição por connstante, substituição baseada no lugar e substituição por mediana
-    - text: |
-        Substituindo por contante, add image
-      image: "https://i.imgur.com/WLKrITO.png"
-    - text: |
-        Imputação baseada no lugar
-      image: "https://i.imgur.com/kX2ivBO.png"
-    - text: |
-        Substituição por mediana
-      image: "https://i.imgur.com/2IAjyk5.png"
+            image : "https://imgur.com/gyJ48P7.png"
+
+            Depois, você irá usar o seu dataset e chamar a função do pandas corr(), que irá calcular a correlação entre as colunas do seu dataset, vamos armazenar na varíavel correlation
+            
+            image : "https://i.imgur.com/KWfnZy1.png"
+
+            Agora, na nossa varíavel correlation está armazenado o resultado da correlação de nossos dados.
+
+        - text: |
+            O grau de correlação é interpretado da seguinte manteira. Ele pode variar entre -1 e 1,e o resultado obtido define se a correlação é negativa ou positiva, sendo que -1  significa que é perfeita positiva, e -1 que é perfeita negativa
