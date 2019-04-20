@@ -19,7 +19,9 @@ actions:
   - utter_animar
   - utter_oferecer_ajuda
   - utter_importar_json
-
+  - utter_importar_json_pandas
+  - utter_importar_json_pandas1
+  - utter_importar_json_pandas2
 
 templates:
   utter_default:
@@ -120,15 +122,15 @@ templates:
         Vamos lá! O primeiro passo para aprender arquivos json é importar a biblioteca!
         Para importar é simples basta escrever:
 
-        import json
+        image: "https://i.imgur.com/SR3Dl7e.png"
 
         O próximo passo é abrir e ler o arquivo desejado atribuindo a uma variavel! Dessa forma:
 
-        conteudo = open('diretorio/arquivo.json')
+        image: "https://i.imgur.com/cRhV5u6.png"
 
         Agora vamos tratar todo o conteúdo do arquivo json como um conjunto de dados pelo comando:
 
-        objeto = json.loads(conteudo)
+        image: "https://i.imgur.com/dTgRNOj.png"
 
         Enfim a manipulação dos dados é com você, jovem hehe Boa sorte!
         Ah! Antes que eu me esqueça tem mais um método utilizando Pandas! Deseja aprender?
@@ -138,7 +140,9 @@ templates:
         Quer aprender mesmo? kkkkkk
         Ok né! Vamos aprender a importar json (dnv) só que utilizando Pandas
         O primeiro passo talvez seja baixar a biblioteca Pandas! Abra o terminal e digite:
-        pip install pandas
+
+        image: "https://i.imgur.com/qxiwHrV.png"
+
         Eae já tem instalado?
 
   utter_importar_json_pandas1:
@@ -146,18 +150,15 @@ templates:
         Então vamos continuar!
         O próximo passo é importar as bibliotecas! Só copiar e colar:
 
-        import json
-        import pandas as pd
-        from pandas.io.json import json_normalize
+        image: "https://imgur.com/33ZwMJW.png"
 
         Agora vamos ler os dados do arquivo que você deseja e setá-lo em uma variável, bem assim:
 
-        with open('diretorio/arquivo.json') as info:
-        data = json.load(info)
+        image: "https://imgur.com/ObqpL3u.png"
 
         Agora você vai "Pandarizar" os dados da seguinte forma também com o auxilio de uma variável:
 
-        aux = json_normalize(data)
+        image: "https://imgur.com/I0Mxdq7.png"
 
         Pronto! Se você printar essa variável aux vai ver seus dados bem mais organizados :D
 
@@ -166,17 +167,14 @@ templates:
         Blz! Enquanto você faz o teu download vou te adiantar o necessário!
         O próximo passo, após o download, é importar as bibliotecas! Só copiar e colar:
 
-        import json
-        import pandas as pd
-        from pandas.io.json import json_normalize
+        image: "https://imgur.com/33ZwMJW.png"
 
         Agora vamos ler os dados do arquivo que você deseja e setá-lo em uma variável, bem assim:
 
-        with open('diretorio/arquivo.json') as info:
-        data = json.load(info)
+        image: "https://imgur.com/ObqpL3u.png"
 
         Agora você vai "Pandarizar" os dados da seguinte forma também com o auxilio de uma variável:
 
-        aux = json_normalize(data)
+        image: "https://imgur.com/I0Mxdq7.png"
 
         Pronto! Se você printar essa variável aux vai ver seus dados bem mais organizados :D
