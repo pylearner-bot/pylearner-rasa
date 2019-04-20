@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://raw.githubusercontent.com/fga-eps-mds/2019.1-PyLearner/master/docs/images/Logo_text.jpg" alt="Logo" height=300 width=400>
+    <img src="https://raw.githubusercontent.com/fga-eps-mds/2019.1-PyLearner/master/docs/img/Logo_text.jpg" alt="Logo" height=300 width=400>
 </p>
 
 <h1 align="center">Machine Learning Chatbot Assistant</h1>
