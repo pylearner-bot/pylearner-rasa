@@ -31,3 +31,44 @@ services:
     depends_on:
       - mongo
 
+  actions:
+    build:
+      context: .
+      dockerfile: ./docker/actions.Dockerfile
+    ports:
+      - 5055:5055
+    volumes:
+      - ./bot/actions:/bot/actions
+      - ./bot/Makefile:/bot/Makefile
+    # command: "make run-actions"
+
+  bot:
+    build:
+      context: .
+      dockerfile: ./docker/bot.Dockerfile
+    restart: unless-stopped
+    environment:
+      - MAX_TYPING_TIME=8
+      - MIN_TYPING_TIME=1
+      - WORDS_PER_SECOND_TYPING=10
+      - ROCKETCHAT_URL=rocketchat:3000
+      - ROCKETCHAT_ADMIN_USERNAME=admin
+      - ROCKETCHAT_ADMIN_PASSWORD=admin
+      - ROCKETCHAT_BOT_USERNAME=bot
+      - ROCKETCHAT_BOT_PASSWORD=bot
+      - ROCKETCHAT_BOT_EMAIL=equipebot19_UNB@gmail.com
+
+      # Should be set to 'production' or 'beta' or 'dev'
+      # - ENVIRONMENT_NAME=${ENV_NAME}
+      - ENVIRONMENT_NAME='dev'
+      # Last commit hash using this command: git rev-parse HEAD
+      - BOT_VERSION=0.1.0-alpha
+
+    ports:
+      - 5005:5005
+      - 5002:5002
+    depends_on:
+      - actions
+    volumes:
+      - ./bot:/bot
+      - ./scripts:/scripts
