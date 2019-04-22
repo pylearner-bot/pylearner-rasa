@@ -1,25 +1,25 @@
 ## caminho feliz
-*cumprimentar
+* cumprimentar
     - utter_cumprimentar
-*bom_humor
+* bom_humor
     - utter_bom_humor
 
 ## caminho triste 1
-*cumprimentar
+* cumprimentar
     - utter_cumprimentar
-*mau_humor
+* mau_humor
     - utter_oferecer_ajuda
     - utter_animar
-*afirmar
+* afirmar
     - utter_bom_humor
 
 ## caminho triste 2
-*cumprimentar
-     utter_cumprimentar
-*mau_humor
+* cumprimentar
+    - utter_cumprimentar
+* mau_humor
     - utter_oferecer_ajuda
     - utter_animar
-*negar
+* negar
     - utter_despedir
 
 
@@ -45,6 +45,28 @@
 
 ## Apresentacao e despedida
 * cumprimentar
-        - utter_cumprimentar
+    - utter_cumprimentar
 * despedir
-        - utter_despedir
+    - utter_despedir
+
+## Dados Json Convencional
+ * importar_json
+    - utter_importar_json
+ * negar
+    - utter_despedir
+
+## Dados Json Completo
+  * importar_json
+    - utter_importar_json
+  * afirmar
+    - utter_importar_json_pandas
+  * afirmar
+    - utter_importar_json_pandas1
+
+## Dados Json Completo2
+  * importar_json
+    - utter_importar_json
+  * afirmar
+    - utter_importar_json_pandas
+  * negar
+    - utter_importar_json_pandas2
