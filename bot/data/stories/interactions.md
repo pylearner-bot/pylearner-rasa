@@ -48,4 +48,3 @@
     - utter_cumprimentar
 * despedir
     - utter_despedir
-        

@@ -70,6 +70,7 @@
 - boa noite
 - fica com Deus
 - flw então
+
 ## intent:afirmar
 - sim
 - claro
@@ -84,6 +85,13 @@
 - com toda certeza
 - beleza
 - fechou então
+- ja instalei sim
+- instalei
+- sim quero aprender o método dos Pandas
+- sim quero sim
+- quero sim
+- sim obrigado
+
 
 ## intent:negar
 - nao
@@ -116,6 +124,17 @@
 - nop
 - not
 - no
+- nao Obrigado
+- nao vlw
+- nao flw
+- quero nao
+- quero n
+- n quero
+- nao tenho instalado
+- n nao tenho instalado
+- n instalei ainda
+- n quero instalar
+
 
 ## intent:diga_mais
 - como funciona
@@ -152,28 +171,3 @@
 - extremamente chateado
 - chateado
 - muito triste
-
-## intent:importar_json
-- Como importar dados json?
-- importar json
-- Como importar json?
-- dados json
-- importar dados json
-- importar dados json
-- me ensina a importar dados json
-- me ensina a tratar dados json
-- como se faz um json
-- importar json utilizando pandas
-- ensina-me a importar dados json
-- desejo importar dados de arquivos json
-- Como eu posso importar arquivos json?
-- Extraindo informações de arquivos json
-- Como importar dados de arquivos json?
-- Como tratar dados de arquivos de json?
-- Como podemos fazer requisição de dados em arquivos json
-- Me ensine a mexer com arquivos json
-- me ensine a mexer em dados com json
-- Como fazer extração de dados em json
-- Como fazer extração de dados em arquivos json
-- Como tabular arquivos json
-- Como utilizar o Data Frame Pandas para arquivos json  
