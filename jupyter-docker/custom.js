@@ -11,3 +11,20 @@ define([
      h.parentNode.insertBefore(j, h);
    }(window, document, 'script', 'http://localhost:3000' + '/livechat')
  )});
+
+ var container  = document.createElement('div')
+ container.setAttribute('id', 'container')
+ document.body.append(container)
+ var rocketchat = document.getElementsByClassName('rocketchat-widget')
+ var notebook = document.getElementById('site')
+ notebook.setAttribute('class', 'display__side')
+
+ container.append(rocketchat)
+ container.append(notebook)
+
+var versionUpdate = (new Date()).getTime()
+var script = document.createElement('script')
+script.type = 'text/javascript'
+script.src = '.jupyter/custom.js?v=' + versionUpdate
+document.body.append(script)
+  

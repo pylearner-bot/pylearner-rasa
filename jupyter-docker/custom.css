@@ -1,0 +1,21 @@
+#container{
+    width: 100%;
+    height: 100%;
+}
+#site{
+    width: 65%;
+}
+.rocketchat-widget{
+    float: left;
+    left: 0px;
+    height: 100%;
+    width: 35%;
+    bottom: 0px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.display__side{
+    float: right;
+    width: 65%;
+    display: block;
+}
