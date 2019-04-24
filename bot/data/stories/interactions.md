@@ -20,6 +20,7 @@
     - utter_oferecer_ajuda
     - utter_animar
 * negar
+    - utter_mau_humor
     - utter_despedir
 
 
@@ -41,6 +42,7 @@
 
 ## negar sem contexto
 * negar
+    - utter_mau_humor
     - utter_despedir
 
 ## Apresentacao e despedida

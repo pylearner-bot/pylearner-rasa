@@ -1,4 +1,4 @@
-## intent:entender_correlação
+## intent:entender_correlacao
 - o que e correlaçao
 - correlaçao
 - para que serve a correlaçao
@@ -9,7 +9,7 @@
 - o que sao indices de correlacao
 - quais indices eu posso usar
 
-## intent:calcular_correlação
+## intent:calcular_correlacao
 - como calcular a correlaçao
 - calculo correlaçao
 - e necessario alguma biblioteca
@@ -20,4 +20,3 @@
 - como utilizar o pandas para calcular correlaçao
 - como interpretar correlaçao
 - qual indice de correlaçao e melhor
-

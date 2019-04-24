@@ -1,8 +1,8 @@
-## caminho entendimento correlaçao
-* entender_correlaçao
-    - utter_entender_correlaçao
+## caminho entendimento correlacao
+* entender_correlacao
+    - utter_entender_correlacao
 
 
-## caminho calcular correlaçao
-* calcular_correlaçao
-    - utter_calcular_correlaçao
+## caminho calcular correlacao
+* calcular_correlacao
+    - utter_calcular_correlacao

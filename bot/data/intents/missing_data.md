@@ -8,7 +8,7 @@
 - radoes para o dataset ter erros
 - o que e uma feature
 
-## intent: iniciar_a_detecçao
+## intent:iniciar_a_deteccao
 - quais sao as features
 - quais sao os tipos de dados esperados
 - ha dados faltantes
@@ -19,7 +19,7 @@
 - funcao de pandas que indica se ha dado faltante
 - dados faltantes nao padronizados
 
-## intent:corrigir_dados_faltantes
+## intent:corrigir_a_deteccao
 - como corrigir o problema de dados faltantes
 - formas de corrigir dados faltantes
 - substituindo por uma constante

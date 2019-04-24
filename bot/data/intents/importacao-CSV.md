@@ -9,14 +9,4 @@
 - como importo um arquivo csv em python
 - e necessario importar alguma biblioteca
 - melhor usar qual biblioteca pra importar o csv
-- importar qual biblioteca 
-
-
-## intent:duvidas_especificas_python
-- por que importar uma biblioteca csv
-- por que usar uma variavel
-- o que e pandas
-- pra que usar pandas 
-- o que significa o rb na funcao open()
-- como usar a função open()
-- como usar a função read_csv()
+- importar qual biblioteca

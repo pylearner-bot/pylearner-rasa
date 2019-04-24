@@ -12,13 +12,12 @@ intents:
   - importar_json
   - entender_arquivo_csv
   - duvidas_de_como_implementar
-  - duvidas_especificas_python
   - entender_dados_faltantes
   - iniciar_a_deteccao
   - corrigir_a_deteccao
-  - entender_correlaçao
-  - calcular_correlaçao
-  
+  - entender_correlacao
+  - calcular_correlacao
+
 actions:
   - utter_default
   - utter_diga_mais
@@ -36,12 +35,11 @@ actions:
   - utter_importar_json_pandas2
   - utter_explicar_csv
   - utter_tirar_duvidas_de_implementacao
-  - utter_tirar_duvidas_de_python
   - utter_entender_dados_faltantes
   - utter_iniciar_a_deteccao
   - utter_corrigir_a_deteccao
-  - utter_entender_correlaçao
-  - utter_calcular_correlaçao
+  - utter_entender_correlacao
+  - utter_calcular_correlacao
 
 templates:
   utter_default:
@@ -130,7 +128,7 @@ templates:
           Estou sim. Obrigado por perguntar!
 
           Me diz como posso ajudar você?
-          
+
   utter_mau_humor:
     - text: |
         Eu infelizmente não sei no que acreditar
@@ -180,12 +178,12 @@ templates:
   utter_entender_histograma:
     - text: |
         Histograma é uma representação gráfica
-        de dados quantitativos 
-        previamente tabulado e dividido em 
+        de dados quantitativos
+        previamente tabulado e dividido em
         classes uniformes ou não uniformes.
     - text: |
         Dados quantitativos é tudo o que pode ser medido e contado
-        Como por exemplo quantas pessoas tem em uma sala 
+        Como por exemplo quantas pessoas tem em uma sala
         E quantas dessas pessoas sao mulheres.
     - text: |
         O histograma serve para ilustrar e representar
@@ -198,8 +196,8 @@ templates:
 
   utter_criar_histograma:
     - text: |
-        Para carregar um dataset que seja um .csv 
-        Basta usar as funções de carregar arquivo csv 
+        Para carregar um dataset que seja um .csv
+        Basta usar as funções de carregar arquivo csv
     - text: |
         Para plotar o histograma usando o seaborn
         Usa a função sns.distplot(a=file['column'],kde=False)
@@ -209,7 +207,7 @@ templates:
         A função sns.kdeplot(a=file['column'],shade=True)
         Onde o primeiro parametro é qual coluna do dataset quer plotar
         E shade = True preenche a area abaixo da curva
-        
+
   utter_importar_json:
     - text: |
         Vamos lá! O primeiro passo para aprender arquivos json é importar a biblioteca!
@@ -284,63 +282,84 @@ templates:
     - text: |
         Os arquivos .csv são bastante simples e bem robustos no formato por isso o CSV é mais amplo que outros formatos digitais do mesmo segmento
     - text: |
-        Significa Comma-Separated Values ==> CSV :)        
-    
+        Significa Comma-Separated Values ==> CSV :)
+
   utter_tirar_duvidas_de_implementacao:
     - text: |
         Temos alguns jeitos de importar um arquivo csv em python,vou te falar dois modos,um é importando a biblioteca csv e utilizando a função open().
         Outra forma é importando a biblioteca pandas,que é muito utilizada em Machine Learning,e usando a função read_csv()
     - text: |
         É necessário sim!Você pode escolher entre a biblioteca csv ou a pandas,sao duas ótimas bibliotecas,com a biblioteca csv voce pode fazer praticamente qualquer coisa com o seu arquivo csv.
-        A biblioteca pandas é muito utilizada em Machine Learning e riquissima em funções para facilitar a manipulação de dados. 
+        A biblioteca pandas é muito utilizada em Machine Learning e riquissima em funções para facilitar a manipulação de dados.
     - text: |
         É sua essa escolha!Se você tem interesse em se aprofundar em Machine Learning(por isso voce esta aqui ne :D) recomendo a pandas por se muito utilizada na manipulação de dados.
         Se você caiu aqui de paraquedas e não tem interesse em ML,importa a csv mesmo e depois pesquisa sobre a pandas!!Adoro a pandas hihihi
     - text: |
         Melhor usar a bibliteca pandas,pq ela é muito utilizada na manipulação de dados em Machine Learning,da uma estudada nela e você vai ver como ela facilita as nossas vidas.
-            
-  utter_tirar_duvidas_python:
-    - text: |
-        Porque sem importar,seria muito mais complicado conseguir manipular arquivos,as bibliotecas servem para facilitar nosso trabalho,alguem tede todo o trabalho de fazer tudo na mão,pra você
-        conseguir ler um arquivo csv com apenas uma função,incrivel ne?!
-    - text: |
-        Porque a função reader() retorna um objeto,por isso,atribuiremos esse objeto a uma variavel.
-    - text: |
-        O Pandas é uma biblioteca de software open-source escrita para a linguagem Python com a finalidade de manipulação e análise de dados.Pandas é muito utilizado em Deep Learning,Data Science e Machine Learning.
-    - text: |
-        Pois se você está aqui,provavelmente está interessado em aprender Machine Learning,certo?A biblioteca pandas é muito utilizado em Deep Learning,Data Science e Machine Learning.
-    - text: |
-        O 'rb' significa Read in Binary mode,que vai se aplicar pra maioria dos casos de abertura de arquivos. 
-    - text: |
-        Antes de tudo você precisa importar a biblioteca csv,depois você cria uma váriavel que vai armazenar o retorno da
-        função open('nome_do_arquivo', 'rb')
-    - text: |
-        Primeiro,é necessário importar a biblioteca pandas,depois crie uma váriavel pra armazenar o retorno dda
-        função read_csv('nome_do_arquivo').Só isso,facil né?! ;D 
-        
-    utter_entender_correlaçao:
+
+  utter_entender_correlacao:
         - text: |
             A Correlação indica interdependência entre duas ou mais variáveis, e serve para determinar a intensidade da relação entre essas variáveis.
         - text: |
             A Matriz de Correlação serve para determinarmos a intensidade da relação com uma quantidade maior de valores com um grau de complexidade maior.
         - text: |
-            Existem diversos índices usados para se calcular correlação, mas iremos começar usando o mais clássico, o coeficiente de Pearson, que é dado pela seguinte expressão matemática 
-            
+            Existem diversos índices usados para se calcular correlação, mas iremos começar usando o mais clássico, o coeficiente de Pearson, que é dado pela seguinte expressão matemática
+
             image: "https://imgur.com/bX1AUFn.png"
 
             Existem outros como o de Spearman e Kendall, que também é possível fazer usando o Pandas
-        
-    utter_calcular_correlaçao:
+
+  utter_calcular_correlacao:
         - text: |
             Primeiramente, vamos importar a biblioteca Pandas
 
             image : "https://imgur.com/gyJ48P7.png"
 
             Depois, você irá usar o seu dataset e chamar a função do pandas corr(), que irá calcular a correlação entre as colunas do seu dataset, vamos armazenar na varíavel correlation
-            
+
             image : "https://i.imgur.com/KWfnZy1.png"
 
             Agora, na nossa varíavel correlation está armazenado o resultado da correlação de nossos dados.
 
         - text: |
             O grau de correlação é interpretado da seguinte manteira. Ele pode variar entre -1 e 1,e o resultado obtido define se a correlação é negativa ou positiva, sendo que -1  significa que é perfeita positiva, e -1 que é perfeita negativa
+  utter_entender_dados_faltantes:
+      - text: |
+          Consiste em valores vazios ou inesperados encontrados em um dataset antes da fase de pré processamento.
+      - text: |
+          Dentre os motivos, houve esquecimento no preenchimento de um campo por um usuário, dados perdidos quando transferidos manualmente de uma base de dados ou Erro no programa.
+      - text: |
+           Dentro do tratamento de dados para pré-processamento, a correção de dados faltantes é uma das tarefas que demandam maior tempo para preparação do modelo. Depois de coletado o dataset, é necessário essa limpeza de dados para que as predições sejam corretas posteriormente.
+      - text: |
+          Trate-se de cada tópico do Dataset. Geralmente representado pelas colunas.
+
+  utter_iniciar_a_deteccao:
+      - text: |
+          As features sao representadas pelas colunas que representam cada tipo de dado no dataset.
+      - text: |
+          Os dados esperados são aqueles que semânticamente estão de acordo com o que o dataset assume. Como por exemplo, se no Dataset há uma coluna indicando "nomes", espera-se como dado strings, e não dados numéricos.
+      - text: |
+          Para checar o Dataset a partir de um CSV, importe a biblioteca pandas e realize os comandos
+        image: "https://i.imgur.com/4Z066UA.png"
+      - text: |
+          A biblioteca pandas, apenas, identifica dados faltantes padronizados,geralmente, representados por "NaN"
+        image: "https://i.imgur.com/BORLI3C.png"
+      - text: |
+          A função isnull do pandas retorna um valor booleano indicando se há valor faltante no dataset
+        image: "https://i.imgur.com/DmIvt29.png"
+      - text: |
+          Para dados não padronizados, é necessário criar uma lista com tipo de valores faltantes
+        image: "https://i.imgur.com/6U0BSlY.png"
+
+  utter_corrigir_a_deteccao:
+      - text: |
+          Para corrigir problemas de dados faltantes, é necessário a utilização de métodos como substuição por connstante, substituição baseada no lugar e substituição por mediana
+      - text: |
+          Substituindo por contante, add image
+        image: "https://i.imgur.com/WLKrITO.png"
+      - text: |
+          Imputação baseada no lugar
+        image: "https://i.imgur.com/kX2ivBO.png"
+      - text: |
+          Substituição por mediana
+        image: "https://i.imgur.com/2IAjyk5.png"
