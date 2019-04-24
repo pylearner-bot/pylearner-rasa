@@ -89,38 +89,6 @@ templates:
 
   utter_bom_humor:
     - text: |
-        Tudo bem, obrigado! Em que posso te ajudar?
-    - text: |
-        Estou bem, humano! Gostei do seu nível de empatia. Como posso te ajudar?
-    - text: |
-        Estou sim. Obrigado por perguntar!
-        Me diz como posso ajudar você?
-          Oi, eu sou um bot, um assistente virtual!
-    - text: |
-          Olá! Eu sou o Pyter, em que posso ser útil?
-    - text: |
-          Ei nerd, trunks? Pyter aqui!
-
-  utter_despedir:
-    - text: |
-          Foi um prazer te ajudar!
-          Sempre que tiver alguma dúvida, volte aqui!
-          Até logo!
-    - text: |
-          Foi um prazer te ajudar!
-          Sempre que precisar, volte aqui!
-          Até a próxima!
-    - text: |
-          Foi um prazer te ajudar!
-          Quando surgir alguma dúvida, volte aqui!
-          Até mais!
-    - text: |
-          Qualquer dúvida, só falar! Até logo!
-    - text: |
-          Volte sempre que precisar. Até mais!
-
-  utter_bom_humor:
-    - text: |
           Tudo bem, obrigado! Em que posso te ajudar?
     - text: |
           Estou bem, humano! Gostei do seu nível de empatia. Como posso te ajudar?
