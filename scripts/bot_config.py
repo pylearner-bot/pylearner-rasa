@@ -26,8 +26,8 @@ logger.addHandler(ch)
 parser = argparse.ArgumentParser()
 
 parser.add_argument(
-    '--bot-name', '-bn', type=str, default='Bot',
-    help='Bot username at RocketChat(default: Bot)'
+    '--bot-name', '-bn', type=str, default='Chat'
+    help='Bot username at RocketChat(default: Pyter)'
 )
 parser.add_argument(
     '--bot-email', '-be', type=str, default='pylearner@email.com',
