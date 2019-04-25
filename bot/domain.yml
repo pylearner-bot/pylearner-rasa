@@ -17,6 +17,8 @@ intents:
   - corrigir_a_deteccao
   - entender_correlacao
   - calcular_correlacao
+  - dados_quantitativos
+  - data_set
 
 actions:
   - utter_default
@@ -29,6 +31,7 @@ actions:
   - utter_oferecer_ajuda
   - utter_entender_histograma
   - utter_criar_histograma
+  - utter_criar_histograma2
   - utter_importar_json
   - utter_importar_json_pandas
   - utter_importar_json_pandas1
@@ -40,6 +43,9 @@ actions:
   - utter_corrigir_a_deteccao
   - utter_entender_correlacao
   - utter_calcular_correlacao
+  - utter_dados_quantitativos
+  - utter_data_set
+  - utter_bons_estudos
 
 templates:
   utter_default:
@@ -149,32 +155,48 @@ templates:
         de dados quantitativos
         previamente tabulado e dividido em
         classes uniformes ou não uniformes.
+
+    - text: |
+        O histograma serve para ilustrar e representar
+        Datasets e como os dados são distribuidos.
+
+  utter_dados_quantitativos:
     - text: |
         Dados quantitativos é tudo o que pode ser medido e contado
         Como por exemplo quantas pessoas tem em uma sala
         E quantas dessas pessoas sao mulheres.
-    - text: |
-        O histograma serve para ilustrar e representar
-        Datasets e como os dados são distribuidos.
+
+  utter_data_set:
     - text: |
         Datasets são um conjunto de dados
+
         Que são representados em tabelas
-        Onde as linhas são os dados quantitativos
-        E as colunas são as características.
+
+        Onde as linhas são os dados quantitativos e as colunas são as características.
 
   utter_criar_histograma:
     - text: |
-        Para carregar um dataset que seja um .csv
-        Basta usar as funções de carregar arquivo csv
+        Para plotar o histograma podemos usar o seaborn! Use a função:
+
+        sns.distplot(a=file['column'],kde=False)
+
+        Onde o primeiro parametro é qual coluna do dataset quer plotar!
+
+        Tem como plotar um histograma com curvas mais suavizadas! Quer conferir?
+
+  utter_criar_histograma2:
     - text: |
-        Para plotar o histograma usando o seaborn
-        Usa a função sns.distplot(a=file['column'],kde=False)
-        Onde o primeiro parametro é qual coluna do dataset quer plotar
-    - text: |
-        Se quiser um histograma com curvas mais suaves pode usar
-        A função sns.kdeplot(a=file['column'],shade=True)
-        Onde o primeiro parametro é qual coluna do dataset quer plotar
-        E shade = True preenche a area abaixo da curva
+        Boa! Gostei da dedicação hehe
+
+        Espero que seja útil pro teu projeto!
+
+        Voltando ao assunto...
+
+        Se tu quiser um histograma com curvas mais suaves pode usar a função
+
+        sns.kdeplot(a=file['column'],shade=True)
+
+        Onde o primeiro parametro é qual coluna do dataset quer plotar e shade = True preenche a area abaixo da curva
 
   utter_importar_json:
     - text: |
@@ -308,16 +330,20 @@ templates:
           Os dados esperados são aqueles que semânticamente estão de acordo com o que o dataset assume. Como por exemplo, se no Dataset há uma coluna indicando "nomes", espera-se como dado strings, e não dados numéricos.
       - text: |
           Para checar o Dataset a partir de um CSV, importe a biblioteca pandas e realize os comandos
-        image: "https://i.imgur.com/4Z066UA.png"
+
+          ![Ex:](https://i.imgur.com/4Z066UA.png)
       - text: |
           A biblioteca pandas, apenas, identifica dados faltantes padronizados,geralmente, representados por "NaN"
-        image: "https://i.imgur.com/BORLI3C.png"
+
+          ![Ex:](https://i.imgur.com/BORLI3C.png)
       - text: |
           A função isnull do pandas retorna um valor booleano indicando se há valor faltante no dataset
-        image: "https://i.imgur.com/DmIvt29.png"
+
+          ![Ex:](https://i.imgur.com/DmIvt29.png)
       - text: |
           Para dados não padronizados, é necessário criar uma lista com tipo de valores faltantes
-        image: "https://i.imgur.com/6U0BSlY.png"
+
+          ![Ex:](https://i.imgur.com/6U0BSlY.png)
 
   utter_corrigir_a_deteccao:
       - text: |
@@ -331,3 +357,13 @@ templates:
       - text: |
           Substituição por mediana
         image: "https://i.imgur.com/2IAjyk5.png"
+
+  utter_bons_estudos:
+    - text: |
+        Bons Estudos aí :)
+    - text: |
+        Espero ter ajudado. Qualquer coisa só falar!
+    - text: |
+        Foca nos estudos aí então
+
+        Flws

@@ -91,7 +91,12 @@
 - sim quero sim
 - quero sim
 - sim obrigado
-
+- blz
+- s
+- ss
+- Ss
+- sim sim
+- sim obrigado
 
 ## intent:negar
 - nao
