@@ -59,6 +59,8 @@ actions:
   - utter_substituicao_imputacao
   - utter_substituicao_mediana
   - utter_entender_correlacao
+  - utter_matriz_correlacao
+  - utter_indice_correlacao
   - utter_calcular_correlacao
   - utter_dados_quantitativos
   - utter_data_set
@@ -320,10 +322,17 @@ templates:
     utter_entender_correlacao:
         - text: |
             A Correlação indica interdependência entre duas ou mais variáveis, e serve para determinar a intensidade da relação entre essas variáveis.
+   
+            Sabendo disso, o próximo conceito é a matriz de correlação. Deseja ver mais?
+    utter_matriz_correlacao:
         - text: |
             A Matriz de Correlação serve para determinarmos a intensidade da relação com uma quantidade maior de valores com um grau de complexidade maior.
+
+            Por fim, deseja saber o que é o indice de correlação?
+
+    utter_indice_correlacao:
         - text: |
-            Existem diversos índices usados para se calcular correlação, mas iremos começar usando o mais clássico, o coeficiente de Pearson, que é dado pela seguinte expressão matemática
+            Iremos começar usando o mais clássico, o coeficiente de Pearson, que é dado pela seguinte expressão matemática
 
             ![Alt Text](https://imgur.com/bX1AUFn.png)
 
