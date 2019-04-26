@@ -294,36 +294,38 @@ templates:
     utter_explicar_csv:
         - text: |
             Comma-separated values (ou CSV) é um formato de arquivo que armazena dados tabelados, cujo grande uso data da época dos mainframes.
-            Por serem bastante simples, arquivos .csv são comuns em todas as plataformas de computador.
+            
+            Beleza, bora aprender a manusear um CSV?
+
         - text: |
             O CSV é um implementação particular de arquivos de texto separados por um delimitador, que usa a vírgula e a quebra de linha para separar os valores.
-            O formato também usa as aspas em campos no qual são usados os caracteres reservados (vírgula e quebra de linha).
-            Essa robustez no formato torna o CSV mais amplo que outros formatos digitais do mesmo segmento.
+ 
+            Beleza, bora aprender a manusear um CSV?
+
         - text: |
             Significa Comma-Separated Values ==> CSV :)
-        - text: |
-            Os arquivos .csv são bastante simples e bem robustos no formato por isso o CSV é mais amplo que outros formatos digitais do mesmo segmento
-        - text: |
-            Significa Comma-Separated Values ==> CSV :)
+
+            Beleza, bora aprender a manusear um CSV?
 
     utter_tirar_duvidas_de_implementacao:
         - text: |
             Temos alguns jeitos de importar um arquivo csv em python,vou te falar dois modos,um é importando a biblioteca csv e utilizando a função open().
-            Outra forma é importando a biblioteca pandas,que é muito utilizada em Machine Learning,e usando a função read_csv()
+            
+            Outra forma é importando a biblioteca pandas usando a função read_csv()
+
         - text: |
-            É necessário sim!Você pode escolher entre a biblioteca csv ou a pandas,sao duas ótimas bibliotecas,com a biblioteca csv voce pode fazer praticamente qualquer coisa com o seu arquivo csv.
-            A biblioteca pandas é muito utilizada em Machine Learning e riquissima em funções para facilitar a manipulação de dados.
-        - text: |
-            É sua essa escolha!Se você tem interesse em se aprofundar em Machine Learning(por isso voce esta aqui ne :D) recomendo a pandas por se muito utilizada na manipulação de dados.
-            Se você caiu aqui de paraquedas e não tem interesse em ML,importa a csv mesmo e depois pesquisa sobre a pandas!!Adoro a pandas hihihi
-        - text: |
-            Melhor usar a bibliteca pandas,pq ela é muito utilizada na manipulação de dados em Machine Learning,da uma estudada nela e você vai ver como ela facilita as nossas vidas.
+            Você pode escolher entre a biblioteca csv ou a pandas.
+
+            Com pandas: Use a função read_csv()
+
+            Com a biblioteca CSV: open()
 
     utter_entender_correlacao:
         - text: |
             A Correlação indica interdependência entre duas ou mais variáveis, e serve para determinar a intensidade da relação entre essas variáveis.
    
             Sabendo disso, o próximo conceito é a matriz de correlação. Deseja ver mais?
+            
     utter_matriz_correlacao:
         - text: |
             A Matriz de Correlação serve para determinarmos a intensidade da relação com uma quantidade maior de valores com um grau de complexidade maior.

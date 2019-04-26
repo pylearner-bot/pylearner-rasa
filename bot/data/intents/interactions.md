@@ -72,6 +72,8 @@
 - flw então
 
 ## intent:afirmar
+- bora
+- agora
 - sim
 - claro
 - com certeza
@@ -116,6 +118,8 @@
 - nao quero saber mais
 - quero falar sobre outra coisa
 - nunca
+- valeu
+- to de boa
 - nao
 - nao conheco
 - não quero
