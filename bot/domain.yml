@@ -19,6 +19,10 @@ intents:
   - calcular_correlacao
   - dados_quantitativos
   - data_set
+  - json_duvidas_imediatas1
+  - json_duvidas_imediatas2
+  - json_duvidas_imediatas3
+  - importar_json_convencional
 
 actions:
   - utter_default
@@ -36,6 +40,9 @@ actions:
   - utter_importar_json_pandas
   - utter_importar_json_pandas1
   - utter_importar_json_pandas2
+  - utter_json_duvidas_rapidas1
+  - utter_json_duvidas_rapidas2
+  - utter_json_duvidas_rapidas3
   - utter_explicar_csv
   - utter_tirar_duvidas_de_implementacao
   - utter_entender_dados_faltantes
@@ -201,28 +208,25 @@ templates:
   utter_importar_json:
     - text: |
         Vamos lá! O primeiro passo para aprender arquivos json é importar a biblioteca!
-        Para importar é simples basta escrever:
+        Para importar é simples! Basta escrever:
 
-        image: "https://i.imgur.com/SR3Dl7e.png"
+        ![Alt Text](https://i.imgur.com/SR3Dl7e.png)
 
         O próximo passo é abrir e ler o arquivo desejado atribuindo a uma variavel! Dessa forma:
 
-        image: "https://i.imgur.com/cRhV5u6.png"
+        ![Alt Text](https://i.imgur.com/cRhV5u6.png)
 
         Agora vamos tratar todo o conteúdo do arquivo json como um conjunto de dados pelo comando:
 
-        image: "https://i.imgur.com/dTgRNOj.png"
+        ![Alt Text](https://i.imgur.com/dTgRNOj.png)
 
         Enfim a manipulação dos dados é com você, jovem hehe Boa sorte!
-        Ah! Antes que eu me esqueça tem mais um método utilizando Pandas! Deseja aprender?
 
   utter_importar_json_pandas:
     - text: |
-        Quer aprender mesmo? kkkkkk
-        Ok né! Vamos aprender a importar json (dnv) só que utilizando Pandas
         O primeiro passo talvez seja baixar a biblioteca Pandas! Abra o terminal e digite:
 
-        image: "https://i.imgur.com/qxiwHrV.png"
+        ![Alt Text](https://i.imgur.com/qxiwHrV.png)
 
         Eae já tem instalado?
 
@@ -231,34 +235,50 @@ templates:
         Então vamos continuar!
         O próximo passo é importar as bibliotecas! Só copiar e colar:
 
-        image: "https://imgur.com/33ZwMJW.png"
+        ![Alt Text](https://imgur.com/33ZwMJW.png)
 
         Agora vamos ler os dados do arquivo que você deseja e setá-lo em uma variável, bem assim:
 
-        image: "https://imgur.com/ObqpL3u.png"
+        ![Alt Text](https://imgur.com/ObqpL3u.png)
 
         Agora você vai "Pandarizar" os dados da seguinte forma também com o auxilio de uma variável:
 
-        image: "https://imgur.com/I0Mxdq7.png"
+        ![Alt Text](https://imgur.com/I0Mxdq7.png)
 
         Pronto! Se você printar essa variável aux vai ver seus dados bem mais organizados :D
 
   utter_importar_json_pandas2:
     - text: |
         Blz! Enquanto você faz o teu download vou te adiantar o necessário!
-        O próximo passo, após o download, é importar as bibliotecas! Só copiar e colar:
+        O próximo passo, após o download, é importar as bibliotecas!
 
-        image: "https://imgur.com/33ZwMJW.png"
+        ![Alt Text](https://imgur.com/33ZwMJW.png)
 
         Agora vamos ler os dados do arquivo que você deseja e setá-lo em uma variável, bem assim:
 
-        image: "https://imgur.com/ObqpL3u.png"
+        ![Alt Text](https://imgur.com/ObqpL3u.png)
 
         Agora você vai "Pandarizar" os dados da seguinte forma também com o auxilio de uma variável:
 
-        image: "https://imgur.com/I0Mxdq7.png"
+        ![Alt Text](https://imgur.com/I0Mxdq7.png)
 
         Pronto! Se você printar essa variável aux vai ver seus dados bem mais organizados :D
+
+  utter_json_duvidas_rapidas1:
+    - text: |
+
+        ![Alt Text](https://imgur.com/33ZwMJW.png)
+
+  utter_json_duvidas_rapidas2:
+    - text: |
+
+        ![Alt Text](https://imgur.com/ObqpL3u.png)
+
+  utter_json_duvidas_rapidas3:
+    - text: |
+
+        ![Alt Text](https://imgur.com/I0Mxdq7.png)
+
   utter_explicar_csv:
     - text: |
         Comma-separated values (ou CSV) é um formato de arquivo que armazena dados tabelados, cujo grande uso data da época dos mainframes.
@@ -295,7 +315,7 @@ templates:
         - text: |
             Existem diversos índices usados para se calcular correlação, mas iremos começar usando o mais clássico, o coeficiente de Pearson, que é dado pela seguinte expressão matemática
 
-            image: "https://imgur.com/bX1AUFn.png"
+            ![Alt Text](https://imgur.com/bX1AUFn.png)
 
             Existem outros como o de Spearman e Kendall, que também é possível fazer usando o Pandas
 
@@ -303,11 +323,11 @@ templates:
         - text: |
             Primeiramente, vamos importar a biblioteca Pandas
 
-            image : "https://imgur.com/gyJ48P7.png"
+            ![Alt Text](https://imgur.com/gyJ48P7.png)
 
             Depois, você irá usar o seu dataset e chamar a função do pandas corr(), que irá calcular a correlação entre as colunas do seu dataset, vamos armazenar na varíavel correlation
 
-            image : "https://i.imgur.com/KWfnZy1.png"
+            ![Alt Text](https://i.imgur.com/KWfnZy1.png)
 
             Agora, na nossa varíavel correlation está armazenado o resultado da correlação de nossos dados.
 
@@ -331,32 +351,35 @@ templates:
       - text: |
           Para checar o Dataset a partir de um CSV, importe a biblioteca pandas e realize os comandos
 
-          ![Ex:](https://i.imgur.com/4Z066UA.png)
+          ![Alt Text](https://i.imgur.com/4Z066UA.png)
       - text: |
           A biblioteca pandas, apenas, identifica dados faltantes padronizados,geralmente, representados por "NaN"
 
-          ![Ex:](https://i.imgur.com/BORLI3C.png)
+          ![Alt Text](https://i.imgur.com/BORLI3C.png)
       - text: |
           A função isnull do pandas retorna um valor booleano indicando se há valor faltante no dataset
 
-          ![Ex:](https://i.imgur.com/DmIvt29.png)
+          ![Alt Text](https://i.imgur.com/DmIvt29.png)
       - text: |
           Para dados não padronizados, é necessário criar uma lista com tipo de valores faltantes
 
-          ![Ex:](https://i.imgur.com/6U0BSlY.png)
+          ![Alt Text](https://i.imgur.com/6U0BSlY.png)
 
   utter_corrigir_a_deteccao:
       - text: |
           Para corrigir problemas de dados faltantes, é necessário a utilização de métodos como substuição por connstante, substituição baseada no lugar e substituição por mediana
       - text: |
           Substituindo por contante, add image
-        image: "https://i.imgur.com/WLKrITO.png"
+
+          ![Alt Text](https://i.imgur.com/WLKrITO.png)
       - text: |
           Imputação baseada no lugar
-        image: "https://i.imgur.com/kX2ivBO.png"
+
+          ![Alt Text](https://i.imgur.com/kX2ivBO.png)
       - text: |
           Substituição por mediana
-        image: "https://i.imgur.com/2IAjyk5.png"
+
+          ![Alt Text](https://i.imgur.com/2IAjyk5.png)
 
   utter_bons_estudos:
     - text: |
