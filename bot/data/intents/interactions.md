@@ -72,6 +72,8 @@
 - flw então
 
 ## intent:afirmar
+- bora
+- agora
 - sim
 - claro
 - com certeza
@@ -91,7 +93,12 @@
 - sim quero sim
 - quero sim
 - sim obrigado
-
+- blz
+- s
+- ss
+- Ss
+- sim sim
+- sim obrigado
 
 ## intent:negar
 - nao
@@ -111,6 +118,8 @@
 - nao quero saber mais
 - quero falar sobre outra coisa
 - nunca
+- valeu
+- to de boa
 - nao
 - nao conheco
 - não quero

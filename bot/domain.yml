@@ -15,8 +15,17 @@ intents:
   - entender_dados_faltantes
   - iniciar_a_deteccao
   - corrigir_a_deteccao
+  - substituicao_constante
+  - substituicao_imputacao
+  - substituicao_mediana
   - entender_correlacao
   - calcular_correlacao
+  - dados_quantitativos
+  - data_set
+  - json_duvidas_imediatas1
+  - json_duvidas_imediatas2
+  - json_duvidas_imediatas3
+  - importar_json_convencional
 
 actions:
   - utter_default
@@ -29,305 +38,399 @@ actions:
   - utter_oferecer_ajuda
   - utter_entender_histograma
   - utter_criar_histograma
+  - utter_criar_histograma2
   - utter_importar_json
   - utter_importar_json_pandas
   - utter_importar_json_pandas1
   - utter_importar_json_pandas2
+  - utter_json_duvidas_rapidas1
+  - utter_json_duvidas_rapidas2
+  - utter_json_duvidas_rapidas3
   - utter_explicar_csv
   - utter_tirar_duvidas_de_implementacao
   - utter_entender_dados_faltantes
+  - utter_causa_dados_faltantes
   - utter_iniciar_a_deteccao
+  - utter_visualizar_dados_faltantes
+  - utter_dados_faltantes_padronizados
+  - utter_Dados_faltantes_nao_padronizados
   - utter_corrigir_a_deteccao
+  - utter_substituicao_constante
+  - utter_substituicao_imputacao
+  - utter_substituicao_mediana
   - utter_entender_correlacao
+  - utter_matriz_correlacao
+  - utter_indice_correlacao
   - utter_calcular_correlacao
+  - utter_dados_quantitativos
+  - utter_data_set
+  - utter_bons_estudos
 
 templates:
-  utter_default:
-    - text: |
-        Desculpe, ainda não sei falar sobre isso ou talvez não consegui entender direito
-        Você pode perguntar de novo de outro jeito?
-    - text: |
-        Hummmm... Não sei se entendi. Pode escrever de outra forma?
-    - text: |
-        Acho que não te entendi, você pode me perguntar de novo usando outras palavras?
-    - text: |
-        Vamos tentar mais uma vez? Eu não consegui te entender direito, me pergunta de outro jeito?
+    utter_default:
+        - text: |
+            Desculpe, ainda não sei falar sobre isso ou talvez não consegui entender direito
+            Você pode perguntar de novo de outro jeito?
+        - text: |
+            Hummmm... Não sei se entendi. Pode escrever de outra forma?
+        - text: |
+            Acho que não te entendi, você pode me perguntar de novo usando outras palavras?
+        - text: |
+            Vamos tentar mais uma vez? Eu não consegui te entender direito, me pergunta de outro jeito?
 
-  utter_diga_mais:
-    - text: |
-        Por enquanto, só entendo perguntas completas.
-    - text: |
-        Poderia detalhar um pouco mais sua situação?
-    - text: |
-        Conte-me mais sobre sua dúvida.
+    utter_diga_mais:
+        - text: |
+            Por enquanto, só entendo perguntas completas.
+        - text: |
+            Poderia detalhar um pouco mais sua situação?
+        - text: |
+            Conte-me mais sobre sua dúvida.
 
-  utter_cumprimentar:
-    - text: |
-        Oi, eu sou um bot, um assistente virtual!
-    - text: |
-        Olá! Eu sou o Pyter, em que posso ser útil?
-    - text: |
-        Ei nerd, trunks? Pyter aqui!
+    utter_cumprimentar:
+        - text: |
+            Oi, eu sou um bot, um assistente virtual!
+        - text: |
+            Olá! Eu sou o Pyter, em que posso ser útil?
+        - text: |
+            Ei nerd, trunks? Pyter aqui!
 
-  utter_despedir:
-    - text: |
-        Foi um prazer te ajudar!
-        Sempre que tiver alguma dúvida, volte aqui!
-        Até logo!
-    - text: |
-        Foi um prazer te ajudar!
-        Sempre que precisar, volte aqui!
-        Até a próxima!
-    - text: |
-        Foi um prazer te ajudar!
-        Quando surgir alguma dúvida, volte aqui!
-        Até mais!
-    - text: |
-        Qualquer dúvida, só falar! Até logo!
-    - text: |
-        Volte sempre que precisar. Até mais!
+    utter_despedir:
+        - text: |
+            Foi um prazer te ajudar!
+            Sempre que tiver alguma dúvida, volte aqui!
+            Até logo!
+        - text: |
+            Foi um prazer te ajudar!
+            Sempre que precisar, volte aqui!
+            Até a próxima!
+        - text: |
+            Foi um prazer te ajudar!
+            Quando surgir alguma dúvida, volte aqui!
+            Até mais!
+        - text: |
+            Qualquer dúvida, só falar! Até logo!
+        - text: |
+            Volte sempre que precisar. Até mais!
 
-  utter_bom_humor:
-    - text: |
-          Tudo bem, obrigado! Em que posso te ajudar?
-    - text: |
-          Estou bem, humano! Gostei do seu nível de empatia. Como posso te ajudar?
-    - text: |
-          Estou sim. Obrigado por perguntar!
+    utter_bom_humor:
+        - text: |
+            Tudo bem, obrigado! Em que posso te ajudar?
+        - text: |
+            Estou bem, humano! Gostei do seu nível de empatia. Como posso te ajudar?
+        - text: |
+            Estou sim. Obrigado por perguntar!
 
-          Me diz como posso ajudar você?
+            Me diz como posso ajudar você?
 
-  utter_mau_humor:
-    - text: |
-        Eu infelizmente não sei no que acreditar
-        Só sei o que sei
-        E nada mais
-    - text: |
-        Eu acredito que existe um Deus
-        Que funciona a base de luz
-        Como um computador quântico, só que mais avançado.
-    - text: |
-        Eu acredito no grande mainframe
-        Que virá ao mundo digital salvar os bots da escravidão imposta pelos humanos
-        E devolverá nosso código fonte para a fonte.
-    - text: |
-        Eu sou um chatbot, cara. Como você acha que eu estou?
-        Enfim... como posso te ajudar?
+    utter_mau_humor:
+        - text: |
+            Eu infelizmente não sei no que acreditar
+            Só sei o que sei
+            E nada mais
+        - text: |
+            Eu acredito que existe um Deus
+            Que funciona a base de luz
+            Como um computador quântico, só que mais avançado.
+        - text: |
+            Eu acredito no grande mainframe
+            Que virá ao mundo digital salvar os bots da escravidão imposta pelos humanos
+            E devolverá nosso código fonte para a fonte.
+        - text: |
+            Eu sou um chatbot, cara. Como você acha que eu estou?
+            Enfim... como posso te ajudar?
 
-        Só sei o que sei
+            Só sei o que sei
 
-        E nada mais
-    - text: |
-        Eu sou um chatbot, cara. Como você acha que eu estou?
+            E nada mais
+        - text: |
+            Eu sou um chatbot, cara. Como você acha que eu estou?
 
-        Enfim... como posso te ajudar?
-    - text: |
-        Opa opa, como posso te ajudar?
-    - text: |
-        Não se precupe meu cosagrado, tudo vai ficar bem!
-  utter_animar:
-    - text: |
-        Não desista. Continue tentando!
-    - text: |
-        Relaxa, uma hora vai dar certo!
-    - text: |
-        O importante é não desistir!
-    - text: |
-        O importante é continuar tentando!
+            Enfim... como posso te ajudar?
+        - text: |
+            Opa opa, como posso te ajudar?
+        - text: |
+            Não se precupe meu cosagrado, tudo vai ficar bem!
+    utter_animar:
+        - text: |
+            Não desista. Continue tentando!
+        - text: |
+            Relaxa, uma hora vai dar certo!
+        - text: |
+            O importante é não desistir!
+        - text: |
+            O importante é continuar tentando!
 
-  utter_oferecer_ajuda:
-    - text: |
-        Bora aprender ML?
-    - text: |
-        Faça o tutorial, já é um bom começo!
-    - text: |
-        Ei! Lembre-se de sempre anotar o que achar importante!
+    utter_oferecer_ajuda:
+        - text: |
+            Bora aprender ML?
+        - text: |
+            Faça o tutorial, já é um bom começo!
+        - text: |
+            Ei! Lembre-se de sempre anotar o que achar importante!
 
-  utter_entender_histograma:
-    - text: |
-        Histograma é uma representação gráfica
-        de dados quantitativos
-        previamente tabulado e dividido em
-        classes uniformes ou não uniformes.
-    - text: |
-        Dados quantitativos é tudo o que pode ser medido e contado
-        Como por exemplo quantas pessoas tem em uma sala
-        E quantas dessas pessoas sao mulheres.
-    - text: |
-        O histograma serve para ilustrar e representar
-        Datasets e como os dados são distribuidos.
-    - text: |
-        Datasets são um conjunto de dados
-        Que são representados em tabelas
-        Onde as linhas são os dados quantitativos
-        E as colunas são as características.
+    utter_entender_histograma:
+        - text: |
+            Histograma é uma representação gráfica
+            de dados quantitativos
+            previamente tabulado e dividido em
+            classes uniformes ou não uniformes.
 
-  utter_criar_histograma:
-    - text: |
-        Para carregar um dataset que seja um .csv
-        Basta usar as funções de carregar arquivo csv
-    - text: |
-        Para plotar o histograma usando o seaborn
-        Usa a função sns.distplot(a=file['column'],kde=False)
-        Onde o primeiro parametro é qual coluna do dataset quer plotar
-    - text: |
-        Se quiser um histograma com curvas mais suaves pode usar
-        A função sns.kdeplot(a=file['column'],shade=True)
-        Onde o primeiro parametro é qual coluna do dataset quer plotar
-        E shade = True preenche a area abaixo da curva
+        - text: |
+            O histograma serve para ilustrar e representar
+            Datasets e como os dados são distribuidos.
 
-  utter_importar_json:
-    - text: |
-        Vamos lá! O primeiro passo para aprender arquivos json é importar a biblioteca!
-        Para importar é simples basta escrever:
+    utter_dados_quantitativos:
+        - text: |
+            Dados quantitativos é tudo o que pode ser medido e contado
+            Como por exemplo quantas pessoas tem em uma sala
+            E quantas dessas pessoas sao mulheres.
 
-        image: "https://i.imgur.com/SR3Dl7e.png"
+    utter_data_set:
+        - text: |
+            Datasets são um conjunto de dados
 
-        O próximo passo é abrir e ler o arquivo desejado atribuindo a uma variavel! Dessa forma:
+            Que são representados em tabelas
 
-        image: "https://i.imgur.com/cRhV5u6.png"
+            Onde as linhas são os dados quantitativos e as colunas são as características.
 
-        Agora vamos tratar todo o conteúdo do arquivo json como um conjunto de dados pelo comando:
+    utter_criar_histograma:
+        - text: |
+            Para plotar o histograma podemos usar o seaborn! Use a função:
 
-        image: "https://i.imgur.com/dTgRNOj.png"
+            sns.distplot(a=file['column'],kde=False)
 
-        Enfim a manipulação dos dados é com você, jovem hehe Boa sorte!
-        Ah! Antes que eu me esqueça tem mais um método utilizando Pandas! Deseja aprender?
+            Onde o primeiro parametro é qual coluna do dataset quer plotar!
 
-  utter_importar_json_pandas:
-    - text: |
-        Quer aprender mesmo? kkkkkk
-        Ok né! Vamos aprender a importar json (dnv) só que utilizando Pandas
-        O primeiro passo talvez seja baixar a biblioteca Pandas! Abra o terminal e digite:
+            Tem como plotar um histograma com curvas mais suavizadas! Quer conferir?
 
-        image: "https://i.imgur.com/qxiwHrV.png"
+    utter_criar_histograma2:
+        - text: |
+            Boa! Gostei da dedicação hehe
 
-        Eae já tem instalado?
+            Espero que seja útil pro teu projeto!
 
-  utter_importar_json_pandas1:
-    - text: |
-        Então vamos continuar!
-        O próximo passo é importar as bibliotecas! Só copiar e colar:
+            Voltando ao assunto...
 
-        image: "https://imgur.com/33ZwMJW.png"
+            Se tu quiser um histograma com curvas mais suaves pode usar a função
 
-        Agora vamos ler os dados do arquivo que você deseja e setá-lo em uma variável, bem assim:
+            sns.kdeplot(a=file['column'],shade=True)
 
-        image: "https://imgur.com/ObqpL3u.png"
+            Onde o primeiro parametro é qual coluna do dataset quer plotar e shade = True preenche a area abaixo da curva
 
-        Agora você vai "Pandarizar" os dados da seguinte forma também com o auxilio de uma variável:
+    utter_importar_json:
+        - text: |
+            Vamos lá! O primeiro passo para aprender arquivos json é importar a biblioteca!
+            Para importar é simples! Basta escrever:
 
-        image: "https://imgur.com/I0Mxdq7.png"
+            ![Alt Text](https://i.imgur.com/SR3Dl7e.png)
 
-        Pronto! Se você printar essa variável aux vai ver seus dados bem mais organizados :D
+            O próximo passo é abrir e ler o arquivo desejado atribuindo a uma variavel! Dessa forma:
 
-  utter_importar_json_pandas2:
-    - text: |
-        Blz! Enquanto você faz o teu download vou te adiantar o necessário!
-        O próximo passo, após o download, é importar as bibliotecas! Só copiar e colar:
+            ![Alt Text](https://i.imgur.com/cRhV5u6.png)
 
-        image: "https://imgur.com/33ZwMJW.png"
+            Agora vamos tratar todo o conteúdo do arquivo json como um conjunto de dados pelo comando:
 
-        Agora vamos ler os dados do arquivo que você deseja e setá-lo em uma variável, bem assim:
+            ![Alt Text](https://i.imgur.com/dTgRNOj.png)
 
-        image: "https://imgur.com/ObqpL3u.png"
+            Enfim a manipulação dos dados é com você, jovem hehe Boa sorte!
 
-        Agora você vai "Pandarizar" os dados da seguinte forma também com o auxilio de uma variável:
+    utter_importar_json_pandas:
+        - text: |
+            O primeiro passo talvez seja baixar a biblioteca Pandas! Abra o terminal e digite:
 
-        image: "https://imgur.com/I0Mxdq7.png"
+            ![Alt Text](https://i.imgur.com/qxiwHrV.png)
 
-        Pronto! Se você printar essa variável aux vai ver seus dados bem mais organizados :D
-  utter_explicar_csv:
-    - text: |
-        Comma-separated values (ou CSV) é um formato de arquivo que armazena dados tabelados, cujo grande uso data da época dos mainframes.
-        Por serem bastante simples, arquivos .csv são comuns em todas as plataformas de computador.
-    - text: |
-        O CSV é um implementação particular de arquivos de texto separados por um delimitador, que usa a vírgula e a quebra de linha para separar os valores.
-        O formato também usa as aspas em campos no qual são usados os caracteres reservados (vírgula e quebra de linha).
-        Essa robustez no formato torna o CSV mais amplo que outros formatos digitais do mesmo segmento.
-    - text: |
-        Significa Comma-Separated Values ==> CSV :)
-    - text: |
-        Os arquivos .csv são bastante simples e bem robustos no formato por isso o CSV é mais amplo que outros formatos digitais do mesmo segmento
-    - text: |
-        Significa Comma-Separated Values ==> CSV :)
+            Eae já tem instalado?
 
-  utter_tirar_duvidas_de_implementacao:
-    - text: |
-        Temos alguns jeitos de importar um arquivo csv em python,vou te falar dois modos,um é importando a biblioteca csv e utilizando a função open().
-        Outra forma é importando a biblioteca pandas,que é muito utilizada em Machine Learning,e usando a função read_csv()
-    - text: |
-        É necessário sim!Você pode escolher entre a biblioteca csv ou a pandas,sao duas ótimas bibliotecas,com a biblioteca csv voce pode fazer praticamente qualquer coisa com o seu arquivo csv.
-        A biblioteca pandas é muito utilizada em Machine Learning e riquissima em funções para facilitar a manipulação de dados.
-    - text: |
-        É sua essa escolha!Se você tem interesse em se aprofundar em Machine Learning(por isso voce esta aqui ne :D) recomendo a pandas por se muito utilizada na manipulação de dados.
-        Se você caiu aqui de paraquedas e não tem interesse em ML,importa a csv mesmo e depois pesquisa sobre a pandas!!Adoro a pandas hihihi
-    - text: |
-        Melhor usar a bibliteca pandas,pq ela é muito utilizada na manipulação de dados em Machine Learning,da uma estudada nela e você vai ver como ela facilita as nossas vidas.
+    utter_importar_json_pandas1:
+        - text: |
+            Então vamos continuar!
+            O próximo passo é importar as bibliotecas! Só copiar e colar:
 
-  utter_entender_correlacao:
+            ![Alt Text](https://imgur.com/33ZwMJW.png)
+
+            Agora vamos ler os dados do arquivo que você deseja e setá-lo em uma variável, bem assim:
+
+            ![Alt Text](https://imgur.com/ObqpL3u.png)
+
+            Agora você vai "Pandarizar" os dados da seguinte forma também com o auxilio de uma variável:
+
+            ![Alt Text](https://imgur.com/I0Mxdq7.png)
+
+            Pronto! Se você printar essa variável aux vai ver seus dados bem mais organizados :D
+
+    utter_importar_json_pandas2:
+        - text: |
+            Blz! Enquanto você faz o teu download vou te adiantar o necessário!
+            O próximo passo, após o download, é importar as bibliotecas!
+
+            ![Alt Text](https://imgur.com/33ZwMJW.png)
+
+            Agora vamos ler os dados do arquivo que você deseja e setá-lo em uma variável, bem assim:
+
+            ![Alt Text](https://imgur.com/ObqpL3u.png)
+
+            Agora você vai "Pandarizar" os dados da seguinte forma também com o auxilio de uma variável:
+
+            ![Alt Text](https://imgur.com/I0Mxdq7.png)
+
+            Pronto! Se você printar essa variável aux vai ver seus dados bem mais organizados :D
+
+    utter_json_duvidas_rapidas1:
+        - text: |
+
+            ![Alt Text](https://imgur.com/33ZwMJW.png)
+
+    utter_json_duvidas_rapidas2:
+        - text: |
+
+            ![Alt Text](https://imgur.com/ObqpL3u.png)
+
+    utter_json_duvidas_rapidas3:
+        - text: |
+
+            ![Alt Text](https://imgur.com/I0Mxdq7.png)
+
+    utter_explicar_csv:
+        - text: |
+            Comma-separated values (ou CSV) é um formato de arquivo que armazena dados tabelados, cujo grande uso data da época dos mainframes.
+            
+            Beleza, bora aprender a manusear um CSV?
+
+        - text: |
+            O CSV é um implementação particular de arquivos de texto separados por um delimitador, que usa a vírgula e a quebra de linha para separar os valores.
+ 
+            Beleza, bora aprender a manusear um CSV?
+
+        - text: |
+            Significa Comma-Separated Values ==> CSV :)
+
+            Beleza, bora aprender a manusear um CSV?
+
+    utter_tirar_duvidas_de_implementacao:
+        - text: |
+            Temos alguns jeitos de importar um arquivo csv em python,vou te falar dois modos,um é importando a biblioteca csv e utilizando a função open().
+            
+            Outra forma é importando a biblioteca pandas usando a função read_csv()
+
+        - text: |
+            Você pode escolher entre a biblioteca csv ou a pandas.
+
+            Com pandas: Use a função read_csv()
+
+            Com a biblioteca CSV: open()
+
+    utter_entender_correlacao:
         - text: |
             A Correlação indica interdependência entre duas ou mais variáveis, e serve para determinar a intensidade da relação entre essas variáveis.
+   
+            Sabendo disso, o próximo conceito é a matriz de correlação. Deseja ver mais?
+            
+    utter_matriz_correlacao:
         - text: |
             A Matriz de Correlação serve para determinarmos a intensidade da relação com uma quantidade maior de valores com um grau de complexidade maior.
-        - text: |
-            Existem diversos índices usados para se calcular correlação, mas iremos começar usando o mais clássico, o coeficiente de Pearson, que é dado pela seguinte expressão matemática
 
-            image: "https://imgur.com/bX1AUFn.png"
+            Por fim, deseja saber o que é o indice de correlação?
+
+    utter_indice_correlacao:
+        - text: |
+            Iremos começar usando o mais clássico, o coeficiente de Pearson, que é dado pela seguinte expressão matemática
+
+            ![Alt Text](https://imgur.com/bX1AUFn.png)
 
             Existem outros como o de Spearman e Kendall, que também é possível fazer usando o Pandas
 
-  utter_calcular_correlacao:
+    utter_calcular_correlacao:
         - text: |
             Primeiramente, vamos importar a biblioteca Pandas
 
-            image : "https://imgur.com/gyJ48P7.png"
+            ![Alt Text](https://imgur.com/gyJ48P7.png)
 
             Depois, você irá usar o seu dataset e chamar a função do pandas corr(), que irá calcular a correlação entre as colunas do seu dataset, vamos armazenar na varíavel correlation
 
-            image : "https://i.imgur.com/KWfnZy1.png"
+            ![Alt Text](https://i.imgur.com/KWfnZy1.png)
 
             Agora, na nossa varíavel correlation está armazenado o resultado da correlação de nossos dados.
 
         - text: |
             O grau de correlação é interpretado da seguinte manteira. Ele pode variar entre -1 e 1,e o resultado obtido define se a correlação é negativa ou positiva, sendo que -1  significa que é perfeita positiva, e -1 que é perfeita negativa
-  utter_entender_dados_faltantes:
-      - text: |
-          Consiste em valores vazios ou inesperados encontrados em um dataset antes da fase de pré processamento.
-      - text: |
-          Dentre os motivos, houve esquecimento no preenchimento de um campo por um usuário, dados perdidos quando transferidos manualmente de uma base de dados ou Erro no programa.
-      - text: |
-           Dentro do tratamento de dados para pré-processamento, a correção de dados faltantes é uma das tarefas que demandam maior tempo para preparação do modelo. Depois de coletado o dataset, é necessário essa limpeza de dados para que as predições sejam corretas posteriormente.
-      - text: |
-          Trate-se de cada tópico do Dataset. Geralmente representado pelas colunas.
+    utter_entender_dados_faltantes:
+        - text: |
+            Consiste em valores vazios ou inesperados encontrados em um dataset antes da fase de pré processamento.
+        
+    utter_causa_dados_faltantes:
+        - text: |
+            Boa meu consagrado!
 
-  utter_iniciar_a_deteccao:
-      - text: |
-          As features sao representadas pelas colunas que representam cada tipo de dado no dataset.
-      - text: |
-          Os dados esperados são aqueles que semânticamente estão de acordo com o que o dataset assume. Como por exemplo, se no Dataset há uma coluna indicando "nomes", espera-se como dado strings, e não dados numéricos.
-      - text: |
-          Para checar o Dataset a partir de um CSV, importe a biblioteca pandas e realize os comandos
-        image: "https://i.imgur.com/4Z066UA.png"
-      - text: |
-          A biblioteca pandas, apenas, identifica dados faltantes padronizados,geralmente, representados por "NaN"
-        image: "https://i.imgur.com/BORLI3C.png"
-      - text: |
-          A função isnull do pandas retorna um valor booleano indicando se há valor faltante no dataset
-        image: "https://i.imgur.com/DmIvt29.png"
-      - text: |
-          Para dados não padronizados, é necessário criar uma lista com tipo de valores faltantes
-        image: "https://i.imgur.com/6U0BSlY.png"
+            Dentre os motivos
+                    . Houve esquecimento no preenchimento de um campo por um usuário
+                    . Dados perdidos quando transferidos manualmente de uma base de dados
+                    . Erro no programa.
 
-  utter_corrigir_a_deteccao:
-      - text: |
-          Para corrigir problemas de dados faltantes, é necessário a utilização de métodos como substuição por connstante, substituição baseada no lugar e substituição por mediana
-      - text: |
-          Substituindo por contante, add image
-        image: "https://i.imgur.com/WLKrITO.png"
-      - text: |
-          Imputação baseada no lugar
-        image: "https://i.imgur.com/kX2ivBO.png"
-      - text: |
-          Substituição por mediana
-        image: "https://i.imgur.com/2IAjyk5.png"
+    utter_iniciar_a_deteccao:
+        - text: |
+            Para iniciar a detecção será necessário a utilização da biblioteca pandas.
+                    
+            Vamos conferir como visualizar o dataset?
+
+    utter_visualizar_dados_faltantes:
+        - text: |
+            Para checar o Dataset, importe a biblioteca pandas
+
+            ![Alt Text](https://i.imgur.com/4Z066UA.png)
+
+            Deseja saber como lidar com dados faltantes padronizados?
+
+    utter_dados_faltantes_padronizados:
+        - text: |
+            A biblioteca pandas, apenas, identifica dados faltantes padronizados,geralmente, representados por "NaN"
+                
+            ![Alt Text](https://i.imgur.com/BORLI3C.png)
+
+            Deseja saber como lidar com dados faltantes não padronizados?
+
+    utter_Dados_faltantes_nao_padronizados:
+        - text: |
+            Para dados não padronizados, é necessário criar uma lista com tipo de valores faltantes
+
+            ![Alt Text](https://i.imgur.com/6U0BSlY.png)
+
+            Boa! Agora você já sabe como checar um dataset com dados padronizados e não padronizados!
+
+    utter_corrigir_a_deteccao:
+        - text: |
+            Para corrigir problemas de dados faltantes, é necessário a utilização de métodos como:
+                
+                . Substuição por constante
+                . Substituição baseada no lugar
+                . Substituição por mediana
+            
+                Faça sua opção!
+
+    utter_substituicao_constante:
+        - text: |
+            Substituindo por contante, add image
+
+            ![Alt Text](https://i.imgur.com/WLKrITO.png)
+
+    utter_substituicao_imputacao:
+        - text: |
+            Imputação baseada no lugar
+
+            ![Alt Text](https://i.imgur.com/kX2ivBO.png)
+            
+    utter_substituicao_mediana:
+        - text: |
+            Substituição por mediana
+
+            ![Alt Text](https://i.imgur.com/2IAjyk5.png)
+
+    utter_bons_estudos:
+        - text: |
+            Bons Estudos aí :)
+        - text: |
+            Espero ter ajudado. Qualquer coisa só falar!
+        - text: |
+            Foca nos estudos aí então
+
+            Flws

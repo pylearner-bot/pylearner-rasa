@@ -22,3 +22,43 @@
 - Como fazer extração de dados em arquivos json
 - Como tabular arquivos json
 - Como utilizar o Data Frame Pandas para arquivos json  
+
+## intent:importar_json_convencional
+- Importar json convencional
+- importar json padrao
+- importar json comum
+- importar json do jeito bruto
+- como usar json bruto
+- como utilizar json metodo tradicional
+- json tradicional
+- json comum
+- json padrao
+
+## intent:json_duvidas_imediatas1
+- Qual biblioteca para importar json
+- biblioteca para json
+- biblioteca para importar json
+- biblioteca json
+- pandas biblioteca json
+- biblioteca json padrao
+- biblioteca json pandas
+- Como importar a biblioteca json
+- Como importar a biblioteca json pandas
+
+## intent:json_duvidas_imediatas2
+- Como ler arquivos json
+- como ler arquivos json pandas
+- como ler arquivos json
+- ler arquivos json
+- lendo arquivos em json
+
+## intent:json_duvidas_imediatas3
+- Função para tabular os dados
+- pandarizar os dados
+- tabelar dados json
+- tabelar os dados json
+- tratar variavel json
+- padronizar os dados json em pandas
+- tabelar dados em json
+- tabelar os dados json
+- pandas tabelar dados  

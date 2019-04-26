@@ -3,9 +3,7 @@
 - correlaçao
 - para que serve a correlaçao
 - o que e uma matriz de correlaçao
-- o que e dependencia
 - o que indica os graus de correlaçao
-- o que e segmentaçao
 - o que sao indices de correlacao
 - quais indices eu posso usar
 
