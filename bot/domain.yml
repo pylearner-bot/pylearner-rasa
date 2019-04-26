@@ -26,6 +26,7 @@ intents:
   - json_duvidas_imediatas2
   - json_duvidas_imediatas3
   - importar_json_convencional
+  - oferecer_ajuda
 
 actions:
   - utter_default
@@ -65,6 +66,7 @@ actions:
   - utter_dados_quantitativos
   - utter_data_set
   - utter_bons_estudos
+  - utter_ajuda
 
 templates:
     utter_default:
@@ -88,12 +90,13 @@ templates:
 
     utter_cumprimentar:
         - text: |
-            Oi, eu sou um bot, um assistente virtual!
+            Oi eu sou o Pyter!
         - text: |
             Olá! Eu sou o Pyter, em que posso ser útil?
         - text: |
-            Ei nerd, trunks? Pyter aqui!
-
+            Ei nerd, trunks? Pyter aqui! Tudo bem?
+        - text:
+            Opa, eu sou o Pyter! Tudo bem?
     utter_despedir:
         - text: |
             Foi um prazer te ajudar!
@@ -150,6 +153,7 @@ templates:
             Opa opa, como posso te ajudar?
         - text: |
             Não se precupe meu cosagrado, tudo vai ficar bem!
+
     utter_animar:
         - text: |
             Não desista. Continue tentando!
@@ -167,6 +171,26 @@ templates:
             Faça o tutorial, já é um bom começo!
         - text: |
             Ei! Lembre-se de sempre anotar o que achar importante!
+
+    utter_ajuda:
+        - text: |
+
+             Por enquanto eu só posso te ajudar nos seguintes temas:
+
+             Importar arquivos JSON
+
+             Importar arquivos CSV
+
+             Entender e detectar Dados Faltantes
+
+             Plotar Histograma
+
+             Calcular Correlação
+
+             Uma introdução ao Jupyter Notebook
+
+             Em breve vou aprender novas funcionalidades! Mas espero que essas atendam sua necessidade :)
+
 
     utter_entender_histograma:
         - text: |
@@ -294,12 +318,12 @@ templates:
     utter_explicar_csv:
         - text: |
             Comma-separated values (ou CSV) é um formato de arquivo que armazena dados tabelados, cujo grande uso data da época dos mainframes.
-            
+
             Beleza, bora aprender a manusear um CSV?
 
         - text: |
             O CSV é um implementação particular de arquivos de texto separados por um delimitador, que usa a vírgula e a quebra de linha para separar os valores.
- 
+
             Beleza, bora aprender a manusear um CSV?
 
         - text: |
@@ -310,7 +334,7 @@ templates:
     utter_tirar_duvidas_de_implementacao:
         - text: |
             Temos alguns jeitos de importar um arquivo csv em python,vou te falar dois modos,um é importando a biblioteca csv e utilizando a função open().
-            
+
             Outra forma é importando a biblioteca pandas usando a função read_csv()
 
         - text: |
@@ -323,9 +347,9 @@ templates:
     utter_entender_correlacao:
         - text: |
             A Correlação indica interdependência entre duas ou mais variáveis, e serve para determinar a intensidade da relação entre essas variáveis.
-   
+
             Sabendo disso, o próximo conceito é a matriz de correlação. Deseja ver mais?
-            
+
     utter_matriz_correlacao:
         - text: |
             A Matriz de Correlação serve para determinarmos a intensidade da relação com uma quantidade maior de valores com um grau de complexidade maior.
@@ -357,7 +381,7 @@ templates:
     utter_entender_dados_faltantes:
         - text: |
             Consiste em valores vazios ou inesperados encontrados em um dataset antes da fase de pré processamento.
-        
+
     utter_causa_dados_faltantes:
         - text: |
             Boa meu consagrado!
@@ -370,7 +394,7 @@ templates:
     utter_iniciar_a_deteccao:
         - text: |
             Para iniciar a detecção será necessário a utilização da biblioteca pandas.
-                    
+
             Vamos conferir como visualizar o dataset?
 
     utter_visualizar_dados_faltantes:
@@ -384,7 +408,7 @@ templates:
     utter_dados_faltantes_padronizados:
         - text: |
             A biblioteca pandas, apenas, identifica dados faltantes padronizados,geralmente, representados por "NaN"
-                
+
             ![Alt Text](https://i.imgur.com/BORLI3C.png)
 
             Deseja saber como lidar com dados faltantes não padronizados?
@@ -400,11 +424,11 @@ templates:
     utter_corrigir_a_deteccao:
         - text: |
             Para corrigir problemas de dados faltantes, é necessário a utilização de métodos como:
-                
+
                 . Substuição por constante
                 . Substituição baseada no lugar
                 . Substituição por mediana
-            
+
                 Faça sua opção!
 
     utter_substituicao_constante:
@@ -418,7 +442,7 @@ templates:
             Imputação baseada no lugar
 
             ![Alt Text](https://i.imgur.com/kX2ivBO.png)
-            
+
     utter_substituicao_mediana:
         - text: |
             Substituição por mediana
