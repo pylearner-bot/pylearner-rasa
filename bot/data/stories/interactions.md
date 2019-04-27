@@ -89,3 +89,7 @@
 ## Religião
 * credo_religioso
     - utter_teologia
+
+## Créditos
+* sobre_pyter
+    - utter_sobre_pyter

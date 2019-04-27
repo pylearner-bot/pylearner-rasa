@@ -336,3 +336,17 @@
 - neo ateu
 - Deus e amor
 - Deus nao esta morto
+
+## intent:sobre_pyter
+
+- quem e voce
+- quem e pyter
+- quem te criou
+- quem te fez
+- quem sao teus criadores
+- quem e vc
+- qual seu nome
+- me fale sobre voce
+- suas informações
+- suas credenciais
+- se apresente para mim 

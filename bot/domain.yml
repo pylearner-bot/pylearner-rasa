@@ -34,6 +34,7 @@ intents:
   - responder_negativamente
   - responder_negativamente_diretamente
   - credo_religioso
+  - sobre_pyter
 
 actions:
 
@@ -79,6 +80,7 @@ actions:
   - utter_bom_humor2
   - utter_animar_respondendo
   - utter_teologia
+  - utter_sobre_pyter
 
 templates:
 
@@ -522,3 +524,13 @@ templates:
             Foca nos estudos aí então
 
             Flws
+
+    utter_sobre_pyter:
+        - text: |
+            Eu sou o Pyter! E como você pode perceber eu sou um bot hehe
+
+            Fui desenvolvido, supervisionado e treinado pelo Álex, Bruno, Carlos, Davi, Ernando, Eugênio, João, Thiago e Ziegler
+
+            Fui programado para sanar suas dúvidas em Machine Learning e te guiar em algumas etapas!
+
+            Se quiser saber mais detalhes, dá uma lida na minha documentação :)
