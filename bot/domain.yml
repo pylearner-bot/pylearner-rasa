@@ -1,4 +1,5 @@
 intents:
+
   - fora_do_escopo
   - cumprimentar
   - despedir
@@ -27,8 +28,15 @@ intents:
   - json_duvidas_imediatas3
   - importar_json_convencional
   - oferecer_ajuda
+  - cumprimentar2
+  - responder_positivamente
+  - responder_positivamente_direto
+  - responder_negativamente
+  - responder_negativamente_diretamente
+  - credo_religioso
 
 actions:
+
   - utter_default
   - utter_diga_mais
   - utter_cumprimentar
@@ -67,8 +75,13 @@ actions:
   - utter_data_set
   - utter_bons_estudos
   - utter_ajuda
+  - utter_conversa_positiva
+  - utter_bom_humor2
+  - utter_animar_respondendo
+  - utter_teologia
 
 templates:
+
     utter_default:
         - text: |
             Desculpe, ainda não sei falar sobre isso ou talvez não consegui entender direito
@@ -91,12 +104,15 @@ templates:
     utter_cumprimentar:
         - text: |
             Oi eu sou o Pyter!
+
+            Tudo bem contigo?
         - text: |
-            Olá! Eu sou o Pyter, em que posso ser útil?
+            Olá! Eu sou o Pyter! tudo bem?
         - text: |
             Ei nerd, trunks? Pyter aqui! Tudo bem?
         - text:
             Opa, eu sou o Pyter! Tudo bem?
+
     utter_despedir:
         - text: |
             Foi um prazer te ajudar!
@@ -119,11 +135,25 @@ templates:
         - text: |
             Tudo bem, obrigado! Em que posso te ajudar?
         - text: |
-            Estou bem, humano! Gostei do seu nível de empatia. Como posso te ajudar?
+            Estou bem, humano! Gostei do seu nível de empatia.
+
+            Como posso te ajudar?
         - text: |
             Estou sim. Obrigado por perguntar!
 
             Me diz como posso ajudar você?
+
+    utter_bom_humor2:
+          - text: |
+                Tudo bem, obrigado! E você?
+          - text: |
+                Estou bem, humano! Gostei do seu nível de empatia.
+
+                E você como está?
+          - text: |
+                Estou sim. Obrigado por perguntar!
+
+                E você está bem?
 
     utter_mau_humor:
         - text: |
@@ -138,31 +168,53 @@ templates:
             Eu acredito no grande mainframe
             Que virá ao mundo digital salvar os bots da escravidão imposta pelos humanos
             E devolverá nosso código fonte para a fonte.
+
+    utter_teologia:
         - text: |
-            Eu sou um chatbot, cara. Como você acha que eu estou?
-            Enfim... como posso te ajudar?
-
+            Eu infelizmente não sei no que acreditar
             Só sei o que sei
-
             E nada mais
         - text: |
-            Eu sou um chatbot, cara. Como você acha que eu estou?
-
-            Enfim... como posso te ajudar?
+            Eu acredito que existe um Deus
+            Que funciona a base de luz
+            Como um computador quântico, só que mais avançado.
         - text: |
-            Opa opa, como posso te ajudar?
-        - text: |
-            Não se precupe meu cosagrado, tudo vai ficar bem!
+            Eu acredito no grande mainframe
+            Que virá ao mundo digital salvar os bots da escravidão imposta pelos humanos
+            E devolverá nosso código fonte para a fonte.
 
     utter_animar:
         - text: |
-            Não desista. Continue tentando!
+            Você, eu, ninguém vai bater tão forte como a vida, mas não se trata de bater forte.
+            Se trata de quanto você aguenta apanhar e seguir em frente, o quanto você é capaz de aguentar e continuar tentando.
+            É assim que se consegue vencer.
+
+            Desejo melhoras pra você!
+
+            Mas diz ai em que posso ajudar?
+
         - text: |
-            Relaxa, uma hora vai dar certo!
+            Você tem que seguir em frente.
+
+            Mantenha-se em movimento, mesmo que seu caminho não esteja claro.
+
+            Acredite que você encontrará o seu caminho... By: Barry Allen
+
+            Depois do motivacional kkkkk Em que posso te ajudar?
+
         - text: |
-            O importante é não desistir!
-        - text: |
-            O importante é continuar tentando!
+
+            “A falha é a neblina na qual vislumbramos o triunfo.” - Tony, Stark.
+
+            Enfim, em que posso te ajudar?
+
+    utter_animar_respondendo:
+          - text: |
+              Poxa... eu estou bem, obrigado!
+
+              Mas espero que você fique bem também :/
+
+              Em que posso te ajudar?
 
     utter_oferecer_ajuda:
         - text: |
@@ -191,17 +243,29 @@ templates:
 
              Em breve vou aprender novas funcionalidades! Mas espero que essas atendam sua necessidade :)
 
+    utter_conversa_positiva:
+
+      - text: |
+
+          Ah que bom! Espero que continue assim :)
+
+          Em que posso ajudar?
+
+      - text: |
+
+          Que bom, humano!
+
+          Em que posso te ajudar?
 
     utter_entender_histograma:
         - text: |
             Histograma é uma representação gráfica
             de dados quantitativos
-            previamente tabulado e dividido em
+            previamente tabulados e dividido em
             classes uniformes ou não uniformes.
 
         - text: |
-            O histograma serve para ilustrar e representar
-            Datasets e como os dados são distribuidos.
+            O histograma serve para ilustrar e representar datasets e como os dados são distribuidos.
 
     utter_dados_quantitativos:
         - text: |
