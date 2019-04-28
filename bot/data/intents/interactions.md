@@ -307,6 +307,17 @@
 - estou me sentindo muito bem
 - isso ae
 - boa
+- de boa
+- top
+- topper
+- tranquilo
+- suave
+- dibs
+- bao
+- ok
+- tranqs
+- bem
+- bom
 
 ## intent:mau_humor
 
@@ -350,3 +361,15 @@
 - suas informações
 - suas credenciais
 - se apresente para mim 
+
+## intent sobre_jupyter
+
+- jupyter
+- o que e jupyter
+- para que serve o jupyter
+- onde estou
+- por que jupyter
+- notebook
+- jupyter notebook
+- o que e notebook
+- o que sao notebooks

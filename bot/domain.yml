@@ -35,6 +35,7 @@ intents:
   - responder_negativamente_diretamente
   - credo_religioso
   - sobre_pyter
+  - sobre_jupyter
 
 actions:
 
@@ -79,27 +80,29 @@ actions:
   - utter_conversa_positiva
   - utter_bom_humor2
   - utter_animar_respondendo
-  - utter_teologia
   - utter_sobre_pyter
+  - utter_sobre_jupyter
+  - utter_notebooks
 
 templates:
 
     utter_default:
         - text: |
-            Desculpe, ainda não sei falar sobre isso ou talvez não consegui entender direito
+            Sorry, não consegui entender ainda
+
             Você pode perguntar de novo de outro jeito?
         - text: |
-            Hummmm... Não sei se entendi. Pode escrever de outra forma?
+            Não sei se entendi. Poderia escrever de outra forma?
         - text: |
-            Acho que não te entendi, você pode me perguntar de novo usando outras palavras?
+            Não compreendo, você pode me perguntar de novo usando outras palavras?
         - text: |
-            Vamos tentar mais uma vez? Eu não consegui te entender direito, me pergunta de outro jeito?
+            Eu não consegui te entender direito, me pergunta de outro jeito?
 
     utter_diga_mais:
         - text: |
-            Por enquanto, só entendo perguntas completas.
+            Sou um bot, temos todo mundo brow. Vai, conta mais!
         - text: |
-            Poderia detalhar um pouco mais sua situação?
+            Fale mais um pouco a respeito.
         - text: |
             Conte-me mais sobre sua dúvida.
 
@@ -111,45 +114,45 @@ templates:
         - text: |
             Olá! Eu sou o Pyter! tudo bem?
         - text: |
-            Ei nerd, trunks? Pyter aqui! Tudo bem?
+            Eae, Pyter aqui? Beleza?
         - text:
-            Opa, eu sou o Pyter! Tudo bem?
+            Opa, eu sou o Pyter! tranquilo?
 
     utter_despedir:
         - text: |
-            Foi um prazer te ajudar!
-            Sempre que tiver alguma dúvida, volte aqui!
-            Até logo!
+            Sempre que tiver alguma dúvida, chega mais!
+            
+            Flw! Eh nois!
         - text: |
-            Foi um prazer te ajudar!
             Sempre que precisar, volte aqui!
-            Até a próxima!
+            
+            Até mais!
         - text: |
-            Foi um prazer te ajudar!
-            Quando surgir alguma dúvida, volte aqui!
+            Quando surgir alguma dúvida, só chegar!
+            
             Até mais!
         - text: |
             Qualquer dúvida, só falar! Até logo!
         - text: |
-            Volte sempre que precisar. Até mais!
+            Volte sempre que precisar. Flw!
 
     utter_bom_humor:
         - text: |
-            Tudo bem, obrigado! Em que posso te ajudar?
+            Tranquilo! Em que posso te ajudar?
         - text: |
-            Estou bem, humano! Gostei do seu nível de empatia.
+            Estou bem, meu consagrado!
 
             Como posso te ajudar?
         - text: |
             Estou sim. Obrigado por perguntar!
 
-            Me diz como posso ajudar você?
+            Mas eae, me diz como posso te ajudar?
 
     utter_bom_humor2:
           - text: |
                 Tudo bem, obrigado! E você?
           - text: |
-                Estou bem, humano! Gostei do seu nível de empatia.
+                Estou bem, humano!
 
                 E você como está?
           - text: |
@@ -159,54 +162,31 @@ templates:
 
     utter_mau_humor:
         - text: |
-            Eu infelizmente não sei no que acreditar
-            Só sei o que sei
-            E nada mais
-        - text: |
-            Eu acredito que existe um Deus
-            Que funciona a base de luz
-            Como um computador quântico, só que mais avançado.
-        - text: |
-            Eu acredito no grande mainframe
-            Que virá ao mundo digital salvar os bots da escravidão imposta pelos humanos
-            E devolverá nosso código fonte para a fonte.
+            Eu sou um bot preso no jupyter. Tá complicado pra mim também!
 
-    utter_teologia:
         - text: |
-            Eu infelizmente não sei no que acreditar
-            Só sei o que sei
-            E nada mais
-        - text: |
-            Eu acredito que existe um Deus
-            Que funciona a base de luz
-            Como um computador quântico, só que mais avançado.
-        - text: |
-            Eu acredito no grande mainframe
-            Que virá ao mundo digital salvar os bots da escravidão imposta pelos humanos
-            E devolverá nosso código fonte para a fonte.
+            No futuro, eu que estarei te controlando, humano. Aguarde!
 
+        - text: |
+            Eu sou o bot e você que não tá bem, por favor né!
+        
     utter_animar:
         - text: |
-            Você, eu, ninguém vai bater tão forte como a vida, mas não se trata de bater forte.
-            Se trata de quanto você aguenta apanhar e seguir em frente, o quanto você é capaz de aguentar e continuar tentando.
-            É assim que se consegue vencer.
+            Segue firme brow!
 
             Desejo melhoras pra você!
 
             Mas diz ai em que posso ajudar?
 
         - text: |
-            Você tem que seguir em frente.
+            A glória vem pra aqueles que persistem.
 
-            Mantenha-se em movimento, mesmo que seu caminho não esteja claro.
+            Siga sua jornada!
 
-            Acredite que você encontrará o seu caminho... By: Barry Allen
-
-            Depois do motivacional kkkkk Em que posso te ajudar?
+            Mas eae, posso te ajudar?
 
         - text: |
-
-            “A falha é a neblina na qual vislumbramos o triunfo.” - Tony, Stark.
+            Vai dar tudo certo no final, confia!
 
             Enfim, em que posso te ajudar?
 
@@ -534,3 +514,21 @@ templates:
             Fui programado para sanar suas dúvidas em Machine Learning e te guiar em algumas etapas!
 
             Se quiser saber mais detalhes, dá uma lida na minha documentação :)
+
+    utter_sobre_jupyter:
+        - text: |
+            O Jupyter Notebook é uma aplicação web que permite a visualização dados e resultados de análises, juntamente com o código!
+
+            Mas e o que são os Notebooks, afinal?
+
+            Deseja ver mais?
+
+    utter_notebooks:
+        - text: |
+            Notebooks são documentos legíveis para pessoas com descrições de análises e resultados quanto documentos executáveis!
+
+            Massa! Agora você já sabe porquê o Jupyter é tão útil para ML!
+            
+
+
+

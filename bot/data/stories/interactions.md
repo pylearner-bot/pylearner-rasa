@@ -86,10 +86,18 @@
 * responder_negativamente
     - utter_animar
 
-## Religião
-* credo_religioso
-    - utter_teologia
-
 ## Créditos
 * sobre_pyter
     - utter_sobre_pyter
+
+## Sobre o jupyter
+* sobre_jupyter
+    - utter_sobre_jupyter
+* afirmar
+    - utter_notebooks
+
+## Sobre o Jupyter negativamente
+* sobre_jupyter
+    - utter_sobre_jupyter
+* negar
+    - utter_bons_estudos
