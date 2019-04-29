@@ -347,11 +347,3 @@ templates:
     utter_importar_excel:
         - text: |
             Primeiro,importaremos a biblioteca openpyxl pois Python por si só nao faz essa manipulação de dados excel,depois importaremos o Workbook de dentro da biblioteca e agora so usar a função load_workbook(filename='arquivo.xlsx') e pronto,agora é com você.
-        - text: |
-           
-        - text: |
-            Existem diversos índices usados para se calcular correlação, mas iremos começar usando o mais clássico, o coeficiente de Pearson, que é dado pela seguinte expressão matemática 
-            
-            image: "https://imgur.com/bX1AUFn.png"
-
-            Existem outros como o de Spearman e Kenda
