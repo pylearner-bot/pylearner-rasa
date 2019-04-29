@@ -344,3 +344,14 @@ templates:
 
         - text: |
             O grau de correlação é interpretado da seguinte manteira. Ele pode variar entre -1 e 1,e o resultado obtido define se a correlação é negativa ou positiva, sendo que -1  significa que é perfeita positiva, e -1 que é perfeita negativa
+    utter_importar_excel:
+        - text: |
+            Primeiro,importaremos a biblioteca openpyxl pois Python por si só nao faz essa manipulação de dados excel,depois importaremos o Workbook de dentro da biblioteca e agora so usar a função load_workbook(filename='arquivo.xlsx') e pronto,agora é com você.
+        - text: |
+           
+        - text: |
+            Existem diversos índices usados para se calcular correlação, mas iremos começar usando o mais clássico, o coeficiente de Pearson, que é dado pela seguinte expressão matemática 
+            
+            image: "https://imgur.com/bX1AUFn.png"
+
+            Existem outros como o de Spearman e Kenda
