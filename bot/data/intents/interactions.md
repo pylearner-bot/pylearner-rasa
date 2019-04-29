@@ -331,22 +331,6 @@
 - chateado
 - muito triste
 
-## intent:credo_religioso
-
-- voce acredita em Deus
-- quem e Deus
-- Deus e bom
-- voce e cristao
-- no que voce acredita
-- voce e ateu
-- voce e crente
-- voce segue alguma religiao
-- voce segue algum credo religioso
-- voce e de Deus
-- ateuzinho
-- neo ateu
-- Deus e amor
-- Deus nao esta morto
 
 ## intent:sobre_pyter
 
@@ -362,7 +346,7 @@
 - suas credenciais
 - se apresente para mim 
 
-## intent sobre_jupyter
+## intent:sobre_jupyter
 
 - jupyter
 - o que e jupyter

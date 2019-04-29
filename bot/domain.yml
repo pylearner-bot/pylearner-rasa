@@ -33,7 +33,6 @@ intents:
   - responder_positivamente_direto
   - responder_negativamente
   - responder_negativamente_diretamente
-  - credo_religioso
   - sobre_pyter
   - sobre_jupyter
 
