@@ -1,5 +1,7 @@
 ## intent: oferecer_ajuda
 - O que vc faz
+- aprender
+- duvida
 - O que voce faz
 - preciso de ajuda
 - me de ajuda
@@ -15,7 +17,7 @@
 - como voce pode me ajudar
 - me ajuda ae
 - poderia me ajudar em que
--  o que voce sabe
+- o que voce sabe
 - em que voce pode me ajudar
 - no que vc pode me ajudar
 - o que voce pode me ensinar
