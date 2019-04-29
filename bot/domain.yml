@@ -87,9 +87,8 @@ templates:
 
     utter_default:
         - text: |
-            Sorry, não consegui entender ainda
-
-            Você pode perguntar de novo de outro jeito?
+            Desculpe, não consegui entender você
+            Poderia perguntar novamente?
         - text: |
             Não sei se entendi. Poderia escrever de outra forma?
         - text: |
@@ -99,7 +98,7 @@ templates:
 
     utter_diga_mais:
         - text: |
-            Sou um bot, temos todo mundo brow. Vai, conta mais!
+            Sou um bot pronto para tirar suas duvidas!
         - text: |
             Fale mais um pouco a respeito.
         - text: |
@@ -108,27 +107,20 @@ templates:
     utter_cumprimentar:
         - text: |
             Oi eu sou o Pyter!
-
             Tudo bem contigo?
         - text: |
             Olá! Eu sou o Pyter! tudo bem?
         - text: |
-            Eae, Pyter aqui? Beleza?
+            Eae, Pyter aqui! Beleza?
         - text:
             Opa, eu sou o Pyter! tranquilo?
 
     utter_despedir:
         - text: |
-            Sempre que tiver alguma dúvida, chega mais!
-            
-            Flw! Eh nois!
+            Sempre que tiver alguma dúvida, pode contar comigo!
+            Até a próxima!
         - text: |
             Sempre que precisar, volte aqui!
-            
-            Até mais!
-        - text: |
-            Quando surgir alguma dúvida, só chegar!
-            
             Até mais!
         - text: |
             Qualquer dúvida, só falar! Até logo!
@@ -139,24 +131,20 @@ templates:
         - text: |
             Tranquilo! Em que posso te ajudar?
         - text: |
-            Estou bem, meu consagrado!
-
+            Passo bem
             Como posso te ajudar?
         - text: |
             Estou sim. Obrigado por perguntar!
-
             Mas eae, me diz como posso te ajudar?
 
     utter_bom_humor2:
           - text: |
                 Tudo bem, obrigado! E você?
           - text: |
-                Estou bem, humano!
-
+                Estou bem!
                 E você como está?
           - text: |
                 Estou sim. Obrigado por perguntar!
-
                 E você está bem?
 
     utter_mau_humor:
@@ -164,37 +152,27 @@ templates:
             Eu sou um bot preso no jupyter. Tá complicado pra mim também!
 
         - text: |
-            No futuro, eu que estarei te controlando, humano. Aguarde!
-
-        - text: |
-            Eu sou o bot e você que não tá bem, por favor né!
+            Infelizmente não posso ajudar nisso...
         
     utter_animar:
         - text: |
-            Segue firme brow!
-
+            Segue firme!
             Desejo melhoras pra você!
-
             Mas diz ai em que posso ajudar?
 
         - text: |
             A glória vem pra aqueles que persistem.
-
             Siga sua jornada!
-
             Mas eae, posso te ajudar?
 
         - text: |
             Vai dar tudo certo no final, confia!
-
             Enfim, em que posso te ajudar?
 
     utter_animar_respondendo:
           - text: |
               Poxa... eu estou bem, obrigado!
-
               Mas espero que você fique bem também :/
-
               Em que posso te ajudar?
 
     utter_oferecer_ajuda:
@@ -210,9 +188,7 @@ templates:
 
              Por enquanto eu só posso te ajudar nos seguintes temas:
 
-             Importar arquivos JSON
-
-             Importar arquivos CSV
+             Importar arquivos JSON e CSV
 
              Entender e detectar Dados Faltantes
 
@@ -220,22 +196,22 @@ templates:
 
              Calcular Correlação
 
-             Uma introdução ao Jupyter Notebook
+             Introdução ao Jupyter Notebook
 
              Em breve vou aprender novas funcionalidades! Mas espero que essas atendam sua necessidade :)
+        - text: |
+            Escreva sua duvida que estarei te ajudando!
 
     utter_conversa_positiva:
 
       - text: |
 
           Ah que bom! Espero que continue assim :)
-
           Em que posso ajudar?
 
       - text: |
 
-          Que bom, humano!
-
+          Que bom!
           Em que posso te ajudar?
 
     utter_entender_histograma:
@@ -257,30 +233,28 @@ templates:
     utter_data_set:
         - text: |
             Datasets são um conjunto de dados
-
-            Que são representados em tabelas
-
-            Onde as linhas são os dados quantitativos e as colunas são as características.
+            que são representados em tabelas
+            onde as linhas são os dados quantitativos e as colunas são as características.
 
     utter_criar_histograma:
         - text: |
-            Para plotar o histograma podemos usar o seaborn! Use a função:
-
-            sns.distplot(a=file['column'],kde=False)
+            Para plotar o histograma podemos usar o seaborn!
+            
+            Primeiramente importe a função:
+                import seaborn as sns
+            Após isso chame a função:
+                sns.distplot(a=file['column'],kde=False)
 
             Onde o primeiro parametro é qual coluna do dataset quer plotar!
-
             Tem como plotar um histograma com curvas mais suavizadas! Quer conferir?
 
     utter_criar_histograma2:
         - text: |
             Boa! Gostei da dedicação hehe
-
             Espero que seja útil pro teu projeto!
-
             Voltando ao assunto...
-
-            Se tu quiser um histograma com curvas mais suaves pode usar a função
+            
+            Se tu quiser um histograma com curvas mais suaves pode usar a função:
 
             sns.kdeplot(a=file['column'],shade=True)
 
@@ -305,55 +279,42 @@ templates:
 
     utter_importar_json_pandas:
         - text: |
-            O primeiro passo talvez seja baixar a biblioteca Pandas! Abra o terminal e digite:
+            O primeiro passo talvez seja baixar a biblioteca Pandas! Na celula do jupyter notebook digite o codigo:
+                !pip install pandas
 
-            ![Alt Text](https://i.imgur.com/qxiwHrV.png)
-
-            Eae já tem instalado?
+            Está instalado?
 
     utter_importar_json_pandas1:
         - text: |
             Então vamos continuar!
             O próximo passo é importar as bibliotecas! Só copiar e colar:
-
-            ![Alt Text](https://imgur.com/33ZwMJW.png)
+                import pandas as pd
 
             Agora vamos ler os dados do arquivo que você deseja e setá-lo em uma variável, bem assim:
+                pd.read_json(file, lines=True)
 
-            ![Alt Text](https://imgur.com/ObqpL3u.png)
-
-            Agora você vai "Pandarizar" os dados da seguinte forma também com o auxilio de uma variável:
-
-            ![Alt Text](https://imgur.com/I0Mxdq7.png)
-
-            Pronto! Se você printar essa variável aux vai ver seus dados bem mais organizados :D
+            Pronto! 
 
     utter_importar_json_pandas2:
         - text: |
             Blz! Enquanto você faz o teu download vou te adiantar o necessário!
             O próximo passo, após o download, é importar as bibliotecas!
-
-            ![Alt Text](https://imgur.com/33ZwMJW.png)
+                import pandas as pd
 
             Agora vamos ler os dados do arquivo que você deseja e setá-lo em uma variável, bem assim:
+                pd.read_json(file, lines=True)
 
-            ![Alt Text](https://imgur.com/ObqpL3u.png)
-
-            Agora você vai "Pandarizar" os dados da seguinte forma também com o auxilio de uma variável:
-
-            ![Alt Text](https://imgur.com/I0Mxdq7.png)
-
-            Pronto! Se você printar essa variável aux vai ver seus dados bem mais organizados :D
+            Pronto! 
 
     utter_json_duvidas_rapidas1:
         - text: |
-
-            ![Alt Text](https://imgur.com/33ZwMJW.png)
+            Para importar o pandas:
+                import pandas as pd
 
     utter_json_duvidas_rapidas2:
         - text: |
-
-            ![Alt Text](https://imgur.com/ObqpL3u.png)
+            Para carregar o arquivo JSON:
+                pd.read_json(file, lines=True)
 
     utter_json_duvidas_rapidas3:
         - text: |
@@ -378,22 +339,21 @@ templates:
 
     utter_tirar_duvidas_de_implementacao:
         - text: |
-            Temos alguns jeitos de importar um arquivo csv em python,vou te falar dois modos,um é importando a biblioteca csv e utilizando a função open().
-
-            Outra forma é importando a biblioteca pandas usando a função read_csv()
-
-        - text: |
-            Você pode escolher entre a biblioteca csv ou a pandas.
-
-            Com pandas: Use a função read_csv()
-
-            Com a biblioteca CSV: open()
-
+            Primeiramente importe o pandas: 
+                import pandas as pd
+            Logo após, chame a função read_csv():
+                pd.read_csv(file)
+            
     utter_entender_correlacao:
         - text: |
             A Correlação indica interdependência entre duas ou mais variáveis, e serve para determinar a intensidade da relação entre essas variáveis.
 
             Sabendo disso, o próximo conceito é a matriz de correlação. Deseja ver mais?
+        - text: |
+            O grau de correlação é interpretado da seguinte maneira. Ele pode variar entre -1 e 1,e o resultado obtido define se a correlação é negativa ou positiva,
+            sendo que -1  significa que é perfeita positiva, e -1 que é perfeita negativa. 
+            
+            Vamos implementar?   
 
     utter_matriz_correlacao:
         - text: |
@@ -403,33 +363,27 @@ templates:
 
     utter_indice_correlacao:
         - text: |
-            Iremos começar usando o mais clássico, o coeficiente de Pearson, que é dado pela seguinte expressão matemática
-
-            ![Alt Text](https://imgur.com/bX1AUFn.png)
+            Iremos começar usando o mais clássico, o coeficiente de Pearson!
 
             Existem outros como o de Spearman e Kendall, que também é possível fazer usando o Pandas
 
     utter_calcular_correlacao:
         - text: |
-            Primeiramente, vamos importar a biblioteca Pandas
+            Primeiramente, vamos importar a biblioteca Pandas:
+                import pandas as pd
 
-            ![Alt Text](https://imgur.com/gyJ48P7.png)
-
-            Depois, você irá usar o seu dataset e chamar a função do pandas corr(), que irá calcular a correlação entre as colunas do seu dataset, vamos armazenar na varíavel correlation
-
-            ![Alt Text](https://i.imgur.com/KWfnZy1.png)
+            Depois, você irá usar o seu dataset e chamar a função do pandas corr(), que irá calcular a correlação entre as colunas do seu dataset, vamos armazenar na varíavel correlation:
+                correlation = dataset_open_with_pandas.corr()
 
             Agora, na nossa varíavel correlation está armazenado o resultado da correlação de nossos dados.
 
-        - text: |
-            O grau de correlação é interpretado da seguinte manteira. Ele pode variar entre -1 e 1,e o resultado obtido define se a correlação é negativa ou positiva, sendo que -1  significa que é perfeita positiva, e -1 que é perfeita negativa
     utter_entender_dados_faltantes:
         - text: |
             Consiste em valores vazios ou inesperados encontrados em um dataset antes da fase de pré processamento.
 
     utter_causa_dados_faltantes:
         - text: |
-            Boa meu consagrado!
+            Muito bem!
 
             Dentre os motivos
                     . Houve esquecimento no preenchimento de um campo por um usuário
