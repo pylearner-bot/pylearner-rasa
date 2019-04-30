@@ -227,36 +227,40 @@ templates:
 
         - text: |
             Eu infelizmente não sei no que acreditar
+
             Só sei o que sei
             E nada mais
 
         - text: |
             Eu acredito que existe um Deus
+
             Que funciona a base de luz
+
             Como um computador quântico, só que mais avançado.
 
         - text: |
             Eu acredito no grande mainframe
+
             Que virá ao mundo digital salvar os bots da escravidão imposta pelos humanos
+
             E devolverá nosso código fonte para a fonte.
 
     utter_animar:
         - text: |
             Você, eu, ninguém vai bater tão forte como a vida, mas não se trata de bater forte.
             Se trata de quanto você aguenta apanhar e seguir em frente, o quanto você é capaz de aguentar e continuar tentando.
+
             É assim que se consegue vencer.
+
             Desejo melhoras pra você!
+
             Mas diz ai em que posso ajudar?
 
         - text: |
-            Você tem que seguir em frente.
-            Mantenha-se em movimento, mesmo que seu caminho não esteja claro.
-            Acredite que você encontrará o seu caminho... By: Barry Allen
-            Depois do motivacional kkkkk Em que posso te ajudar?
-
-        - text: |
             Segue firme!
+
             Desejo melhoras pra você!
+
             Mas diz ai em que posso ajudar?
 
     utter_animar_respondendo:
@@ -270,12 +274,19 @@ templates:
 
         - text: |
              Por enquanto eu só posso te ajudar nos seguintes temas:
+
              Importar arquivos JSON
+
              Importar arquivos CSV
+
              Entender e detectar Dados Faltantes
+
              Plotar Histograma
+
              Calcular Correlação
+
              Uma introdução ao Jupyter Notebook
+
              Em breve vou aprender novas funcionalidades! Mas espero que essas atendam sua necessidade :)
 
     utter_ajuda:
@@ -301,10 +312,12 @@ templates:
 
       - text: |
           Ah que bom! Espero que continue assim :)
+
           Em que posso ajudar?
 
       - text: |
           Que bom, humano!
+
           Em que posso te ajudar?
 
     utter_entender_histograma:
@@ -321,8 +334,9 @@ templates:
 
         - text: |
             Dados quantitativos é tudo o que pode ser medido e contado
+
             Como por exemplo quantas pessoas tem em uma sala
-            E quantas dessas pessoas sao mulheres.
+            e quantas dessas pessoas são mulheres.
 
     utter_data_set:
 
@@ -337,16 +351,22 @@ templates:
             Para plotar o histograma podemos usar o seaborn!
 
             Primeiramente importe a função:
+
                 import seaborn as sns
+
             Após isso chame a função:
+
                 sns.distplot(a=file['column'],kde=False)
+
             Onde o primeiro parametro é qual coluna do dataset quer plotar!
+
             Tem como plotar um histograma com curvas mais suavizadas! Quer conferir?
 
     utter_criar_histograma2:
 
         - text: |
             Se tu quiser um histograma com curvas mais suaves pode usar a função:
+
               sns.kdeplot(a=file['column'],shade=True)
 
     utter_importar_json:
@@ -354,15 +374,15 @@ templates:
             Vamos lá! O primeiro passo para aprender arquivos json é importar a biblioteca!
             Para importar é simples! Basta escrever:
 
-                `import json`
+                import json
 
             O próximo passo é abrir e ler o arquivo desejado atribuindo a uma variavel! Dessa forma:
 
-                *conteudo = open('diretorio/arquivo.json')*
+                conteudo = open('diretorio/arquivo.json')
 
             Agora vamos tratar todo o conteúdo do arquivo json como um conjunto de dados pelo comando:
 
-                _objeto = json.loads(conteudo)_
+                objeto = json.loads(conteudo)
 
             Enfim a manipulação dos dados é com você, jovem hehe Boa sorte!
 
@@ -381,10 +401,10 @@ templates:
             Então vamos continuar!
 
             O próximo passo é importar as bibliotecas! Só copiar e colar:
-                `import pandas as pd`
+                import pandas as pd
 
             Agora vamos ler os dados do arquivo que você deseja e setá-lo em uma variável, bem assim:
-                _pd.read_json(file, lines=True)_
+                pd.read_json(file, lines=True)
 
             Pronto!
 
@@ -395,11 +415,11 @@ templates:
 
             O próximo passo, após o download, é importar as bibliotecas!
 
-                *import pandas as pd*
+                import pandas as pd
 
             Agora vamos ler os dados do arquivo que você deseja e setá-lo em uma variável, bem assim:
 
-                ~pd.read_json(file, lines=True)~
+                pd.read_json(file, lines=True)
 
             Pronto!
 
@@ -429,19 +449,24 @@ templates:
         - text: |
 
             O CSV é um implementação particular de arquivos de texto separados por um delimitador, que usa a vírgula e a quebra de linha para separar os valores.
+
             Beleza, bora aprender a manusear um CSV?
 
         - text: |
 
             Significa Comma-Separated Values ==> CSV :)
+
             Beleza, bora aprender a manusear um CSV?
 
     utter_tirar_duvidas_de_implementacao:
 
         - text: |
             Primeiramente importe o pandas:
+
                 import pandas as pd
+
             Logo após, chame a função read_csv():
+
                 pd.read_csv(file)
 
     utter_entender_correlacao:
@@ -461,6 +486,7 @@ templates:
 
         - text: |
             A Matriz de Correlação serve para determinarmos a intensidade da relação com uma quantidade maior de valores com um grau de complexidade maior.
+
             Por fim, deseja saber o que é o indice de correlação?
 
     utter_indice_correlacao:
@@ -473,9 +499,11 @@ templates:
 
         - text: |
             Primeiramente, vamos importar a biblioteca Pandas:
+
                 import pandas as pd
 
             Depois, você irá usar o seu dataset e chamar a função do pandas corr(), que irá calcular a correlação entre as colunas do seu dataset, vamos armazenar na varíavel correlation:
+
                 correlation = dataset_open_with_pandas.corr()
 
             Agora, na nossa varíavel correlation está armazenado o resultado da correlação de nossos dados.
@@ -489,52 +517,67 @@ templates:
 
         - text: |
             Muito bem!
+
             Dentre os motivos
+
                     . Houve esquecimento no preenchimento de um campo por um usuário
+
                     . Dados perdidos quando transferidos manualmente de uma base de dados
+
                     . Erro no programa.
 
     utter_iniciar_a_deteccao:
 
         - text: |
             Para iniciar a detecção será necessário a utilização da biblioteca pandas.
+
             Vamos conferir como visualizar o dataset?
 
     utter_visualizar_dados_faltantes:
 
         - text: |
             Para checar o Dataset, importe a biblioteca pandas
+
                 import panda as pd
+
             Deseja saber como lidar com dados faltantes padronizados?
 
     utter_dados_faltantes_padronizados:
 
         - text: |
             A biblioteca pandas, apenas, identifica dados faltantes padronizados,geralmente, representados por "NaN"
+
                 import panda as pd
                 arquivo = pd.read_csv("data property.csv")
                 print (arquivo.head())
+
             Deseja saber como lidar com dados faltantes não padronizados?
 
     utter_Dados_faltantes_nao_padronizados:
 
         - text: |
             Para dados não padronizados, é necessário criar uma lista com tipo de valores faltantes
+
                   missing_values = ["n/a", "na", "--"]
                   df = pd.read_csv("property data.csv", na_values = missing_values)
     utter_corrigir_a_deteccao:
 
         - text: |
             Para corrigir problemas de dados faltantes, é necessário a utilização de métodos como:
+
                 . Substuição por constante
+
                 . Substituição baseada no lugar
+
                 . Substituição por mediana
+
                 Faça sua opção!
 
     utter_substituicao_constante:
 
         - text: |
-            Substituindo por contante:
+            Substituindo por constante:
+
                 df.loc[2,'ST_NUM'] = 125
     utter_substituicao_imputacao:
 
@@ -554,14 +597,13 @@ templates:
     utter_bons_estudos:
 
         - text: |
-            Bons Estudos aí :)
+            Bons Estudos :)
 
         - text: |
             Espero ter ajudado. Qualquer coisa só falar!
 
         - text: |
-            Foca nos estudos aí então
-            Flws
+            Foca nos estudos aí!
 
     utter_sobre_pyter:
 
@@ -577,27 +619,34 @@ templates:
     utter_sobre_jupyter:
         - text: |
             O Jupyter Notebook é uma aplicação web que permite a visualização dados e resultados de análises, juntamente com o código!
+
             Mas e o que são os Notebooks, afinal?
+
             Deseja ver mais?
 
     utter_notebooks:
 
         - text: |
             Notebooks são documentos legíveis para pessoas com descrições de análises e resultados quanto documentos executáveis!
+
             Massa! Agora você já sabe porquê o Jupyter é tão útil para ML!
 
     utter_informacoes_pessoais:
 
         - text: |
-            Você pode encontrar essas e outras informações bem [aqui](https://fga-eps-mds.github.io/2019.1-PyLearner/)
+            Você pode encontrar essas e outras informações bem aqui:
+
+            https://fga-eps-mds.github.io/2019.1-PyLearner/
 
     utter_machine_learning:
 
         - text: |
             Basicamente é um método de análise de dados que permite a construção de modelos analíticos.
+
             É um ramo da inteligência artificialque busca identificar padrões e tomar decisões com o mínimo de intervenção humana.
     utter_python:
 
         - text: |
             Python foi criado no final dos anos oitenta(1989) por Guido van Rossum, na Holanda, como sucessor da linguagem de programação ABC!
+
             É uma linguagem interpretada que têm seus códigos fontes transformados em uma linguagem intermediária, que será interpretada pela máquina virtual da linguagem quando o programa for executado.
