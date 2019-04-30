@@ -86,6 +86,10 @@
 * responder_negativamente
     - utter_animar
 
+## Religião
+* credo_religioso
+    - utter_teologia
+
 ## Créditos
 * sobre_pyter
     - utter_sobre_pyter
@@ -101,3 +105,15 @@
     - utter_sobre_jupyter
 * negar
     - utter_bons_estudos
+
+## Documentação
+* informacoes_pessoais
+    - utter_informacoes_pessoais
+
+## Python
+* python_info
+    - utter_python
+
+## Machine Learning
+* Machine_Learning
+    - utter_machine_learning

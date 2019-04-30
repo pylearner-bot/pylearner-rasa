@@ -23,6 +23,19 @@
 - o que voce pode me ensinar
 - me ensina alguma coisa
 - me ensine algo
+- tenho duvida
+- duvida
+- duvidas
+- tenho muitas duvidas
+- duvidas
+- sanar minha duvida
+- tenho uma duvida
+- duvidas
+- me de uma dica
+- me da umas dicas
+- dicas
+- quero dicas
+- dicas do que voce sabe
 - me ensina algo relevante
 - o que voce pode oferecer
 - o que voce me ajuda

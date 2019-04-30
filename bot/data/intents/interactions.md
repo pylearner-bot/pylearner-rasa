@@ -344,7 +344,24 @@
 - me fale sobre voce
 - suas informações
 - suas credenciais
-- se apresente para mim 
+- se apresente para mim
+
+## intent:credo_religioso
+
+- voce acredita em Deus
+- quem e Deus
+- Deus e bom
+- voce e cristao
+- no que voce acredita
+- voce e ateu
+- voce e crente
+- voce segue alguma religiao
+- voce segue algum credo religioso
+- voce e de Deus
+- ateuzinho
+- neo ateu
+- Deus e amor
+- Deus nao esta morto
 
 ## intent:sobre_jupyter
 
@@ -357,3 +374,51 @@
 - jupyter notebook
 - o que e notebook
 - o que sao notebooks
+
+## intent:informacoes_pessoais
+
+- onde encontro sua documentação
+- onde encontro suas informações
+- tem cpf
+- rg
+- identidade
+- documentacao
+- onde posso te achar
+- tem git
+- git hub
+- voce e open source
+- Voce eh Software Livre
+- Softwate Livre
+- Onde posso colaborar
+- Como posso te ajudar a desenvolver
+- Como te desenvolver
+- Como te ajudar
+- Como posso contribuir
+- Seus documentos por favor
+- blitz
+
+## intent:Machine_Learning
+
+- o que e machine learning
+- machine learnig
+- o que eh ml
+- ml
+- machine learning
+
+## intent:python_info
+
+- o que e python
+- me conta sobre python
+- python
+- informações da sua linguagem
+- python3
+- me fale sobre python
+- pythones
+- pythonesco
+- diz ai sobre python
+- linguagem python
+- pythõ
+- anaconda
+- serpente
+- quem e python
+- me diga o que e python3
