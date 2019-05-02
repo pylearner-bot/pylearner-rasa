@@ -187,11 +187,13 @@ templates:
 
         - text: |
             Estou bem, humano! Gostei do seu nível de empatia.
+
             Como posso te ajudar?
 
         - text: |
-            Estou sim. Obrigado por perguntar!
-            Me diz como posso ajudar você?
+            Estou bem! Obrigado por perguntar!
+
+            Me diz como posso ajudar você :)
 
     utter_bom_humor2:
 

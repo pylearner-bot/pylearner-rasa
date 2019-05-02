@@ -1,6 +1,11 @@
 ## intent:entender_correlacao
 - o que e correlaçao
 - correlaçao
+- correlação
+- o que e correlação?
+- o que e correlacao
+- o que e correlaçao
+- correlacao 
 - para que serve a correlaçao
 - o que e uma matriz de correlaçao
 - o que indica os graus de correlaçao
