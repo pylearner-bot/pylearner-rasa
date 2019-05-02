@@ -1,4 +1,5 @@
 ## intent:fora_do_escopo
+
 - esta chovendo
 - ja e de noite
 - que dia e hoje
@@ -9,25 +10,17 @@
 - hoje e natal
 
 ## intent:cumprimentar
+
 - beleza
-- tudo bem
-- como vai
-- como vao as coisas
 - com licenca
-- tudo bom
-- pode me tirar uma duvida
-- gostaria de tirar uma duvida
-- to bem
 - tranquilo
 - estou bem
 - joia
-- de boa
 - fala ai
-- estou otimo
-- muito bem
 - bom dia
 - boa tarde
 - boa noite
+- boa madrugada
 - ola
 - oie
 - opa tudo bem
@@ -41,7 +34,149 @@
 - eae bro
 - fala bro
 
+## intent:cumprimentar2
+
+- oi tudo bem
+- oi como vai
+- oi como esta
+- eai tudo bem
+- eai beleza
+- eai blz
+- eae tudo bem
+- eae como vai
+- eae ta de boa
+- fala ai mano tudo bem
+- fala ai bro tudo bem
+- fala ae bro
+- oi tudo bom
+- oi blz
+- ola tudo bem
+- ola como vai
+- oie td bem
+- coe tudo bom
+- oi td bm
+- eae tudo okay
+- oie ta de boa
+- ola como e que ta
+- oi como e q ta
+- oee que passas
+- hi!? all right
+- eae ta de boa
+- oi ta suave
+- eae ta suave na nave
+- oi ta bao
+- oie ta sussa
+- fala ta bem
+- Oi meu chapa de boa na lagoa
+- eae meu consagrado tranquilo
+- Oi mano ta tranquilao
+- oi brother ta favoravel
+
+## intent:responder_positivamente
+
+- to bem sim e vc
+- estou bem sim e vc
+- estou bem e voce
+- tudo bom e vc
+- tudo otimo e voce
+- tudo okay e voce
+- tudo joia e voce
+- joia e voce
+- joia e vc
+- massa e tu
+- legal e voce
+- to suave e voce
+- to de boa e tu
+- to de boa e voce
+- to na nice e voce
+- estou good vibes e voce
+- td tranquilo e voce
+- to bem e voce
+- to indo e voce
+- to bom e voce
+- to bem meu consagrado e voce
+- to bem mano e voce
+- estou bem bro e vc
+- estou bem mano e voce
+
+## intent:responder_positivamente_direto
+
+- to bem sim
+- estou bem sim
+- estou bem
+- tudo bom
+- tudo otimo
+- tudo okay
+- tudo joia
+- joia
+- massa
+- legal
+- to suave
+- to de boa
+- to na nice
+- estou good vibes
+- td tranquilo
+- to bem
+- to indo  
+- to bom
+- to bem bro
+- to bem mano
+- to bem meu consagrado
+
+## intent:responder_negativamente_diretamente
+
+- to mal
+- nao to legal
+- nao to bem
+- nao estou bem
+- to bem nao
+- estou bem nao
+- to bad
+- estou na bad  
+- estou ruim
+- to triste
+- estou triste
+- sou sadboy
+- estou mal
+- estou bem nao
+- estou frustrado
+- to frustrado
+- estou decepcionado
+- estou muito triste
+- to muito triste
+- estou gripado
+- to malzao
+- estou malzao
+- nn to mal
+
+## intent:responder_negativamente
+
+- to mal e voce
+- nao to legal e voce
+- nao to bem e voce
+- nao estou bem e voce
+- to bem nao e voce
+- estou bem nao e voce
+- to bad e voce
+- estou na bad e voce
+- estou ruim e voce
+- to triste e voce
+- estou triste e voce
+- sou sadboy e voce
+- estou mal e voce
+- estou bem nao e voce
+- estou frustrado e voce
+- to frustrado e voce
+- estou decepcionado e voce
+- estou muito triste e voce
+- to muito triste e voce
+- estou gripado e voce
+- to malzao e voce
+- estou malzao e voce
+- nn to mal e voce
+
 ## intent:despedir
+
 - tchau
 - ate logo
 - te vejo depois
@@ -72,6 +207,9 @@
 - flw então
 
 ## intent:afirmar
+
+- bora
+- agora
 - sim
 - claro
 - com certeza
@@ -91,9 +229,15 @@
 - sim quero sim
 - quero sim
 - sim obrigado
-
+- blz
+- s
+- ss
+- Ss
+- sim sim
+- sim obrigado
 
 ## intent:negar
+
 - nao
 - nunca
 - eu acho que nao
@@ -111,6 +255,8 @@
 - nao quero saber mais
 - quero falar sobre outra coisa
 - nunca
+- valeu
+- to de boa
 - nao
 - nao conheco
 - não quero
@@ -135,8 +281,8 @@
 - n instalei ainda
 - n quero instalar
 
-
 ## intent:diga_mais
+
 - como funciona
 - o que e isso
 - nao entendi
@@ -150,6 +296,7 @@
 - pode repetir
 
 ## intent:bom_humor
+
 - perfeito
 - muito bom
 - otimo
@@ -160,8 +307,20 @@
 - estou me sentindo muito bem
 - isso ae
 - boa
+- de boa
+- top
+- topper
+- tranquilo
+- suave
+- dibs
+- bao
+- ok
+- tranqs
+- bem
+- bom
 
 ## intent:mau_humor
+
 - triste
 - muito triste
 - infeliz
@@ -171,3 +330,95 @@
 - extremamente chateado
 - chateado
 - muito triste
+
+
+## intent:sobre_pyter
+
+- quem e voce
+- quem e pyter
+- quem te criou
+- quem te fez
+- quem sao teus criadores
+- quem e vc
+- qual seu nome
+- me fale sobre voce
+- suas informações
+- suas credenciais
+- se apresente para mim
+
+## intent:credo_religioso
+
+- voce acredita em Deus
+- quem e Deus
+- Deus e bom
+- voce e cristao
+- no que voce acredita
+- voce e ateu
+- voce e crente
+- voce segue alguma religiao
+- voce segue algum credo religioso
+- voce e de Deus
+- ateuzinho
+- neo ateu
+- Deus e amor
+- Deus nao esta morto
+
+## intent:sobre_jupyter
+
+- jupyter
+- o que e jupyter
+- para que serve o jupyter
+- onde estou
+- por que jupyter
+- notebook
+- jupyter notebook
+- o que e notebook
+- o que sao notebooks
+
+## intent:informacoes_pessoais
+
+- onde encontro sua documentação
+- onde encontro suas informações
+- tem cpf
+- rg
+- identidade
+- documentacao
+- onde posso te achar
+- tem git
+- git hub
+- voce e open source
+- Voce eh Software Livre
+- Softwate Livre
+- Onde posso colaborar
+- Como posso te ajudar a desenvolver
+- Como te desenvolver
+- Como te ajudar
+- Como posso contribuir
+- Seus documentos por favor
+- blitz
+
+## intent:Machine_Learning
+
+- o que e machine learning
+- machine learnig
+- o que eh ml
+- ml
+- machine learning
+
+## intent:python_info
+
+- o que e python
+- me conta sobre python
+- python
+- informações da sua linguagem
+- python3
+- me fale sobre python
+- pythones
+- pythonesco
+- diz ai sobre python
+- linguagem python
+- pythõ
+- anaconda
+- serpente
+- quem e python
+- me diga o que e python3
