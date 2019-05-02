@@ -1,21 +1,53 @@
 #container{
     width: 100%;
     height: 100%;
+    display: inline-flex;
 }
-#site{
+#notebook__container{
     width: 65%;
+    height: 100%
+}
+#header{
+    position: unset !important;
+    height: 5% !important;
+    max-height: 5% !important;
+}
+#logo{
+    max-width: 30%;
+    max-height: 30%;
+    width: 30%;
+    height: 30%;
+    top: 0;
+    position: absolute;
+}
+html, body{
+    height: 100%;
 }
 .rocketchat-widget{
-    float: left;
-    left: 0px;
-    height: 100%;
-    width: 35%;
-    bottom: 0px;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+    float: left !important ;
+    left: 0px !important;
+    height: 70% !important;
+    width: 35% !important;
+    bottom: 0 !important;
+    border-top-left-radius: 5px !important;
+    top: 30% !important;
+    border-top-right-radius: 5px !important;
+    z-index: 0 !important;
+    position: relative !important;
+    display: inline-flex !important;
+}
+#ipython-main-app{
+    top: 5%;
 }
 .display__side{
-    float: right;
-    width: 65%;
-    display: block;
+    top: 10%;
+    float: left !important;
+    width: 100% !important;
+    display: inline-flex;
+    z-index: 0 !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;  
+}
+.container{
+    width: unset !important;
 }
