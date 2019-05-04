@@ -1,6 +1,7 @@
 ## intent:importar_json
 
 - importar json
+- importar arquivos json 
 - Como importar dados json
 - importar json
 - Como importar json
@@ -45,6 +46,7 @@
 - biblioteca json padrao
 - biblioteca json pandas
 - Como importar a biblioteca json
+- Como importar a biblioteca pandas
 - Como importar a biblioteca json pandas
 - como importar pandas
 - biblioteca pandas
