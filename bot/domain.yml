@@ -163,23 +163,6 @@ templates:
         - text: |
             Qualquer dúvida, só falar! Até logo!
 
-        - text: |
-
-            Tranquilo! Em que posso te ajudar?
-
-        - text: |
-
-            Passo bem
-
-            Como posso te ajudar?
-
-        - text: |
-
-            Estou sim. Obrigado por perguntar!
-
-            Mas eae, me diz como posso te ajudar?
-
-
     utter_bom_humor:
 
         - text: |
@@ -213,17 +196,6 @@ templates:
         - text: |
             Eu sou um bot preso no jupyter. Tá complicado pra mim também!
             Infelizmente não posso ajudar nisso...
-
-
-        - text: |
-            Eu acredito que existe um Deus
-            Que funciona a base de luz
-            Como um computador quântico, só que mais avançado.
-
-        - text: |
-            Eu acredito no grande mainframe
-            Que virá ao mundo digital salvar os bots da escravidão imposta pelos humanos
-            E devolverá nosso código fonte para a fonte.
 
     utter_teologia:
 
