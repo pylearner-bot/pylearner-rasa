@@ -205,7 +205,7 @@ templates:
                 E você como está?
 
           - text: |
-                Estou sim. Obrigado por perguntar!
+                Estou bem! Obrigado por perguntar!
                 E você está bem?
 
     utter_mau_humor:

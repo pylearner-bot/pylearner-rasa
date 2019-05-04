@@ -147,6 +147,10 @@
 
 ## intent:responder_negativamente_diretamente
 
+- no
+- nao
+- não
+- nao to
 - to mal
 - nao to legal
 - nao to bem
@@ -259,7 +263,7 @@
 - sim obrigado
 - desejo sim
 - gostaria sim
-- instalado 
+- instalado
 
 ## intent:negar
 
