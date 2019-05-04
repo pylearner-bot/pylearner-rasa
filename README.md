@@ -4,18 +4,24 @@
 
 <h1 align="center">Machine Learning Chatbot Assistant</h1>
 
-<p align="center">
-    <a href="https://fga-eps-mds.github.io/2019.1-PyLearner"><strong>Read the Docs &raquo;</strong></a>
-    <br>
-</p>
 
 [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT) [![Build Status](https://travis-ci.com/pylearner-bot/pylearner-rasa.svg?branch=master)](https://travis-ci.com/pylearner-bot/pylearner-rasa)
 ![GitHub watchers](https://img.shields.io/github/watchers/fga-eps-mds/2019.1-PyLearner.svg?style=social)
 
-## Sobre
+## Sobre o Pylearner
 
 <p align="justify">
-O PyLearner surge com a ideia de ter um ambiente web que traga a comodidade de utilizar Jupyter Notebook sem instalar localmente na máquina e que possua também artifícios para ajudar iniciantes em Machine Learning. Para isso, desenvolvemos o chatbot <i>Pyter</i> que tira dúvidas, recomenda conteúdos para o usuário estudar e faz demonstrações usando tutoriais.
+O PyLearner surge com a ideia de ter um ambiente web que traga a comodidade de utilizar Jupyter Notebook sem instalar localmente na máquina e que possua também artifícios para ajudar iniciantes em Machine Learning.
+
+Nele você vai encontrar não só um chat para tirar pequenas dúvidas mas também:
+* Tutoriais clássicos de Machine Learning
+* Bot capaz de recomendar exercícios do kaggle
+* Erros ou até dúvidas que vão ter auxílio do stackoverflow. 
+</p>
+
+<p align="center">
+    <a href="https://fga-eps-mds.github.io/2019.1-PyLearner"><strong>Veja a Documentação Completa &raquo;</strong></a>
+    <br>
 </p>
 
 ## Funções implementadas
@@ -23,8 +29,8 @@ O PyLearner surge com a ideia de ter um ambiente web que traga a comodidade de u
 As principais habilidades do _Pyter_ são:
 
 * Pré-processamento de dados.
-    - [ ] Importação de dados [(Pandas)](https://pandas.pydata.org/)
-    - [ ] Tratamento de dados [(Pandas)](https://pandas.pydata.org/), [(SciKit Learn)](https://scikit-learn.org/stable/modules/preprocessing.html)
+    - [x] Importação de dados [(Pandas)](https://pandas.pydata.org/)
+    - [x] Tratamento de dados [(Pandas)](https://pandas.pydata.org/), [(SciKit Learn)](https://scikit-learn.org/stable/modules/preprocessing.html)
 * Modelagem.
     - [ ] Aprendizado supervisionado [(SciKit Learn)](https://scikit-learn.org/stable/modules/preprocessing.html)
     - [ ] Aprendizado não-supervisionado [(SciKit Learn)](https://scikit-learn.org/stable/modules/preprocessing.html)
@@ -32,8 +38,8 @@ As principais habilidades do _Pyter_ são:
     - [ ] Visualização de dados [(Matplotlib)](https://matplotlib.org/), [(Seaborn)](https://seaborn.pydata.org/)
     - [ ] Visualização de resultados [(SciKit Learn)](https://scikit-learn.org/stable/modules/preprocessing.html)
 * Tutorial.
-    - [ ] Iris Flower [(SciKit Learn)](https://scikit-learn.org/stable/modules/preprocessing.html)
-    - [ ] MNIST [(SciKit Learn)](https://scikit-learn.org/stable/modules/preprocessing.html)
+    - [x] Iris Flower [(SciKit Learn)](https://scikit-learn.org/stable/modules/preprocessing.html)
+    - [x] MNIST [(SciKit Learn)](https://scikit-learn.org/stable/modules/preprocessing.html)
     - [ ] Titanic [(SciKit Learn)](https://scikit-learn.org/stable/modules/preprocessing.html)
 * Sugestões de conteúdo.
     - [ ] Espaços de conteúdos [(Medium)](https://medium.com/), [(TowardsDataScience)](https://towardsdatascience.com/), [(Kaggle)](https://kaggle.com)
@@ -104,6 +110,6 @@ Acesse o jupyter notebook em http://localhost:8888/
   <img src="https://cdn-images-1.medium.com/max/1600/1*emiGsBgJu2KHWyjluhKXQw.png" width="60"/>
   <img src="https://cdn-images-1.medium.com/max/1200/1*F0LADxTtsKOgmPa-_7iUEQ.jpeg" width="60"/>
   <img src="https://cdn.sstatic.net/Sites/stats/img/apple-touch-icon@2.png?v=344f57aa10cc" width="60"/>
-  <img src="https://storage.googleapis.com/kaggle-organizations/4/thumbnail.png" width="60"/>
+  <img src="https://pbs.twimg.com/profile_images/1146317507/twitter_400x400.png" width="60"/>
   <img src="https://cdn.sstatic.net/Sites/ai/img/logo.svg?v=99838c31f823" width="60"/>
 </p>
