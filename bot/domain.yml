@@ -344,3 +344,19 @@ templates:
 
         - text: |
             O grau de correlação é interpretado da seguinte manteira. Ele pode variar entre -1 e 1,e o resultado obtido define se a correlação é negativa ou positiva, sendo que -1  significa que é perfeita positiva, e -1 que é perfeita negativa
+    utter_entender_relatorio_classificacao:
+        - text: |
+            Após definir o que deseja que a máquina reconheça e passar os tipos de classificação,é necessário gerar o relatório de classificação,ou seja,como foi o desempenho da máquina
+
+    utter_gerar_relatorio_classificacao:
+        - text: |
+        Primeiro é necessário instalar o sklearn e importar a biblioteca classification_report
+        
+        pip install -U scikit-learn ou conda install scikit-learn
+        from sklearn.metrics  import  classification_report
+
+        Agora, podemos utilizar a funcao classification_report(),que e como visualizaremos as classificações
+
+        classification_report(y_true, y_pred, labels=None, target_names=None, sample_weight=None, digits=2, output_dict=False)
+        
+
