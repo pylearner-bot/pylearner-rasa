@@ -1,8 +1,25 @@
-## caminho entendimento correlaçao
-* entender_correlaçao
-    - utter_entender_correlaçao
+## caminho entendimento correlacao
+* entender_correlacao
+    - utter_entender_correlacao
+* afirmar
+    - utter_matriz_correlacao
+* afirmar
+    - utter_indice_correlacao
+
+## caminho entendimento correlacao negativo 1
+* entender_correlacao
+    - utter_entender_correlacao
+* negar
+    - utter_bons_estudos
+
+## caminho entendimento correlacao negativo 2
+* entender_correlacao
+    - utter_entender_correlacao
+* afirmar
+    - utter_matriz_correlacao
+* negar
 
 
-## caminho calcular correlaçao
-* calcular_correlaçao
-    - utter_calcular_correlaçao
+## caminho calcular correlacao
+* calcular_correlacao
+    - utter_calcular_correlacao
