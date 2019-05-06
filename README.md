@@ -2,26 +2,41 @@
     <img src="https://raw.githubusercontent.com/fga-eps-mds/2019.1-PyLearner/master/docs/img/Logo_text.jpg" alt="Logo" height=300 width=400>
 </p>
 
-<h1 align="center">Machine Learning Chatbot Assistant</h1>
+<h1 align="center">
+  <a href="https://fga-eps-mds.github.io/2019.1-PyLearner">
+    Machine Learning Chatbot Assistant
+  </a>
+</h1>
 
+<!--<p align="center">
+    <a href="https://fga-eps-mds.github.io/2019.1-PyLearner"><strong>Read the Docs &raquo;</strong></a>
+    <br>
+</p>
+//-->
 
 [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT) [![Build Status](https://travis-ci.com/pylearner-bot/pylearner-rasa.svg?branch=master)](https://travis-ci.com/pylearner-bot/pylearner-rasa)
 ![GitHub watchers](https://img.shields.io/github/watchers/fga-eps-mds/2019.1-PyLearner.svg?style=social)
 
-## Sobre o Pylearner
+
 
 <p align="justify">
-O PyLearner surge com a ideia de ter um ambiente web que traga a comodidade de utilizar Jupyter Notebook sem instalar localmente na máquina e que possua também artifícios para ajudar iniciantes em Machine Learning.
+O PyLearner surge com a ideia de ter um ambiente web que traga a comodidade de utilizar Jupyter Notebook sem instalar localmente na máquina e que possua também artifícios para ajudar iniciantes em Machine Learning. Para isso, desenvolvemos o chatbot <i>Pyter</i> que tira dúvidas recomenda conteúdos para o usuário estudar e faz demonstrações usando tutoriais.
 
-Nele você vai encontrar não só um chat para tirar pequenas dúvidas mas também:
-* Tutoriais clássicos de Machine Learning
-* Bot capaz de recomendar exercícios do kaggle
-* Erros ou até dúvidas que vão ter auxílio do stackoverflow. 
-</p>
+- **Aprendizado.** Com o uso frequente do pyter para auxiliar em atividades de machine learning ou até mesmo para recomendar exercícios, você pode aprender muito!
+- **Praticidade.** A junção do chat no jupyter torna muito mais tranquilo tirar as duvidas no ambiente em que já esta aprendendo.
+- **Ajuda.** O Pyter não só te ajuda com dúvidas mas também com possíveis erros nas células do jupyter.
+- **Tutoriais.** Os tutoriais são os exemplos mais clássicos em machine learning, para que o aluno possa ter uma experiencia de solucionar o seu primeiro problema de forma completa.
 
-<p align="center">
-    <a href="https://fga-eps-mds.github.io/2019.1-PyLearner"><strong>Veja a Documentação Completa &raquo;</strong></a>
-    <br>
+
+## Conteudos
+
+- [Documentação](#-documentação)
+- [Como usar?](#-como-usar)
+- [Funções já implementadas](#-funções-implementadas)
+- [Roadmap do projeto](#-roadmap-do-projeto)
+- [Codigo de Conduta](#-código-de-conduta)
+- [Licença](#-licença)
+
 </p>
 
 ## Funções implementadas
@@ -29,27 +44,33 @@ Nele você vai encontrar não só um chat para tirar pequenas dúvidas mas tamb�
 As principais habilidades do _Pyter_ são:
 
 * Pré-processamento de dados.
-    - [x] Importação de dados [(Pandas)](https://pandas.pydata.org/)
-    - [x] Tratamento de dados [(Pandas)](https://pandas.pydata.org/), [(SciKit Learn)](https://scikit-learn.org/stable/modules/preprocessing.html)
+    - [ ] Importação de dados [(Pandas)](https://pandas.pydata.org/)
+    - [ ] Tratamento de dados [(Pandas)](https://pandas.pydata.org/), [(SciKit Learn)](https://scikit-learn.org/stable/modules/preprocessing.html)
 * Modelagem.
     - [ ] Aprendizado supervisionado [(SciKit Learn)](https://scikit-learn.org/stable/modules/preprocessing.html)
+        - Generalized Linear Models
+            - Logistic regression
+        - Support Vector Machines
+            - Classification
+        - Stochastic Gradient Descent
+            - Classification
+        - Nearest Neighbors
+            - Nearest Neighbors Classification
+        - Naive Bayes
+            - Gaussian Naive Bayes
+        - Decision Trees
+            - Classification
     - [ ] Aprendizado não-supervisionado [(SciKit Learn)](https://scikit-learn.org/stable/modules/preprocessing.html)
 * Visualização.
     - [ ] Visualização de dados [(Matplotlib)](https://matplotlib.org/), [(Seaborn)](https://seaborn.pydata.org/)
     - [ ] Visualização de resultados [(SciKit Learn)](https://scikit-learn.org/stable/modules/preprocessing.html)
 * Tutorial.
-    - [x] Iris Flower [(SciKit Learn)](https://scikit-learn.org/stable/modules/preprocessing.html)
-    - [x] MNIST [(SciKit Learn)](https://scikit-learn.org/stable/modules/preprocessing.html)
+    - [ ] Iris Flower [(SciKit Learn)](https://scikit-learn.org/stable/modules/preprocessing.html)
+    - [ ] MNIST [(SciKit Learn)](https://scikit-learn.org/stable/modules/preprocessing.html)
     - [ ] Titanic [(SciKit Learn)](https://scikit-learn.org/stable/modules/preprocessing.html)
 * Sugestões de conteúdo.
     - [ ] Espaços de conteúdos [(Medium)](https://medium.com/), [(TowardsDataScience)](https://towardsdatascience.com/), [(Kaggle)](https://kaggle.com)
     - [ ] Fórum [(Cross Validated)](https://stats.stackexchange.com/), [(Artificial Intelligence StackExchange)](https://ai.stackexchange.com/)
-
-## Dependências
-
-* `git`
-* `docker`
-* `docker-compose`
 
 ## Como usar
 
@@ -67,7 +88,20 @@ docker-compose up --build
 
 Acesse o jupyter notebook em http://localhost:8888/
 
-## Ferramentas utilizadas em desenvolvimento
+## Roadmap do projeto
+
+Você pode aprender mais sobre nossa visão dando uma olhada no nosso [Roadmap](https://fga-eps-mds.github.io/2019.1-PyLearner/roadmap/Roadmap-Projeto/)
+
+## Código de Conduta
+Nós adotamos um [Código de Conduta](https://github.com/pylearner-bot/pylearner-rasa/blob/master/.github/CODE_OF_CONDUCT.md) que esperamos que os participantes do projeto sigam. Por favor, leia o texto completo para que você possa entender quais ações serão e quais não serão toleradas.
+
+## Licença
+
+Este projeto está licenciado sob a [Licença](https://github.com/pylearner-bot/pylearner-rasa/blob/master/LICENSE) MIT. 
+
+Os direitos autorais nos arquivos de definição são respectivos de cada colaborador listado no início de cada arquivo de definição
+
+<!--## Ferramentas utilizadas em desenvolvimento
 
 <p float="left">
   <img src="https://telegram.org/img/t_logo.png" width="60"/>
@@ -95,6 +129,7 @@ Acesse o jupyter notebook em http://localhost:8888/
   <img src="https://avatars3.githubusercontent.com/u/46843839?v=4" width="60"/>
 </p>
 
+
 ## Ferramentas ensinadas pelo <i>Pyter</i>
 
 <p float="left">
@@ -110,6 +145,7 @@ Acesse o jupyter notebook em http://localhost:8888/
   <img src="https://cdn-images-1.medium.com/max/1600/1*emiGsBgJu2KHWyjluhKXQw.png" width="60"/>
   <img src="https://cdn-images-1.medium.com/max/1200/1*F0LADxTtsKOgmPa-_7iUEQ.jpeg" width="60"/>
   <img src="https://cdn.sstatic.net/Sites/stats/img/apple-touch-icon@2.png?v=344f57aa10cc" width="60"/>
-  <img src="https://pbs.twimg.com/profile_images/1146317507/twitter_400x400.png" width="60"/>
+  <img src="https://storage.googleapis.com/kaggle-organizations/4/thumbnail.png" width="60"/>
   <img src="https://cdn.sstatic.net/Sites/ai/img/logo.svg?v=99838c31f823" width="60"/>
 </p>
+//-->
