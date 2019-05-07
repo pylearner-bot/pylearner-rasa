@@ -39,6 +39,11 @@ intents:
   - informacoes_pessoais
   - python_info
   - Machine_Learning
+  - entender_matriz_confusao
+  - entender_verdadeiro_positivo
+  - entender_falso_positivo
+  - entender_verdadeiro_negativo
+  - entender_falso_negativo
 
 actions:
 
@@ -90,6 +95,11 @@ actions:
   - utter_informacoes_pessoais
   - utter_machine_learning
   - utter_python
+  - utter_entender_matriz_confusao
+  - utter_entender_verdadeiro_positivo
+  - utter_entender_falso_positivo
+  - utter_entender_verdadeiro_negativo
+  - utter_entender_falso_negativo
 
 templates:
 
@@ -650,3 +660,33 @@ templates:
             Python foi criado no final dos anos oitenta(1989) por Guido van Rossum, na Holanda, como sucessor da linguagem de programação ABC!
 
             É uma linguagem interpretada que têm seus códigos fontes transformados em uma linguagem intermediária, que será interpretada pela máquina virtual da linguagem quando o programa for executado.
+
+    utter_entender_matriz_confusao:
+
+        - text: |
+            A Matriz de confusão serve para a mensuração da performance de classificação de um modelo em machine learning. 
+
+            E em uma tabela que mostra as frequências de classificação para cada classe do modelo, que são:
+            
+            . True Positive (TP)
+            . False Positive (FP)
+            . True Negative (TN)
+            . False Negative (FN)
+    
+    utter_entender_verdadeiro_positivo:
+        - text: |
+            True Positive (TP): ocorre quando no conjunto real, a classe que estamos buscando foi prevista corretamente.
+    
+    utter_entender_falso_positivo:
+        - text: |
+            False Positive (FP): ocorre quando no conjunto real, a classe que estamos buscando prever foi prevista incorretamente.
+
+    utter_entender_verdadeiro_negativo:
+        - text: |
+            True Negative (TN): ocorre quando no conjunto real, a classe que não estamos buscando prever foi prevista corretamente.
+
+    utter_entender_falso_negativo:
+        - text: |
+            False Negative (FN): ocorre quando no conjunto real, a classe que não estamos buscando prever foi prevista incorretamente.
+    
+                
