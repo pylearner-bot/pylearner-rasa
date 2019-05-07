@@ -666,12 +666,14 @@ templates:
         - text: |
             A Matriz de confusão serve para a mensuração da performance de classificação de um modelo em machine learning. 
 
-            E em uma tabela que mostra as frequências de classificação para cada classe do modelo, que são:
+            E consiste em uma tabela que mostra as frequências de classificação para cada classe do modelo, que são:
             
             . True Positive (TP)
             . False Positive (FP)
             . True Negative (TN)
             . False Negative (FN)
+
+            Se quiser ver mais sobre cada um, digite a sigla ou o nome da frequência desejada.
     
     utter_entender_verdadeiro_positivo:
         - text: |

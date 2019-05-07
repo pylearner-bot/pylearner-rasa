@@ -24,7 +24,7 @@
 - o que e false positive
 - o que é false positive
 
-##intent:entender_verdadeiro_negativo
+## intent:entender_verdadeiro_negativo
 - O que é verdadeiro negativo                                                                            
 - o que e verdadeiro negativo
 - verdadeiro negativo
@@ -33,7 +33,7 @@
 - o que e true negative
 - o que é true negative
 
-##intent:entender_falso_negativo
+## intent:entender_falso_negativo
 - O que é falso negativo
 - o que e falso negativo
 - falso negativo
