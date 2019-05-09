@@ -39,7 +39,7 @@ intents:
   - informacoes_pessoais
   - python_info
   - Machine_Learning
-  - enteder_modelos_lineares_generalizados
+  - entender_modelos_lineares_generalizados
   - entender_regressao_logistica
   - entender_maquina_de_vetores_de_suporte
   - entender_descentramento_estocástico_gradiente

@@ -1,4 +1,5 @@
-## intent:enteder_modelos_lineares_generalizados
+## intent:entender_modelos_lineares_generalizados
+
 - o que são modelos lineares generalizados
 - modelos lineares generalizados
 - generalized linear models

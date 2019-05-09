@@ -1,6 +1,6 @@
 ## caminho entendimento modelos lineares generalizados
 
-* enteder_modelos_lineares_generalizados
+* entender_modelos_lineares_generalizados
     - utter_entender_modelos_lineares_generalizados
 * afirmar
     - utter_entender_regressao_logistica
@@ -9,7 +9,7 @@
 
 ## caminho entendimento modelos lineares generalizados 2
 
-* enteder_modelos_lineares_generalizados
+* entender_modelos_lineares_generalizados
     - utter_entender_modelos_lineares_generalizados
 * afirmar
     - utter_entender_regressao_logistica
