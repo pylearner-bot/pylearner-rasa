@@ -39,6 +39,8 @@ intents:
   - informacoes_pessoais
   - python_info
   - Machine_Learning
+  - enteder_modelos_lineares_generalizados
+  - entender_regressao_logistica
   - entender_nearest_neighbors
   - entender_classificacao_nearest_neighbors
   - entender_classificador_k_neighbors_classifier
@@ -99,6 +101,9 @@ actions:
   - utter_informacoes_pessoais
   - utter_machine_learning
   - utter_python
+  - utter_entender_modelos_lineares_generalizados
+  - utter_entender_regressao_logistica
+  - utter_implementar_regressao_logistica
   - utter_entender_nearest_neighbors
   - utter_entender_classificacao_nearest_neighbors
   - utter_entender_classificador_k_neighbors_classifier
@@ -669,6 +674,31 @@ templates:
 
             É uma linguagem interpretada que têm seus códigos fontes transformados em uma linguagem intermediária, que será interpretada pela máquina virtual da linguagem quando o programa for executado.
 
+    utter_entender_modelos_lineares_generalizados:
+        - text: |
+            
+            O modelo linear generalizado generaliza a regressão linear permitindo que o modelo linear seja relacionado à variável de resposta por meio de uma função de link e permitindo que a magnitude da variância de cada medida seja uma função de seu valor previsto.
+  
+            O próximo tópico de GLM trata-se de regressao logistica, deseja ver mais?
+    
+    utter_entender_regressao_logistica:
+        - text: |
+            A regressão logística, apesar de seu nome, é um modelo linear para classificação em vez de regressão. A regressão logística também é conhecida na literatura como regressão logit, classificação de máxima entropia (MaxEnt) ou o classificador log-linear.
+
+            Deseja ver como implementá-la?
+
+    utter_implementar_regressao_logistica:
+        - text: |
+            Nesse modelo, as probabilidades que descrevem os resultados possíveis de um único teste são modeladas usando uma função logística:
+
+            from sklearn import svm
+            X = [[0, 0], [1, 1]]
+            y = [0, 1]
+            clf = svm.SVC(gamma='scale')
+            clf.fit(X, y)
+
+            Agora você já está pronto para conferir o próximo assunto que trata-se da máquina de vetores de suporte!
+               
     utter_entender_nearest_neighbors:
 
         - text: |
