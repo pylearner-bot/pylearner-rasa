@@ -1,5 +1,6 @@
 train-nlu:
 	python3 -m rasa_nlu.train -c nlu_config.yml --fixed_model_name current --data data/intents/ -o models --project nlu --verbose
+#	python3 -m rasa_nlu.train -c nlu_config.yml --model --data data/intents/ --path models/current/nlu
 
 train-core:
 	python3 train.py
@@ -23,3 +24,7 @@ evaluate:
 
 run-actions:
 	python -m rasa_core_sdk.endpoint --actions actions
+
+.PHONY: all e2e clean
+	e2e:
+		python3 -m rasa_core.evaluate default --core models/dialogue --nlu models/nlu/current --stories e2e/e2e_stories.md --e2e
