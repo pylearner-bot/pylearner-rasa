@@ -104,6 +104,10 @@ actions:
   - utter_entender_modelos_lineares_generalizados
   - utter_entender_regressao_logistica
   - utter_implementar_regressao_logistica
+  - utter_entender_maquina_de_vetores_de_suporte
+  - utter_implementar_svm
+  - utter_implementar_suporte_svm
+  - utter_implementar_classificao_multi_classe
   - utter_entender_nearest_neighbors
   - utter_entender_classificacao_nearest_neighbors
   - utter_entender_classificador_k_neighbors_classifier
@@ -697,8 +701,62 @@ templates:
             clf = svm.SVC(gamma='scale')
             clf.fit(X, y)
 
-            Agora você já está pronto para conferir o próximo assunto que trata-se da máquina de vetores de suporte!
+            Agora você já está pronto para conferir o próximo assunto: Support Vector Machines.
                
+    utter_entender_maquina_de_vetores_de_suporte:
+        - text: |
+            A máquina de vetores de suporte (SVM) é um conjunto de métodos do aprendizado supervisionado que analisam os dados e reconhecem padrões, usado para classificação e análise de regressão. 
+            
+            O SVM padrão toma como entrada um conjunto de dados e prediz, para cada entrada dada, qual de duas possíveis classes a entrada faz parte, o que faz do SVM um classificador linear binário não probabilístico.
+
+            Deseja ver como implementar como implementar esse classificador?
+
+    utter_implementar_svm:
+        - text: |
+           
+            SVC, NuSVC e LinearSVC são classificadores que tomam como entrada duas matrizes: uma matriz X de tamanho [n_samples, n_features] contendo as amostras de treinamento, e uma matriz y de rótulos de classe (strings ou inteiros), tamanho [n_samples]:
+
+            from sklearn import svm
+            X = [[0, 0], [1, 1]]
+            y = [0, 1]
+            clf = svm.SVC(gamma='scale')
+            clf.predict([[2., 2.]])
+
+            Depois de aprender esse conceito, deseja ver mais sobre vetores de suporte?
+
+    utter_implementar_suporte_svm:
+        - text: |
+            A função de decisão de SVMs depende de algum subconjunto dos dados de treinamento, chamados de vetores de suporte. Algumas propriedades destes vetores de suporte podem ser encontradas nos membros support_vectors_, support_ e n_support:
+
+            Para obter os vetores de suporte:
+            clf.support_vectors_
+            
+            Para obter os índices dos vetores de suporte:
+            clf.support_
+
+            Para obter o número de vetores de suporte para cada classe:
+            clf.n_support_
+
+            Deseja ver mais sobre como implementar uma classificação multiclasse?
+
+    utter_implementar_classificao_multi_classe:
+        - text: |
+            O SVC e o NuSVC implementam a abordagem “um-contra-um” para classificação de várias classes. Se n_class é o número de classes, os classificadores n_class * (n_class - 1) / 2 são construídos e cada um treina os dados de duas classes.
+
+            X = [[0], [1], [2], [3]]
+            Y = [0, 1, 2, 3]
+            clf = svm.SVC(gamma='scale', decision_function_shape='ovo')
+            clf.fit(X, Y)
+
+            dec = clf.decision_function([[1]])
+            dec.shape[1]
+
+            clf.decision_function_shape = "ovr"
+            dec = clf.decision_function([[1]])
+            dec.shape[1]
+
+            Agora você já sabe o que precisa sobre SVM, o próximo conteúdo de aprendizado supervionado trata-se de: Stochastic Gradient Descent
+
     utter_entender_nearest_neighbors:
 
         - text: |
