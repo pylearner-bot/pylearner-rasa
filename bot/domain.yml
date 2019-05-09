@@ -39,6 +39,15 @@ intents:
   - informacoes_pessoais
   - python_info
   - Machine_Learning
+  - entender_nearest_neighbors
+  - entender_classificacao_nearest_neighbors
+  - entender_classificador_k_neighbors_classifier
+  - entender_classificador_radius_neighbors_classifier
+  - classificadores_nearest_neighbors
+  - entender_pesos_classificadores_nearest_neighbors
+  - implementar_classificadores_nearest_neighbor
+  - RadiusNeighborsClassifier
+  - KNeighborsClassifier
 
 actions:
 
@@ -90,6 +99,15 @@ actions:
   - utter_informacoes_pessoais
   - utter_machine_learning
   - utter_python
+  - utter_entender_nearest_neighbors
+  - utter_entender_classificacao_nearest_neighbors
+  - utter_entender_classificador_k_neighbors_classifier
+  - utter_entender_classificador_radius_neighbors_classifier
+  - utter_classificadores_nearest_neighbors
+  - utter_entender_pesos_classificadores_nearest_neighbors
+  - utter_implementar_classificadores_nearest_neighbor
+  - utter_RadiusNeighborsClassifier
+  - utter_KNeighborsClassifier
 
 templates:
 
@@ -647,6 +665,86 @@ templates:
     utter_python:
 
         - text: |
-            Python foi criado no final dos anos oitenta(1989) por Guido van Rossum, na Holanda, como sucessor da linguagem de programação ABC!
+            Python foi criado no final dos anos oitenta (1989) por Guido van Rossum, na Holanda, como sucessor da linguagem de programação ABC!
 
             É uma linguagem interpretada que têm seus códigos fontes transformados em uma linguagem intermediária, que será interpretada pela máquina virtual da linguagem quando o programa for executado.
+
+    utter_entender_nearest_neighbors:
+
+        - text: |
+            O método Nearest Neighbors consiste em encontrar um número predefinido de amostras de treinamento mais próximas da distancia do novo ponto e prever a label a partir delas.
+
+        - text: |
+            Sendo um método não paramêtrico, é bem sucedido em situações de classificação em que os limites de decisão são muito irregulares.
+    
+    utter_entender_classificacao_nearest_neighbors:
+
+        - text: |
+            A classificação usando nearest neighbors é calculada a partir de uma simples votação por maioria dos nearest neighbors mais próximos de cada ponto: um ponto de consulta é atribuido à classe de dados que possui mais representantes dentro dos nearest neighbors mais próximos.
+    
+    utter_entender_classificador_k_neighbors_classifier:
+
+        - text: |
+            Implementa o aprendizado baseado no k nearest neighbors de cada ponto de consulta,onde k é um valor inteiro especificado pelo usuário.
+
+            A escolha ideal do valor k é altamente dependente dos dados: em geral, um k muito grande suprime os efeitos do ruído, mas torna os limites de classificação menos distintos.
+
+
+    utter_entender_classificador_radius_neighbors_classifier:
+        
+        - text: |
+            Implementa a aprendizagem com base no número de neighbors dentro de um raio fixo r de cada ponto de treinamento, onde r é um valor de ponto flutuante especificado pelo usuário.
+
+            O usuário especifica um raio fixo r, de modo que pontos em vizinhanças mais esparsas usem menos vizinhos mais próximos para a classificação.
+
+    utter_classificadores_nearest_neighbors:
+        
+        - text: |
+            O scikit-learn implementa dois classificadores de nearest neighbors: KNeighborsClassifier e RadiusNeighborsClassifier.
+
+            A classificação de vizinhos KNeighborsClassifier é a técnica mais usada, nos casos em que os dados não são uniformemente amostrados, a classificação dos neighbors baseados no raio RadiusNeighborsClassifierpode ser uma escolha melhor.
+    
+    utter_entender_pesos_classificadores_nearest_neighbors:
+        
+        - text: |
+            A classificação básica de nearest neighbors usa pesos uniformes: isto é, o valor atribuído a um ponto de consulta é calculado a partir de uma votação por maioria simples dos vizinhos mais próximos. 
+            
+            Em algumas circunstâncias, é melhor ponderar os neighbors de tal forma que os vizinhos mais próximos contribuam mais para o ajuste. 
+            
+            Isso pode ser feito através do parametro weights. 
+            
+            O valor padrão weights = 'uniform', atribui pesos uniformes a cada vizinho.
+            
+            weights = 'distance' atribui pesos proporcionais ao inverso da distância do ponto de consulta.
+
+    utter_implementar_classificadores_nearest_neighbor:
+
+        - text: |
+            Escolha um classificador:
+                . KNeighborsClassifier
+
+                . RadiusNeighborsClassifier
+
+    utter_RadiusNeighborsClassifier:
+
+        - text: |
+            X = [[0], [1], [2], [3]]
+            y = [0, 0, 1, 1]
+            from sklearn.neighbors import RadiusNeighborsClassifier
+            neigh = RadiusNeighborsClassifier(radius=1.0)
+            neigh.fit(X, y) 
+
+            print(neigh.predict([[1.5]]))
+
+    utter_KNeighborsClassifier:
+
+        - text: |
+            X = [[0], [1], [2], [3]]
+            y = [0, 0, 1, 1]
+            from sklearn.neighbors import KNeighborsClassifier
+            neigh = KNeighborsClassifier(n_neighbors=3)
+            neigh.fit(X, y) 
+
+            print(neigh.predict([[1.1]]))
+
+            print(neigh.predict_proba([[0.9]]))

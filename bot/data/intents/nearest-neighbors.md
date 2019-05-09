@@ -4,20 +4,38 @@
 - para que serve um nearest neighbors
 
 
-## intent:classificacao_nearest_neighbors
+## intent:entender_classificacao_nearest_neighbors
+- classificacao nearest neighbors
 - quando usar o metodo de classificacao nearest neighbors
 - como classificar usando nearest neighbors
+
+## intent:classificadores_nearest_neighbors
 - qual classificador usar
-- qual classificador e mais usado
+
+## intent:entender_pesos_classificadores_nearest_neighbors
 - weights
+- pesos
 - qual peso usar
 - qual a diferenca dos pesos
 - weights uniform
 - weights distance
 
-## intent:classificador_k_neighbors_classifier
-- qual valor de k usar
-- k muito grande
+## intent:entender_classificador_k_neighbors_classifier
+- como funciona o classificador KNeighborsClassifier
+- classificacao KNeighborsClassifier
+- classificador KNeighborsClassifier
 
-## intent:classificador_radius_neighbors_classifier
-- qual valor de r usar
+## intent:entender_classificador_radius_neighbors_classifier
+- classificacao RadiusNeighborsClassifier
+- classificador RadiusNeighborsClassifier
+- como funciona o classificador RadiusNeighborsClassifier
+
+## intent:implementar_classificadores_nearest_neighbors
+- como implementar classificadores nearest neighbors
+- implementacao nearest neighbors
+
+## intent:RadiusNeighborsClassifier
+- RadiusNeighborsClassifier
+
+## intent:KNeighborsClassifier
+- KNeighborsClassifier
