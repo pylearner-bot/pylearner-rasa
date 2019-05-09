@@ -38,6 +38,12 @@ intents:
   - informacoes_pessoais
   - python_info
   - Machine_Learning
+  - entender_matriz_confusao
+  - implementar_matriz_confusao_sklearn
+  - entender_verdadeiro_positivo
+  - entender_falso_positivo
+  - entender_verdadeiro_negativo
+  - entender_falso_negativo
   - entender_metricas_de_classificacao
   - quais_as_metricas_de_classificacao
   - entender_classificacao_accuracy
@@ -101,6 +107,13 @@ actions:
   - utter_informacoes_pessoais
   - utter_machine_learning
   - utter_python
+  - utter_entender_matriz_confusao
+  - utter_implementar_matriz_confusao_sklearn
+  - utter_implementar_matriz_confusao_pandas
+  - utter_entender_verdadeiro_positivo
+  - utter_entender_falso_positivo
+  - utter_entender_verdadeiro_negativo
+  - utter_entender_falso_negativo
   - utter_entender_metricas_de_classificacao
   - utter_quais_as_metricas_de_classificacao
   - utter_entender_classificacao_accuracy
@@ -732,4 +745,63 @@ templates:
 
         Precision é responsável por nos informar qual a proporção de identificações numéricas foi realmente correta.
 
-        De certo modo o precision tenta descrever a eficiência do modelo treinado.
+        É uma linguagem interpretada que têm seus códigos fontes transformados em uma linguagem intermediária, que será interpretada pela máquina virtual da linguagem quando o programa for executado.
+
+    utter_entender_matriz_confusao:
+
+        - text: |
+            A Matriz de confusão serve para a mensuração da performance de classificação de um modelo em machine learning. 
+
+            E consiste em uma tabela que mostra as frequências de classificação para cada classe do modelo, que são:
+            
+            . True Positive (TP)
+            . False Positive (FP)
+            . True Negative (TN)
+            . False Negative (FN)
+
+            Se quiser ver a definição, digite a sigla ou o nome da frequência desejada.
+
+            Mas antes disso, deseja ver como como implementar?
+    
+    utter_implementar_matriz_confusao_sklearn:
+        - text: |
+
+            O Scikit-Learn fornece uma função confusion_matrix, confira o exemplo:
+
+        
+            from sklearn.metrics import confusion_matrix
+            y_actu = [2, 0, 2, 2, 0, 1, 1, 2, 2, 0, 1, 2]
+            y_pred = [0, 0, 2, 1, 0, 2, 1, 0, 2, 0, 2, 2]
+            confusion_matrix(y_actu, y_pred)
+            
+
+            Mas também pode ser criado uma matriz de confusão usando Pandas, deseja visualizar?
+    
+    utter_implementar_matriz_confusao_pandas:
+        - text: |
+
+            Segue o exemplo com a biblioteca Pandas:
+
+            import pandas as pd
+            y_actu = pd.Series([2, 0, 2, 2, 0, 1, 1, 2, 2, 0, 1, 2], name='Actual')
+            y_pred = pd.Series([0, 0, 2, 1, 0, 2, 1, 0, 2, 0, 2, 2], name='Predicted')
+            df_confusion = pd.crosstab(y_actu, y_pred)
+
+            Agora você já está pronto para saber quais são as métricas usadas para avaliação dos modelos!            
+    
+    utter_entender_verdadeiro_positivo:
+        - text: |
+            True Positive (TP): ocorre quando no conjunto real, a classe que estamos buscando foi prevista corretamente.
+    
+    utter_entender_falso_positivo:
+        - text: |
+            False Positive (FP): ocorre quando no conjunto real, a classe que estamos buscando prever foi prevista incorretamente.
+
+    utter_entender_verdadeiro_negativo:
+        - text: |
+            True Negative (TN): ocorre quando no conjunto real, a classe que não estamos buscando prever foi prevista corretamente.
+
+    utter_entender_falso_negativo:
+        - text: |
+            False Negative (FN): ocorre quando no conjunto real, a classe que não estamos buscando prever foi prevista incorretamente.
+    
