@@ -44,6 +44,13 @@ intents:
   - entender_classificacao_f1
   - usar_classificacao_accuracy
   - usar_classificacao_f1
+  - recall
+  - recall_conceitual
+  - recall_ponderado
+  - precision
+  - precision_ponderado
+  - precison_conceitual
+  - relatorio_metrico
 
 actions:
   - utter_default
@@ -100,6 +107,13 @@ actions:
   - utter_usar_classificacao_accuracy
   - utter_entender_classificacao_f1
   - utter_usar_classificacao_f1
+  - utter_recall
+  - utter_recall_conceito
+  - utter_recall_ponderado
+  - utter_relatorio_metricas
+  - utter_precision
+  - utter_precision_conceito
+  - utter_precision_ponderado
 
 templates:
   utter_default:
@@ -625,17 +639,97 @@ templates:
   utter_usar_classificacao_accuracy:
     - text: |
         A Classificacao Accuracy é calculada por =
+
         `Accuracy = Numero de predições certas/Numero total de predições feitas`
+
         E para utilizarmos ela em python,utilizaremos a funcao accuracy_score() da biblioteca sklearn.metrics que esta dentro da Scikit Learn
+
         `sklearn.metrics.accuracy_score(y_true, y_pred, normalize=True, sample_weight=None)`
   utter_entender_classificacao_f1:
     - text: |
         Classificação F1 é usada para media a precisão de um teste.
+
         F1 é a média harmônica entre a Precision e Recall.
+
         Ele fala o quão preciso é o seu classificador(quantas instâncias foram classificadas corretamente),assim como o quão robusto ele é(se não errou um número significativo de instâncias)
   utter_usar_classificacao_f1:
     - text: |
         A Classificacao F1 é calculada por
+
         `F1 = 2 * ( 1 / ( (1 / Precision) + (1/ Recall) ) )`
+
         E para utilizarmos ela em python,utilizaremos a funcao f1_score() da biblioteca sklearn.metrics que esta dentro da Scikit Learn
+
         `sklearn.metrics.f1_score(y_true, y_pred, labels=None, pos_label=1, average=’binary’, sample_weight=None)`
+
+  utter_recall:
+    - text:
+        Primeiro passo é você importar a biblioteca do Recall
+
+        from sklearn.metrics import recall_score
+
+        A função para calcular o recall é
+
+        recall_score(valores_reais, valores_preditos, pos_label=chave)
+
+        onde a chave é o valor em que o recall será calculado
+
+  utter_recall_ponderado:
+    - text:
+        Primeiro passo é você importar a biblioteca do Recall
+
+        from sklearn.metrics import recall_score
+
+        A função para calcular o recall é
+
+        recall_score(valores_reais, valores_preditos, labels=[chave], average='tipo')
+
+        Onde 'tipo' pode assumir um recall pondeado como 'micro', 'macro', 'weighted' ou 'binary'
+
+  utter_precision:
+      - text:
+          Primeiro passo é você importar a biblioteca do Precision
+
+          from sklearn.metrics import precision_score
+
+          A função para calcular o precision é
+
+          precision_score(valores_reais, valores_preditos, pos_label=chave)
+
+          onde a chave é o valor em que o precision será calculado
+
+  utter_precision_ponderado:
+      - text:
+          Primeiro passo é você importar a biblioteca do Precision
+
+          from sklearn.metrics import recall_score
+
+          A função para calcular o precision é
+
+          precision_score(valores_reais, valores_preditos, labels=[chave], average='macro')
+
+          Onde o 'tipo' pode assumir um precision ponderado em 'micro', 'macro', 'weighted' ou 'binary'
+          e a chave é o valor no qual o precision será calculado
+
+  utter_relatorio_metricas:
+    - text:
+
+        from sklearn.metrics import classification_report
+
+        target_names = (['Objeto 0', 'Objeto 1'])
+
+        print(classification_report(valores_reais, valores_preditos, target_names=target_names))
+
+        onde os target_names são os elementos que serão mapeados pelas métricas
+
+  utter_recall_conceito:
+    -  text:
+
+        O Recall é responsável por nos informar qual é proporção de valores que foram identificados corretamente pelo modelo.
+
+  utter_precision_conceito:
+    - text:
+
+        Precision é responsável por nos informar qual a proporção de identificações numéricas foi realmente correta.
+
+        De certo modo o precision tenta descrever a eficiência do modelo treinado.
