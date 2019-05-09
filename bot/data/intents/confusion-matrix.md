@@ -6,6 +6,15 @@
 - Para que serve matriz de confusao
 - Para que serve matriz de confusão
 
+## intent:implementar_matriz_confusao_sklearn
+- como implementar a matriz de confusao
+- como implementar a matriz de confusão
+- como usar a matriz de confusao
+- código matriz de confusao
+- codigo matriz de confusao
+- implementacao matriz de confusao
+- implementação matriz de confusão
+
 ## intent:entender_verdadeiro_positivo
 - O que é verdadeiro positivo
 - o que e verdadeiro positivo

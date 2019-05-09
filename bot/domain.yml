@@ -40,6 +40,7 @@ intents:
   - python_info
   - Machine_Learning
   - entender_matriz_confusao
+  - implementar_matriz_confusao_sklearn
   - entender_verdadeiro_positivo
   - entender_falso_positivo
   - entender_verdadeiro_negativo
@@ -96,6 +97,8 @@ actions:
   - utter_machine_learning
   - utter_python
   - utter_entender_matriz_confusao
+  - utter_implementar_matriz_confusao_sklearn
+  - utter_implementar_matriz_confusao_pandas
   - utter_entender_verdadeiro_positivo
   - utter_entender_falso_positivo
   - utter_entender_verdadeiro_negativo
@@ -673,7 +676,35 @@ templates:
             . True Negative (TN)
             . False Negative (FN)
 
-            Se quiser ver mais sobre cada um, digite a sigla ou o nome da frequência desejada.
+            Se quiser ver a definição, digite a sigla ou o nome da frequência desejada.
+
+            Mas antes disso, deseja ver como como implementar?
+    
+    utter_implementar_matriz_confusao_sklearn:
+        - text: |
+
+            O Scikit-Learn fornece uma função confusion_matrix, confira o exemplo:
+
+        
+            from sklearn.metrics import confusion_matrix
+            y_actu = [2, 0, 2, 2, 0, 1, 1, 2, 2, 0, 1, 2]
+            y_pred = [0, 0, 2, 1, 0, 2, 1, 0, 2, 0, 2, 2]
+            confusion_matrix(y_actu, y_pred)
+            
+
+            Mas também pode ser criado uma matriz de confusão usando Pandas, deseja visualizar?
+    
+    utter_implementar_matriz_confusao_pandas:
+        - text: |
+
+            Segue o exemplo com a biblioteca Pandas:
+
+            import pandas as pd
+            y_actu = pd.Series([2, 0, 2, 2, 0, 1, 1, 2, 2, 0, 1, 2], name='Actual')
+            y_pred = pd.Series([0, 0, 2, 1, 0, 2, 1, 0, 2, 0, 2, 2], name='Predicted')
+            df_confusion = pd.crosstab(y_actu, y_pred)
+
+            Agora você já está pronto para saber quais são as métricas usadas para avaliação dos modelos!            
     
     utter_entender_verdadeiro_positivo:
         - text: |
