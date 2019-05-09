@@ -41,6 +41,8 @@ intents:
   - Machine_Learning
   - enteder_modelos_lineares_generalizados
   - entender_regressao_logistica
+  - entender_maquina_de_vetores_de_suporte
+  - entender_descentramento_estocástico_gradiente
   - entender_nearest_neighbors
   - entender_classificacao_nearest_neighbors
   - entender_classificador_k_neighbors_classifier
@@ -108,6 +110,10 @@ actions:
   - utter_implementar_svm
   - utter_implementar_suporte_svm
   - utter_implementar_classificao_multi_classe
+  - utter_entender_descentramento_estocástico_gradiente
+  - utter_classificacao_descentramento_estocástico_gradiente
+  - utter_membros_descentramento_estocástico_gradiente
+  - utter_funcoes_perda_descentramento_estocástico_gradiente
   - utter_entender_nearest_neighbors
   - utter_entender_classificacao_nearest_neighbors
   - utter_entender_classificador_k_neighbors_classifier
@@ -756,6 +762,58 @@ templates:
             dec.shape[1]
 
             Agora você já sabe o que precisa sobre SVM, o próximo conteúdo de aprendizado supervionado trata-se de: Stochastic Gradient Descent
+
+    utter_entender_descentramento_estocástico_gradiente:
+        - text: |
+            O Descentramento Estocástico de Gradiente (SGD) é uma abordagem para a aprendizagem discriminativa de classificadores lineares sob funções de perda convexa.
+
+            O SGD é frequentemente sido aplicado  na classificação de textos e processamento de linguagem natural.
+
+            Deseja ver como implemtar esse classificador agora?
+        
+    utter_classificacao_descentramento_estocástico_gradiente:
+        - text: |
+            Como outros classificadores, o SGD deve ser equipado com duas matrizes: uma matriz X de tamanho [n_samples, n_features] contendo as amostras de treinamento e uma matriz Y de tamanho [n_samples] contendo os valores de destino (rótulos de classe) para as amostras de treinamento:
+
+            from sklearn.linear_model import SGDClassifier
+            X = [[0., 0.], [1., 1.]]
+            y = [0, 1]
+            clf = SGDClassifier(loss="hinge", penalty="l2", max_iter=5)
+            clf.fit(X, y)
+
+            Agora que o modelo foi ajustado, deseja ver mais sobre membros que podem ser usados ao SGD?
+
+    utter_membros_descentramento_estocástico_gradiente:
+        - text: |
+
+            Depois de ajustado, o modelo pode ser usado para prever novos valores:
+            
+            clf.predict([[2., 2.]])
+
+            O SGD ajusta um modelo linear aos dados de treinamento:
+            
+            clf.coef_  
+
+            Para obter a distância assinada para o hiperplano use SGDClassifier.decision_function:
+            
+            clf.decision_function([[2., 2.]])
+
+            Após aprender essas funções, deseja ver quais as funções de perda aceitas pelo SGD?
+    
+    utter_funcoes_perda_descentramento_estocástico_gradiente:
+        - text: |
+
+            A função de perda de concreto pode ser definida através do parâmetro de perda. O SGDClassifier suporta as seguintes funções de perda:
+
+            .loss = "hinge": (soft-margin) linear Máquina de Vetores de Suporte
+            .loss = "modified_huber": perda da dobradiça alisada
+            .loss = "log": regressão logística
+            
+            Implementação:
+            clf = SGDClassifier(loss="log", max_iter=5).fit(X, y)
+            clf.predict_proba([[1., 1.]])     
+            
+        Isso é tudo, o próximo tópico de aprendizado supervisionado é: Nearest Neighbors
 
     utter_entender_nearest_neighbors:
 
