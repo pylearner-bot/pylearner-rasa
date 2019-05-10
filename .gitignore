@@ -105,5 +105,10 @@ venv.bak/
 
 # MongoDB
 data/
-bot/models/
 *.wt
+
+# Leave bot data on git tracking
+!bot/data/
+
+# Ignore bot models
+bot/models/
