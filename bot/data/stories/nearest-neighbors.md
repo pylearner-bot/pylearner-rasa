@@ -23,3 +23,15 @@
     - utter_entender_classificador_k_neighbors_classifier
 * afirmar
     - utter_KNeighborsClassifier
+
+## caminho implementacao de nearest neighbors 1
+* implementar_classificadores_nearest_neighbor
+    - utter_implementar_classificadores_nearest_neighbor
+* RadiusNeighborsClassifier
+    - utter_RadiusNeighborsClassifier
+
+## caminho implementacao de nearest neighbors 2
+* implementar_classificadores_nearest_neighbor
+    - utter_implementar_classificadores_nearest_neighbor
+* KNeighborsClassifier
+    - utter_KNeighborsClassifier

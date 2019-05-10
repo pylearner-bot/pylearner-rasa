@@ -51,6 +51,10 @@ intents:
   - implementar_classificadores_nearest_neighbor
   - RadiusNeighborsClassifier
   - KNeighborsClassifier
+  - entender_gaussian_naive_bayes
+  - implementar_gaussian_nayve_bayes
+  - entender_decision_tree
+  - algoritmo_decision_tree
 
 actions:
 
@@ -121,6 +125,10 @@ actions:
   - utter_implementar_classificadores_nearest_neighbor
   - utter_RadiusNeighborsClassifier
   - utter_KNeighborsClassifier
+  - utter_entender_gaussian_naive_bayes
+  - utter_implementar_gaussian_nayve_bayes
+  - utter_entender_decision_tree
+  - utter_algoritmo_decision_tree
 
 templates:
 
@@ -876,7 +884,6 @@ templates:
             from sklearn.neighbors import RadiusNeighborsClassifier
             neigh = RadiusNeighborsClassifier(radius=1.0)
             neigh.fit(X, y) 
-
             print(neigh.predict([[1.5]]))
 
     utter_KNeighborsClassifier:
@@ -887,7 +894,47 @@ templates:
             from sklearn.neighbors import KNeighborsClassifier
             neigh = KNeighborsClassifier(n_neighbors=3)
             neigh.fit(X, y) 
-
             print(neigh.predict([[1.1]]))
-
             print(neigh.predict_proba([[0.9]]))
+
+    utter_implementar_gaussian_nayve_bayes:
+
+        - text: |
+            from sklearn import datasets
+            iris = datasets.load_iris()
+            from sklearn.naive_bayes import GaussianNB
+            gnb = GaussianNB()
+            y_pred = gnb.fit(iris.data, iris.target).predict(iris.data)
+            print("Number of mislabeled points out of a total %d points : %d"
+                % (iris.data.shape[0],(iris.target != y_pred).sum()))
+
+            Era isso que procurava?
+
+    utter_entender_gaussian_naive_bayes:
+
+        - text: |
+            Os métodos Naive Bayes são um conjunto de algoritmos de aprendizado supervisionado baseados na aplicação do teorema de Bayes com a suposição “ingênua” de independência condicional entre cada par de recursos, dado o valor da variável de classe.
+            
+            GaussianNB implementa o algoritmo Gaussian Naive Bayes para classificação. A probabilidade das features assume ser gaussiana.
+
+            Gostaria de saber como é o algoritmo?
+
+    utter_entender_decision_tree:
+
+        - text: |
+            Árvores de decisão (Decision trees) são um método de aprendizagem supervisionada não paramétrico usado para classificação.
+            
+            O objetivo é criar um modelo que prevê o valor de uma variável de destino, aprendendo regras de decisão simples inferidas a partir dos recursos de dados.
+
+            Gostaria de ver o algoritmo?
+    
+    utter_algoritmo_decision_tree:
+
+        - text: |
+            from sklearn import tree
+            X = [[0, 0], [1, 1]]
+            Y = [0, 1]
+            clf = tree.DecisionTreeClassifier()
+            clf = clf.fit(X, Y)
+            clf.predict([[2., 2.]])
+            clf.predict_proba([[2., 2.]])
