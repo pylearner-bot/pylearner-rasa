@@ -656,6 +656,7 @@ templates:
             É uma linguagem interpretada que têm seus códigos fontes transformados em uma linguagem intermediária, que será interpretada pela máquina virtual da linguagem quando o programa for executado.
 
     utter_kmeans:
+
         - text: |
             O Primeiro passo é importar a biblioteca
 
@@ -668,5 +669,30 @@ templates:
             para visualizar em que agrupamento estão os dados use: print(kmeans.labels_)
 
     utter_kmeans_conceitual:
+
         - text:
             K-means possui por finalidade agrupar um conjunto de dados semelhantes ou que não apresentam grande discrepância entre si descobrindo assim padrões subjacentes.
+
+    utter_kmeans_centroide:
+
+        - text: |
+            Depois de setar os dados usando kmeans:
+
+            kmeans = KMeans(n_clusters=quantidade_de_agrupamentos).fit(valores_aleatorios)
+
+            Iremos encontrar os centroides dos agrupamentos da seguinte forma:
+
+            print(kmeans.cluster_centers_)
+
+
+    utter_kmeans_mapeados:
+    
+        - text: |
+
+            Depois de setar os dados usando kmeans:
+
+            kmeans = KMeans(n_clusters=quantidade_de_agrupamentos).fit(valores_aleatorios)
+
+            Para visualizar, de fato, em que cluster se encontra cada dado:
+
+            print (kmeans.labels_)
