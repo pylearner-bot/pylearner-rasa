@@ -39,6 +39,10 @@ intents:
   - informacoes_pessoais
   - python_info
   - Machine_Learning
+  - entender_modelos_lineares_generalizados
+  - entender_regressao_logistica
+  - entender_maquina_de_vetores_de_suporte
+  - entender_descentramento_estocástico_gradiente
   - entender_nearest_neighbors
   - entender_classificacao_nearest_neighbors
   - entender_classificador_k_neighbors_classifier
@@ -98,6 +102,17 @@ actions:
   - utter_informacoes_pessoais
   - utter_machine_learning
   - utter_python
+  - utter_entender_modelos_lineares_generalizados
+  - utter_entender_regressao_logistica
+  - utter_implementar_regressao_logistica
+  - utter_entender_maquina_de_vetores_de_suporte
+  - utter_implementar_svm
+  - utter_implementar_suporte_svm
+  - utter_implementar_classificao_multi_classe
+  - utter_entender_descentramento_estocástico_gradiente
+  - utter_classificacao_descentramento_estocástico_gradiente
+  - utter_membros_descentramento_estocástico_gradiente
+  - utter_funcoes_perda_descentramento_estocástico_gradiente
   - utter_entender_nearest_neighbors
   - utter_entender_classificacao_nearest_neighbors
   - utter_entender_classificador_k_neighbors_classifier
@@ -666,6 +681,137 @@ templates:
             Python foi criado no final dos anos oitenta (1989) por Guido van Rossum, na Holanda, como sucessor da linguagem de programação ABC!
 
             É uma linguagem interpretada que têm seus códigos fontes transformados em uma linguagem intermediária, que será interpretada pela máquina virtual da linguagem quando o programa for executado.
+
+    utter_entender_modelos_lineares_generalizados:
+        - text: |
+            
+            O modelo linear generalizado generaliza a regressão linear permitindo que o modelo linear seja relacionado à variável de resposta por meio de uma função de link e permitindo que a magnitude da variância de cada medida seja uma função de seu valor previsto.
+  
+            O próximo tópico de GLM trata-se de regressao logistica, deseja ver mais?
+    
+    utter_entender_regressao_logistica:
+        - text: |
+            A regressão logística, apesar de seu nome, é um modelo linear para classificação em vez de regressão. A regressão logística também é conhecida na literatura como regressão logit, classificação de máxima entropia (MaxEnt) ou o classificador log-linear.
+
+            Deseja ver como implementá-la?
+
+    utter_implementar_regressao_logistica:
+        - text: |
+            Nesse modelo, as probabilidades que descrevem os resultados possíveis de um único teste são modeladas usando uma função logística:
+
+            from sklearn import svm
+            X = [[0, 0], [1, 1]]
+            y = [0, 1]
+            clf = svm.SVC(gamma='scale')
+            clf.fit(X, y)
+
+            Agora você já está pronto para conferir o próximo assunto: Support Vector Machines.
+               
+    utter_entender_maquina_de_vetores_de_suporte:
+        - text: |
+            A máquina de vetores de suporte (SVM) é um conjunto de métodos do aprendizado supervisionado que analisam os dados e reconhecem padrões, usado para classificação e análise de regressão. 
+            
+            O SVM padrão toma como entrada um conjunto de dados e prediz, para cada entrada dada, qual de duas possíveis classes a entrada faz parte, o que faz do SVM um classificador linear binário não probabilístico.
+
+            Deseja ver como implementar como implementar esse classificador?
+
+    utter_implementar_svm:
+        - text: |
+           
+            SVC, NuSVC e LinearSVC são classificadores que tomam como entrada duas matrizes: uma matriz X de tamanho [n_samples, n_features] contendo as amostras de treinamento, e uma matriz y de rótulos de classe (strings ou inteiros), tamanho [n_samples]:
+
+            from sklearn import svm
+            X = [[0, 0], [1, 1]]
+            y = [0, 1]
+            clf = svm.SVC(gamma='scale')
+            clf.predict([[2., 2.]])
+
+            Depois de aprender esse conceito, deseja ver mais sobre vetores de suporte?
+
+    utter_implementar_suporte_svm:
+        - text: |
+            A função de decisão de SVMs depende de algum subconjunto dos dados de treinamento, chamados de vetores de suporte. Algumas propriedades destes vetores de suporte podem ser encontradas nos membros support_vectors_, support_ e n_support:
+
+            Para obter os vetores de suporte:
+            clf.support_vectors_
+            
+            Para obter os índices dos vetores de suporte:
+            clf.support_
+
+            Para obter o número de vetores de suporte para cada classe:
+            clf.n_support_
+
+            Deseja ver mais sobre como implementar uma classificação multiclasse?
+
+    utter_implementar_classificao_multi_classe:
+        - text: |
+            O SVC e o NuSVC implementam a abordagem “um-contra-um” para classificação de várias classes. Se n_class é o número de classes, os classificadores n_class * (n_class - 1) / 2 são construídos e cada um treina os dados de duas classes.
+
+            X = [[0], [1], [2], [3]]
+            Y = [0, 1, 2, 3]
+            clf = svm.SVC(gamma='scale', decision_function_shape='ovo')
+            clf.fit(X, Y)
+
+            dec = clf.decision_function([[1]])
+            dec.shape[1]
+
+            clf.decision_function_shape = "ovr"
+            dec = clf.decision_function([[1]])
+            dec.shape[1]
+
+            Agora você já sabe o que precisa sobre SVM, o próximo conteúdo de aprendizado supervionado trata-se de: Stochastic Gradient Descent
+
+    utter_entender_descentramento_estocástico_gradiente:
+        - text: |
+            O Descentramento Estocástico de Gradiente (SGD) é uma abordagem para a aprendizagem discriminativa de classificadores lineares sob funções de perda convexa.
+
+            O SGD é frequentemente sido aplicado  na classificação de textos e processamento de linguagem natural.
+
+            Deseja ver como implemtar esse classificador agora?
+        
+    utter_classificacao_descentramento_estocástico_gradiente:
+        - text: |
+            Como outros classificadores, o SGD deve ser equipado com duas matrizes: uma matriz X de tamanho [n_samples, n_features] contendo as amostras de treinamento e uma matriz Y de tamanho [n_samples] contendo os valores de destino (rótulos de classe) para as amostras de treinamento:
+
+            from sklearn.linear_model import SGDClassifier
+            X = [[0., 0.], [1., 1.]]
+            y = [0, 1]
+            clf = SGDClassifier(loss="hinge", penalty="l2", max_iter=5)
+            clf.fit(X, y)
+
+            Agora que o modelo foi ajustado, deseja ver mais sobre membros que podem ser usados ao SGD?
+
+    utter_membros_descentramento_estocástico_gradiente:
+        - text: |
+
+            Depois de ajustado, o modelo pode ser usado para prever novos valores:
+            
+            clf.predict([[2., 2.]])
+
+            O SGD ajusta um modelo linear aos dados de treinamento:
+            
+            clf.coef_  
+
+            Para obter a distância assinada para o hiperplano use SGDClassifier.decision_function:
+            
+            clf.decision_function([[2., 2.]])
+
+            Após aprender essas funções, deseja ver quais as funções de perda aceitas pelo SGD?
+    
+    utter_funcoes_perda_descentramento_estocástico_gradiente:
+        - text: |
+
+            A função de perda de concreto pode ser definida através do parâmetro de perda. O SGDClassifier suporta as seguintes funções de perda:
+
+            .loss = "hinge": (soft-margin) linear Máquina de Vetores de Suporte
+            .loss = "modified_huber": perda da dobradiça alisada
+            .loss = "log": regressão logística
+            
+            Implementação:
+            clf = SGDClassifier(loss="log", max_iter=5).fit(X, y)
+            clf.predict_proba([[1., 1.]])     
+            
+        Isso é tudo, o próximo tópico de aprendizado supervisionado é: Nearest Neighbors
 
     utter_entender_nearest_neighbors:
 
