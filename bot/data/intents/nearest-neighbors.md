@@ -3,7 +3,6 @@
 - o que e nearest neighbors
 - para que serve um nearest neighbors
 
-
 ## intent:entender_classificacao_nearest_neighbors
 - classificacao nearest neighbors
 - quando usar o metodo de classificacao nearest neighbors
@@ -11,14 +10,6 @@
 
 ## intent:classificadores_nearest_neighbors
 - qual classificador usar
-
-## intent:entender_pesos_classificadores_nearest_neighbors
-- weights
-- pesos
-- qual peso usar
-- qual a diferenca dos pesos
-- weights uniform
-- weights distance
 
 ## intent:entender_classificador_k_neighbors_classifier
 - como funciona o classificador KNeighborsClassifier

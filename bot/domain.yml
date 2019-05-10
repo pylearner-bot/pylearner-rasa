@@ -44,7 +44,6 @@ intents:
   - entender_classificador_k_neighbors_classifier
   - entender_classificador_radius_neighbors_classifier
   - classificadores_nearest_neighbors
-  - entender_pesos_classificadores_nearest_neighbors
   - implementar_classificadores_nearest_neighbor
   - RadiusNeighborsClassifier
   - KNeighborsClassifier
@@ -104,7 +103,6 @@ actions:
   - utter_entender_classificador_k_neighbors_classifier
   - utter_entender_classificador_radius_neighbors_classifier
   - utter_classificadores_nearest_neighbors
-  - utter_entender_pesos_classificadores_nearest_neighbors
   - utter_implementar_classificadores_nearest_neighbor
   - utter_RadiusNeighborsClassifier
   - utter_KNeighborsClassifier
@@ -674,14 +672,17 @@ templates:
         - text: |
             O método Nearest Neighbors consiste em encontrar um número predefinido de amostras de treinamento mais próximas da distancia do novo ponto e prever a label a partir delas.
 
-        - text: |
-            Sendo um método não paramêtrico, é bem sucedido em situações de classificação em que os limites de decisão são muito irregulares.
-    
+            Deseja saber sobre classificação Nearest Neighbors?
+
     utter_entender_classificacao_nearest_neighbors:
 
         - text: |
             A classificação usando nearest neighbors é calculada a partir de uma simples votação por maioria dos nearest neighbors mais próximos de cada ponto: um ponto de consulta é atribuido à classe de dados que possui mais representantes dentro dos nearest neighbors mais próximos.
-    
+
+            Sendo um método não paramêtrico, é bem sucedido em situações de classificação em que os limites de decisão são muito irregulares.
+
+            Saber mais?
+
     utter_entender_classificador_k_neighbors_classifier:
 
         - text: |
@@ -689,6 +690,7 @@ templates:
 
             A escolha ideal do valor k é altamente dependente dos dados: em geral, um k muito grande suprime os efeitos do ruído, mas torna os limites de classificação menos distintos.
 
+            Deseja ver a implementação?
 
     utter_entender_classificador_radius_neighbors_classifier:
         
@@ -697,26 +699,21 @@ templates:
 
             O usuário especifica um raio fixo r, de modo que pontos em vizinhanças mais esparsas usem menos vizinhos mais próximos para a classificação.
 
+            Deseja ver a implementação?
+
     utter_classificadores_nearest_neighbors:
         
         - text: |
             O scikit-learn implementa dois classificadores de nearest neighbors: KNeighborsClassifier e RadiusNeighborsClassifier.
 
             A classificação de vizinhos KNeighborsClassifier é a técnica mais usada, nos casos em que os dados não são uniformemente amostrados, a classificação dos neighbors baseados no raio RadiusNeighborsClassifierpode ser uma escolha melhor.
-    
-    utter_entender_pesos_classificadores_nearest_neighbors:
-        
-        - text: |
-            A classificação básica de nearest neighbors usa pesos uniformes: isto é, o valor atribuído a um ponto de consulta é calculado a partir de uma votação por maioria simples dos vizinhos mais próximos. 
-            
-            Em algumas circunstâncias, é melhor ponderar os neighbors de tal forma que os vizinhos mais próximos contribuam mais para o ajuste. 
-            
-            Isso pode ser feito através do parametro weights. 
-            
-            O valor padrão weights = 'uniform', atribui pesos uniformes a cada vizinho.
-            
-            weights = 'distance' atribui pesos proporcionais ao inverso da distância do ponto de consulta.
 
+            Escolha um dos classificadores para saber mais:
+                    
+                    .Classificador KNeighborsClassifier
+
+                    .Classificador RadiusNeighborsClassifier
+    
     utter_implementar_classificadores_nearest_neighbor:
 
         - text: |
