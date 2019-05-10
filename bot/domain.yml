@@ -39,6 +39,8 @@ intents:
   - informacoes_pessoais
   - python_info
   - Machine_Learning
+  - kmeans
+  - kmeans_conceito
 
 actions:
 
@@ -90,6 +92,8 @@ actions:
   - utter_informacoes_pessoais
   - utter_machine_learning
   - utter_python
+  - utter_kmeans
+  - utter_kmeans_conceitual
 
 templates:
 
@@ -650,3 +654,19 @@ templates:
             Python foi criado no final dos anos oitenta(1989) por Guido van Rossum, na Holanda, como sucessor da linguagem de programação ABC!
 
             É uma linguagem interpretada que têm seus códigos fontes transformados em uma linguagem intermediária, que será interpretada pela máquina virtual da linguagem quando o programa for executado.
+
+    utter_kmeans:
+        - text: |
+            O Primeiro passo é importar a biblioteca
+
+            from sklearn.cluster import KMeans
+
+            Agora iremos setar os dados e agrupa-los utilizando KMeans
+
+            kmeans = KMeans(n_clusters=quantidade_de_agrupamentos).fit(dados_a_serem_agrupados)
+
+            para visualizar em que agrupamento estão os dados use: print(kmeans.labels_)
+
+    utter_kmeans_conceitual:
+        - text:
+            K-means possui por finalidade agrupar um conjunto de dados semelhantes ou que não apresentam grande discrepância entre si descobrindo assim padrões subjacentes.
