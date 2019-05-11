@@ -64,11 +64,22 @@ services:
       # Last commit hash using this command: git rev-parse HEAD
       - BOT_VERSION=0.1.0-alpha
 
+      # Analytics config
+      - ENABLE_ANALYTICS=False
+      - ELASTICSEARCH_URL=elasticsearch:9200
+
+      # # HTTP login on elasticsearch
+      # - ELASTICSEARCH_USER=admin
+      # - ELASTICSEARCH_PASSWORD=admin
+      # - ELASTICSEARCH_HTTP_SCHEME=https
+      # - ELASTICSEARCH_PORT=443
+
     ports:
       - 5005:5005
       - 5002:5002
     depends_on:
       - actions
+      - rocketchat
     volumes:
       - ./bot:/bot
       - ./scripts:/scripts
