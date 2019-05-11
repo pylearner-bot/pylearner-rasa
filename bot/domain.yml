@@ -38,6 +38,9 @@ intents:
   - informacoes_pessoais
   - python_info
   - Machine_Learning
+  - entender_feature_scaling
+  - entender_normalizacao
+  - entender_padronizacao
   - entender_matriz_confusao
   - implementar_matriz_confusao_sklearn
   - entender_verdadeiro_positivo
@@ -132,6 +135,12 @@ actions:
   - utter_informacoes_pessoais
   - utter_machine_learning
   - utter_python
+  - utter_entender_feature_scaling
+  - utter_tecnicas_feture_scaling
+  - utter_entender_normalizacao
+  - utter_implementar_normalizacao
+  - utter_entender_padronizacao
+  - utter_implementar_padronizacao
   - utter_entender_matriz_confusao
   - utter_implementar_matriz_confusao_sklearn
   - utter_implementar_matriz_confusao_pandas
@@ -724,6 +733,66 @@ templates:
             Python foi criado no final dos anos oitenta (1989) por Guido van Rossum, na Holanda, como sucessor da linguagem de programação ABC!
 
             É uma linguagem interpretada que têm seus códigos fontes transformados em uma linguagem intermediária, que será interpretada pela máquina virtual da linguagem quando o programa for executado.
+    
+    utter_entender_feature_scaling:
+        - text: |
+            O Feature Scaling é uma técnica para padronizar os recursos independentes presentes nos dados em um intervalo fixo. 
+            
+            Ele é executado durante o pré-processamento de dados para lidar com magnitudes, valores ou unidades altamente variáveis. 
+
+            Deseja ver mais sobre técnicas utilizadas para Feature Scaling?
+
+        - text: |
+            O Feature Scaling é uma técnica para padronizar os recursos independentes presentes nos dados em um intervalo fixo.
+
+            Se o dimensionamento de recurso não for feito, um algoritmo de aprendizado de máquina tende a pesar valores maiores, maiores e considera valores menores como os valores mais baixos, independentemente da unidade dos valores.
+  
+            Vamos conferir algumas técnicas de Feature Scaling?
+    
+    utter_tecnicas_feture_scaling:
+
+        - text: |
+            Considere as duas mais importantes:
+
+            . Min-Max Normalizazation (Min-Max Normalização)
+            . Standardisation (Padronização)
+
+            Escolha uma opção
+        
+    utter_entender_normalizacao:
+        - text: |
+            Esta técnica redimensiona um recurso ou valor de observação com valor de distribuição entre 0 e 1.
+
+            X = (Xi - min(x)) / (max(x) - min(x))
+
+            Mas e como implementar? Deseja conferir?
+        
+    utter_implementar_normalizacao:
+        - text: |
+            Será necessário a importação da biblioteca sklearn:
+
+            from sklearn import preprocessing
+            min_max_scaler = preprocessing.MinMaxScaler(feature_range =(0, 1))
+            x_after_min_max_scaler = min_max_scaler.fit_transform(dataSet) 
+            print ("\nAfter min max Scaling : \n", x_after_min_max_scaler)
+
+    utter_entender_padronizacao:
+        - text: |
+            É uma técnica muito eficaz que reescala um valor de recurso para que ele tenha distribuição com valor médio 0 e variância igual a 1.
+
+            X = (Xi - média) / desvio padrão 
+
+            Mas como se implementa isso? Deseja conferir?
+
+    utter_implementar_padronizacao:
+        - text: |
+            Para isso, será necessário a importação da biblioteca sklearn:
+
+                from sklearn import preprocessing
+                Standardisation = preprocessing.StandardScaler() 
+                x_after_Standardisation = Standardisation.fit_transform(x) 
+                print ("\nAfter Standardisation : \n", x_after_Standardisation) 
+
 
     utter_entender_metricas_de_classificacao:
         - text: |
