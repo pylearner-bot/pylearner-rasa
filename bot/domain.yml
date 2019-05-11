@@ -38,6 +38,9 @@ intents:
   - informacoes_pessoais
   - python_info
   - Machine_Learning
+  - entender_feature_scaling
+  - entender_normalizacao
+  - entender_padronizacao
   - entender_matriz_confusao
   - implementar_matriz_confusao_sklearn
   - entender_verdadeiro_positivo
