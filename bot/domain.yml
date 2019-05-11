@@ -39,6 +39,13 @@ intents:
   - informacoes_pessoais
   - python_info
   - Machine_Learning
+  - transformar_dados_categoricos
+  - transformar_dados_categoricos
+  - categoricos_rapidos
+  - categoricos_rapidos2
+  - categoricos_rapidos3
+  - categoricos_rapidos4
+  - categoricos_rapidos5
   - kmeans
   - kmeans_conceito
   - entender_modelos_lineares_generalizados
@@ -108,6 +115,12 @@ actions:
   - utter_informacoes_pessoais
   - utter_machine_learning
   - utter_python
+  - utter_transoformar_dados_categoricos
+  - utter_categoricos_rapidos
+  - utter_categoricos_rapidos2
+  - utter_categoricos_rapidos3
+  - utter_categoricos_rapidos4
+  - utter_categoricos_rapidos5
   - utter_kmeans
   - utter_kmeans_conceitual
   - utter_entender_modelos_lineares_generalizados
@@ -683,6 +696,57 @@ templates:
 
             É uma linguagem interpretada que têm seus códigos fontes transformados em uma linguagem intermediária, que será interpretada pela máquina virtual da linguagem quando o programa for executado.
 
+    utter_transoformar_dados_categoricos:
+
+      - text: |
+          O primeiro passo é a importação do módulo de processamento!
+
+          from sklearn.preprocessing import LabelEncoder
+
+          Depois devemos instanciar um objeto da LabelEncoder
+
+          label_encoder = LabelEncoder()
+
+          Agora utilizaremos a função fit_trainsform() para converter os dados!
+
+          valores_numericos = label_encoder.fit_transform(dados_categoricos)
+
+          Para decodificar os dados mapeados
+
+          valor_real = label_encoder.inverse_transform([valor_numerico])
+
+    utter_categoricos_rapidos:
+
+        - text: |
+            No terminal:
+                pip install -U scikit-learn
+
+    utter_categoricos_rapidos2:
+
+    - text: |
+
+          from sklearn.preprocessing import LabelEncoder
+
+    utter_categoricos_rapidos3:
+      - text: |
+
+          label_encoder = LabelEncoder()
+
+          valores_numericos = label_encoder.fit_transform(dados_categoricos)
+
+          No caso os dados_categoricos pode ser um vetor ou uma variável, dependendo da sua necessidade!
+
+    utter_categoricos_rapidos4:
+      - text: |
+
+          label_encoder = LabelEncoder()
+
+          valor_real = label_encoder.inverse_transform([valor_numerico_dado_categorico])
+
+    utter_categoricos_rapidos5:
+      - text: |
+
+          label_encoder = LabelEncoder()
     utter_kmeans:
 
         - text: |
