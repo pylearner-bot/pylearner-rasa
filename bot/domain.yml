@@ -39,6 +39,8 @@ intents:
   - informacoes_pessoais
   - python_info
   - Machine_Learning
+  - kmeans
+  - kmeans_conceito
   - entender_modelos_lineares_generalizados
   - entender_regressao_logistica
   - entender_maquina_de_vetores_de_suporte
@@ -106,6 +108,8 @@ actions:
   - utter_informacoes_pessoais
   - utter_machine_learning
   - utter_python
+  - utter_kmeans
+  - utter_kmeans_conceitual
   - utter_entender_modelos_lineares_generalizados
   - utter_entender_regressao_logistica
   - utter_implementar_regressao_logistica
@@ -690,6 +694,48 @@ templates:
 
             É uma linguagem interpretada que têm seus códigos fontes transformados em uma linguagem intermediária, que será interpretada pela máquina virtual da linguagem quando o programa for executado.
 
+    utter_kmeans:
+
+        - text: |
+            O Primeiro passo é importar a biblioteca
+
+            from sklearn.cluster import KMeans
+
+            Agora iremos setar os dados e agrupa-los utilizando KMeans
+
+            kmeans = KMeans(n_clusters=quantidade_de_agrupamentos).fit(dados_a_serem_agrupados)
+
+            para visualizar em que agrupamento estão os dados use: print(kmeans.labels_)
+
+    utter_kmeans_conceitual:
+
+        - text:
+            K-means possui por finalidade agrupar um conjunto de dados semelhantes ou que não apresentam grande discrepância entre si descobrindo assim padrões subjacentes.
+
+    utter_kmeans_centroide:
+
+        - text: |
+            Depois de setar os dados usando kmeans:
+
+            kmeans = KMeans(n_clusters=quantidade_de_agrupamentos).fit(valores_aleatorios)
+
+            Iremos encontrar os centroides dos agrupamentos da seguinte forma:
+
+            print(kmeans.cluster_centers_)
+
+
+    utter_kmeans_mapeados:
+    
+        - text: |
+
+            Depois de setar os dados usando kmeans:
+
+            kmeans = KMeans(n_clusters=quantidade_de_agrupamentos).fit(valores_aleatorios)
+
+            Para visualizar, de fato, em que cluster se encontra cada dado:
+
+            print (kmeans.labels_)
+            
     utter_entender_modelos_lineares_generalizados:
         - text: |
             
