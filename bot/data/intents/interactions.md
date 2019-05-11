@@ -14,8 +14,6 @@
 - beleza
 - com licenca
 - tranquilo
-- estou bem
-- joia
 - fala ai
 - bom dia
 - boa tarde
@@ -33,9 +31,19 @@
 - oi
 - eae bro
 - fala bro
+- oiiii
+- oe
+- Oi Pyter
+- oi pyter
+- ola pyter
+- eae pyter
+
 
 ## intent:cumprimentar2
 
+- ola como voce esta
+- oi como voce esta
+- oi pyter como vai
 - oi tudo bem
 - oi como vai
 - oi como esta
@@ -74,7 +82,14 @@
 
 ## intent:responder_positivamente
 
+- estou bem e voce como vai
+- estou bom e voce como esta
 - to bem sim e vc
+- tudo bem e com voce
+- tudo bem comigo e com voce
+- tudo certo comigo e com voce
+- estou bem tambem
+- estou otimo tambem
 - estou bem sim e vc
 - estou bem e voce
 - tudo bom e vc
@@ -98,12 +113,19 @@
 - to bem mano e voce
 - estou bem bro e vc
 - estou bem mano e voce
+- tudo certo e voce como esta?
 
 ## intent:responder_positivamente_direto
 
 - to bem sim
+- tudo bem
+- tudo bom
+- tudo bem por aqui
+- tudo bom aqui sim
 - estou bem sim
 - estou bem
+- eu estou bem
+- eu estou bem sim
 - tudo bom
 - tudo otimo
 - tudo okay
@@ -125,6 +147,10 @@
 
 ## intent:responder_negativamente_diretamente
 
+- no
+- nao
+- não
+- nao to
 - to mal
 - nao to legal
 - nao to bem
@@ -235,6 +261,9 @@
 - Ss
 - sim sim
 - sim obrigado
+- desejo sim
+- gostaria sim
+- instalado
 
 ## intent:negar
 
@@ -396,14 +425,17 @@
 - Como posso contribuir
 - Seus documentos por favor
 - blitz
+- sua documentação onde esta
 
 ## intent:Machine_Learning
 
 - o que e machine learning
 - machine learnig
 - o que eh ml
+- o que e ml
 - ml
 - machine learning
+- defina machine learning
 
 ## intent:python_info
 

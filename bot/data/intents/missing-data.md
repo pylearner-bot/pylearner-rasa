@@ -18,6 +18,8 @@
 ## intent:corrigir_a_deteccao
 - como corrigir o problema de dados faltantes
 - formas de corrigir dados faltantes
+- corrigir dados faltantes
+- resolver dados faltantes
 
 ## intent:substituicao_constante
 - substituicao por constante
