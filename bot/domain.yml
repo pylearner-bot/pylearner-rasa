@@ -291,6 +291,8 @@ templates:
 
              Uma introdução ao Jupyter Notebook
 
+             Métricas de Regressão(R2 score, explained variance score)
+
              Em breve vou aprender novas funcionalidades! Mas espero que essas atendam sua necessidade :)
 
     utter_ajuda:
@@ -685,3 +687,25 @@ templates:
             r2_score(y_true, y_pred, multioutput='raw_values')
             
             r2_score(y_true, y_pred, multioutput=[0.3, 0.7])
+    
+    utter_entender_explained_variance_score:
+
+        - text: |
+             A função explained_variance_score é usada para medir a proporção para qual um modelo matemático varia dentro de um conjunto de dados.              
+             
+             A melhor pontuação possível é 1.0.
+             Caso o r2_score = explained_variance_score, isso significa que o Erro Médio = 0.
+
+             Deseja ver um exemplo de uso da função explained_variance_score?
+    
+    utter_exemplo_funcao_explained_variance_score:
+
+        - text: |
+            y_true = [3, -0.5, 2, 7]
+            y_pred = [2.5, 0.0, 2, 8]
+            explained_variance_score(y_true, y_pred)  
+            0.957...
+            y_true = [[0.5, 1], [-1, 1], [7, -6]]
+            y_pred = [[0, 2], [-1, 2], [8, -5]]
+            explained_variance_score(y_true, y_pred, multioutput='uniform_average')
+            0.983...
