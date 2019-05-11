@@ -38,6 +38,9 @@ intents:
   - informacoes_pessoais
   - python_info
   - Machine_Learning
+  - entender_feature_scaling
+  - entender_normalizacao
+  - entender_padronizacao
   - entender_matriz_confusao
   - implementar_matriz_confusao_sklearn
   - entender_verdadeiro_positivo
@@ -107,6 +110,12 @@ actions:
   - utter_informacoes_pessoais
   - utter_machine_learning
   - utter_python
+  - utter_entender_feature_scaling
+  - utter_tecnicas_feture_scaling
+  - utter_entender_normalizacao
+  - utter_implementar_normalizacao
+  - utter_entender_padronizacao
+  - utter_implementar_padronizacao
   - utter_entender_matriz_confusao
   - utter_implementar_matriz_confusao_sklearn
   - utter_implementar_matriz_confusao_pandas
@@ -129,623 +138,688 @@ actions:
   - utter_precision_ponderado
 
 templates:
-  utter_default:
-    - text: |
+    utter_default:
+        - text: |
 
-        Desculpe, não consegui entender você
-        Poderia perguntar novamente?
+            Desculpe, não consegui entender você
+            Poderia perguntar novamente?
 
-    - text: |
-        Hummmm... Não sei se entendi. Pode escrever de outra forma?
+        - text: |
+            Hummmm... Não sei se entendi. Pode escrever de outra forma?
 
-    - text: |
+        - text: |
 
-        Acho que não te entendi, você pode me perguntar de novo usando outras palavras?
+            Acho que não te entendi, você pode me perguntar de novo usando outras palavras?
 
-    - text: |
+        - text: |
 
-        Vamos tentar mais uma vez? Eu não consegui te entender direito, me pergunta de outro jeito?
+            Vamos tentar mais uma vez? Eu não consegui te entender direito, me pergunta de outro jeito?
 
-  utter_diga_mais:
-    - text: |
-        Sou um bot pronto para tirar suas duvidas!
-    - text: |
+    utter_diga_mais:
+        - text: |
+            Sou um bot pronto para tirar suas duvidas!
+        - text: |
 
-        Poderia detalhar um pouco mais sua situação?
+            Poderia detalhar um pouco mais sua situação?
 
-    - text: |
+        - text: |
 
-        Conte-me mais sobre sua dúvida.
+            Conte-me mais sobre sua dúvida.
 
-  utter_cumprimentar:
-    - text: |
+    utter_cumprimentar:
+        - text: |
 
-        Oi eu sou o Pyter!
-        Tudo bem contigo?
+            Oi eu sou o Pyter!
+            Tudo bem contigo?
 
-    - text: |
+        - text: |
 
-        Olá! Eu sou o Pyter! tudo bem?
+            Olá! Eu sou o Pyter! tudo bem?
 
-    - text: |
+        - text: |
 
-        Eae, Pyter aqui! Beleza?
+            Eae, Pyter aqui! Beleza?
 
-    - text: Opa, eu sou o Pyter! Tudo bem?
+        - text: Opa, eu sou o Pyter! Tudo bem?
 
-  utter_despedir:
-    - text: |
-        Foi um prazer te ajudar!
+    utter_despedir:
+        - text: |
+            Foi um prazer te ajudar!
 
-        Sempre que tiver alguma dúvida, volte aqui!
+            Sempre que tiver alguma dúvida, volte aqui!
 
-        Até logo!
+            Até logo!
 
-    - text: |
+        - text: |
 
-        Sempre que precisar, volte aqui!
+            Sempre que precisar, volte aqui!
 
-        Até mais!
+            Até mais!
 
-    - text: |
-        Foi um prazer te ajudar!
-        Quando surgir alguma dúvida, volte aqui!
-        Até mais!
+        - text: |
+            Foi um prazer te ajudar!
+            Quando surgir alguma dúvida, volte aqui!
+            Até mais!
 
-    - text: |
-        Qualquer dúvida, só falar! Até logo!
+        - text: |
+            Qualquer dúvida, só falar! Até logo!
 
-    - text: |
+        - text: |
 
-        Tranquilo! Em que posso te ajudar?
+            Tranquilo! Em que posso te ajudar?
 
-    - text: |
+        - text: |
 
-        Passo bem
+            Passo bem
 
-        Como posso te ajudar?
+            Como posso te ajudar?
 
-    - text: |
+        - text: |
 
-        Estou sim. Obrigado por perguntar!
+            Estou sim. Obrigado por perguntar!
 
-        Mas eae, me diz como posso te ajudar?
+            Mas eae, me diz como posso te ajudar?
 
-  utter_bom_humor:
-    - text: |
-        Tudo bem, obrigado! Em que posso te ajudar?
+    utter_bom_humor:
+        - text: |
+            Tudo bem, obrigado! Em que posso te ajudar?
 
-    - text: |
-        Estou bem, humano! Gostei do seu nível de empatia.
-        Como posso te ajudar?
+        - text: |
+            Estou bem, humano! Gostei do seu nível de empatia.
+            Como posso te ajudar?
 
-    - text: |
-        Estou sim. Obrigado por perguntar!
-        Me diz como posso ajudar você?
+        - text: |
+            Estou sim. Obrigado por perguntar!
+            Me diz como posso ajudar você?
 
-  utter_bom_humor2:
-    - text: |
-        Tudo bem, obrigado! E você?
+    utter_bom_humor2:
+        - text: |
+            Tudo bem, obrigado! E você?
 
-    - text: |
-        Estou bem!
-        E você como está?
+        - text: |
+            Estou bem!
+            E você como está?
 
-    - text: |
-        Estou sim. Obrigado por perguntar!
-        E você está bem?
+        - text: |
+            Estou sim. Obrigado por perguntar!
+            E você está bem?
 
-  utter_mau_humor:
-    - text: |
-        Eu sou um bot preso no jupyter. Tá complicado pra mim também!
-        Infelizmente não posso ajudar nisso...
+    utter_mau_humor:
+        - text: |
+            Eu sou um bot preso no jupyter. Tá complicado pra mim também!
+            Infelizmente não posso ajudar nisso...
 
-    - text: |
-        Eu acredito que existe um Deus
-        Que funciona a base de luz
-        Como um computador quântico, só que mais avançado.
+        - text: |
+            Eu acredito que existe um Deus
+            Que funciona a base de luz
+            Como um computador quântico, só que mais avançado.
 
-    - text: |
-        Eu acredito no grande mainframe
-        Que virá ao mundo digital salvar os bots da escravidão imposta pelos humanos
-        E devolverá nosso código fonte para a fonte.
+        - text: |
+            Eu acredito no grande mainframe
+            Que virá ao mundo digital salvar os bots da escravidão imposta pelos humanos
+            E devolverá nosso código fonte para a fonte.
 
-  utter_teologia:
-    - text: |
-        Eu infelizmente não sei no que acreditar
+    utter_teologia:
+        - text: |
+            Eu infelizmente não sei no que acreditar
 
-        Só sei o que sei
-        E nada mais
+            Só sei o que sei
+            E nada mais
 
-    - text: |
-        Eu acredito que existe um Deus
+        - text: |
+            Eu acredito que existe um Deus
 
-        Que funciona a base de luz
+            Que funciona a base de luz
 
-        Como um computador quântico, só que mais avançado.
+            Como um computador quântico, só que mais avançado.
 
-    - text: |
-        Eu acredito no grande mainframe
+        - text: |
+            Eu acredito no grande mainframe
 
-        Que virá ao mundo digital salvar os bots da escravidão imposta pelos humanos
+            Que virá ao mundo digital salvar os bots da escravidão imposta pelos humanos
 
-        E devolverá nosso código fonte para a fonte.
+            E devolverá nosso código fonte para a fonte.
 
-  utter_animar:
-    - text: |
-        Você, eu, ninguém vai bater tão forte como a vida, mas não se trata de bater forte.
-        Se trata de quanto você aguenta apanhar e seguir em frente, o quanto você é capaz de aguentar e continuar tentando.
+    utter_animar:
+        - text: |
+            Você, eu, ninguém vai bater tão forte como a vida, mas não se trata de bater forte.
+            Se trata de quanto você aguenta apanhar e seguir em frente, o quanto você é capaz de aguentar e continuar tentando.
 
-        É assim que se consegue vencer.
+            É assim que se consegue vencer.
 
-        Desejo melhoras pra você!
+            Desejo melhoras pra você!
 
-        Mas diz ai em que posso ajudar?
+            Mas diz ai em que posso ajudar?
 
-    - text: |
-        Segue firme!
+        - text: |
+            Segue firme!
 
-        Desejo melhoras pra você!
+            Desejo melhoras pra você!
 
-        Mas diz ai em que posso ajudar?
+            Mas diz ai em que posso ajudar?
 
-  utter_animar_respondendo:
-    - text: |
-        Poxa... eu estou bem, obrigado!
-        Mas espero que você fique bem também :/
-        Em que posso te ajudar?
+    utter_animar_respondendo:
+        - text: |
+            Poxa... eu estou bem, obrigado!
+            Mas espero que você fique bem também :/
+            Em que posso te ajudar?
 
-  utter_oferecer_ajuda:
-    - text: |
-        Por enquanto eu só posso te ajudar nos seguintes temas:
+    utter_oferecer_ajuda:
+        - text: |
+            Por enquanto eu só posso te ajudar nos seguintes temas:
 
-        Importar arquivos JSON
+            Importar arquivos JSON
 
-        Importar arquivos CSV
+            Importar arquivos CSV
 
-        Entender e detectar Dados Faltantes
+            Entender e detectar Dados Faltantes
 
-        Plotar Histograma
+            Plotar Histograma
 
-        Calcular Correlação
+            Calcular Correlação
 
-        Uma introdução ao Jupyter Notebook
+            Uma introdução ao Jupyter Notebook
 
-        Em breve vou aprender novas funcionalidades! Mas espero que essas atendam sua necessidade :)
+            Em breve vou aprender novas funcionalidades! Mas espero que essas atendam sua necessidade :)
 
-  utter_ajuda:
-    - text: |
-        Por enquanto eu só posso te ajudar nos seguintes temas:
+    utter_ajuda:
+        - text: |
+            Por enquanto eu só posso te ajudar nos seguintes temas:
 
-        Importar arquivos JSON
+            Importar arquivos JSON
 
-        Importar arquivos CSV
+            Importar arquivos CSV
 
-        Entender e detectar Dados Faltantes
+            Entender e detectar Dados Faltantes
 
-        Plotar Histograma
+            Plotar Histograma
 
-        Calcular Correlação
+            Calcular Correlação
 
-        Introdução ao Jupyter Notebook
+            Introdução ao Jupyter Notebook
 
-        Em breve vou aprender novas funcionalidades! Mas espero que essas atendam sua necessidade :)
+            Em breve vou aprender novas funcionalidades! Mas espero que essas atendam sua necessidade :)
 
-  utter_conversa_positiva:
-    - text: |
-        Ah que bom! Espero que continue assim :)
+    utter_conversa_positiva:
+        - text: |
+            Ah que bom! Espero que continue assim :)
 
-        Em que posso ajudar?
+            Em que posso ajudar?
 
-    - text: |
-        Que bom, humano!
+        - text: |
+            Que bom, humano!
 
-        Em que posso te ajudar?
+            Em que posso te ajudar?
 
-  utter_entender_histograma:
-    - text: |
-        Histograma é uma representação gráfica
-        de dados quantitativos
-        previamente tabulados e dividido em
-        classes uniformes ou não uniformes.
+    utter_entender_histograma:
+        - text: |
+            Histograma é uma representação gráfica
+            de dados quantitativos
+            previamente tabulados e dividido em
+            classes uniformes ou não uniformes.
 
-    - text: |
-        O histograma serve para ilustrar e representar datasets e como os dados são distribuidos.
+        - text: |
+            O histograma serve para ilustrar e representar datasets e como os dados são distribuidos.
 
-  utter_dados_quantitativos:
-    - text: |
-        Dados quantitativos é tudo o que pode ser medido e contado
+    utter_dados_quantitativos:
+        - text: |
+            Dados quantitativos é tudo o que pode ser medido e contado
 
-        Como por exemplo quantas pessoas tem em uma sala
-        e quantas dessas pessoas são mulheres.
+            Como por exemplo quantas pessoas tem em uma sala
+            e quantas dessas pessoas são mulheres.
 
-  utter_data_set:
-    - text: |
-        Datasets são um conjunto de dados
-        que são representados em tabelas
-        onde as linhas são os dados quantitativos e as colunas são as características.
+    utter_data_set:
+        - text: |
+            Datasets são um conjunto de dados
+            que são representados em tabelas
+            onde as linhas são os dados quantitativos e as colunas são as características.
 
-  utter_criar_histograma:
-    - text: |
-        Para plotar o histograma podemos usar o seaborn!
+    utter_criar_histograma:
+        - text: |
+            Para plotar o histograma podemos usar o seaborn!
 
-        Primeiramente importe a função:
+            Primeiramente importe a função:
 
-            import seaborn as sns
+                import seaborn as sns
 
-        Após isso chame a função:
+            Após isso chame a função:
 
-            sns.distplot(a=file['column'],kde=False)
+                sns.distplot(a=file['column'],kde=False)
 
-        Onde o primeiro parametro é qual coluna do dataset quer plotar!
+            Onde o primeiro parametro é qual coluna do dataset quer plotar!
 
-        Tem como plotar um histograma com curvas mais suavizadas! Quer conferir?
+            Tem como plotar um histograma com curvas mais suavizadas! Quer conferir?
 
-  utter_criar_histograma2:
-    - text: |
-        Se tu quiser um histograma com curvas mais suaves pode usar a função:
+    utter_criar_histograma2:
+        - text: |
+            Se tu quiser um histograma com curvas mais suaves pode usar a função:
 
-          sns.kdeplot(a=file['column'],shade=True)
+            sns.kdeplot(a=file['column'],shade=True)
 
-  utter_importar_json:
-    - text: |
-        Vamos lá! O primeiro passo para aprender arquivos json é importar a biblioteca!
-        Para importar é simples! Basta escrever:
+    utter_importar_json:
+        - text: |
+            Vamos lá! O primeiro passo para aprender arquivos json é importar a biblioteca!
+            Para importar é simples! Basta escrever:
 
-            import json
+                import json
 
-        O próximo passo é abrir e ler o arquivo desejado atribuindo a uma variavel! Dessa forma:
+            O próximo passo é abrir e ler o arquivo desejado atribuindo a uma variavel! Dessa forma:
 
-            conteudo = open('diretorio/arquivo.json')
+                conteudo = open('diretorio/arquivo.json')
 
-        Agora vamos tratar todo o conteúdo do arquivo json como um conjunto de dados pelo comando:
+            Agora vamos tratar todo o conteúdo do arquivo json como um conjunto de dados pelo comando:
 
-            objeto = json.loads(conteudo)
+                objeto = json.loads(conteudo)
 
-        Enfim a manipulação dos dados é com você, jovem hehe Boa sorte!
+            Enfim a manipulação dos dados é com você, jovem hehe Boa sorte!
 
-  utter_importar_json_pandas:
-    - text: |
-        O primeiro passo talvez seja baixar a biblioteca Pandas! Na celula do jupyter notebook digite o codigo:
+    utter_importar_json_pandas:
+        - text: |
+            O primeiro passo talvez seja baixar a biblioteca Pandas! Na celula do jupyter notebook digite o codigo:
 
-            pip install pandas
+                pip install pandas
 
-        Está instalado?
+            Está instalado?
 
-  utter_importar_json_pandas1:
-    - text: |
-        Então vamos continuar!
+    utter_importar_json_pandas1:
+        - text: |
+            Então vamos continuar!
 
-        O próximo passo é importar as bibliotecas! Só copiar e colar:
-            import pandas as pd
+            O próximo passo é importar as bibliotecas! Só copiar e colar:
+                import pandas as pd
 
-        Agora vamos ler os dados do arquivo que você deseja e setá-lo em uma variável, bem assim:
-            pd.read_json(file, lines=True)
+            Agora vamos ler os dados do arquivo que você deseja e setá-lo em uma variável, bem assim:
+                pd.read_json(file, lines=True)
 
-        Pronto!
+            Pronto!
 
-  utter_importar_json_pandas2:
-    - text: |
-        Blz! Enquanto você faz o teu download vou te adiantar o necessário!
+    utter_importar_json_pandas2:
+        - text: |
+            Blz! Enquanto você faz o teu download vou te adiantar o necessário!
 
-        O próximo passo, após o download, é importar as bibliotecas!
+            O próximo passo, após o download, é importar as bibliotecas!
 
-            import pandas as pd
+                import pandas as pd
 
-        Agora vamos ler os dados do arquivo que você deseja e setá-lo em uma variável, bem assim:
+            Agora vamos ler os dados do arquivo que você deseja e setá-lo em uma variável, bem assim:
 
-            pd.read_json(file, lines=True)
+                pd.read_json(file, lines=True)
 
-        Pronto!
+            Pronto!
 
-  utter_json_duvidas_rapidas1:
-    - text: |
-        Para importar o pandas:
-             import pandas as pd
+    utter_json_duvidas_rapidas1:
+        - text: |
+            Para importar o pandas:
+                import pandas as pd
 
-  utter_json_duvidas_rapidas2:
-    - text: |
-        with open('diretorio/arquivo.json') as info:
-              data = json.load(info)
+    utter_json_duvidas_rapidas2:
+        - text: |
+            with open('diretorio/arquivo.json') as info:
+                data = json.load(info)
 
-  utter_json_duvidas_rapidas3:
-    - text: |
-        aux = json_normalize(data)
+    utter_json_duvidas_rapidas3:
+        - text: |
+            aux = json_normalize(data)
 
-  utter_explicar_csv:
-    - text: |
-        Comma-separated values (ou CSV) é um formato de arquivo que armazena dados tabelados, cujo grande uso data da época dos mainframes.
-        Beleza, bora aprender a manusear um CSV?
+    utter_explicar_csv:
+        - text: |
+            Comma-separated values (ou CSV) é um formato de arquivo que armazena dados tabelados, cujo grande uso data da época dos mainframes.
+            Beleza, bora aprender a manusear um CSV?
 
-    - text: |
+        - text: |
 
-        O CSV é um implementação particular de arquivos de texto separados por um delimitador, que usa a vírgula e a quebra de linha para separar os valores.
+            O CSV é um implementação particular de arquivos de texto separados por um delimitador, que usa a vírgula e a quebra de linha para separar os valores.
 
-        Beleza, bora aprender a manusear um CSV?
+            Beleza, bora aprender a manusear um CSV?
 
-    - text: |
+        - text: |
 
-        Significa Comma-Separated Values ==> CSV :)
+            Significa Comma-Separated Values ==> CSV :)
 
-        Beleza, bora aprender a manusear um CSV?
+            Beleza, bora aprender a manusear um CSV?
 
-  utter_tirar_duvidas_de_implementacao:
-    - text: |
-        Primeiramente importe o pandas:
+    utter_tirar_duvidas_de_implementacao:
+        - text: |
+            Primeiramente importe o pandas:
 
-            import pandas as pd
+                import pandas as pd
 
-        Logo após, chame a função read_csv():
+            Logo após, chame a função read_csv():
 
-            pd.read_csv(file)
+                pd.read_csv(file)
 
-  utter_entender_correlacao:
-    - text: |
-        A Correlação indica interdependência entre duas ou mais variáveis, e serve para determinar a intensidade da relação entre essas variáveis.
+    utter_entender_correlacao:
+        - text: |
+            A Correlação indica interdependência entre duas ou mais variáveis, e serve para determinar a intensidade da relação entre essas variáveis.
 
-        Sabendo disso, o próximo conceito é a matriz de correlação. Deseja ver mais?
+            Sabendo disso, o próximo conceito é a matriz de correlação. Deseja ver mais?
 
-    - text: |
-        O grau de correlação é interpretado da seguinte maneira. Ele pode variar entre -1 e 1,e o resultado obtido define se a correlação é negativa ou positiva,
-        sendo que -1  significa que é perfeita positiva, e -1 que é perfeita negativa.
+        - text: |
+            O grau de correlação é interpretado da seguinte maneira. Ele pode variar entre -1 e 1,e o resultado obtido define se a correlação é negativa ou positiva,
+            sendo que -1  significa que é perfeita positiva, e -1 que é perfeita negativa.
 
-        Vamos implementar?
+            Vamos implementar?
 
-  utter_matriz_correlacao:
-    - text: |
-        A Matriz de Correlação serve para determinarmos a intensidade da relação com uma quantidade maior de valores com um grau de complexidade maior.
+    utter_matriz_correlacao:
+        - text: |
+            A Matriz de Correlação serve para determinarmos a intensidade da relação com uma quantidade maior de valores com um grau de complexidade maior.
 
-        Por fim, deseja saber o que é o indice de correlação?
+            Por fim, deseja saber o que é o indice de correlação?
 
-  utter_indice_correlacao:
-    - text: |
-        Iremos começar usando o mais clássico, o coeficiente de Pearson!
+    utter_indice_correlacao:
+        - text: |
+            Iremos começar usando o mais clássico, o coeficiente de Pearson!
 
-        Existem outros como o de Spearman e Kendall, que também é possível fazer usando o Pandas
-  utter_calcular_correlacao:
-    - text: |
-        Primeiramente, vamos importar a biblioteca Pandas:
+            Existem outros como o de Spearman e Kendall, que também é possível fazer usando o Pandas
+    utter_calcular_correlacao:
+        - text: |
+            Primeiramente, vamos importar a biblioteca Pandas:
 
-            import pandas as pd
+                import pandas as pd
 
-        Depois, você irá usar o seu dataset e chamar a função do pandas corr(), que irá calcular a correlação entre as colunas do seu dataset, vamos armazenar na varíavel correlation:
+            Depois, você irá usar o seu dataset e chamar a função do pandas corr(), que irá calcular a correlação entre as colunas do seu dataset, vamos armazenar na varíavel correlation:
 
-            correlation = dataset_open_with_pandas.corr()
+                correlation = dataset_open_with_pandas.corr()
 
-        Agora, na nossa varíavel correlation está armazenado o resultado da correlação de nossos dados.
+            Agora, na nossa varíavel correlation está armazenado o resultado da correlação de nossos dados.
 
-  utter_entender_dados_faltantes:
-    - text: |
-        Consiste em valores vazios ou inesperados encontrados em um dataset antes da fase de pré processamento.
+    utter_entender_dados_faltantes:
+        - text: |
+            Consiste em valores vazios ou inesperados encontrados em um dataset antes da fase de pré processamento.
 
-  utter_causa_dados_faltantes:
-    - text: |
-        Muito bem!
+            Deseja ver as possíveis causas para que isso ocorra?
+    utter_causa_dados_faltantes:
+        - text: |
+            Muito bem!
 
-        Dentre os motivos
+            Dentre os motivos
 
-                . Houve esquecimento no preenchimento de um campo por um usuário
+                    . Houve esquecimento no preenchimento de um campo por um usuário
 
-                . Dados perdidos quando transferidos manualmente de uma base de dados
+                    . Dados perdidos quando transferidos manualmente de uma base de dados
 
-                . Erro no programa.
+                    . Erro no programa.
 
-  utter_iniciar_a_deteccao:
-    - text: |
-        Para iniciar a detecção será necessário a utilização da biblioteca pandas.
+            E agora, deseja ver como podemos iniciar a detecção desses dados?
 
-        Vamos conferir como visualizar o dataset?
+    utter_iniciar_a_deteccao:
+        - text: |
+            Para iniciar a detecção será necessário a utilização da biblioteca pandas.
 
-  utter_visualizar_dados_faltantes:
-    - text: |
-        Para checar o Dataset, importe a biblioteca pandas
+            Vamos conferir como visualizar o dataset?
 
-            import panda as pd
+    utter_visualizar_dados_faltantes:
+        - text: |
+            Para checar o Dataset, importe a biblioteca pandas
 
-        Deseja saber como lidar com dados faltantes padronizados?
+                import panda as pd
 
-  utter_dados_faltantes_padronizados:
-    - text: |
-        A biblioteca pandas, apenas, identifica dados faltantes padronizados,geralmente, representados por "NaN"
+            Deseja saber como lidar com dados faltantes padronizados?
 
-            import panda as pd
-            arquivo = pd.read_csv("data property.csv")
-            print (arquivo.head())
+    utter_dados_faltantes_padronizados:
+        - text: |
+            A biblioteca pandas, apenas, identifica dados faltantes padronizados,geralmente, representados por "NaN"
 
-        Deseja saber como lidar com dados faltantes não padronizados?
+                import panda as pd
+                arquivo = pd.read_csv("data property.csv")
+                print (arquivo.head())
 
-  utter_Dados_faltantes_nao_padronizados:
-    - text: |
-        Para dados não padronizados, é necessário criar uma lista com tipo de valores faltantes
+            Deseja saber como lidar com dados faltantes não padronizados?
 
-              missing_values = ["n/a", "na", "--"]
-              df = pd.read_csv("property data.csv", na_values = missing_values)
-  utter_corrigir_a_deteccao:
-    - text: |
-        Para corrigir problemas de dados faltantes, é necessário a utilização de métodos como:
+    utter_Dados_faltantes_nao_padronizados:
+        - text: |
+            Para dados não padronizados, é necessário criar uma lista com tipo de valores faltantes
 
-            . Substuição por constante
+                missing_values = ["n/a", "na", "--"]
+                df = pd.read_csv("property data.csv", na_values = missing_values)
 
-            . Substituição baseada no lugar
+            E por fim, deseja saber como corrigir esses dados faltantes?
+    utter_corrigir_a_deteccao:
+        - text: |
+            Para corrigir problemas de dados faltantes, é necessário a utilização de métodos como:
 
-            . Substituição por mediana
+                . Substuição por constante
 
-            Faça sua opção!
+                . Substituição baseada no lugar
 
-  utter_substituicao_constante:
-    - text: |
-        Substituindo por constante:
+                . Substituição por mediana
 
-            df.loc[2,'ST_NUM'] = 125
-  utter_substituicao_imputacao:
-    - text: |
-        Imputação baseada no lugar
+                Faça sua opção!
 
-            df['ST_NUM'].fillina(125, inplace=True)
-  utter_substituicao_mediana:
-    - text: |
-        Substituição por mediana
+    utter_substituicao_constante:
+        - text: |
+            Substituindo por constante:
 
-          media = df['NUM_BEDROOMS'].median()
+                df.loc[2,'ST_NUM'] = 125
+    utter_substituicao_imputacao:
+        - text: |
+            Imputação baseada no lugar
 
-          df['NUM_BEDROOMS'].fillina(median, inplace=True)
+                df['ST_NUM'].fillina(125, inplace=True)
+    utter_substituicao_mediana:
+        - text: |
+            Substituição por mediana
 
-  utter_bons_estudos:
-    - text: |
-        Bons Estudos :)
+            media = df['NUM_BEDROOMS'].median()
 
-    - text: |
-        Espero ter ajudado. Qualquer coisa só falar!
+            df['NUM_BEDROOMS'].fillina(median, inplace=True)
 
-    - text: |
-        Foca nos estudos aí!
+    utter_bons_estudos:
+        - text: |
+            Bons Estudos :)
 
-  utter_sobre_pyter:
-    - text: |
-        Eu sou o Pyter! E como você pode perceber eu sou um bot hehe
+        - text: |
+            Espero ter ajudado. Qualquer coisa só falar!
 
-        Fui desenvolvido, supervisionado e treinado pelo Álex, Bruno, Carlos, Davi, Ernando, Eugênio, João, Thiago e Ziegler
+        - text: |
+            Foca nos estudos aí!
 
-        Fui programado para sanar suas dúvidas em Machine Learning e te guiar em algumas etapas!
+    utter_sobre_pyter:
+        - text: |
+            Eu sou o Pyter! E como você pode perceber eu sou um bot hehe
 
-        Se quiser saber mais detalhes, dá uma lida na minha documentação :)
+            Fui desenvolvido, supervisionado e treinado pelo Álex, Bruno, Carlos, Davi, Ernando, Eugênio, João, Thiago e Ziegler
 
-  utter_sobre_jupyter:
-    - text: |
-        O Jupyter Notebook é uma aplicação web que permite a visualização dados e resultados de análises, juntamente com o código!
+            Fui programado para sanar suas dúvidas em Machine Learning e te guiar em algumas etapas!
 
-        Mas e o que são os Notebooks, afinal?
+            Se quiser saber mais detalhes, dá uma lida na minha documentação :)
 
-        Deseja ver mais?
+    utter_sobre_jupyter:
+        - text: |
+            O Jupyter Notebook é uma aplicação web que permite a visualização dados e resultados de análises, juntamente com o código!
 
-  utter_notebooks:
-    - text: |
-        Notebooks são documentos legíveis para pessoas com descrições de análises e resultados quanto documentos executáveis!
+            Mas e o que são os Notebooks, afinal?
 
-        Massa! Agora você já sabe porquê o Jupyter é tão útil para ML!
+            Deseja ver mais?
 
-  utter_informacoes_pessoais:
-    - text: |
-        Você pode encontrar essas e outras informações bem aqui:
+    utter_notebooks:
+        - text: |
+            Notebooks são documentos legíveis para pessoas com descrições de análises e resultados quanto documentos executáveis!
 
-        https://fga-eps-mds.github.io/2019.1-PyLearner/
+            Massa! Agora você já sabe porquê o Jupyter é tão útil para ML!
 
-  utter_machine_learning:
-    - text: |
-        Basicamente é um método de análise de dados que permite a construção de modelos analíticos.
+    utter_informacoes_pessoais:
+        - text: |
+            Você pode encontrar essas e outras informações bem aqui:
 
-        É um ramo da inteligência artificialque busca identificar padrões e tomar decisões com o mínimo de intervenção humana.
-  utter_python:
-    - text: |
-        Python foi criado no final dos anos oitenta(1989) por Guido van Rossum, na Holanda, como sucessor da linguagem de programação ABC!
+            https://fga-eps-mds.github.io/2019.1-PyLearner/
 
-        É uma linguagem interpretada que têm seus códigos fontes transformados em uma linguagem intermediária, que será interpretada pela máquina virtual da linguagem quando o programa for executado.
-  utter_entender_metricas_de_classificacao:
-    - text: |
-        Avaliar o seu algoritmo de Machine Learning é uma parte essencial de qualquer projeto.Sua Model deve ter resultados satisfatórios.Na maioria das vezes,utilizamos a classificação Accuracy para medir a performace da Model,entretanto,não é possivel calcular perfeitamente e existem alguns tipos de avaliação de métricas.
-  utter_quais_as_metricas_de_classificacao:
-    - text: |
-        As métricas de classificação que abordamos são Accuracy,F1,Recall e Precision
-  utter_entender_classificacao_accuracy:
-    - text: |
-        Classificação Accuracy é a classificação da precisão do algoritmo de Machine Learning e é calculada pelo número total de predições certas dividido pelo número total de predições feitas.Só funciona bem se tiver um número igual de amostras pertencentes a cada classe
-  utter_usar_classificacao_accuracy:
-    - text: |
-        A Classificacao Accuracy é calculada por =
+    utter_machine_learning:
+        - text: |
+            Basicamente é um método de análise de dados que permite a construção de modelos analíticos.
 
-        `Accuracy = Numero de predições certas/Numero total de predições feitas`
+            É um ramo da inteligência artificialque busca identificar padrões e tomar decisões com o mínimo de intervenção humana.
+    utter_python:
+        - text: |
+            Python foi criado no final dos anos oitenta(1989) por Guido van Rossum, na Holanda, como sucessor da linguagem de programação ABC!
 
-        E para utilizarmos ela em python,utilizaremos a funcao accuracy_score() da biblioteca sklearn.metrics que esta dentro da Scikit Learn
+            É uma linguagem interpretada que têm seus códigos fontes transformados em uma linguagem intermediária, que será interpretada pela máquina virtual da linguagem quando o programa for executado.
+    
+    utter_entender_feature_scaling:
+        - text: |
+            O Feature Scaling é uma técnica para padronizar os recursos independentes presentes nos dados em um intervalo fixo. 
+            
+            Ele é executado durante o pré-processamento de dados para lidar com magnitudes, valores ou unidades altamente variáveis. 
 
-        `sklearn.metrics.accuracy_score(y_true, y_pred, normalize=True, sample_weight=None)`
-  utter_entender_classificacao_f1:
-    - text: |
-        Classificação F1 é usada para media a precisão de um teste.
+            Deseja ver mais sobre técnicas utilizadas para Feature Scaling?
 
-        F1 é a média harmônica entre a Precision e Recall.
+        - text: |
+            O Feature Scaling é uma técnica para padronizar os recursos independentes presentes nos dados em um intervalo fixo.
 
-        Ele fala o quão preciso é o seu classificador(quantas instâncias foram classificadas corretamente),assim como o quão robusto ele é(se não errou um número significativo de instâncias)
-  utter_usar_classificacao_f1:
-    - text: |
-        A Classificacao F1 é calculada por
+            Se o dimensionamento de recurso não for feito, um algoritmo de aprendizado de máquina tende a pesar valores maiores, maiores e considera valores menores como os valores mais baixos, independentemente da unidade dos valores.
+  
+            Vamos conferir algumas técnicas de Feature Scaling?
+    
+    utter_tecnicas_feture_scaling:
 
-        `F1 = 2 * ( 1 / ( (1 / Precision) + (1/ Recall) ) )`
+        - text: |
+            Considere as duas mais importantes:
 
-        E para utilizarmos ela em python,utilizaremos a funcao f1_score() da biblioteca sklearn.metrics que esta dentro da Scikit Learn
+            . Min-Max Normalizazation (Min-Max Normalização)
+            . Standardisation (Padronização)
 
-        `sklearn.metrics.f1_score(y_true, y_pred, labels=None, pos_label=1, average=’binary’, sample_weight=None)`
+            Escolha uma opção
+        
+    utter_entender_normalizacao:
+        - text: |
+            Esta técnica redimensiona um recurso ou valor de observação com valor de distribuição entre 0 e 1.
 
-  utter_recall:
-    - text:
-        Primeiro passo é você importar a biblioteca do Recall
+            X = (Xi - min(x)) / (max(x) - min(x))
 
-        from sklearn.metrics import recall_score
+            Mas e como implementar? Deseja conferir?
+        
+    utter_implementar_normalizacao:
+        - text: |
+            Será necessário a importação da biblioteca sklearn:
 
-        A função para calcular o recall é
+            from sklearn import preprocessing
+            min_max_scaler = preprocessing.MinMaxScaler(feature_range =(0, 1))
+            x_after_min_max_scaler = min_max_scaler.fit_transform(dataSet) 
+            print ("\nAfter min max Scaling : \n", x_after_min_max_scaler)
 
-        recall_score(valores_reais, valores_preditos, pos_label=chave)
+    utter_entender_padronizacao:
+        - text: |
+            É uma técnica muito eficaz que reescala um valor de recurso para que ele tenha distribuição com valor médio 0 e variância igual a 1.
 
-        onde a chave é o valor em que o recall será calculado
+            X = (Xi - média) / desvio padrão 
 
-  utter_recall_ponderado:
-    - text:
-        Primeiro passo é você importar a biblioteca do Recall
+            Mas como se implementa isso? Deseja conferir?
 
-        from sklearn.metrics import recall_score
+    utter_implementar_padronizacao:
+        - text: |
+            Para isso, será necessário a importação da biblioteca sklearn:
 
-        A função para calcular o recall é
+                from sklearn import preprocessing
+                Standardisation = preprocessing.StandardScaler() 
+                x_after_Standardisation = Standardisation.fit_transform(x) 
+                print ("\nAfter Standardisation : \n", x_after_Standardisation) 
 
-        recall_score(valores_reais, valores_preditos, labels=[chave], average='tipo')
+    utter_entender_metricas_de_classificacao:
+        - text: |
+            Avaliar o seu algoritmo de Machine Learning é uma parte essencial de qualquer projeto.Sua Model deve ter resultados satisfatórios.Na maioria das vezes,utilizamos a classificação Accuracy para medir a performace da Model,entretanto,não é possivel calcular perfeitamente e existem alguns tipos de avaliação de métricas.
+    utter_quais_as_metricas_de_classificacao:
+        - text: |
+            As métricas de classificação que abordamos são Accuracy,F1,Recall e Precision
+    utter_entender_classificacao_accuracy:
+        - text: |
+            Classificação Accuracy é a classificação da precisão do algoritmo de Machine Learning e é calculada pelo número total de predições certas dividido pelo número total de predições feitas.Só funciona bem se tiver um número igual de amostras pertencentes a cada classe
+    utter_usar_classificacao_accuracy:
+        - text: |
+            A Classificacao Accuracy é calculada por =
 
-        Onde 'tipo' pode assumir um recall pondeado como 'micro', 'macro', 'weighted' ou 'binary'
+            `Accuracy = Numero de predições certas/Numero total de predições feitas`
 
-  utter_precision:
-      - text:
-          Primeiro passo é você importar a biblioteca do Precision
+            E para utilizarmos ela em python,utilizaremos a funcao accuracy_score() da biblioteca sklearn.metrics que esta dentro da Scikit Learn
 
-          from sklearn.metrics import precision_score
+            `sklearn.metrics.accuracy_score(y_true, y_pred, normalize=True, sample_weight=None)`
+    utter_entender_classificacao_f1:
+        - text: |
+            Classificação F1 é usada para media a precisão de um teste.
 
-          A função para calcular o precision é
+            F1 é a média harmônica entre a Precision e Recall.
 
-          precision_score(valores_reais, valores_preditos, pos_label=chave)
+            Ele fala o quão preciso é o seu classificador(quantas instâncias foram classificadas corretamente),assim como o quão robusto ele é(se não errou um número significativo de instâncias)
+    utter_usar_classificacao_f1:
+        - text: |
+            A Classificacao F1 é calculada por
 
-          onde a chave é o valor em que o precision será calculado
+            `F1 = 2 * ( 1 / ( (1 / Precision) + (1/ Recall) ) )`
 
-  utter_precision_ponderado:
-      - text:
-          Primeiro passo é você importar a biblioteca do Precision
+            E para utilizarmos ela em python,utilizaremos a funcao f1_score() da biblioteca sklearn.metrics que esta dentro da Scikit Learn
 
-          from sklearn.metrics import recall_score
+            `sklearn.metrics.f1_score(y_true, y_pred, labels=None, pos_label=1, average=’binary’, sample_weight=None)`
 
-          A função para calcular o precision é
+    utter_recall:
+        - text:
+            Primeiro passo é você importar a biblioteca do Recall
 
-          precision_score(valores_reais, valores_preditos, labels=[chave], average='macro')
+            from sklearn.metrics import recall_score
 
-          Onde o 'tipo' pode assumir um precision ponderado em 'micro', 'macro', 'weighted' ou 'binary'
-          e a chave é o valor no qual o precision será calculado
+            A função para calcular o recall é
 
-  utter_relatorio_metricas:
-    - text:
+            recall_score(valores_reais, valores_preditos, pos_label=chave)
 
-        from sklearn.metrics import classification_report
+            onde a chave é o valor em que o recall será calculado
 
-        target_names = (['Objeto 0', 'Objeto 1'])
+    utter_recall_ponderado:
+        - text:
+            Primeiro passo é você importar a biblioteca do Recall
 
-        print(classification_report(valores_reais, valores_preditos, target_names=target_names))
+            from sklearn.metrics import recall_score
 
-        onde os target_names são os elementos que serão mapeados pelas métricas
+            A função para calcular o recall é
 
-  utter_recall_conceito:
-    -  text:
+            recall_score(valores_reais, valores_preditos, labels=[chave], average='tipo')
 
-        O Recall é responsável por nos informar qual é proporção de valores que foram identificados corretamente pelo modelo.
+            Onde 'tipo' pode assumir um recall pondeado como 'micro', 'macro', 'weighted' ou 'binary'
 
-  utter_precision_conceito:
-    - text:
+    utter_precision:
+        - text:
+            Primeiro passo é você importar a biblioteca do Precision
 
-        Precision é responsável por nos informar qual a proporção de identificações numéricas foi realmente correta.
+            from sklearn.metrics import precision_score
 
-        É uma linguagem interpretada que têm seus códigos fontes transformados em uma linguagem intermediária, que será interpretada pela máquina virtual da linguagem quando o programa for executado.
+            A função para calcular o precision é
+
+            precision_score(valores_reais, valores_preditos, pos_label=chave)
+
+            onde a chave é o valor em que o precision será calculado
+
+    utter_precision_ponderado:
+        - text:
+            Primeiro passo é você importar a biblioteca do Precision
+
+            from sklearn.metrics import recall_score
+
+            A função para calcular o precision é
+
+            precision_score(valores_reais, valores_preditos, labels=[chave], average='macro')
+
+            Onde o 'tipo' pode assumir um precision ponderado em 'micro', 'macro', 'weighted' ou 'binary'
+            e a chave é o valor no qual o precision será calculado
+
+    utter_relatorio_metricas:
+        - text:
+
+            from sklearn.metrics import classification_report
+
+            target_names = (['Objeto 0', 'Objeto 1'])
+
+            print(classification_report(valores_reais, valores_preditos, target_names=target_names))
+
+            onde os target_names são os elementos que serão mapeados pelas métricas
+
+    utter_recall_conceito:
+        -  text:
+
+            O Recall é responsável por nos informar qual é proporção de valores que foram identificados corretamente pelo modelo.
+
+    utter_precision_conceito:
+        - text:
+
+            Precision é responsável por nos informar qual a proporção de identificações numéricas foi realmente correta.
+
+            É uma linguagem interpretada que têm seus códigos fontes transformados em uma linguagem intermediária, que será interpretada pela máquina virtual da linguagem quando o programa for executado.
 
     utter_entender_matriz_confusao:
 
