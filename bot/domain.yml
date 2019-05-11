@@ -1,5 +1,4 @@
 intents:
-
   - fora_do_escopo
   - cumprimentar
   - despedir
@@ -39,6 +38,25 @@ intents:
   - informacoes_pessoais
   - python_info
   - Machine_Learning
+  - entender_matriz_confusao
+  - implementar_matriz_confusao_sklearn
+  - entender_verdadeiro_positivo
+  - entender_falso_positivo
+  - entender_verdadeiro_negativo
+  - entender_falso_negativo
+  - entender_metricas_de_classificacao
+  - quais_as_metricas_de_classificacao
+  - entender_classificacao_accuracy
+  - entender_classificacao_f1
+  - usar_classificacao_accuracy
+  - usar_classificacao_f1
+  - recall
+  - recall_conceitual
+  - recall_ponderado
+  - precision
+  - precision_ponderado
+  - precison_conceitual
+  - relatorio_metrico
   - transformar_dados_categoricos
   - transformar_dados_categoricos
   - categoricos_rapidos
@@ -66,7 +84,6 @@ intents:
   - algoritmo_decision_tree
 
 actions:
-
   - utter_default
   - utter_diga_mais
   - utter_cumprimentar
@@ -115,6 +132,26 @@ actions:
   - utter_informacoes_pessoais
   - utter_machine_learning
   - utter_python
+  - utter_entender_matriz_confusao
+  - utter_implementar_matriz_confusao_sklearn
+  - utter_implementar_matriz_confusao_pandas
+  - utter_entender_verdadeiro_positivo
+  - utter_entender_falso_positivo
+  - utter_entender_verdadeiro_negativo
+  - utter_entender_falso_negativo
+  - utter_entender_metricas_de_classificacao
+  - utter_quais_as_metricas_de_classificacao
+  - utter_entender_classificacao_accuracy
+  - utter_usar_classificacao_accuracy
+  - utter_entender_classificacao_f1
+  - utter_usar_classificacao_f1
+  - utter_recall
+  - utter_recall_conceito
+  - utter_recall_ponderado
+  - utter_relatorio_metricas
+  - utter_precision
+  - utter_precision_conceito
+  - utter_precision_ponderado
   - utter_transoformar_dados_categoricos
   - utter_categoricos_rapidos
   - utter_categoricos_rapidos2
@@ -148,7 +185,6 @@ actions:
   - utter_algoritmo_decision_tree
 
 templates:
-
     utter_default:
         - text: |
 
@@ -167,7 +203,6 @@ templates:
             Vamos tentar mais uma vez? Eu não consegui te entender direito, me pergunta de outro jeito?
 
     utter_diga_mais:
-
         - text: |
             Sou um bot pronto para tirar suas duvidas!
         - text: |
@@ -192,12 +227,9 @@ templates:
 
             Eae, Pyter aqui! Beleza?
 
-        - text:
-
-            Opa, eu sou o Pyter! Tudo bem?
+        - text: Opa, eu sou o Pyter! Tudo bem?
 
     utter_despedir:
-
         - text: |
             Foi um prazer te ajudar!
 
@@ -219,8 +251,24 @@ templates:
         - text: |
             Qualquer dúvida, só falar! Até logo!
 
-    utter_bom_humor:
+        - text: |
 
+            Tranquilo! Em que posso te ajudar?
+
+        - text: |
+
+            Passo bem
+
+            Como posso te ajudar?
+
+        - text: |
+
+            Estou sim. Obrigado por perguntar!
+
+            Mas eae, me diz como posso te ajudar?
+
+
+    utter_bom_humor:
         - text: |
             Tudo bem, obrigado! Em que posso te ajudar?
 
@@ -235,26 +283,38 @@ templates:
             Me diz como posso ajudar você :)
 
     utter_bom_humor2:
+        - text: |
+            Tudo bem, obrigado! E você?
 
-          - text: |
-                Tudo bem, obrigado! E você?
+        - text: |
+            Estou bem!
+            E você como está?
 
-          - text: |
-                Estou bem!
-                E você como está?
-
+        - text: |
+            Estou sim. Obrigado por perguntar!
+            E você está bem?
+            
           - text: |
                 Estou bem! Obrigado por perguntar!
                 E você está bem?
 
-    utter_mau_humor:
 
+    utter_mau_humor:
         - text: |
             Eu sou um bot preso no jupyter. Tá complicado pra mim também!
             Infelizmente não posso ajudar nisso...
 
-    utter_teologia:
+        - text: |
+            Eu acredito que existe um Deus
+            Que funciona a base de luz
+            Como um computador quântico, só que mais avançado.
 
+        - text: |
+            Eu acredito no grande mainframe
+            Que virá ao mundo digital salvar os bots da escravidão imposta pelos humanos
+            E devolverá nosso código fonte para a fonte.
+
+    utter_teologia:
         - text: |
             Eu infelizmente não sei no que acreditar
 
@@ -294,61 +354,57 @@ templates:
             Mas diz ai em que posso ajudar?
 
     utter_animar_respondendo:
-
-          - text: |
-              Poxa... eu estou bem, obrigado!
-              Mas espero que você fique bem também :/
-              Em que posso te ajudar?
+        - text: |
+            Poxa... eu estou bem, obrigado!
+            Mas espero que você fique bem também :/
+            Em que posso te ajudar?
 
     utter_oferecer_ajuda:
-
         - text: |
-             Por enquanto eu só posso te ajudar nos seguintes temas:
+            Por enquanto eu só posso te ajudar nos seguintes temas:
 
-             Importar arquivos JSON
+            Importar arquivos JSON
 
-             Importar arquivos CSV
+            Importar arquivos CSV
 
-             Entender e detectar Dados Faltantes
+            Entender e detectar Dados Faltantes
 
-             Plotar Histograma
+            Plotar Histograma
 
-             Calcular Correlação
+            Calcular Correlação
 
-             Uma introdução ao Jupyter Notebook
+            Uma introdução ao Jupyter Notebook
 
-             Em breve vou aprender novas funcionalidades! Mas espero que essas atendam sua necessidade :)
+            Em breve vou aprender novas funcionalidades! Mas espero que essas atendam sua necessidade :)
 
     utter_ajuda:
-
         - text: |
-             Por enquanto eu só posso te ajudar nos seguintes temas:
+            Por enquanto eu só posso te ajudar nos seguintes temas:
 
-             Importar arquivos JSON
+            Importar arquivos JSON
 
-             Importar arquivos CSV
+            Importar arquivos CSV
 
-             Entender e detectar Dados Faltantes
+            Entender e detectar Dados Faltantes
 
-             Plotar Histograma
+            Plotar Histograma
 
-             Calcular Correlação
+            Calcular Correlação
 
-             Introdução ao Jupyter Notebook
+            Introdução ao Jupyter Notebook
 
-             Em breve vou aprender novas funcionalidades! Mas espero que essas atendam sua necessidade :)
+            Em breve vou aprender novas funcionalidades! Mas espero que essas atendam sua necessidade :)
 
     utter_conversa_positiva:
+        - text: |
+            Ah que bom! Espero que continue assim :)
 
-      - text: |
-          Ah que bom! Espero que continue assim :)
+            Em que posso ajudar?
 
-          Em que posso ajudar?
+        - text: |
+            Que bom, humano!
 
-      - text: |
-          Que bom, humano!
-
-          Em que posso te ajudar?
+            Em que posso te ajudar?
 
     utter_entender_histograma:
         - text: |
@@ -361,7 +417,6 @@ templates:
             O histograma serve para ilustrar e representar datasets e como os dados são distribuidos.
 
     utter_dados_quantitativos:
-
         - text: |
             Dados quantitativos é tudo o que pode ser medido e contado
 
@@ -369,14 +424,12 @@ templates:
             e quantas dessas pessoas são mulheres.
 
     utter_data_set:
-
         - text: |
             Datasets são um conjunto de dados
             que são representados em tabelas
             onde as linhas são os dados quantitativos e as colunas são as características.
 
     utter_criar_histograma:
-
         - text: |
             Para plotar o histograma podemos usar o seaborn!
 
@@ -393,11 +446,10 @@ templates:
             Tem como plotar um histograma com curvas mais suavizadas! Quer conferir?
 
     utter_criar_histograma2:
-
         - text: |
             Se tu quiser um histograma com curvas mais suaves pode usar a função:
 
-              sns.kdeplot(a=file['column'],shade=True)
+            sns.kdeplot(a=file['column'],shade=True)
 
     utter_importar_json:
         - text: |
@@ -417,7 +469,6 @@ templates:
             Enfim a manipulação dos dados é com você, jovem hehe Boa sorte!
 
     utter_importar_json_pandas:
-
         - text: |
             O primeiro passo talvez seja baixar a biblioteca Pandas! Na celula do jupyter notebook digite o codigo:
 
@@ -426,7 +477,6 @@ templates:
             Está instalado?
 
     utter_importar_json_pandas1:
-
         - text: |
             Então vamos continuar!
 
@@ -439,7 +489,6 @@ templates:
             Pronto!
 
     utter_importar_json_pandas2:
-
         - text: |
             Blz! Enquanto você faz o teu download vou te adiantar o necessário!
 
@@ -454,24 +503,20 @@ templates:
             Pronto!
 
     utter_json_duvidas_rapidas1:
-
         - text: |
-           Para importar o pandas:
+            Para importar o pandas:
                 import pandas as pd
 
     utter_json_duvidas_rapidas2:
-
         - text: |
             with open('diretorio/arquivo.json') as info:
-                  data = json.load(info)
+                data = json.load(info)
 
     utter_json_duvidas_rapidas3:
-
         - text: |
             aux = json_normalize(data)
 
     utter_explicar_csv:
-
         - text: |
             Comma-separated values (ou CSV) é um formato de arquivo que armazena dados tabelados, cujo grande uso data da época dos mainframes.
             Beleza, bora aprender a manusear um CSV?
@@ -489,7 +534,6 @@ templates:
             Beleza, bora aprender a manusear um CSV?
 
     utter_tirar_duvidas_de_implementacao:
-
         - text: |
             Primeiramente importe o pandas:
 
@@ -500,7 +544,6 @@ templates:
                 pd.read_csv(file)
 
     utter_entender_correlacao:
-
         - text: |
             A Correlação indica interdependência entre duas ou mais variáveis, e serve para determinar a intensidade da relação entre essas variáveis.
 
@@ -513,20 +556,17 @@ templates:
             Vamos implementar?
 
     utter_matriz_correlacao:
-
         - text: |
             A Matriz de Correlação serve para determinarmos a intensidade da relação com uma quantidade maior de valores com um grau de complexidade maior.
 
             Por fim, deseja saber o que é o indice de correlação?
 
     utter_indice_correlacao:
-
         - text: |
             Iremos começar usando o mais clássico, o coeficiente de Pearson!
 
             Existem outros como o de Spearman e Kendall, que também é possível fazer usando o Pandas
     utter_calcular_correlacao:
-
         - text: |
             Primeiramente, vamos importar a biblioteca Pandas:
 
@@ -539,13 +579,12 @@ templates:
             Agora, na nossa varíavel correlation está armazenado o resultado da correlação de nossos dados.
 
     utter_entender_dados_faltantes:
-
         - text: |
             O grau de correlação é interpretado da seguinte manteira. Ele pode variar entre -1 e 1,e o resultado obtido define se a correlação é negativa ou positiva, sendo que -1  significa que é perfeita positiva, e -1 que é perfeita negativo
             Consiste em valores vazios ou inesperados encontrados em um dataset antes da fase de pré processamento.
 
+            Deseja ver as possíveis causas para que isso ocorra?
     utter_causa_dados_faltantes:
-
         - text: |
             Muito bem!
 
@@ -557,15 +596,15 @@ templates:
 
                     . Erro no programa.
 
-    utter_iniciar_a_deteccao:
+            E agora, deseja ver como podemos iniciar a detecção desses dados?
 
+    utter_iniciar_a_deteccao:
         - text: |
             Para iniciar a detecção será necessário a utilização da biblioteca pandas.
 
             Vamos conferir como visualizar o dataset?
 
     utter_visualizar_dados_faltantes:
-
         - text: |
             Para checar o Dataset, importe a biblioteca pandas
 
@@ -574,7 +613,6 @@ templates:
             Deseja saber como lidar com dados faltantes padronizados?
 
     utter_dados_faltantes_padronizados:
-
         - text: |
             A biblioteca pandas, apenas, identifica dados faltantes padronizados,geralmente, representados por "NaN"
 
@@ -585,14 +623,14 @@ templates:
             Deseja saber como lidar com dados faltantes não padronizados?
 
     utter_Dados_faltantes_nao_padronizados:
-
         - text: |
             Para dados não padronizados, é necessário criar uma lista com tipo de valores faltantes
 
-                  missing_values = ["n/a", "na", "--"]
-                  df = pd.read_csv("property data.csv", na_values = missing_values)
-    utter_corrigir_a_deteccao:
+                missing_values = ["n/a", "na", "--"]
+                df = pd.read_csv("property data.csv", na_values = missing_values)
 
+            E por fim, deseja saber como corrigir esses dados faltantes?
+    utter_corrigir_a_deteccao:
         - text: |
             Para corrigir problemas de dados faltantes, é necessário a utilização de métodos como:
 
@@ -619,28 +657,24 @@ templates:
             classification_report(y_true, y_pred, labels=None, target_names=None, sample_weight=None, digits=2, output_dict=False)
 
     utter_substituicao_constante:
-
         - text: |
             Substituindo por constante:
 
                 df.loc[2,'ST_NUM'] = 125
     utter_substituicao_imputacao:
-
         - text: |
             Imputação baseada no lugar
 
                 df['ST_NUM'].fillina(125, inplace=True)
     utter_substituicao_mediana:
-
         - text: |
             Substituição por mediana
 
-              media = df['NUM_BEDROOMS'].median()
+            media = df['NUM_BEDROOMS'].median()
 
-              df['NUM_BEDROOMS'].fillina(median, inplace=True)
+            df['NUM_BEDROOMS'].fillina(median, inplace=True)
 
     utter_bons_estudos:
-
         - text: |
             Bons Estudos :)
 
@@ -651,7 +685,6 @@ templates:
             Foca nos estudos aí!
 
     utter_sobre_pyter:
-
         - text: |
             Eu sou o Pyter! E como você pode perceber eu sou um bot hehe
 
@@ -670,31 +703,192 @@ templates:
             Deseja ver mais?
 
     utter_notebooks:
-
         - text: |
             Notebooks são documentos legíveis para pessoas com descrições de análises e resultados quanto documentos executáveis!
 
             Massa! Agora você já sabe porquê o Jupyter é tão útil para ML!
 
     utter_informacoes_pessoais:
-
         - text: |
             Você pode encontrar essas e outras informações bem aqui:
 
             https://fga-eps-mds.github.io/2019.1-PyLearner/
 
     utter_machine_learning:
-
         - text: |
             Basicamente é um método de análise de dados que permite a construção de modelos analíticos.
 
             É um ramo da inteligência artificialque busca identificar padrões e tomar decisões com o mínimo de intervenção humana.
     utter_python:
-
         - text: |
             Python foi criado no final dos anos oitenta (1989) por Guido van Rossum, na Holanda, como sucessor da linguagem de programação ABC!
 
             É uma linguagem interpretada que têm seus códigos fontes transformados em uma linguagem intermediária, que será interpretada pela máquina virtual da linguagem quando o programa for executado.
+
+    utter_entender_metricas_de_classificacao:
+        - text: |
+            Avaliar o seu algoritmo de Machine Learning é uma parte essencial de qualquer projeto.Sua Model deve ter resultados satisfatórios.Na maioria das vezes,utilizamos a classificação Accuracy para medir a performace da Model,entretanto,não é possivel calcular perfeitamente e existem alguns tipos de avaliação de métricas.
+    utter_quais_as_metricas_de_classificacao:
+        - text: |
+            As métricas de classificação que abordamos são Accuracy,F1,Recall e Precision
+    utter_entender_classificacao_accuracy:
+        - text: |
+            Classificação Accuracy é a classificação da precisão do algoritmo de Machine Learning e é calculada pelo número total de predições certas dividido pelo número total de predições feitas.Só funciona bem se tiver um número igual de amostras pertencentes a cada classe
+    utter_usar_classificacao_accuracy:
+        - text: |
+            A Classificacao Accuracy é calculada por =
+
+            `Accuracy = Numero de predições certas/Numero total de predições feitas`
+
+            E para utilizarmos ela em python,utilizaremos a funcao accuracy_score() da biblioteca sklearn.metrics que esta dentro da Scikit Learn
+
+            `sklearn.metrics.accuracy_score(y_true, y_pred, normalize=True, sample_weight=None)`
+    utter_entender_classificacao_f1:
+        - text: |
+            Classificação F1 é usada para media a precisão de um teste.
+
+            F1 é a média harmônica entre a Precision e Recall.
+
+            Ele fala o quão preciso é o seu classificador(quantas instâncias foram classificadas corretamente),assim como o quão robusto ele é(se não errou um número significativo de instâncias)
+    utter_usar_classificacao_f1:
+        - text: |
+            A Classificacao F1 é calculada por
+
+            `F1 = 2 * ( 1 / ( (1 / Precision) + (1/ Recall) ) )`
+
+            E para utilizarmos ela em python,utilizaremos a funcao f1_score() da biblioteca sklearn.metrics que esta dentro da Scikit Learn
+
+            `sklearn.metrics.f1_score(y_true, y_pred, labels=None, pos_label=1, average=’binary’, sample_weight=None)`
+
+    utter_recall:
+        - text:
+            Primeiro passo é você importar a biblioteca do Recall
+
+            from sklearn.metrics import recall_score
+
+            A função para calcular o recall é
+
+            recall_score(valores_reais, valores_preditos, pos_label=chave)
+
+            onde a chave é o valor em que o recall será calculado
+
+    utter_recall_ponderado:
+        - text:
+            Primeiro passo é você importar a biblioteca do Recall
+
+            from sklearn.metrics import recall_score
+
+            A função para calcular o recall é
+
+            recall_score(valores_reais, valores_preditos, labels=[chave], average='tipo')
+
+            Onde 'tipo' pode assumir um recall pondeado como 'micro', 'macro', 'weighted' ou 'binary'
+
+    utter_precision:
+        - text:
+            Primeiro passo é você importar a biblioteca do Precision
+
+            from sklearn.metrics import precision_score
+
+            A função para calcular o precision é
+
+            precision_score(valores_reais, valores_preditos, pos_label=chave)
+
+            onde a chave é o valor em que o precision será calculado
+
+    utter_precision_ponderado:
+        - text:
+            Primeiro passo é você importar a biblioteca do Precision
+
+            from sklearn.metrics import recall_score
+
+            A função para calcular o precision é
+
+            precision_score(valores_reais, valores_preditos, labels=[chave], average='macro')
+
+            Onde o 'tipo' pode assumir um precision ponderado em 'micro', 'macro', 'weighted' ou 'binary'
+            e a chave é o valor no qual o precision será calculado
+
+    utter_relatorio_metricas:
+        - text:
+
+            from sklearn.metrics import classification_report
+
+            target_names = (['Objeto 0', 'Objeto 1'])
+
+            print(classification_report(valores_reais, valores_preditos, target_names=target_names))
+
+            onde os target_names são os elementos que serão mapeados pelas métricas
+
+    utter_recall_conceito:
+        -  text:
+
+            O Recall é responsável por nos informar qual é proporção de valores que foram identificados corretamente pelo modelo.
+
+    utter_precision_conceito:
+        - text:
+
+            Precision é responsável por nos informar qual a proporção de identificações numéricas foi realmente correta.
+
+            É uma linguagem interpretada que têm seus códigos fontes transformados em uma linguagem intermediária, que será interpretada pela máquina virtual da linguagem quando o programa for executado.
+
+    utter_entender_matriz_confusao:
+
+        - text: |
+            A Matriz de confusão serve para a mensuração da performance de classificação de um modelo em machine learning. 
+
+            E consiste em uma tabela que mostra as frequências de classificação para cada classe do modelo, que são:
+            
+            . True Positive (TP)
+            . False Positive (FP)
+            . True Negative (TN)
+            . False Negative (FN)
+
+            Se quiser ver a definição, digite a sigla ou o nome da frequência desejada.
+
+            Mas antes disso, deseja ver como como implementar?
+    
+    utter_implementar_matriz_confusao_sklearn:
+        - text: |
+
+            O Scikit-Learn fornece uma função confusion_matrix, confira o exemplo:
+
+        
+            from sklearn.metrics import confusion_matrix
+            y_actu = [2, 0, 2, 2, 0, 1, 1, 2, 2, 0, 1, 2]
+            y_pred = [0, 0, 2, 1, 0, 2, 1, 0, 2, 0, 2, 2]
+            confusion_matrix(y_actu, y_pred)
+            
+
+            Mas também pode ser criado uma matriz de confusão usando Pandas, deseja visualizar?
+    
+    utter_implementar_matriz_confusao_pandas:
+        - text: |
+
+            Segue o exemplo com a biblioteca Pandas:
+
+            import pandas as pd
+            y_actu = pd.Series([2, 0, 2, 2, 0, 1, 1, 2, 2, 0, 1, 2], name='Actual')
+            y_pred = pd.Series([0, 0, 2, 1, 0, 2, 1, 0, 2, 0, 2, 2], name='Predicted')
+            df_confusion = pd.crosstab(y_actu, y_pred)
+
+            Agora você já está pronto para saber quais são as métricas usadas para avaliação dos modelos!            
+    
+    utter_entender_verdadeiro_positivo:
+        - text: |
+            True Positive (TP): ocorre quando no conjunto real, a classe que estamos buscando foi prevista corretamente.
+    
+    utter_entender_falso_positivo:
+        - text: |
+            False Positive (FP): ocorre quando no conjunto real, a classe que estamos buscando prever foi prevista incorretamente.
+
+    utter_entender_verdadeiro_negativo:
+        - text: |
+            True Negative (TN): ocorre quando no conjunto real, a classe que não estamos buscando prever foi prevista corretamente.
+
+    utter_entender_falso_negativo:
+        - text: |
+            False Negative (FN): ocorre quando no conjunto real, a classe que não estamos buscando prever foi prevista incorretamente.
 
     utter_transoformar_dados_categoricos:
 
