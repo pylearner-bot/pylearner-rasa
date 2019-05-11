@@ -22,13 +22,13 @@
 * negar
     - utter_bons_estudos
 
-#caminho implementação padronização
+# caminho implementação padronização
 * entender_padronizacao
     - utter_entender_padronizacao
 * afirmar
     - utter_implementar_padronizacao
 
-#caminho implementação padronização 2
+# caminho implementação padronização 2
 * entender_padronizacao
     - utter_entender_padronizacao
 * negar
