@@ -1,9 +1,9 @@
 ## end_to_end story 1
-* cumprimentar: sdfasdfa
+* cumprimentar: oi
     - utter_cumprimentar
-* importar_json: como importar
+* importar_json: csv
     - utter_importar_json_pandas
-* afirmar: sim
+* afirmar: aasdfasd
     - utter_importar_json_pandas1
 * despedir: tchau
     - utter_despedir
