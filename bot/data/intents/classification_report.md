@@ -6,7 +6,7 @@
 - que relatorio de classificacao
 - relatorio de classificacao
 
-## intent: gerar_relatorio_classificacao
+## intent:gerar_relatorio_classificacao
 
 - como gerar o relatorio de classificacao
 - como funciona o relatorio de classificacao
