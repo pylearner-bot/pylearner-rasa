@@ -39,6 +39,10 @@ intents:
   - informacoes_pessoais
   - python_info
   - Machine_Learning
+  - entender_r2_score
+  - entender_explained_variance_score
+  - exemplo_funcao_exaplained_variance_score
+  - exemplo_funcao_r2_score
   - entender_feature_scaling
   - entender_normalizacao
   - entender_padronizacao
@@ -140,6 +144,8 @@ actions:
   - utter_informacoes_pessoais
   - utter_machine_learning
   - utter_python
+  - utter_entender_r2_score
+  - utter_exemplo_funcao_r2_score
   - utter_entender_feature_scaling
   - utter_tecnicas_feture_scaling
   - utter_entender_normalizacao
@@ -395,7 +401,10 @@ templates:
 
             Uma introdução ao Jupyter Notebook
 
-            Em breve vou aprender novas funcionalidades! Mas espero que essas atendam sua necessidade :)
+             Métricas de Regressão(R2 score, explained variance score)
+
+             Em breve vou aprender novas funcionalidades! Mas espero que essas atendam sua necessidade :)
+
 
     utter_ajuda:
         - text: |
@@ -913,6 +922,58 @@ templates:
 
             É uma linguagem interpretada que têm seus códigos fontes transformados em uma linguagem intermediária, que será interpretada pela máquina virtual da linguagem quando o programa for executado.
 
+    utter_entender_r2_score:
+
+        - text: |
+             A função r2_score calcula o coeficiente de determinação R2. 
+             Esse coeficiente fornece uma métrica de quão bem as amostras futuras provavelmente serão previstas pelo modelo. 
+             
+             A melhor pontuação possível é 1.0 e pode ser negativa (porque o modelo pode ser arbitrariamente pior). 
+             Essa métrica não é bem definida para amostras únicas e retornará um valor NaN se o número de amostras(n_samples) for menor que dois.
+
+             Deseja ver um exemplo de uso da função r2_score?
+    
+    utter_exemplo_funcao_r2_score:
+
+        - text: |
+            from sklearn.metrics import r2_score
+            y_true = [3, -0.5, 2, 7]
+            y_pred = [2.5, 0.0, 2, 8]
+            r2_score(y_true, y_pred)  
+
+            y_true = [[0.5, 1], [-1, 1], [7, -6]]
+            y_pred = [[0, 2], [-1, 2], [8, -5]]
+            r2_score(y_true, y_pred, multioutput='variance_weighted')
+
+            y_true = [[0.5, 1], [-1, 1], [7, -6]]
+            y_pred = [[0, 2], [-1, 2], [8, -5]]
+            r2_score(y_true, y_pred, multioutput='uniform_average')
+
+            r2_score(y_true, y_pred, multioutput='raw_values')
+            
+            r2_score(y_true, y_pred, multioutput=[0.3, 0.7])
+    
+    utter_entender_explained_variance_score:
+
+        - text: |
+             A função explained_variance_score é usada para medir a proporção para qual um modelo matemático varia dentro de um conjunto de dados.              
+             
+             A melhor pontuação possível é 1.0.
+             Caso o r2_score = explained_variance_score, isso significa que o Erro Médio = 0.
+
+             Deseja ver um exemplo de uso da função explained_variance_score?
+    
+    utter_exemplo_funcao_explained_variance_score:
+
+        - text: |
+            y_true = [3, -0.5, 2, 7]
+            y_pred = [2.5, 0.0, 2, 8]
+            explained_variance_score(y_true, y_pred)  
+            0.957...
+            y_true = [[0.5, 1], [-1, 1], [7, -6]]
+            y_pred = [[0, 2], [-1, 2], [8, -5]]
+            explained_variance_score(y_true, y_pred, multioutput='uniform_average')
+            0.983...
     utter_entender_matriz_confusao:
 
         - text: |
