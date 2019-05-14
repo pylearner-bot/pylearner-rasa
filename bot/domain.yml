@@ -41,7 +41,7 @@ intents:
   - Machine_Learning
   - entender_r2_score
   - entender_explained_variance_score
-  - exemplo_funcao_exaplained_variance_score
+  - exemplo_funcao_explained_variance_score
   - exemplo_funcao_r2_score
   - entender_feature_scaling
   - entender_normalizacao
@@ -207,7 +207,8 @@ actions:
   - utter_gerar_relatorio_classificacao
   - utter_kmeans_centroide
   - utter_kmeans_mapeados
-
+  - utter_entender_explained_variance_score
+  - utter_exemplo_funcao_explained_variance_score
 templates:
 
     utter_default:
