@@ -27,4 +27,13 @@ def create_stories(user_intent, user_input, utter):
     for intent, inp, utt in zip(user_intent, user_input, utter):
         yield "* {}: {}\n\t - {}".format(intent, inp, utt)
 
-print(create_stories(user_intent, user_input, utter))
+
+def write_file(stories):
+    E2E_FILE = './e2e_stories.md'
+    with open(E2E_FILE, "w") as f:
+        stories = [story for story in stories]
+        for story in stories:
+            f.write("%s\n" % story)
+
+stories = create_stories(user_intent, user_input, utter)
+write_file(stories)
