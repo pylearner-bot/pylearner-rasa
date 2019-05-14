@@ -1,4 +1,5 @@
 intents:
+
   - fora_do_escopo
   - cumprimentar
   - despedir
@@ -81,14 +82,18 @@ intents:
   - entender_classificacao_nearest_neighbors
   - entender_classificador_k_neighbors_classifier
   - entender_classificador_radius_neighbors_classifier
+  - entender_relatorio_classificacao
   - classificadores_nearest_neighbors
-  - implementar_classificadores_nearest_neighbor
+  - implementar_classificadores_nearest_neighbors
+  - gerar_relatorio_classificacao
   - RadiusNeighborsClassifier
   - KNeighborsClassifier
   - entender_gaussian_naive_bayes
   - implementar_gaussian_nayve_bayes
   - entender_decision_tree
   - algoritmo_decision_tree
+  - kmeans_centroide
+  - kmeans_mapeados
 
 actions:
   - utter_default
@@ -198,12 +203,18 @@ actions:
   - utter_implementar_gaussian_nayve_bayes
   - utter_entender_decision_tree
   - utter_algoritmo_decision_tree
+  - utter_entender_relatorio_classificacao
+  - utter_gerar_relatorio_classificacao
+  - utter_kmeans_centroide
+  - utter_kmeans_mapeados
 
 templates:
+
     utter_default:
         - text: |
 
-            Desculpe, não consegui entender você
+            Desculpe, não consegui entender você!
+
             Poderia perguntar novamente?
 
         - text: |
@@ -309,9 +320,9 @@ templates:
             Estou sim. Obrigado por perguntar!
             E você está bem?
 
-          - text: |
-                Estou bem! Obrigado por perguntar!
-                E você está bem?
+        - text: |
+            Estou bem! Obrigado por perguntar!
+            E você está bem?
 
 
     utter_mau_humor:
@@ -659,11 +670,11 @@ templates:
                 . Substituição por mediana
 
                 Faça sua opção!
-     utter_entender_relatorio_classificacao:
+    utter_entender_relatorio_classificacao:
         - text: |
             Após definir o que deseja que a máquina reconheça e passar os tipos de classificação,é necessário gerar o relatório de classificação,ou seja,como foi o desempenho da máquina
 
-     utter_gerar_relatorio_classificacao:
+    utter_gerar_relatorio_classificacao:
         - text: |
             Primeiro é necessário instalar o sklearn e importar a biblioteca classification_report
 
@@ -672,7 +683,8 @@ templates:
 
             Agora, podemos utilizar a funcao classification_report(),que e como visualizaremos as classificações
 
-            classification_report(y_true, y_pred, labels=None, target_names=None, sample_weight=None, digits=2, output_dict=False)
+            target_names = (['Objeto 0', 'Objeto 1'])
+            classification_report(valores_reais, valores_preditos, target_names=target_names)
 
     utter_substituicao_constante:
         - text: |
@@ -839,7 +851,7 @@ templates:
             `sklearn.metrics.f1_score(y_true, y_pred, labels=None, pos_label=1, average=’binary’, sample_weight=None)`
 
     utter_recall:
-        - text:
+        - text: |
             Primeiro passo é você importar a biblioteca do Recall
 
             from sklearn.metrics import recall_score
@@ -851,7 +863,7 @@ templates:
             onde a chave é o valor em que o recall será calculado
 
     utter_recall_ponderado:
-        - text:
+        - text: |
             Primeiro passo é você importar a biblioteca do Recall
 
             from sklearn.metrics import recall_score
@@ -863,7 +875,7 @@ templates:
             Onde 'tipo' pode assumir um recall pondeado como 'micro', 'macro', 'weighted' ou 'binary'
 
     utter_precision:
-        - text:
+        - text: |
             Primeiro passo é você importar a biblioteca do Precision
 
             from sklearn.metrics import precision_score
@@ -875,7 +887,7 @@ templates:
             onde a chave é o valor em que o precision será calculado
 
     utter_precision_ponderado:
-        - text:
+        - text: |
             Primeiro passo é você importar a biblioteca do Precision
 
             from sklearn.metrics import recall_score
@@ -888,7 +900,7 @@ templates:
             e a chave é o valor no qual o precision será calculado
 
     utter_relatorio_metricas:
-        - text:
+        - text: |
 
             from sklearn.metrics import classification_report
 
@@ -899,12 +911,12 @@ templates:
             onde os target_names são os elementos que serão mapeados pelas métricas
 
     utter_recall_conceito:
-        -  text:
+        -  text: |
 
             O Recall é responsável por nos informar qual é proporção de valores que foram identificados corretamente pelo modelo.
 
     utter_precision_conceito:
-        - text:
+        - text: |
 
             Precision é responsável por nos informar qual a proporção de identificações numéricas foi realmente correta.
 
@@ -1086,7 +1098,7 @@ templates:
 
     utter_kmeans_conceitual:
 
-        - text:
+        - text: |
             K-means possui por finalidade agrupar um conjunto de dados semelhantes ou que não apresentam grande discrepância entre si descobrindo assim padrões subjacentes.
 
     utter_kmeans_centroide:
@@ -1174,6 +1186,7 @@ templates:
 
             Deseja ver mais sobre como implementar uma classificação multiclasse?
 
+
     utter_implementar_classificao_multi_classe:
         - text: |
             O SVC e o NuSVC implementam a abordagem “um-contra-um” para classificação de várias classes. Se n_class é o número de classes, os classificadores n_class * (n_class - 1) / 2 são construídos e cada um treina os dados de duas classes.
@@ -1191,6 +1204,8 @@ templates:
             dec.shape[1]
 
             Agora você já sabe o que precisa sobre SVM, o próximo conteúdo de aprendizado supervionado trata-se de: Stochastic Gradient Descent
+
+
 
     utter_entender_descentramento_estocástico_gradiente:
         - text: |
@@ -1231,7 +1246,6 @@ templates:
 
     utter_funcoes_perda_descentramento_estocástico_gradiente:
         - text: |
-
             A função de perda de concreto pode ser definida através do parâmetro de perda. O SGDClassifier suporta as seguintes funções de perda:
 
             .loss = "hinge": (soft-margin) linear Máquina de Vetores de Suporte
@@ -1242,7 +1256,7 @@ templates:
             clf = SGDClassifier(loss="log", max_iter=5).fit(X, y)
             clf.predict_proba([[1., 1.]])
 
-        Isso é tudo, o próximo tópico de aprendizado supervisionado é: Nearest Neighbors
+            Isso é tudo, o próximo tópico de aprendizado supervisionado é: Nearest Neighbors
 
     utter_entender_nearest_neighbors:
 
