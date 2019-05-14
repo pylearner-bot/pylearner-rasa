@@ -1,6 +1,6 @@
 ## Dados categoricos
 * transformar_dados_categoricos
-    - utter_transoformar_dados_categoricos
+    - utter_transformar_dados_categoricos
 
 ## Dados categoricos instalar
 * categoricos_rapidos

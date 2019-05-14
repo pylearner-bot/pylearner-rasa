@@ -167,7 +167,7 @@ actions:
   - utter_precision
   - utter_precision_conceito
   - utter_precision_ponderado
-  - utter_transoformar_dados_categoricos
+  - utter_transformar_dados_categoricos
   - utter_categoricos_rapidos
   - utter_categoricos_rapidos2
   - utter_categoricos_rapidos3
@@ -308,7 +308,7 @@ templates:
         - text: |
             Estou sim. Obrigado por perguntar!
             E você está bem?
-            
+
           - text: |
                 Estou bem! Obrigado por perguntar!
                 E você está bem?
@@ -666,7 +666,7 @@ templates:
      utter_gerar_relatorio_classificacao:
         - text: |
             Primeiro é necessário instalar o sklearn e importar a biblioteca classification_report
-        
+
             pip install -U scikit-learn ou conda install scikit-learn
             from sklearn.metrics  import  classification_report
 
@@ -742,12 +742,12 @@ templates:
             Python foi criado no final dos anos oitenta (1989) por Guido van Rossum, na Holanda, como sucessor da linguagem de programação ABC!
 
             É uma linguagem interpretada que têm seus códigos fontes transformados em uma linguagem intermediária, que será interpretada pela máquina virtual da linguagem quando o programa for executado.
-    
+
     utter_entender_feature_scaling:
         - text: |
-            O Feature Scaling é uma técnica para padronizar os recursos independentes presentes nos dados em um intervalo fixo. 
-            
-            Ele é executado durante o pré-processamento de dados para lidar com magnitudes, valores ou unidades altamente variáveis. 
+            O Feature Scaling é uma técnica para padronizar os recursos independentes presentes nos dados em um intervalo fixo.
+
+            Ele é executado durante o pré-processamento de dados para lidar com magnitudes, valores ou unidades altamente variáveis.
 
             Deseja ver mais sobre técnicas utilizadas para Feature Scaling?
 
@@ -755,9 +755,9 @@ templates:
             O Feature Scaling é uma técnica para padronizar os recursos independentes presentes nos dados em um intervalo fixo.
 
             Se o dimensionamento de recurso não for feito, um algoritmo de aprendizado de máquina tende a pesar valores maiores, maiores e considera valores menores como os valores mais baixos, independentemente da unidade dos valores.
-  
+
             Vamos conferir algumas técnicas de Feature Scaling?
-    
+
     utter_tecnicas_feture_scaling:
 
         - text: |
@@ -767,7 +767,7 @@ templates:
             . Standardisation (Padronização)
 
             Escolha uma opção
-        
+
     utter_entender_normalizacao:
         - text: |
             Esta técnica redimensiona um recurso ou valor de observação com valor de distribuição entre 0 e 1.
@@ -775,21 +775,21 @@ templates:
             X = (Xi - min(x)) / (max(x) - min(x))
 
             Mas e como implementar? Deseja conferir?
-        
+
     utter_implementar_normalizacao:
         - text: |
             Será necessário a importação da biblioteca sklearn:
 
             from sklearn import preprocessing
             min_max_scaler = preprocessing.MinMaxScaler(feature_range =(0, 1))
-            x_after_min_max_scaler = min_max_scaler.fit_transform(dataSet) 
+            x_after_min_max_scaler = min_max_scaler.fit_transform(dataSet)
             print ("\nAfter min max Scaling : \n", x_after_min_max_scaler)
 
     utter_entender_padronizacao:
         - text: |
             É uma técnica muito eficaz que reescala um valor de recurso para que ele tenha distribuição com valor médio 0 e variância igual a 1.
 
-            X = (Xi - média) / desvio padrão 
+            X = (Xi - média) / desvio padrão
 
             Mas como se implementa isso? Deseja conferir?
 
@@ -798,9 +798,9 @@ templates:
             Para isso, será necessário a importação da biblioteca sklearn:
 
                 from sklearn import preprocessing
-                Standardisation = preprocessing.StandardScaler() 
-                x_after_Standardisation = Standardisation.fit_transform(x) 
-                print ("\nAfter Standardisation : \n", x_after_Standardisation) 
+                Standardisation = preprocessing.StandardScaler()
+                x_after_Standardisation = Standardisation.fit_transform(x)
+                print ("\nAfter Standardisation : \n", x_after_Standardisation)
 
 
     utter_entender_metricas_de_classificacao:
@@ -913,21 +913,21 @@ templates:
     utter_entender_r2_score:
 
         - text: |
-             A função r2_score calcula o coeficiente de determinação R2. 
-             Esse coeficiente fornece uma métrica de quão bem as amostras futuras provavelmente serão previstas pelo modelo. 
-             
-             A melhor pontuação possível é 1.0 e pode ser negativa (porque o modelo pode ser arbitrariamente pior). 
+             A função r2_score calcula o coeficiente de determinação R2.
+             Esse coeficiente fornece uma métrica de quão bem as amostras futuras provavelmente serão previstas pelo modelo.
+
+             A melhor pontuação possível é 1.0 e pode ser negativa (porque o modelo pode ser arbitrariamente pior).
              Essa métrica não é bem definida para amostras únicas e retornará um valor NaN se o número de amostras(n_samples) for menor que dois.
 
              Deseja ver um exemplo de uso da função r2_score?
-    
+
     utter_exemplo_funcao_r2_score:
 
         - text: |
             from sklearn.metrics import r2_score
             y_true = [3, -0.5, 2, 7]
             y_pred = [2.5, 0.0, 2, 8]
-            r2_score(y_true, y_pred)  
+            r2_score(y_true, y_pred)
 
             y_true = [[0.5, 1], [-1, 1], [7, -6]]
             y_pred = [[0, 2], [-1, 2], [8, -5]]
@@ -938,25 +938,25 @@ templates:
             r2_score(y_true, y_pred, multioutput='uniform_average')
 
             r2_score(y_true, y_pred, multioutput='raw_values')
-            
+
             r2_score(y_true, y_pred, multioutput=[0.3, 0.7])
-    
+
     utter_entender_explained_variance_score:
 
         - text: |
-             A função explained_variance_score é usada para medir a proporção para qual um modelo matemático varia dentro de um conjunto de dados.              
-             
+             A função explained_variance_score é usada para medir a proporção para qual um modelo matemático varia dentro de um conjunto de dados.
+
              A melhor pontuação possível é 1.0.
              Caso o r2_score = explained_variance_score, isso significa que o Erro Médio = 0.
 
              Deseja ver um exemplo de uso da função explained_variance_score?
-    
+
     utter_exemplo_funcao_explained_variance_score:
 
         - text: |
             y_true = [3, -0.5, 2, 7]
             y_pred = [2.5, 0.0, 2, 8]
-            explained_variance_score(y_true, y_pred)  
+            explained_variance_score(y_true, y_pred)
             0.957...
             y_true = [[0.5, 1], [-1, 1], [7, -6]]
             y_pred = [[0, 2], [-1, 2], [8, -5]]
@@ -965,10 +965,10 @@ templates:
     utter_entender_matriz_confusao:
 
         - text: |
-            A Matriz de confusão serve para a mensuração da performance de classificação de um modelo em machine learning. 
+            A Matriz de confusão serve para a mensuração da performance de classificação de um modelo em machine learning.
 
             E consiste em uma tabela que mostra as frequências de classificação para cada classe do modelo, que são:
-            
+
             . True Positive (TP)
             . False Positive (FP)
             . True Negative (TN)
@@ -977,21 +977,21 @@ templates:
             Se quiser ver a definição, digite a sigla ou o nome da frequência desejada.
 
             Mas antes disso, deseja ver como como implementar?
-    
+
     utter_implementar_matriz_confusao_sklearn:
         - text: |
 
             O Scikit-Learn fornece uma função confusion_matrix, confira o exemplo:
 
-        
+
             from sklearn.metrics import confusion_matrix
             y_actu = [2, 0, 2, 2, 0, 1, 1, 2, 2, 0, 1, 2]
             y_pred = [0, 0, 2, 1, 0, 2, 1, 0, 2, 0, 2, 2]
             confusion_matrix(y_actu, y_pred)
-            
+
 
             Mas também pode ser criado uma matriz de confusão usando Pandas, deseja visualizar?
-    
+
     utter_implementar_matriz_confusao_pandas:
         - text: |
 
@@ -1002,12 +1002,12 @@ templates:
             y_pred = pd.Series([0, 0, 2, 1, 0, 2, 1, 0, 2, 0, 2, 2], name='Predicted')
             df_confusion = pd.crosstab(y_actu, y_pred)
 
-            Agora você já está pronto para saber quais são as métricas usadas para avaliação dos modelos!            
-    
+            Agora você já está pronto para saber quais são as métricas usadas para avaliação dos modelos!
+
     utter_entender_verdadeiro_positivo:
         - text: |
             True Positive (TP): ocorre quando no conjunto real, a classe que estamos buscando foi prevista corretamente.
-    
+
     utter_entender_falso_positivo:
         - text: |
             False Positive (FP): ocorre quando no conjunto real, a classe que estamos buscando prever foi prevista incorretamente.
@@ -1020,7 +1020,7 @@ templates:
         - text: |
             False Negative (FN): ocorre quando no conjunto real, a classe que não estamos buscando prever foi prevista incorretamente.
 
-    utter_transoformar_dados_categoricos:
+    utter_transformar_dados_categoricos:
 
       - text: |
           O primeiro passo é a importação do módulo de processamento!
@@ -1102,7 +1102,7 @@ templates:
 
 
     utter_kmeans_mapeados:
-    
+
         - text: |
 
             Depois de setar os dados usando kmeans:
@@ -1112,14 +1112,14 @@ templates:
             Para visualizar, de fato, em que cluster se encontra cada dado:
 
             print (kmeans.labels_)
-            
+
     utter_entender_modelos_lineares_generalizados:
         - text: |
-            
+
             O modelo linear generalizado generaliza a regressão linear permitindo que o modelo linear seja relacionado à variável de resposta por meio de uma função de link e permitindo que a magnitude da variância de cada medida seja uma função de seu valor previsto.
-  
+
             O próximo tópico de GLM trata-se de regressao logistica, deseja ver mais?
-    
+
     utter_entender_regressao_logistica:
         - text: |
             A regressão logística, apesar de seu nome, é um modelo linear para classificação em vez de regressão. A regressão logística também é conhecida na literatura como regressão logit, classificação de máxima entropia (MaxEnt) ou o classificador log-linear.
@@ -1137,18 +1137,18 @@ templates:
             clf.fit(X, y)
 
             Agora você já está pronto para conferir o próximo assunto: Support Vector Machines.
-               
+
     utter_entender_maquina_de_vetores_de_suporte:
         - text: |
-            A máquina de vetores de suporte (SVM) é um conjunto de métodos do aprendizado supervisionado que analisam os dados e reconhecem padrões, usado para classificação e análise de regressão. 
-            
+            A máquina de vetores de suporte (SVM) é um conjunto de métodos do aprendizado supervisionado que analisam os dados e reconhecem padrões, usado para classificação e análise de regressão.
+
             O SVM padrão toma como entrada um conjunto de dados e prediz, para cada entrada dada, qual de duas possíveis classes a entrada faz parte, o que faz do SVM um classificador linear binário não probabilístico.
 
             Deseja ver como implementar como implementar esse classificador?
 
     utter_implementar_svm:
         - text: |
-           
+
             SVC, NuSVC e LinearSVC são classificadores que tomam como entrada duas matrizes: uma matriz X de tamanho [n_samples, n_features] contendo as amostras de treinamento, e uma matriz y de rótulos de classe (strings ou inteiros), tamanho [n_samples]:
 
             from sklearn import svm
@@ -1165,7 +1165,7 @@ templates:
 
             Para obter os vetores de suporte:
             clf.support_vectors_
-            
+
             Para obter os índices dos vetores de suporte:
             clf.support_
 
@@ -1199,7 +1199,7 @@ templates:
             O SGD é frequentemente sido aplicado  na classificação de textos e processamento de linguagem natural.
 
             Deseja ver como implemtar esse classificador agora?
-        
+
     utter_classificacao_descentramento_estocástico_gradiente:
         - text: |
             Como outros classificadores, o SGD deve ser equipado com duas matrizes: uma matriz X de tamanho [n_samples, n_features] contendo as amostras de treinamento e uma matriz Y de tamanho [n_samples] contendo os valores de destino (rótulos de classe) para as amostras de treinamento:
@@ -1216,19 +1216,19 @@ templates:
         - text: |
 
             Depois de ajustado, o modelo pode ser usado para prever novos valores:
-            
+
             clf.predict([[2., 2.]])
 
             O SGD ajusta um modelo linear aos dados de treinamento:
-            
-            clf.coef_  
+
+            clf.coef_
 
             Para obter a distância assinada para o hiperplano use SGDClassifier.decision_function:
-            
+
             clf.decision_function([[2., 2.]])
 
             Após aprender essas funções, deseja ver quais as funções de perda aceitas pelo SGD?
-    
+
     utter_funcoes_perda_descentramento_estocástico_gradiente:
         - text: |
 
@@ -1237,11 +1237,11 @@ templates:
             .loss = "hinge": (soft-margin) linear Máquina de Vetores de Suporte
             .loss = "modified_huber": perda da dobradiça alisada
             .loss = "log": regressão logística
-            
+
             Implementação:
             clf = SGDClassifier(loss="log", max_iter=5).fit(X, y)
-            clf.predict_proba([[1., 1.]])     
-            
+            clf.predict_proba([[1., 1.]])
+
         Isso é tudo, o próximo tópico de aprendizado supervisionado é: Nearest Neighbors
 
     utter_entender_nearest_neighbors:
@@ -1270,7 +1270,7 @@ templates:
             Deseja ver a implementação?
 
     utter_entender_classificador_radius_neighbors_classifier:
-        
+
         - text: |
             Implementa a aprendizagem com base no número de neighbors dentro de um raio fixo r de cada ponto de treinamento, onde r é um valor de ponto flutuante especificado pelo usuário.
 
@@ -1279,18 +1279,18 @@ templates:
             Deseja ver a implementação?
 
     utter_classificadores_nearest_neighbors:
-        
+
         - text: |
             O scikit-learn implementa dois classificadores de nearest neighbors: KNeighborsClassifier e RadiusNeighborsClassifier.
 
             A classificação de vizinhos KNeighborsClassifier é a técnica mais usada, nos casos em que os dados não são uniformemente amostrados, a classificação dos neighbors baseados no raio RadiusNeighborsClassifierpode ser uma escolha melhor.
 
             Escolha um dos classificadores para saber mais:
-                    
+
                     .Classificador KNeighborsClassifier
 
                     .Classificador RadiusNeighborsClassifier
-    
+
     utter_implementar_classificadores_nearest_neighbor:
 
         - text: |
@@ -1306,7 +1306,7 @@ templates:
             y = [0, 0, 1, 1]
             from sklearn.neighbors import RadiusNeighborsClassifier
             neigh = RadiusNeighborsClassifier(radius=1.0)
-            neigh.fit(X, y) 
+            neigh.fit(X, y)
             print(neigh.predict([[1.5]]))
 
     utter_KNeighborsClassifier:
@@ -1316,7 +1316,7 @@ templates:
             y = [0, 0, 1, 1]
             from sklearn.neighbors import KNeighborsClassifier
             neigh = KNeighborsClassifier(n_neighbors=3)
-            neigh.fit(X, y) 
+            neigh.fit(X, y)
             print(neigh.predict([[1.1]]))
             print(neigh.predict_proba([[0.9]]))
 
@@ -1337,7 +1337,7 @@ templates:
 
         - text: |
             Os métodos Naive Bayes são um conjunto de algoritmos de aprendizado supervisionado baseados na aplicação do teorema de Bayes com a suposição “ingênua” de independência condicional entre cada par de recursos, dado o valor da variável de classe.
-            
+
             GaussianNB implementa o algoritmo Gaussian Naive Bayes para classificação. A probabilidade das features assume ser gaussiana.
 
             Gostaria de saber como é o algoritmo?
@@ -1346,11 +1346,11 @@ templates:
 
         - text: |
             Árvores de decisão (Decision trees) são um método de aprendizagem supervisionada não paramétrico usado para classificação.
-            
+
             O objetivo é criar um modelo que prevê o valor de uma variável de destino, aprendendo regras de decisão simples inferidas a partir dos recursos de dados.
 
             Gostaria de ver o algoritmo?
-    
+
     utter_algoritmo_decision_tree:
 
         - text: |
