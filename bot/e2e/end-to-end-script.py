@@ -94,13 +94,20 @@ def create_stories(user_intent, user_input, utter):
     for intent, inp, utt in zip(user_intent, user_input, utter):
         yield "* {}: {}\n\t - {}".format(intent, inp, utt)
 
+def title():
+    title = "## Stories to Pyter Test"
+    E2E_FILE = './e2e_stories.md'
+    with open(E2E_FILE, "w") as f:
+        f.write("%s\n" % title)
+
 
 def write_file(stories):
     E2E_FILE = './e2e_stories.md'
-    with open(E2E_FILE, "w") as f:
+    with open(E2E_FILE, "a") as f:
         stories = [story for story in stories]
         for story in stories:
             f.write("%s\n" % story)
 
 stories = create_stories(user_intent, user_input, utter)
+title()
 write_file(stories)
