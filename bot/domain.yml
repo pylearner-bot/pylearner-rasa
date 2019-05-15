@@ -94,6 +94,9 @@ intents:
   - algoritmo_decision_tree
   - kmeans_centroide
   - kmeans_mapeados
+  - entender_bayesian_regression
+  - entender_bayesian_ridge_regression
+  - implementar_bayesian_ridge_regression
 
 actions:
   - utter_default
@@ -207,6 +210,9 @@ actions:
   - utter_gerar_relatorio_classificacao
   - utter_kmeans_centroide
   - utter_kmeans_mapeados
+  - utter_entender_bayesian_regression
+  - utter_entender_bayesian_ridge_regression
+  - utter_implementar_bayesian_ridge_regression
 
 templates:
 
@@ -1375,3 +1381,41 @@ templates:
             clf = clf.fit(X, Y)
             clf.predict([[2., 2.]])
             clf.predict_proba([[2., 2.]])
+
+    utter_entender_bayesian_regression:
+
+        - text: |
+            Tecnicas de regressão bayesianas podem ser usadas para incluir parâmetros regulares no processo de estimativa. 
+            
+            Isso é feito ao introduzir uma distribuição, chamada de distribuição a priori, ao conjunto de parâmetros desconhecidos quantificando a sua crença sobre esse conjunto
+            
+            A estimação dos parâmetros é dada através da distribuição à posteriori, que é proporcional ao produto da função de verossimilhança com a distribuição a priori.
+
+            Deseja aprender sobre o modelo de regressão BayesianRidge?
+
+    utter_entender_bayesian_ridge_regression:
+
+        - text: |
+            BayesianRidge estima um modelo de probabilidade do problema de regressão. 
+            Os coeficientes α e λ são escolhidos para serem distribuições gamma, o conjugado para a precisão Gaussiana. 
+            
+            O resultado do modelo é chamado de Bayesian Ridge Regression. Os parâmetros ω, α e λ sao estimados durante o ajuste do modelo. 
+            
+            Os parâmetros de regularização α e λ são estimados maximizando a probabilidade marginal do log.
+
+            Gostaria de ver um exemplo da função BayesianRidge?
+
+    utter_implementar_bayesian_ridge_regression:
+
+        - text: |
+            from sklearn import linear_model
+            X = [[0., 0.], [1., 1.], [2., 2.], [3., 3.]]
+            Y = [0., 1., 2., 3.]
+            reg = linear_model.BayesianRidge()
+            reg.fit(X, Y) 
+
+            Depois de ajustado, o modelo pode ser usado para prever novos valores:
+                reg.predict([[1, 0.]])
+
+            E para acessar os coeficientes:
+                reg.coef_
