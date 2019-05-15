@@ -1,12 +1,10 @@
-# ## end_to_end story 1
-# * cumprimentar: oi
-#     - utter_cumprimentar
-# * importar_json: csv
-#     - utter_importar_json_pandas
-# * afirmar: aasdfasd
-#     - utter_importar_json_pandas1
-# * despedir: tchau
-#     - utter_despedir
+"""
+End to end test script
+To add new test cases add the:
+    - user_intent
+    - user_input
+    - utter
+"""
 
 user_intent = [
     'cumprimentar',
@@ -33,7 +31,6 @@ user_intent = [
     'exemplo_funcao_r2_score',
     'entender_descentramento_estocástico_gradiente',
     'entender_maquina_de_vetores_de_suporte'
-
 ]
 
 user_input = [
@@ -90,24 +87,28 @@ utter = [
     'utter_entender_maquina_de_vetores_de_suporte'
 ]
 
+
 def create_stories(user_intent, user_input, utter):
+    """
+    Zip through lists and return them in the e2e test format
+    """
     for intent, inp, utt in zip(user_intent, user_input, utter):
         yield "* {}: {}\n\t - {}".format(intent, inp, utt)
 
-def title():
-    title = "## Stories to Pyter Test"
-    E2E_FILE = './e2e_stories.md'
-    with open(E2E_FILE, "w") as f:
-        f.write("%s\n" % title)
-
 
 def write_file(stories):
+    """
+    write story tests to file
+    """
     E2E_FILE = './e2e_stories.md'
-    with open(E2E_FILE, "a") as f:
+    title = "## Stories for Pyter Test\n"
+
+    with open(E2E_FILE, "w") as f:
+        f.write(title)
         stories = [story for story in stories]
         for story in stories:
             f.write("%s\n" % story)
 
+
 stories = create_stories(user_intent, user_input, utter)
-title()
 write_file(stories)
