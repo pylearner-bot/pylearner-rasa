@@ -16,12 +16,10 @@
     max-width: 30%;
     max-height: 30%;
     width: 30%;
-    height: 30%;
     top: 0;
+    margin-left: auto;
+    margin-right: auto;
     position: absolute;
-}
-html, body{
-    height: 100%;
 }
 .rocketchat-widget{
     float: left !important ;

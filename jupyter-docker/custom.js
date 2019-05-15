@@ -5,7 +5,7 @@ document.getElementsByTagName('head')[0].appendChild(importJQuery)
 
 var logo = document.createElement('img')
     logo.setAttribute('id', 'logo')
-    logo.setAttribute('src', 'https://github.com/fga-eps-mds/2019.1-PyLearner/raw/master/docs/img/Logo_text.jpg')
+    logo.setAttribute('src', 'https://i.imgur.com/vqxQKTP.png')
 
   var waitForRocketchat = function(selector, callback){
     if (jQuery(selector).length){
