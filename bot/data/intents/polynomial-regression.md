@@ -10,3 +10,4 @@
 
 - como implementar a regressao polinomial
 - como implementar a polynomial regression
+- implementar polynomial regression
