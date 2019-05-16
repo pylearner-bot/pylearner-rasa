@@ -40,7 +40,7 @@ intents:
   - Machine_Learning
   - entender_r2_score
   - entender_explained_variance_score
-  - exemplo_funcao_exaplained_variance_score
+  - exemplo_funcao_explained_variance_score
   - exemplo_funcao_r2_score
   - entender_feature_scaling
   - entender_normalizacao
@@ -176,7 +176,7 @@ actions:
   - utter_precision
   - utter_precision_conceito
   - utter_precision_ponderado
-  - utter_transoformar_dados_categoricos
+  - utter_transformar_dados_categoricos
   - utter_categoricos_rapidos
   - utter_categoricos_rapidos2
   - utter_categoricos_rapidos3
@@ -216,7 +216,8 @@ actions:
   - utter_implementar_bayesian_ridge_regression
   - utter_entender_polynomial_regression
   - utter_implementar_polynomial_regression
-
+  - utter_entender_explained_variance_score
+  - utter_exemplo_funcao_explained_variance_score
 templates:
   utter_default:
     - text: |
@@ -335,11 +336,13 @@ templates:
     - text: |
         Eu sou um bot preso no jupyter. Tá complicado pra mim também!
         Infelizmente não posso ajudar nisso...
-
     - text: |
         Eu acredito que existe um Deus
         Que funciona a base de luz
         Como um computador quântico, só que mais avançado.
+        - text: |
+            Estou bem! Obrigado por perguntar!
+            E você está bem?
 
     - text: |
         Eu acredito no grande mainframe
@@ -920,7 +923,6 @@ templates:
 
   utter_precision_conceito:
     - text: |
-
         Precision é responsável por nos informar qual a proporção de identificações numéricas foi realmente correta.
 
         É uma linguagem interpretada que têm seus códigos fontes transformados em uma linguagem intermediária, que será interpretada pela máquina virtual da linguagem quando o programa for executado.
@@ -929,12 +931,28 @@ templates:
     - text: |
         A função r2_score calcula o coeficiente de determinação R2. 
         Esse coeficiente fornece uma métrica de quão bem as amostras futuras provavelmente serão previstas pelo modelo. 
+        - text: |
+             A função r2_score calcula o coeficiente de determinação R2.
+             Esse coeficiente fornece uma métrica de quão bem as amostras futuras provavelmente serão previstas pelo modelo.
+
+             A melhor pontuação possível é 1.0 e pode ser negativa (porque o modelo pode ser arbitrariamente pior).
+             Essa métrica não é bem definida para amostras únicas e retornará um valor NaN se o número de amostras(n_samples) for menor que dois.
+
+             Deseja ver um exemplo de uso da função r2_score?
+
+    utter_exemplo_funcao_r2_score:
+
+        - text: |
+            from sklearn.metrics import r2_score
+            y_true = [3, -0.5, 2, 7]
+            y_pred = [2.5, 0.0, 2, 8]
+            r2_score(y_true, y_pred)
 
         A melhor pontuação possível é 1.0 e pode ser negativa (porque o modelo pode ser arbitrariamente pior). 
         Essa métrica não é bem definida para amostras únicas e retornará um valor NaN se o número de amostras(n_samples) for menor que dois.
 
         Deseja ver um exemplo de uso da função r2_score?
-
+        
   utter_exemplo_funcao_r2_score:
     - text: |
         from sklearn.metrics import r2_score
@@ -951,6 +969,32 @@ templates:
         r2_score(y_true, y_pred, multioutput='uniform_average')
 
         r2_score(y_true, y_pred, multioutput='raw_values')
+            r2_score(y_true, y_pred, multioutput='raw_values')
+
+            r2_score(y_true, y_pred, multioutput=[0.3, 0.7])
+
+    utter_entender_explained_variance_score:
+
+        - text: |
+             A função explained_variance_score é usada para medir a proporção para qual um modelo matemático varia dentro de um conjunto de dados.
+
+             A melhor pontuação possível é 1.0.
+             Caso o r2_score = explained_variance_score, isso significa que o Erro Médio = 0.
+
+             Deseja ver um exemplo de uso da função explained_variance_score?
+
+    utter_exemplo_funcao_explained_variance_score:
+
+        - text: |
+            y_true = [3, -0.5, 2, 7]
+            y_pred = [2.5, 0.0, 2, 8]
+            explained_variance_score(y_true, y_pred)
+            0.957...
+            y_true = [[0.5, 1], [-1, 1], [7, -6]]
+            y_pred = [[0, 2], [-1, 2], [8, -5]]
+            explained_variance_score(y_true, y_pred, multioutput='uniform_average')
+            0.983...
+    utter_entender_matriz_confusao:
 
         r2_score(y_true, y_pred, multioutput=[0.3, 0.7])
 
@@ -1017,6 +1061,7 @@ templates:
   utter_entender_verdadeiro_positivo:
     - text: |
         True Positive (TP): ocorre quando no conjunto real, a classe que estamos buscando foi prevista corretamente.
+    utter_transformar_dados_categoricos:
 
   utter_entender_falso_positivo:
     - text: |
