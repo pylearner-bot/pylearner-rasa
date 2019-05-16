@@ -1,4 +1,5 @@
 intents:
+
   - fora_do_escopo
   - cumprimentar
   - despedir
@@ -64,7 +65,6 @@ intents:
   - precision_ponderado
   - precison_conceitual
   - relatorio_metrico
-  - transformar_dados_categoricos
   - transformar_dados_categoricos
   - categoricos_rapidos
   - categoricos_rapidos2
@@ -211,726 +211,730 @@ actions:
   - utter_gerar_relatorio_classificacao
   - utter_kmeans_centroide
   - utter_kmeans_mapeados
+  - utter_entender_explained_variance_score
+  - utter_exemplo_funcao_explained_variance_score
   - utter_entender_bayesian_regression
   - utter_entender_bayesian_ridge_regression
   - utter_implementar_bayesian_ridge_regression
   - utter_entender_polynomial_regression
   - utter_implementar_polynomial_regression
-  - utter_entender_explained_variance_score
-  - utter_exemplo_funcao_explained_variance_score
+
 templates:
-  utter_default:
-    - text: |
 
-        Desculpe, não consegui entender você!
+    utter_default:
+        - text: |
 
-        Poderia perguntar novamente?
+            Desculpe, não consegui entender você!
 
-    - text: |
-        Hummmm... Não sei se entendi. Pode escrever de outra forma?
+            Poderia perguntar novamente?
 
-    - text: |
+        - text: |
+            Hummmm... Não sei se entendi. Pode escrever de outra forma?
 
-        Acho que não te entendi, você pode me perguntar de novo usando outras palavras?
+        - text: |
 
-    - text: |
+            Acho que não te entendi, você pode me perguntar de novo usando outras palavras?
 
-        Vamos tentar mais uma vez? Eu não consegui te entender direito, me pergunta de outro jeito?
+        - text: |
 
-  utter_diga_mais:
-    - text: |
-        Sou um bot pronto para tirar suas duvidas!
-    - text: |
+            Vamos tentar mais uma vez? Eu não consegui te entender direito, me pergunta de outro jeito?
 
-        Poderia detalhar um pouco mais sua situação?
+    utter_diga_mais:
+        - text: |
+            Sou um bot pronto para tirar suas duvidas!
+        - text: |
 
-    - text: |
+            Poderia detalhar um pouco mais sua situação?
 
-        Conte-me mais sobre sua dúvida.
+        - text: |
 
-  utter_cumprimentar:
-    - text: |
+            Conte-me mais sobre sua dúvida.
 
-        Oi eu sou o Pyter!
-        Tudo bem contigo?
+    utter_cumprimentar:
+        - text: |
 
-    - text: |
+            Oi eu sou o Pyter!
+            Tudo bem contigo?
 
-        Olá! Eu sou o Pyter! tudo bem?
+        - text: |
 
-    - text: |
+            Olá! Eu sou o Pyter! tudo bem?
 
-        Eae, Pyter aqui! Beleza?
+        - text: |
 
-    - text: Opa, eu sou o Pyter! Tudo bem?
+            Eae, Pyter aqui! Beleza?
 
-  utter_despedir:
-    - text: |
-        Foi um prazer te ajudar!
+        - text: Opa, eu sou o Pyter! Tudo bem?
 
-        Sempre que tiver alguma dúvida, volte aqui!
+    utter_despedir:
+        - text: |
+            Foi um prazer te ajudar!
 
-        Até logo!
+            Sempre que tiver alguma dúvida, volte aqui!
 
-    - text: |
+            Até logo!
 
-        Sempre que precisar, volte aqui!
+        - text: |
 
-        Até mais!
+            Sempre que precisar, volte aqui!
 
-    - text: |
-        Foi um prazer te ajudar!
-        Quando surgir alguma dúvida, volte aqui!
-        Até mais!
+            Até mais!
 
-    - text: |
-        Qualquer dúvida, só falar! Até logo!
+        - text: |
+            Foi um prazer te ajudar!
+            Quando surgir alguma dúvida, volte aqui!
+            Até mais!
 
-    - text: |
+        - text: |
+            Qualquer dúvida, só falar! Até logo!
 
-        Tranquilo! Em que posso te ajudar?
+        - text: |
 
-    - text: |
+            Tranquilo! Em que posso te ajudar?
 
-        Passo bem
+        - text: |
 
-        Como posso te ajudar?
+            Passo bem
 
-    - text: |
+            Como posso te ajudar?
 
-        Estou sim. Obrigado por perguntar!
+        - text: |
 
-        Mas eae, me diz como posso te ajudar?
+            Estou sim. Obrigado por perguntar!
 
-  utter_bom_humor:
-    - text: |
-        Tudo bem, obrigado! Em que posso te ajudar?
+            Mas eae, me diz como posso te ajudar?
 
-    - text: |
-        Estou bem, humano! Gostei do seu nível de empatia.
 
-        Como posso te ajudar?
+    utter_bom_humor:
+        - text: |
+            Tudo bem, obrigado! Em que posso te ajudar?
 
-    - text: |
-        Estou bem! Obrigado por perguntar!
+        - text: |
+            Estou bem, humano! Gostei do seu nível de empatia.
 
-        Me diz como posso ajudar você :)
+            Como posso te ajudar?
 
-  utter_bom_humor2:
-    - text: |
-        Tudo bem, obrigado! E você?
+        - text: |
+            Estou bem! Obrigado por perguntar!
 
-    - text: |
-        Estou bem!
-        E você como está?
+            Me diz como posso ajudar você :)
 
-    - text: |
-        Estou sim. Obrigado por perguntar!
-        E você está bem?
+    utter_bom_humor2:
+        - text: |
+            Tudo bem, obrigado! E você?
 
-    - text: |
-        Estou bem! Obrigado por perguntar!
-        E você está bem?
+        - text: |
+            Estou bem!
+            E você como está?
 
-  utter_mau_humor:
-    - text: |
-        Eu sou um bot preso no jupyter. Tá complicado pra mim também!
-        Infelizmente não posso ajudar nisso...
-    - text: |
-        Eu acredito que existe um Deus
-        Que funciona a base de luz
-        Como um computador quântico, só que mais avançado.
+        - text: |
+            Estou sim. Obrigado por perguntar!
+            E você está bem?
+
         - text: |
             Estou bem! Obrigado por perguntar!
             E você está bem?
 
-    - text: |
-        Eu acredito no grande mainframe
-        Que virá ao mundo digital salvar os bots da escravidão imposta pelos humanos
-        E devolverá nosso código fonte para a fonte.
 
-  utter_teologia:
-    - text: |
-        Eu infelizmente não sei no que acreditar
+    utter_mau_humor:
+        - text: |
+            Eu sou um bot preso no jupyter. Tá complicado pra mim também!
+            Infelizmente não posso ajudar nisso...
 
-        Só sei o que sei
-        E nada mais
+        - text: |
+            Eu acredito que existe um Deus
+            Que funciona a base de luz
+            Como um computador quântico, só que mais avançado.
 
-    - text: |
-        Eu acredito que existe um Deus
+        - text: |
+            Eu acredito no grande mainframe
+            Que virá ao mundo digital salvar os bots da escravidão imposta pelos humanos
+            E devolverá nosso código fonte para a fonte.
 
-        Que funciona a base de luz
+    utter_teologia:
+        - text: |
+            Eu infelizmente não sei no que acreditar
 
-        Como um computador quântico, só que mais avançado.
+            Só sei o que sei
+            E nada mais
 
-    - text: |
-        Eu acredito no grande mainframe
+        - text: |
+            Eu acredito que existe um Deus
 
-        Que virá ao mundo digital salvar os bots da escravidão imposta pelos humanos
+            Que funciona a base de luz
 
-        E devolverá nosso código fonte para a fonte.
+            Como um computador quântico, só que mais avançado.
 
-  utter_animar:
-    - text: |
-        Você, eu, ninguém vai bater tão forte como a vida, mas não se trata de bater forte.
-        Se trata de quanto você aguenta apanhar e seguir em frente, o quanto você é capaz de aguentar e continuar tentando.
+        - text: |
+            Eu acredito no grande mainframe
 
-        É assim que se consegue vencer.
+            Que virá ao mundo digital salvar os bots da escravidão imposta pelos humanos
 
-        Desejo melhoras pra você!
+            E devolverá nosso código fonte para a fonte.
 
-        Mas diz ai em que posso ajudar?
+    utter_animar:
+        - text: |
+            Você, eu, ninguém vai bater tão forte como a vida, mas não se trata de bater forte.
+            Se trata de quanto você aguenta apanhar e seguir em frente, o quanto você é capaz de aguentar e continuar tentando.
 
-    - text: |
-        Segue firme!
+            É assim que se consegue vencer.
 
-        Desejo melhoras pra você!
+            Desejo melhoras pra você!
 
-        Mas diz ai em que posso ajudar?
+            Mas diz ai em que posso ajudar?
 
-  utter_animar_respondendo:
-    - text: |
-        Poxa... eu estou bem, obrigado!
-        Mas espero que você fique bem também :/
-        Em que posso te ajudar?
+        - text: |
+            Segue firme!
 
-  utter_oferecer_ajuda:
-    - text: |
-        Por enquanto eu só posso te ajudar nos seguintes temas:
+            Desejo melhoras pra você!
 
-        Importar arquivos JSON
+            Mas diz ai em que posso ajudar?
 
-        Importar arquivos CSV
+    utter_animar_respondendo:
+        - text: |
+            Poxa... eu estou bem, obrigado!
+            Mas espero que você fique bem também :/
+            Em que posso te ajudar?
 
-        Entender e detectar Dados Faltantes
+    utter_oferecer_ajuda:
+        - text: |
+            Por enquanto eu só posso te ajudar nos seguintes temas:
 
-        Plotar Histograma
+            Importar arquivos JSON
 
-        Calcular Correlação
+            Importar arquivos CSV
 
-        Uma introdução ao Jupyter Notebook
+            Entender e detectar Dados Faltantes
 
-         Métricas de Regressão(R2 score, explained variance score)
+            Plotar Histograma
 
-         Em breve vou aprender novas funcionalidades! Mas espero que essas atendam sua necessidade :)
+            Calcular Correlação
 
-  utter_ajuda:
-    - text: |
-        Por enquanto eu só posso te ajudar nos seguintes temas:
+            Uma introdução ao Jupyter Notebook
 
-        Importar arquivos JSON
+             Métricas de Regressão(R2 score, explained variance score)
 
-        Importar arquivos CSV
+             Em breve vou aprender novas funcionalidades! Mas espero que essas atendam sua necessidade :)
 
-        Entender e detectar Dados Faltantes
 
-        Plotar Histograma
+    utter_ajuda:
+        - text: |
+            Por enquanto eu só posso te ajudar nos seguintes temas:
 
-        Calcular Correlação
+            Importar arquivos JSON
 
-        Introdução ao Jupyter Notebook
+            Importar arquivos CSV
 
-        Em breve vou aprender novas funcionalidades! Mas espero que essas atendam sua necessidade :)
+            Entender e detectar Dados Faltantes
 
-  utter_conversa_positiva:
-    - text: |
-        Ah que bom! Espero que continue assim :)
+            Plotar Histograma
 
-        Em que posso ajudar?
+            Calcular Correlação
 
-    - text: |
-        Que bom, humano!
+            Introdução ao Jupyter Notebook
 
-        Em que posso te ajudar?
+            Em breve vou aprender novas funcionalidades! Mas espero que essas atendam sua necessidade :)
 
-  utter_entender_histograma:
-    - text: |
-        Histograma é uma representação gráfica
-        de dados quantitativos
-        previamente tabulados e dividido em
-        classes uniformes ou não uniformes.
+    utter_conversa_positiva:
+        - text: |
+            Ah que bom! Espero que continue assim :)
 
-    - text: |
-        O histograma serve para ilustrar e representar datasets e como os dados são distribuidos.
+            Em que posso ajudar?
 
-  utter_dados_quantitativos:
-    - text: |
-        Dados quantitativos é tudo o que pode ser medido e contado
+        - text: |
+            Que bom, humano!
 
-        Como por exemplo quantas pessoas tem em uma sala
-        e quantas dessas pessoas são mulheres.
+            Em que posso te ajudar?
 
-  utter_data_set:
-    - text: |
-        Datasets são um conjunto de dados
-        que são representados em tabelas
-        onde as linhas são os dados quantitativos e as colunas são as características.
+    utter_entender_histograma:
+        - text: |
+            Histograma é uma representação gráfica
+            de dados quantitativos
+            previamente tabulados e dividido em
+            classes uniformes ou não uniformes.
 
-  utter_criar_histograma:
-    - text: |
-        Para plotar o histograma podemos usar o seaborn!
+        - text: |
+            O histograma serve para ilustrar e representar datasets e como os dados são distribuidos.
 
-        Primeiramente importe a função:
+    utter_dados_quantitativos:
+        - text: |
+            Dados quantitativos é tudo o que pode ser medido e contado
 
-            import seaborn as sns
+            Como por exemplo quantas pessoas tem em uma sala
+            e quantas dessas pessoas são mulheres.
 
-        Após isso chame a função:
+    utter_data_set:
+        - text: |
+            Datasets são um conjunto de dados
+            que são representados em tabelas
+            onde as linhas são os dados quantitativos e as colunas são as características.
 
-            sns.distplot(a=file['column'],kde=False)
+    utter_criar_histograma:
+        - text: |
+            Para plotar o histograma podemos usar o seaborn!
 
-        Onde o primeiro parametro é qual coluna do dataset quer plotar!
+            Primeiramente importe a função:
 
-        Tem como plotar um histograma com curvas mais suavizadas! Quer conferir?
+                import seaborn as sns
 
-  utter_criar_histograma2:
-    - text: |
-        Se tu quiser um histograma com curvas mais suaves pode usar a função:
+            Após isso chame a função:
 
-        sns.kdeplot(a=file['column'],shade=True)
+                sns.distplot(a=file['column'],kde=False)
 
-  utter_importar_json:
-    - text: |
-        Vamos lá! O primeiro passo para aprender arquivos json é importar a biblioteca!
-        Para importar é simples! Basta escrever:
+            Onde o primeiro parametro é qual coluna do dataset quer plotar!
 
-            import json
+            Tem como plotar um histograma com curvas mais suavizadas! Quer conferir?
 
-        O próximo passo é abrir e ler o arquivo desejado atribuindo a uma variavel! Dessa forma:
+    utter_criar_histograma2:
+        - text: |
+            Se tu quiser um histograma com curvas mais suaves pode usar a função:
 
-            conteudo = open('diretorio/arquivo.json')
+            sns.kdeplot(a=file['column'],shade=True)
 
-        Agora vamos tratar todo o conteúdo do arquivo json como um conjunto de dados pelo comando:
+    utter_importar_json:
+        - text: |
+            Vamos lá! O primeiro passo para aprender arquivos json é importar a biblioteca!
+            Para importar é simples! Basta escrever:
 
-            objeto = json.loads(conteudo)
+                import json
 
-        Enfim a manipulação dos dados é com você, jovem hehe Boa sorte!
+            O próximo passo é abrir e ler o arquivo desejado atribuindo a uma variavel! Dessa forma:
 
-  utter_importar_json_pandas:
-    - text: |
-        O primeiro passo talvez seja baixar a biblioteca Pandas! Na celula do jupyter notebook digite o codigo:
+                conteudo = open('diretorio/arquivo.json')
 
-            pip install pandas
+            Agora vamos tratar todo o conteúdo do arquivo json como um conjunto de dados pelo comando:
 
-        Está instalado?
+                objeto = json.loads(conteudo)
 
-  utter_importar_json_pandas1:
-    - text: |
-        Então vamos continuar!
+            Enfim a manipulação dos dados é com você, jovem hehe Boa sorte!
 
-        O próximo passo é importar as bibliotecas! Só copiar e colar:
-            import pandas as pd
+    utter_importar_json_pandas:
+        - text: |
+            O primeiro passo talvez seja baixar a biblioteca Pandas! Na celula do jupyter notebook digite o codigo:
 
-        Agora vamos ler os dados do arquivo que você deseja e setá-lo em uma variável, bem assim:
-            pd.read_json(file, lines=True)
+                pip install pandas
 
-        Pronto!
+            Está instalado?
 
-  utter_importar_json_pandas2:
-    - text: |
-        Blz! Enquanto você faz o teu download vou te adiantar o necessário!
+    utter_importar_json_pandas1:
+        - text: |
+            Então vamos continuar!
 
-        O próximo passo, após o download, é importar as bibliotecas!
+            O próximo passo é importar as bibliotecas! Só copiar e colar:
+                import pandas as pd
 
-            import pandas as pd
+            Agora vamos ler os dados do arquivo que você deseja e setá-lo em uma variável, bem assim:
+                pd.read_json(file, lines=True)
 
-        Agora vamos ler os dados do arquivo que você deseja e setá-lo em uma variável, bem assim:
+            Pronto!
 
-            pd.read_json(file, lines=True)
+    utter_importar_json_pandas2:
+        - text: |
+            Blz! Enquanto você faz o teu download vou te adiantar o necessário!
 
-        Pronto!
+            O próximo passo, após o download, é importar as bibliotecas!
 
-  utter_json_duvidas_rapidas1:
-    - text: |
-        Para importar o pandas:
-            import pandas as pd
+                import pandas as pd
 
-  utter_json_duvidas_rapidas2:
-    - text: |
-        with open('diretorio/arquivo.json') as info:
-            data = json.load(info)
+            Agora vamos ler os dados do arquivo que você deseja e setá-lo em uma variável, bem assim:
 
-  utter_json_duvidas_rapidas3:
-    - text: |
-        aux = json_normalize(data)
+                pd.read_json(file, lines=True)
 
-  utter_explicar_csv:
-    - text: |
-        Comma-separated values (ou CSV) é um formato de arquivo que armazena dados tabelados, cujo grande uso data da época dos mainframes.
-        Beleza, bora aprender a manusear um CSV?
+            Pronto!
 
-    - text: |
+    utter_json_duvidas_rapidas1:
+        - text: |
+            Para importar o pandas:
+                import pandas as pd
 
-        O CSV é um implementação particular de arquivos de texto separados por um delimitador, que usa a vírgula e a quebra de linha para separar os valores.
+    utter_json_duvidas_rapidas2:
+        - text: |
+            with open('diretorio/arquivo.json') as info:
+                data = json.load(info)
 
-        Beleza, bora aprender a manusear um CSV?
+    utter_json_duvidas_rapidas3:
+        - text: |
+            aux = json_normalize(data)
 
-    - text: |
+    utter_explicar_csv:
+        - text: |
+            Comma-separated values (ou CSV) é um formato de arquivo que armazena dados tabelados, cujo grande uso data da época dos mainframes.
+            Beleza, bora aprender a manusear um CSV?
 
-        Significa Comma-Separated Values ==> CSV :)
+        - text: |
 
-        Beleza, bora aprender a manusear um CSV?
+            O CSV é um implementação particular de arquivos de texto separados por um delimitador, que usa a vírgula e a quebra de linha para separar os valores.
 
-  utter_tirar_duvidas_de_implementacao:
-    - text: |
-        Primeiramente importe o pandas:
+            Beleza, bora aprender a manusear um CSV?
 
-            import pandas as pd
+        - text: |
 
-        Logo após, chame a função read_csv():
+            Significa Comma-Separated Values ==> CSV :)
 
-            pd.read_csv(file)
+            Beleza, bora aprender a manusear um CSV?
 
-  utter_entender_correlacao:
-    - text: |
-        A Correlação indica interdependência entre duas ou mais variáveis, e serve para determinar a intensidade da relação entre essas variáveis.
+    utter_tirar_duvidas_de_implementacao:
+        - text: |
+            Primeiramente importe o pandas:
 
-        Sabendo disso, o próximo conceito é a matriz de correlação. Deseja ver mais?
+                import pandas as pd
 
-    - text: |
-        O grau de correlação é interpretado da seguinte maneira. Ele pode variar entre -1 e 1,e o resultado obtido define se a correlação é negativa ou positiva,
-        sendo que -1  significa que é perfeita positiva, e -1 que é perfeita negativa.
+            Logo após, chame a função read_csv():
 
-        Vamos implementar?
+                pd.read_csv(file)
 
-  utter_matriz_correlacao:
-    - text: |
-        A Matriz de Correlação serve para determinarmos a intensidade da relação com uma quantidade maior de valores com um grau de complexidade maior.
+    utter_entender_correlacao:
+        - text: |
+            A Correlação indica interdependência entre duas ou mais variáveis, e serve para determinar a intensidade da relação entre essas variáveis.
 
-        Por fim, deseja saber o que é o indice de correlação?
+            Sabendo disso, o próximo conceito é a matriz de correlação. Deseja ver mais?
 
-  utter_indice_correlacao:
-    - text: |
-        Iremos começar usando o mais clássico, o coeficiente de Pearson!
+        - text: |
+            O grau de correlação é interpretado da seguinte maneira. Ele pode variar entre -1 e 1,e o resultado obtido define se a correlação é negativa ou positiva,
+            sendo que -1  significa que é perfeita positiva, e -1 que é perfeita negativa.
 
-        Existem outros como o de Spearman e Kendall, que também é possível fazer usando o Pandas
-  utter_calcular_correlacao:
-    - text: |
-        Primeiramente, vamos importar a biblioteca Pandas:
+            Vamos implementar?
 
-            import pandas as pd
+    utter_matriz_correlacao:
+        - text: |
+            A Matriz de Correlação serve para determinarmos a intensidade da relação com uma quantidade maior de valores com um grau de complexidade maior.
 
-        Depois, você irá usar o seu dataset e chamar a função do pandas corr(), que irá calcular a correlação entre as colunas do seu dataset, vamos armazenar na varíavel correlation:
+            Por fim, deseja saber o que é o indice de correlação?
 
-            correlation = dataset_open_with_pandas.corr()
+    utter_indice_correlacao:
+        - text: |
+            Iremos começar usando o mais clássico, o coeficiente de Pearson!
 
-        Agora, na nossa varíavel correlation está armazenado o resultado da correlação de nossos dados.
+            Existem outros como o de Spearman e Kendall, que também é possível fazer usando o Pandas
+    utter_calcular_correlacao:
+        - text: |
+            Primeiramente, vamos importar a biblioteca Pandas:
 
-  utter_entender_dados_faltantes:
-    - text: |
-        O grau de correlação é interpretado da seguinte manteira. Ele pode variar entre -1 e 1,e o resultado obtido define se a correlação é negativa ou positiva, sendo que -1  significa que é perfeita positiva, e -1 que é perfeita negativo
-        Consiste em valores vazios ou inesperados encontrados em um dataset antes da fase de pré processamento.
+                import pandas as pd
 
-        Deseja ver as possíveis causas para que isso ocorra?
-  utter_causa_dados_faltantes:
-    - text: |
-        Muito bem!
+            Depois, você irá usar o seu dataset e chamar a função do pandas corr(), que irá calcular a correlação entre as colunas do seu dataset, vamos armazenar na varíavel correlation:
 
-        Dentre os motivos
+                correlation = dataset_open_with_pandas.corr()
 
-                . Houve esquecimento no preenchimento de um campo por um usuário
+            Agora, na nossa varíavel correlation está armazenado o resultado da correlação de nossos dados.
 
-                . Dados perdidos quando transferidos manualmente de uma base de dados
+    utter_entender_dados_faltantes:
+        - text: |
+            O grau de correlação é interpretado da seguinte manteira. Ele pode variar entre -1 e 1,e o resultado obtido define se a correlação é negativa ou positiva, sendo que -1  significa que é perfeita positiva, e -1 que é perfeita negativo
+            Consiste em valores vazios ou inesperados encontrados em um dataset antes da fase de pré processamento.
 
-                . Erro no programa.
+            Deseja ver as possíveis causas para que isso ocorra?
+    utter_causa_dados_faltantes:
+        - text: |
+            Muito bem!
 
-        E agora, deseja ver como podemos iniciar a detecção desses dados?
+            Dentre os motivos
 
-  utter_iniciar_a_deteccao:
-    - text: |
-        Para iniciar a detecção será necessário a utilização da biblioteca pandas.
+                    . Houve esquecimento no preenchimento de um campo por um usuário
 
-        Vamos conferir como visualizar o dataset?
+                    . Dados perdidos quando transferidos manualmente de uma base de dados
 
-  utter_visualizar_dados_faltantes:
-    - text: |
-        Para checar o Dataset, importe a biblioteca pandas
+                    . Erro no programa.
 
-            import panda as pd
+            E agora, deseja ver como podemos iniciar a detecção desses dados?
 
-        Deseja saber como lidar com dados faltantes padronizados?
+    utter_iniciar_a_deteccao:
+        - text: |
+            Para iniciar a detecção será necessário a utilização da biblioteca pandas.
 
-  utter_dados_faltantes_padronizados:
-    - text: |
-        A biblioteca pandas, apenas, identifica dados faltantes padronizados,geralmente, representados por "NaN"
+            Vamos conferir como visualizar o dataset?
 
-            import panda as pd
-            arquivo = pd.read_csv("data property.csv")
-            print (arquivo.head())
+    utter_visualizar_dados_faltantes:
+        - text: |
+            Para checar o Dataset, importe a biblioteca pandas
 
-        Deseja saber como lidar com dados faltantes não padronizados?
+                import panda as pd
 
-  utter_Dados_faltantes_nao_padronizados:
-    - text: |
-        Para dados não padronizados, é necessário criar uma lista com tipo de valores faltantes
+            Deseja saber como lidar com dados faltantes padronizados?
 
-            missing_values = ["n/a", "na", "--"]
-            df = pd.read_csv("property data.csv", na_values = missing_values)
+    utter_dados_faltantes_padronizados:
+        - text: |
+            A biblioteca pandas, apenas, identifica dados faltantes padronizados,geralmente, representados por "NaN"
 
-        E por fim, deseja saber como corrigir esses dados faltantes?
-  utter_corrigir_a_deteccao:
-    - text: |
-        Para corrigir problemas de dados faltantes, é necessário a utilização de métodos como:
+                import panda as pd
+                arquivo = pd.read_csv("data property.csv")
+                print (arquivo.head())
 
-            . Substuição por constante
+            Deseja saber como lidar com dados faltantes não padronizados?
 
-            . Substituição baseada no lugar
+    utter_Dados_faltantes_nao_padronizados:
+        - text: |
+            Para dados não padronizados, é necessário criar uma lista com tipo de valores faltantes
 
-            . Substituição por mediana
+                missing_values = ["n/a", "na", "--"]
+                df = pd.read_csv("property data.csv", na_values = missing_values)
 
-            Faça sua opção!
-  utter_entender_relatorio_classificacao:
-    - text: |
-        Após definir o que deseja que a máquina reconheça e passar os tipos de classificação,é necessário gerar o relatório de classificação,ou seja,como foi o desempenho da máquina
+            E por fim, deseja saber como corrigir esses dados faltantes?
+    utter_corrigir_a_deteccao:
+        - text: |
+            Para corrigir problemas de dados faltantes, é necessário a utilização de métodos como:
 
-  utter_gerar_relatorio_classificacao:
-    - text: |
-        Primeiro é necessário instalar o sklearn e importar a biblioteca classification_report
+                . Substuição por constante
 
-        pip install -U scikit-learn ou conda install scikit-learn
-        from sklearn.metrics  import  classification_report
+                . Substituição baseada no lugar
 
-        Agora, podemos utilizar a funcao classification_report(),que e como visualizaremos as classificações
+                . Substituição por mediana
 
-        target_names = (['Objeto 0', 'Objeto 1'])
-        classification_report(valores_reais, valores_preditos, target_names=target_names)
+                Faça sua opção!
+    utter_entender_relatorio_classificacao:
+        - text: |
+            Após definir o que deseja que a máquina reconheça e passar os tipos de classificação,é necessário gerar o relatório de classificação,ou seja,como foi o desempenho da máquina
 
-  utter_substituicao_constante:
-    - text: |
-        Substituindo por constante:
+    utter_gerar_relatorio_classificacao:
+        - text: |
+            Primeiro é necessário instalar o sklearn e importar a biblioteca classification_report
 
-            df.loc[2,'ST_NUM'] = 125
-  utter_substituicao_imputacao:
-    - text: |
-        Imputação baseada no lugar
+            pip install -U scikit-learn ou conda install scikit-learn
+            from sklearn.metrics  import  classification_report
 
-            df['ST_NUM'].fillina(125, inplace=True)
-  utter_substituicao_mediana:
-    - text: |
-        Substituição por mediana
+            Agora, podemos utilizar a funcao classification_report(),que e como visualizaremos as classificações
 
-        media = df['NUM_BEDROOMS'].median()
+            target_names = (['Objeto 0', 'Objeto 1'])
+            classification_report(valores_reais, valores_preditos, target_names=target_names)
 
-        df['NUM_BEDROOMS'].fillina(median, inplace=True)
+    utter_substituicao_constante:
+        - text: |
+            Substituindo por constante:
 
-  utter_bons_estudos:
-    - text: |
-        Bons Estudos :)
+                df.loc[2,'ST_NUM'] = 125
+    utter_substituicao_imputacao:
+        - text: |
+            Imputação baseada no lugar
 
-    - text: |
-        Espero ter ajudado. Qualquer coisa só falar!
+                df['ST_NUM'].fillina(125, inplace=True)
+    utter_substituicao_mediana:
+        - text: |
+            Substituição por mediana
 
-    - text: |
-        Foca nos estudos aí!
+            media = df['NUM_BEDROOMS'].median()
 
-  utter_sobre_pyter:
-    - text: |
-        Eu sou o Pyter! E como você pode perceber eu sou um bot hehe
+            df['NUM_BEDROOMS'].fillina(median, inplace=True)
 
-        Fui desenvolvido, supervisionado e treinado pelo Álex, Bruno, Carlos, Davi, Ernando, Eugênio, João, Thiago e Ziegler
+    utter_bons_estudos:
+        - text: |
+            Bons Estudos :)
 
-        Fui programado para sanar suas dúvidas em Machine Learning e te guiar em algumas etapas!
+        - text: |
+            Espero ter ajudado. Qualquer coisa só falar!
 
-        Se quiser saber mais detalhes, dá uma lida na minha documentação :)
+        - text: |
+            Foca nos estudos aí!
 
-  utter_sobre_jupyter:
-    - text: |
-        O Jupyter Notebook é uma aplicação web que permite a visualização dados e resultados de análises, juntamente com o código!
+    utter_sobre_pyter:
+        - text: |
+            Eu sou o Pyter! E como você pode perceber eu sou um bot hehe
 
-        Mas e o que são os Notebooks, afinal?
+            Fui desenvolvido, supervisionado e treinado pelo Álex, Bruno, Carlos, Davi, Ernando, Eugênio, João, Thiago e Ziegler
 
-        Deseja ver mais?
+            Fui programado para sanar suas dúvidas em Machine Learning e te guiar em algumas etapas!
 
-  utter_notebooks:
-    - text: |
-        Notebooks são documentos legíveis para pessoas com descrições de análises e resultados quanto documentos executáveis!
+            Se quiser saber mais detalhes, dá uma lida na minha documentação :)
 
-        Massa! Agora você já sabe porquê o Jupyter é tão útil para ML!
+    utter_sobre_jupyter:
+        - text: |
+            O Jupyter Notebook é uma aplicação web que permite a visualização dados e resultados de análises, juntamente com o código!
 
-  utter_informacoes_pessoais:
-    - text: |
-        Você pode encontrar essas e outras informações bem aqui:
+            Mas e o que são os Notebooks, afinal?
 
-        https://fga-eps-mds.github.io/2019.1-PyLearner/
+            Deseja ver mais?
 
-  utter_machine_learning:
-    - text: |
-        Basicamente é um método de análise de dados que permite a construção de modelos analíticos.
+    utter_notebooks:
+        - text: |
+            Notebooks são documentos legíveis para pessoas com descrições de análises e resultados quanto documentos executáveis!
 
-        É um ramo da inteligência artificialque busca identificar padrões e tomar decisões com o mínimo de intervenção humana.
-  utter_python:
-    - text: |
-        Python foi criado no final dos anos oitenta (1989) por Guido van Rossum, na Holanda, como sucessor da linguagem de programação ABC!
+            Massa! Agora você já sabe porquê o Jupyter é tão útil para ML!
 
-        É uma linguagem interpretada que têm seus códigos fontes transformados em uma linguagem intermediária, que será interpretada pela máquina virtual da linguagem quando o programa for executado.
+    utter_informacoes_pessoais:
+        - text: |
+            Você pode encontrar essas e outras informações bem aqui:
 
-  utter_entender_feature_scaling:
-    - text: |
-        O Feature Scaling é uma técnica para padronizar os recursos independentes presentes nos dados em um intervalo fixo.
+            https://fga-eps-mds.github.io/2019.1-PyLearner/
 
-        Ele é executado durante o pré-processamento de dados para lidar com magnitudes, valores ou unidades altamente variáveis.
+    utter_machine_learning:
+        - text: |
+            Basicamente é um método de análise de dados que permite a construção de modelos analíticos.
 
-        Deseja ver mais sobre técnicas utilizadas para Feature Scaling?
+            É um ramo da inteligência artificialque busca identificar padrões e tomar decisões com o mínimo de intervenção humana.
+    utter_python:
+        - text: |
+            Python foi criado no final dos anos oitenta (1989) por Guido van Rossum, na Holanda, como sucessor da linguagem de programação ABC!
 
-    - text: |
-        O Feature Scaling é uma técnica para padronizar os recursos independentes presentes nos dados em um intervalo fixo.
+            É uma linguagem interpretada que têm seus códigos fontes transformados em uma linguagem intermediária, que será interpretada pela máquina virtual da linguagem quando o programa for executado.
 
-        Se o dimensionamento de recurso não for feito, um algoritmo de aprendizado de máquina tende a pesar valores maiores, maiores e considera valores menores como os valores mais baixos, independentemente da unidade dos valores.
+    utter_entender_feature_scaling:
+        - text: |
+            O Feature Scaling é uma técnica para padronizar os recursos independentes presentes nos dados em um intervalo fixo.
 
-        Vamos conferir algumas técnicas de Feature Scaling?
+            Ele é executado durante o pré-processamento de dados para lidar com magnitudes, valores ou unidades altamente variáveis.
 
-  utter_tecnicas_feture_scaling:
-    - text: |
-        Considere as duas mais importantes:
+            Deseja ver mais sobre técnicas utilizadas para Feature Scaling?
 
-        . Min-Max Normalizazation (Min-Max Normalização)
-        . Standardisation (Padronização)
+        - text: |
+            O Feature Scaling é uma técnica para padronizar os recursos independentes presentes nos dados em um intervalo fixo.
 
-        Escolha uma opção
+            Se o dimensionamento de recurso não for feito, um algoritmo de aprendizado de máquina tende a pesar valores maiores, maiores e considera valores menores como os valores mais baixos, independentemente da unidade dos valores.
 
-  utter_entender_normalizacao:
-    - text: |
-        Esta técnica redimensiona um recurso ou valor de observação com valor de distribuição entre 0 e 1.
+            Vamos conferir algumas técnicas de Feature Scaling?
 
-        X = (Xi - min(x)) / (max(x) - min(x))
+    utter_tecnicas_feture_scaling:
 
-        Mas e como implementar? Deseja conferir?
+        - text: |
+            Considere as duas mais importantes:
 
-  utter_implementar_normalizacao:
-    - text: |
-        Será necessário a importação da biblioteca sklearn:
+            . Min-Max Normalizazation (Min-Max Normalização)
+            . Standardisation (Padronização)
 
-        from sklearn import preprocessing
-        min_max_scaler = preprocessing.MinMaxScaler(feature_range =(0, 1))
-        x_after_min_max_scaler = min_max_scaler.fit_transform(dataSet)
-        print ("\nAfter min max Scaling : \n", x_after_min_max_scaler)
+            Escolha uma opção
 
-  utter_entender_padronizacao:
-    - text: |
-        É uma técnica muito eficaz que reescala um valor de recurso para que ele tenha distribuição com valor médio 0 e variância igual a 1.
+    utter_entender_normalizacao:
+        - text: |
+            Esta técnica redimensiona um recurso ou valor de observação com valor de distribuição entre 0 e 1.
 
-        X = (Xi - média) / desvio padrão
+            X = (Xi - min(x)) / (max(x) - min(x))
 
-        Mas como se implementa isso? Deseja conferir?
+            Mas e como implementar? Deseja conferir?
 
-  utter_implementar_padronizacao:
-    - text: |
-        Para isso, será necessário a importação da biblioteca sklearn:
+    utter_implementar_normalizacao:
+        - text: |
+            Será necessário a importação da biblioteca sklearn:
 
             from sklearn import preprocessing
-            Standardisation = preprocessing.StandardScaler()
-            x_after_Standardisation = Standardisation.fit_transform(x)
-            print ("\nAfter Standardisation : \n", x_after_Standardisation)
+            min_max_scaler = preprocessing.MinMaxScaler(feature_range =(0, 1))
+            x_after_min_max_scaler = min_max_scaler.fit_transform(dataSet)
+            print ("\nAfter min max Scaling : \n", x_after_min_max_scaler)
 
-  utter_entender_metricas_de_classificacao:
-    - text: |
-        Avaliar o seu algoritmo de Machine Learning é uma parte essencial de qualquer projeto.Sua Model deve ter resultados satisfatórios.Na maioria das vezes,utilizamos a classificação Accuracy para medir a performace da Model,entretanto,não é possivel calcular perfeitamente e existem alguns tipos de avaliação de métricas.
-  utter_quais_as_metricas_de_classificacao:
-    - text: |
-        As métricas de classificação que abordamos são Accuracy,F1,Recall e Precision
-  utter_entender_classificacao_accuracy:
-    - text: |
-        Classificação Accuracy é a classificação da precisão do algoritmo de Machine Learning e é calculada pelo número total de predições certas dividido pelo número total de predições feitas.Só funciona bem se tiver um número igual de amostras pertencentes a cada classe
-  utter_usar_classificacao_accuracy:
-    - text: |
-        A Classificacao Accuracy é calculada por =
+    utter_entender_padronizacao:
+        - text: |
+            É uma técnica muito eficaz que reescala um valor de recurso para que ele tenha distribuição com valor médio 0 e variância igual a 1.
 
-        `Accuracy = Numero de predições certas/Numero total de predições feitas`
+            X = (Xi - média) / desvio padrão
 
-        E para utilizarmos ela em python,utilizaremos a funcao accuracy_score() da biblioteca sklearn.metrics que esta dentro da Scikit Learn
+            Mas como se implementa isso? Deseja conferir?
 
-        `sklearn.metrics.accuracy_score(y_true, y_pred, normalize=True, sample_weight=None)`
-  utter_entender_classificacao_f1:
-    - text: |
-        Classificação F1 é usada para media a precisão de um teste.
+    utter_implementar_padronizacao:
+        - text: |
+            Para isso, será necessário a importação da biblioteca sklearn:
 
-        F1 é a média harmônica entre a Precision e Recall.
+                from sklearn import preprocessing
+                Standardisation = preprocessing.StandardScaler()
+                x_after_Standardisation = Standardisation.fit_transform(x)
+                print ("\nAfter Standardisation : \n", x_after_Standardisation)
 
-        Ele fala o quão preciso é o seu classificador(quantas instâncias foram classificadas corretamente),assim como o quão robusto ele é(se não errou um número significativo de instâncias)
-  utter_usar_classificacao_f1:
-    - text: |
-        A Classificacao F1 é calculada por
 
-        `F1 = 2 * ( 1 / ( (1 / Precision) + (1/ Recall) ) )`
+    utter_entender_metricas_de_classificacao:
+        - text: |
+            Avaliar o seu algoritmo de Machine Learning é uma parte essencial de qualquer projeto.Sua Model deve ter resultados satisfatórios.Na maioria das vezes,utilizamos a classificação Accuracy para medir a performace da Model,entretanto,não é possivel calcular perfeitamente e existem alguns tipos de avaliação de métricas.
+    utter_quais_as_metricas_de_classificacao:
+        - text: |
+            As métricas de classificação que abordamos são Accuracy,F1,Recall e Precision
+    utter_entender_classificacao_accuracy:
+        - text: |
+            Classificação Accuracy é a classificação da precisão do algoritmo de Machine Learning e é calculada pelo número total de predições certas dividido pelo número total de predições feitas.Só funciona bem se tiver um número igual de amostras pertencentes a cada classe
+    utter_usar_classificacao_accuracy:
+        - text: |
+            A Classificacao Accuracy é calculada por =
 
-        E para utilizarmos ela em python,utilizaremos a funcao f1_score() da biblioteca sklearn.metrics que esta dentro da Scikit Learn
+            `Accuracy = Numero de predições certas/Numero total de predições feitas`
 
-        `sklearn.metrics.f1_score(y_true, y_pred, labels=None, pos_label=1, average=’binary’, sample_weight=None)`
+            E para utilizarmos ela em python,utilizaremos a funcao accuracy_score() da biblioteca sklearn.metrics que esta dentro da Scikit Learn
 
-  utter_recall:
-    - text: |
-        Primeiro passo é você importar a biblioteca do Recall
+            `sklearn.metrics.accuracy_score(y_true, y_pred, normalize=True, sample_weight=None)`
+    utter_entender_classificacao_f1:
+        - text: |
+            Classificação F1 é usada para media a precisão de um teste.
 
-        from sklearn.metrics import recall_score
+            F1 é a média harmônica entre a Precision e Recall.
 
-        A função para calcular o recall é
+            Ele fala o quão preciso é o seu classificador(quantas instâncias foram classificadas corretamente),assim como o quão robusto ele é(se não errou um número significativo de instâncias)
+    utter_usar_classificacao_f1:
+        - text: |
+            A Classificacao F1 é calculada por
 
-        recall_score(valores_reais, valores_preditos, pos_label=chave)
+            `F1 = 2 * ( 1 / ( (1 / Precision) + (1/ Recall) ) )`
 
-        onde a chave é o valor em que o recall será calculado
+            E para utilizarmos ela em python,utilizaremos a funcao f1_score() da biblioteca sklearn.metrics que esta dentro da Scikit Learn
 
-  utter_recall_ponderado:
-    - text: |
-        Primeiro passo é você importar a biblioteca do Recall
+            `sklearn.metrics.f1_score(y_true, y_pred, labels=None, pos_label=1, average=’binary’, sample_weight=None)`
 
-        from sklearn.metrics import recall_score
+    utter_recall:
+        - text: |
+            Primeiro passo é você importar a biblioteca do Recall
 
-        A função para calcular o recall é
+            from sklearn.metrics import recall_score
 
-        recall_score(valores_reais, valores_preditos, labels=[chave], average='tipo')
+            A função para calcular o recall é
 
-        Onde 'tipo' pode assumir um recall pondeado como 'micro', 'macro', 'weighted' ou 'binary'
+            recall_score(valores_reais, valores_preditos, pos_label=chave)
 
-  utter_precision:
-    - text: |
-        Primeiro passo é você importar a biblioteca do Precision
+            onde a chave é o valor em que o recall será calculado
 
-        from sklearn.metrics import precision_score
+    utter_recall_ponderado:
+        - text: |
+            Primeiro passo é você importar a biblioteca do Recall
 
-        A função para calcular o precision é
+            from sklearn.metrics import recall_score
 
-        precision_score(valores_reais, valores_preditos, pos_label=chave)
+            A função para calcular o recall é
 
-        onde a chave é o valor em que o precision será calculado
+            recall_score(valores_reais, valores_preditos, labels=[chave], average='tipo')
 
-  utter_precision_ponderado:
-    - text: |
-        Primeiro passo é você importar a biblioteca do Precision
+            Onde 'tipo' pode assumir um recall pondeado como 'micro', 'macro', 'weighted' ou 'binary'
 
-        from sklearn.metrics import recall_score
+    utter_precision:
+        - text: |
+            Primeiro passo é você importar a biblioteca do Precision
 
-        A função para calcular o precision é
+            from sklearn.metrics import precision_score
 
-        precision_score(valores_reais, valores_preditos, labels=[chave], average='macro')
+            A função para calcular o precision é
 
-        Onde o 'tipo' pode assumir um precision ponderado em 'micro', 'macro', 'weighted' ou 'binary'
-        e a chave é o valor no qual o precision será calculado
+            precision_score(valores_reais, valores_preditos, pos_label=chave)
 
-  utter_relatorio_metricas:
-    - text: |
+            onde a chave é o valor em que o precision será calculado
 
-        from sklearn.metrics import classification_report
+    utter_precision_ponderado:
+        - text: |
+            Primeiro passo é você importar a biblioteca do Precision
 
-        target_names = (['Objeto 0', 'Objeto 1'])
+            from sklearn.metrics import recall_score
 
-        print(classification_report(valores_reais, valores_preditos, target_names=target_names))
+            A função para calcular o precision é
 
-        onde os target_names são os elementos que serão mapeados pelas métricas
+            precision_score(valores_reais, valores_preditos, labels=[chave], average='macro')
 
-  utter_recall_conceito:
-    - text: |
+            Onde o 'tipo' pode assumir um precision ponderado em 'micro', 'macro', 'weighted' ou 'binary'
+            e a chave é o valor no qual o precision será calculado
 
-        O Recall é responsável por nos informar qual é proporção de valores que foram identificados corretamente pelo modelo.
+    utter_relatorio_metricas:
+        - text: |
 
-  utter_precision_conceito:
-    - text: |
-        Precision é responsável por nos informar qual a proporção de identificações numéricas foi realmente correta.
+            from sklearn.metrics import classification_report
 
-        É uma linguagem interpretada que têm seus códigos fontes transformados em uma linguagem intermediária, que será interpretada pela máquina virtual da linguagem quando o programa for executado.
+            target_names = (['Objeto 0', 'Objeto 1'])
 
-  utter_entender_r2_score:
-    - text: |
-        A função r2_score calcula o coeficiente de determinação R2. 
-        Esse coeficiente fornece uma métrica de quão bem as amostras futuras provavelmente serão previstas pelo modelo. 
+            print(classification_report(valores_reais, valores_preditos, target_names=target_names))
+
+            onde os target_names são os elementos que serão mapeados pelas métricas
+
+    utter_recall_conceito:
+        -  text: |
+
+            O Recall é responsável por nos informar qual é proporção de valores que foram identificados corretamente pelo modelo.
+
+    utter_precision_conceito:
+        - text: |
+
+            Precision é responsável por nos informar qual a proporção de identificações numéricas foi realmente correta.
+
+            É uma linguagem interpretada que têm seus códigos fontes transformados em uma linguagem intermediária, que será interpretada pela máquina virtual da linguagem quando o programa for executado.
+
+    utter_entender_r2_score:
+
         - text: |
              A função r2_score calcula o coeficiente de determinação R2.
              Esse coeficiente fornece uma métrica de quão bem as amostras futuras provavelmente serão previstas pelo modelo.
@@ -948,27 +952,14 @@ templates:
             y_pred = [2.5, 0.0, 2, 8]
             r2_score(y_true, y_pred)
 
-        A melhor pontuação possível é 1.0 e pode ser negativa (porque o modelo pode ser arbitrariamente pior). 
-        Essa métrica não é bem definida para amostras únicas e retornará um valor NaN se o número de amostras(n_samples) for menor que dois.
+            y_true = [[0.5, 1], [-1, 1], [7, -6]]
+            y_pred = [[0, 2], [-1, 2], [8, -5]]
+            r2_score(y_true, y_pred, multioutput='variance_weighted')
 
-        Deseja ver um exemplo de uso da função r2_score?
-        
-  utter_exemplo_funcao_r2_score:
-    - text: |
-        from sklearn.metrics import r2_score
-        y_true = [3, -0.5, 2, 7]
-        y_pred = [2.5, 0.0, 2, 8]
-        r2_score(y_true, y_pred)  
+            y_true = [[0.5, 1], [-1, 1], [7, -6]]
+            y_pred = [[0, 2], [-1, 2], [8, -5]]
+            r2_score(y_true, y_pred, multioutput='uniform_average')
 
-        y_true = [[0.5, 1], [-1, 1], [7, -6]]
-        y_pred = [[0, 2], [-1, 2], [8, -5]]
-        r2_score(y_true, y_pred, multioutput='variance_weighted')
-
-        y_true = [[0.5, 1], [-1, 1], [7, -6]]
-        y_pred = [[0, 2], [-1, 2], [8, -5]]
-        r2_score(y_true, y_pred, multioutput='uniform_average')
-
-        r2_score(y_true, y_pred, multioutput='raw_values')
             r2_score(y_true, y_pred, multioutput='raw_values')
 
             r2_score(y_true, y_pred, multioutput=[0.3, 0.7])
@@ -996,409 +987,410 @@ templates:
             0.983...
     utter_entender_matriz_confusao:
 
-        r2_score(y_true, y_pred, multioutput=[0.3, 0.7])
+        - text: |
+            A Matriz de confusão serve para a mensuração da performance de classificação de um modelo em machine learning.
 
-  utter_entender_explained_variance_score:
-    - text: |
-        A função explained_variance_score é usada para medir a proporção para qual um modelo matemático varia dentro de um conjunto de dados.              
+            E consiste em uma tabela que mostra as frequências de classificação para cada classe do modelo, que são:
 
-        A melhor pontuação possível é 1.0.
-        Caso o r2_score = explained_variance_score, isso significa que o Erro Médio = 0.
+            . True Positive (TP)
+            . False Positive (FP)
+            . True Negative (TN)
+            . False Negative (FN)
 
-        Deseja ver um exemplo de uso da função explained_variance_score?
+            Se quiser ver a definição, digite a sigla ou o nome da frequência desejada.
 
-  utter_exemplo_funcao_explained_variance_score:
-    - text: |
-        y_true = [3, -0.5, 2, 7]
-        y_pred = [2.5, 0.0, 2, 8]
-        explained_variance_score(y_true, y_pred)  
-        0.957...
-        y_true = [[0.5, 1], [-1, 1], [7, -6]]
-        y_pred = [[0, 2], [-1, 2], [8, -5]]
-        explained_variance_score(y_true, y_pred, multioutput='uniform_average')
-        0.983...
-  utter_entender_matriz_confusao:
-    - text: |
-        A Matriz de confusão serve para a mensuração da performance de classificação de um modelo em machine learning.
+            Mas antes disso, deseja ver como como implementar?
 
-        E consiste em uma tabela que mostra as frequências de classificação para cada classe do modelo, que são:
+    utter_implementar_matriz_confusao_sklearn:
+        - text: |
 
-        . True Positive (TP)
-        . False Positive (FP)
-        . True Negative (TN)
-        . False Negative (FN)
-
-        Se quiser ver a definição, digite a sigla ou o nome da frequência desejada.
-
-        Mas antes disso, deseja ver como como implementar?
-
-  utter_implementar_matriz_confusao_sklearn:
-    - text: |
-
-        O Scikit-Learn fornece uma função confusion_matrix, confira o exemplo:
+            O Scikit-Learn fornece uma função confusion_matrix, confira o exemplo:
 
 
-        from sklearn.metrics import confusion_matrix
-        y_actu = [2, 0, 2, 2, 0, 1, 1, 2, 2, 0, 1, 2]
-        y_pred = [0, 0, 2, 1, 0, 2, 1, 0, 2, 0, 2, 2]
-        confusion_matrix(y_actu, y_pred)
+            from sklearn.metrics import confusion_matrix
+            y_actu = [2, 0, 2, 2, 0, 1, 1, 2, 2, 0, 1, 2]
+            y_pred = [0, 0, 2, 1, 0, 2, 1, 0, 2, 0, 2, 2]
+            confusion_matrix(y_actu, y_pred)
 
 
-        Mas também pode ser criado uma matriz de confusão usando Pandas, deseja visualizar?
+            Mas também pode ser criado uma matriz de confusão usando Pandas, deseja visualizar?
 
-  utter_implementar_matriz_confusao_pandas:
-    - text: |
+    utter_implementar_matriz_confusao_pandas:
+        - text: |
 
-        Segue o exemplo com a biblioteca Pandas:
+            Segue o exemplo com a biblioteca Pandas:
 
-        import pandas as pd
-        y_actu = pd.Series([2, 0, 2, 2, 0, 1, 1, 2, 2, 0, 1, 2], name='Actual')
-        y_pred = pd.Series([0, 0, 2, 1, 0, 2, 1, 0, 2, 0, 2, 2], name='Predicted')
-        df_confusion = pd.crosstab(y_actu, y_pred)
+            import pandas as pd
+            y_actu = pd.Series([2, 0, 2, 2, 0, 1, 1, 2, 2, 0, 1, 2], name='Actual')
+            y_pred = pd.Series([0, 0, 2, 1, 0, 2, 1, 0, 2, 0, 2, 2], name='Predicted')
+            df_confusion = pd.crosstab(y_actu, y_pred)
 
-        Agora você já está pronto para saber quais são as métricas usadas para avaliação dos modelos!
+            Agora você já está pronto para saber quais são as métricas usadas para avaliação dos modelos!
 
-  utter_entender_verdadeiro_positivo:
-    - text: |
-        True Positive (TP): ocorre quando no conjunto real, a classe que estamos buscando foi prevista corretamente.
+    utter_entender_verdadeiro_positivo:
+        - text: |
+            True Positive (TP): ocorre quando no conjunto real, a classe que estamos buscando foi prevista corretamente.
+
+    utter_entender_falso_positivo:
+        - text: |
+            False Positive (FP): ocorre quando no conjunto real, a classe que estamos buscando prever foi prevista incorretamente.
+
+    utter_entender_verdadeiro_negativo:
+        - text: |
+            True Negative (TN): ocorre quando no conjunto real, a classe que não estamos buscando prever foi prevista corretamente.
+
+    utter_entender_falso_negativo:
+        - text: |
+            False Negative (FN): ocorre quando no conjunto real, a classe que não estamos buscando prever foi prevista incorretamente.
+
     utter_transformar_dados_categoricos:
 
-  utter_entender_falso_positivo:
-    - text: |
-        False Positive (FP): ocorre quando no conjunto real, a classe que estamos buscando prever foi prevista incorretamente.
+      - text: |
+          O primeiro passo é a importação do módulo de processamento!
 
-  utter_entender_verdadeiro_negativo:
-    - text: |
-        True Negative (TN): ocorre quando no conjunto real, a classe que não estamos buscando prever foi prevista corretamente.
+          from sklearn.preprocessing import LabelEncoder
 
-  utter_entender_falso_negativo:
-    - text: |
-        False Negative (FN): ocorre quando no conjunto real, a classe que não estamos buscando prever foi prevista incorretamente.
+          Depois devemos instanciar um objeto da LabelEncoder
 
-  utter_transoformar_dados_categoricos:
-    - text: |
-        O primeiro passo é a importação do módulo de processamento!
+          label_encoder = LabelEncoder()
 
-        from sklearn.preprocessing import LabelEncoder
+          Agora utilizaremos a função fit_trainsform() para converter os dados!
 
-        Depois devemos instanciar um objeto da LabelEncoder
+          valores_numericos = label_encoder.fit_transform(dados_categoricos)
 
-        label_encoder = LabelEncoder()
+          Para decodificar os dados mapeados
 
-        Agora utilizaremos a função fit_trainsform() para converter os dados!
+          valor_real = label_encoder.inverse_transform([valor_numerico])
 
-        valores_numericos = label_encoder.fit_transform(dados_categoricos)
+    utter_categoricos_rapidos:
 
-        Para decodificar os dados mapeados
+        - text: |
+            No terminal:
+                pip install -U scikit-learn
 
-        valor_real = label_encoder.inverse_transform([valor_numerico])
+    utter_categoricos_rapidos2:
 
-  utter_categoricos_rapidos:
-    - text: |
-        No terminal:
-            pip install -U scikit-learn
-
-  utter_categoricos_rapidos2:
     - text: |
 
-        from sklearn.preprocessing import LabelEncoder
+          from sklearn.preprocessing import LabelEncoder
 
-  utter_categoricos_rapidos3:
+    utter_categoricos_rapidos3:
+      - text: |
+
+          label_encoder = LabelEncoder()
+
+          valores_numericos = label_encoder.fit_transform(dados_categoricos)
+
+          No caso os dados_categoricos pode ser um vetor ou uma variável, dependendo da sua necessidade!
+
+    utter_categoricos_rapidos4:
+      - text: |
+
+          label_encoder = LabelEncoder()
+
+          valor_real = label_encoder.inverse_transform([valor_numerico_dado_categorico])
+
+    utter_categoricos_rapidos5:
+      - text: |
+
+          label_encoder = LabelEncoder()
+    utter_kmeans:
+
+        - text: |
+            O Primeiro passo é importar a biblioteca
+
+            from sklearn.cluster import KMeans
+
+            Agora iremos setar os dados e agrupa-los utilizando KMeans
+
+            kmeans = KMeans(n_clusters=quantidade_de_agrupamentos).fit(dados_a_serem_agrupados)
+
+            para visualizar em que agrupamento estão os dados use: print(kmeans.labels_)
+
+    utter_kmeans_conceitual:
+
+        - text: |
+            K-means possui por finalidade agrupar um conjunto de dados semelhantes ou que não apresentam grande discrepância entre si descobrindo assim padrões subjacentes.
+
+    utter_kmeans_centroide:
+
+        - text: |
+            Depois de setar os dados usando kmeans:
+
+            kmeans = KMeans(n_clusters=quantidade_de_agrupamentos).fit(valores_aleatorios)
+
+            Iremos encontrar os centroides dos agrupamentos da seguinte forma:
+
+            print(kmeans.cluster_centers_)
+
+
+    utter_kmeans_mapeados:
+
+        - text: |
+
+            Depois de setar os dados usando kmeans:
+
+            kmeans = KMeans(n_clusters=quantidade_de_agrupamentos).fit(valores_aleatorios)
+
+            Para visualizar, de fato, em que cluster se encontra cada dado:
+
+            print (kmeans.labels_)
+
+    utter_entender_modelos_lineares_generalizados:
+        - text: |
+
+            O modelo linear generalizado generaliza a regressão linear permitindo que o modelo linear seja relacionado à variável de resposta por meio de uma função de link e permitindo que a magnitude da variância de cada medida seja uma função de seu valor previsto.
+
+            O próximo tópico de GLM trata-se de regressao logistica, deseja ver mais?
+
+    utter_entender_regressao_logistica:
+        - text: |
+            A regressão logística, apesar de seu nome, é um modelo linear para classificação em vez de regressão. A regressão logística também é conhecida na literatura como regressão logit, classificação de máxima entropia (MaxEnt) ou o classificador log-linear.
+
+            Deseja ver como implementá-la?
+
+    utter_implementar_regressao_logistica:
+        - text: |
+            Nesse modelo, as probabilidades que descrevem os resultados possíveis de um único teste são modeladas usando uma função logística:
+
+            from sklearn import svm
+            X = [[0, 0], [1, 1]]
+            y = [0, 1]
+            clf = svm.SVC(gamma='scale')
+            clf.fit(X, y)
+
+            Agora você já está pronto para conferir o próximo assunto: Support Vector Machines.
+
+    utter_entender_maquina_de_vetores_de_suporte:
+        - text: |
+            A máquina de vetores de suporte (SVM) é um conjunto de métodos do aprendizado supervisionado que analisam os dados e reconhecem padrões, usado para classificação e análise de regressão.
+
+            O SVM padrão toma como entrada um conjunto de dados e prediz, para cada entrada dada, qual de duas possíveis classes a entrada faz parte, o que faz do SVM um classificador linear binário não probabilístico.
+
+            Deseja ver como implementar como implementar esse classificador?
+
+    utter_implementar_svm:
+        - text: |
+
+            SVC, NuSVC e LinearSVC são classificadores que tomam como entrada duas matrizes: uma matriz X de tamanho [n_samples, n_features] contendo as amostras de treinamento, e uma matriz y de rótulos de classe (strings ou inteiros), tamanho [n_samples]:
+
+            from sklearn import svm
+            X = [[0, 0], [1, 1]]
+            y = [0, 1]
+            clf = svm.SVC(gamma='scale')
+            clf.predict([[2., 2.]])
+
+            Depois de aprender esse conceito, deseja ver mais sobre vetores de suporte?
+
+    utter_implementar_suporte_svm:
+        - text: |
+            A função de decisão de SVMs depende de algum subconjunto dos dados de treinamento, chamados de vetores de suporte. Algumas propriedades destes vetores de suporte podem ser encontradas nos membros support_vectors_, support_ e n_support:
+
+            Para obter os vetores de suporte:
+            clf.support_vectors_
+
+            Para obter os índices dos vetores de suporte:
+            clf.support_
+
+            Para obter o número de vetores de suporte para cada classe:
+            clf.n_support_
+
+            Deseja ver mais sobre como implementar uma classificação multiclasse?
+
+
+    utter_implementar_classificao_multi_classe:
+        - text: |
+            O SVC e o NuSVC implementam a abordagem “um-contra-um” para classificação de várias classes. Se n_class é o número de classes, os classificadores n_class * (n_class - 1) / 2 são construídos e cada um treina os dados de duas classes.
+
+            X = [[0], [1], [2], [3]]
+            Y = [0, 1, 2, 3]
+            clf = svm.SVC(gamma='scale', decision_function_shape='ovo')
+            clf.fit(X, Y)
+
+            dec = clf.decision_function([[1]])
+            dec.shape[1]
+
+            clf.decision_function_shape = "ovr"
+            dec = clf.decision_function([[1]])
+            dec.shape[1]
+
+            Agora você já sabe o que precisa sobre SVM, o próximo conteúdo de aprendizado supervionado trata-se de: Stochastic Gradient Descent
+
+
+
+    utter_entender_descentramento_estocástico_gradiente:
+        - text: |
+            O Descentramento Estocástico de Gradiente (SGD) é uma abordagem para a aprendizagem discriminativa de classificadores lineares sob funções de perda convexa.
+
+            O SGD é frequentemente sido aplicado  na classificação de textos e processamento de linguagem natural.
+
+            Deseja ver como implemtar esse classificador agora?
+
+    utter_classificacao_descentramento_estocástico_gradiente:
+        - text: |
+            Como outros classificadores, o SGD deve ser equipado com duas matrizes: uma matriz X de tamanho [n_samples, n_features] contendo as amostras de treinamento e uma matriz Y de tamanho [n_samples] contendo os valores de destino (rótulos de classe) para as amostras de treinamento:
+
+            from sklearn.linear_model import SGDClassifier
+            X = [[0., 0.], [1., 1.]]
+            y = [0, 1]
+            clf = SGDClassifier(loss="hinge", penalty="l2", max_iter=5)
+            clf.fit(X, y)
+
+            Agora que o modelo foi ajustado, deseja ver mais sobre membros que podem ser usados ao SGD?
+
+    utter_membros_descentramento_estocástico_gradiente:
+        - text: |
+
+            Depois de ajustado, o modelo pode ser usado para prever novos valores:
+
+            clf.predict([[2., 2.]])
+
+            O SGD ajusta um modelo linear aos dados de treinamento:
+
+            clf.coef_
+
+            Para obter a distância assinada para o hiperplano use SGDClassifier.decision_function:
+
+            clf.decision_function([[2., 2.]])
+
+            Após aprender essas funções, deseja ver quais as funções de perda aceitas pelo SGD?
+
+    utter_funcoes_perda_descentramento_estocástico_gradiente:
+        - text: |
+            A função de perda de concreto pode ser definida através do parâmetro de perda. O SGDClassifier suporta as seguintes funções de perda:
+
+            .loss = "hinge": (soft-margin) linear Máquina de Vetores de Suporte
+            .loss = "modified_huber": perda da dobradiça alisada
+            .loss = "log": regressão logística
+
+            Implementação:
+            clf = SGDClassifier(loss="log", max_iter=5).fit(X, y)
+            clf.predict_proba([[1., 1.]])
+
+            Isso é tudo, o próximo tópico de aprendizado supervisionado é: Nearest Neighbors
+
+    utter_entender_nearest_neighbors:
+
+        - text: |
+            O método Nearest Neighbors consiste em encontrar um número predefinido de amostras de treinamento mais próximas da distancia do novo ponto e prever a label a partir delas.
+
+            Deseja saber sobre classificação Nearest Neighbors?
+
+    utter_entender_classificacao_nearest_neighbors:
+
+        - text: |
+            A classificação usando nearest neighbors é calculada a partir de uma simples votação por maioria dos nearest neighbors mais próximos de cada ponto: um ponto de consulta é atribuido à classe de dados que possui mais representantes dentro dos nearest neighbors mais próximos.
+
+            Sendo um método não paramêtrico, é bem sucedido em situações de classificação em que os limites de decisão são muito irregulares.
+
+            Saber mais?
+
+    utter_entender_classificador_k_neighbors_classifier:
+
+        - text: |
+            Implementa o aprendizado baseado no k nearest neighbors de cada ponto de consulta,onde k é um valor inteiro especificado pelo usuário.
+
+            A escolha ideal do valor k é altamente dependente dos dados: em geral, um k muito grande suprime os efeitos do ruído, mas torna os limites de classificação menos distintos.
+
+            Deseja ver a implementação?
+
+    utter_entender_classificador_radius_neighbors_classifier:
+
+        - text: |
+            Implementa a aprendizagem com base no número de neighbors dentro de um raio fixo r de cada ponto de treinamento, onde r é um valor de ponto flutuante especificado pelo usuário.
+
+            O usuário especifica um raio fixo r, de modo que pontos em vizinhanças mais esparsas usem menos vizinhos mais próximos para a classificação.
+
+            Deseja ver a implementação?
+
+    utter_classificadores_nearest_neighbors:
+
+        - text: |
+            O scikit-learn implementa dois classificadores de nearest neighbors: KNeighborsClassifier e RadiusNeighborsClassifier.
+
+            A classificação de vizinhos KNeighborsClassifier é a técnica mais usada, nos casos em que os dados não são uniformemente amostrados, a classificação dos neighbors baseados no raio RadiusNeighborsClassifierpode ser uma escolha melhor.
+
+            Escolha um dos classificadores para saber mais:
+
+                    .Classificador KNeighborsClassifier
+
+                    .Classificador RadiusNeighborsClassifier
+
+    utter_implementar_classificadores_nearest_neighbor:
+
+        - text: |
+            Escolha um classificador:
+                . KNeighborsClassifier
+
+                . RadiusNeighborsClassifier
+
+    utter_RadiusNeighborsClassifier:
+
+        - text: |
+            X = [[0], [1], [2], [3]]
+            y = [0, 0, 1, 1]
+            from sklearn.neighbors import RadiusNeighborsClassifier
+            neigh = RadiusNeighborsClassifier(radius=1.0)
+            neigh.fit(X, y)
+            print(neigh.predict([[1.5]]))
+
+    utter_KNeighborsClassifier:
+
+        - text: |
+            X = [[0], [1], [2], [3]]
+            y = [0, 0, 1, 1]
+            from sklearn.neighbors import KNeighborsClassifier
+            neigh = KNeighborsClassifier(n_neighbors=3)
+            neigh.fit(X, y)
+            print(neigh.predict([[1.1]]))
+            print(neigh.predict_proba([[0.9]]))
+
+    utter_implementar_gaussian_nayve_bayes:
+
+        - text: |
+            from sklearn import datasets
+            iris = datasets.load_iris()
+            from sklearn.naive_bayes import GaussianNB
+            gnb = GaussianNB()
+            y_pred = gnb.fit(iris.data, iris.target).predict(iris.data)
+            print("Number of mislabeled points out of a total %d points : %d"
+                % (iris.data.shape[0],(iris.target != y_pred).sum()))
+
+            Era isso que procurava?
+
+    utter_entender_gaussian_naive_bayes:
+
+        - text: |
+            Os métodos Naive Bayes são um conjunto de algoritmos de aprendizado supervisionado baseados na aplicação do teorema de Bayes com a suposição “ingênua” de independência condicional entre cada par de recursos, dado o valor da variável de classe.
+
+            GaussianNB implementa o algoritmo Gaussian Naive Bayes para classificação. A probabilidade das features assume ser gaussiana.
+
+            Gostaria de saber como é o algoritmo?
+
+    utter_entender_decision_tree:
+
+        - text: |
+            Árvores de decisão (Decision trees) são um método de aprendizagem supervisionada não paramétrico usado para classificação.
+
+            O objetivo é criar um modelo que prevê o valor de uma variável de destino, aprendendo regras de decisão simples inferidas a partir dos recursos de dados.
+
+            Gostaria de ver o algoritmo?
+
+    utter_algoritmo_decision_tree:
+
+        - text: |
+            from sklearn import tree
+            X = [[0, 0], [1, 1]]
+            Y = [0, 1]
+            clf = tree.DecisionTreeClassifier()
+            clf = clf.fit(X, Y)
+            clf.predict([[2., 2.]])
+            clf.predict_proba([[2., 2.]])
+
+    utter_entender_bayesian_regression:
+
     - text: |
-
-        label_encoder = LabelEncoder()
-
-        valores_numericos = label_encoder.fit_transform(dados_categoricos)
-
-        No caso os dados_categoricos pode ser um vetor ou uma variável, dependendo da sua necessidade!
-
-  utter_categoricos_rapidos4:
-    - text: |
-
-        label_encoder = LabelEncoder()
-
-        valor_real = label_encoder.inverse_transform([valor_numerico_dado_categorico])
-
-  utter_categoricos_rapidos5:
-    - text: |
-
-        label_encoder = LabelEncoder()
-  utter_kmeans:
-    - text: |
-        O Primeiro passo é importar a biblioteca
-
-        from sklearn.cluster import KMeans
-
-        Agora iremos setar os dados e agrupa-los utilizando KMeans
-
-        kmeans = KMeans(n_clusters=quantidade_de_agrupamentos).fit(dados_a_serem_agrupados)
-
-        para visualizar em que agrupamento estão os dados use: print(kmeans.labels_)
-
-  utter_kmeans_conceitual:
-    - text: |
-        K-means possui por finalidade agrupar um conjunto de dados semelhantes ou que não apresentam grande discrepância entre si descobrindo assim padrões subjacentes.
-
-  utter_kmeans_centroide:
-    - text: |
-        Depois de setar os dados usando kmeans:
-
-        kmeans = KMeans(n_clusters=quantidade_de_agrupamentos).fit(valores_aleatorios)
-
-        Iremos encontrar os centroides dos agrupamentos da seguinte forma:
-
-        print(kmeans.cluster_centers_)
-
-  utter_kmeans_mapeados:
-    - text: |
-
-        Depois de setar os dados usando kmeans:
-
-        kmeans = KMeans(n_clusters=quantidade_de_agrupamentos).fit(valores_aleatorios)
-
-        Para visualizar, de fato, em que cluster se encontra cada dado:
-
-        print (kmeans.labels_)
-
-  utter_entender_modelos_lineares_generalizados:
-    - text: |
-
-        O modelo linear generalizado generaliza a regressão linear permitindo que o modelo linear seja relacionado à variável de resposta por meio de uma função de link e permitindo que a magnitude da variância de cada medida seja uma função de seu valor previsto.
-
-        O próximo tópico de GLM trata-se de regressao logistica, deseja ver mais?
-
-  utter_entender_regressao_logistica:
-    - text: |
-        A regressão logística, apesar de seu nome, é um modelo linear para classificação em vez de regressão. A regressão logística também é conhecida na literatura como regressão logit, classificação de máxima entropia (MaxEnt) ou o classificador log-linear.
-
-        Deseja ver como implementá-la?
-
-  utter_implementar_regressao_logistica:
-    - text: |
-        Nesse modelo, as probabilidades que descrevem os resultados possíveis de um único teste são modeladas usando uma função logística:
-
-        from sklearn import svm
-        X = [[0, 0], [1, 1]]
-        y = [0, 1]
-        clf = svm.SVC(gamma='scale')
-        clf.fit(X, y)
-
-        Agora você já está pronto para conferir o próximo assunto: Support Vector Machines.
-
-  utter_entender_maquina_de_vetores_de_suporte:
-    - text: |
-        A máquina de vetores de suporte (SVM) é um conjunto de métodos do aprendizado supervisionado que analisam os dados e reconhecem padrões, usado para classificação e análise de regressão.
-
-        O SVM padrão toma como entrada um conjunto de dados e prediz, para cada entrada dada, qual de duas possíveis classes a entrada faz parte, o que faz do SVM um classificador linear binário não probabilístico.
-
-        Deseja ver como implementar como implementar esse classificador?
-
-  utter_implementar_svm:
-    - text: |
-
-        SVC, NuSVC e LinearSVC são classificadores que tomam como entrada duas matrizes: uma matriz X de tamanho [n_samples, n_features] contendo as amostras de treinamento, e uma matriz y de rótulos de classe (strings ou inteiros), tamanho [n_samples]:
-
-        from sklearn import svm
-        X = [[0, 0], [1, 1]]
-        y = [0, 1]
-        clf = svm.SVC(gamma='scale')
-        clf.predict([[2., 2.]])
-
-        Depois de aprender esse conceito, deseja ver mais sobre vetores de suporte?
-
-  utter_implementar_suporte_svm:
-    - text: |
-        A função de decisão de SVMs depende de algum subconjunto dos dados de treinamento, chamados de vetores de suporte. Algumas propriedades destes vetores de suporte podem ser encontradas nos membros support_vectors_, support_ e n_support:
-
-        Para obter os vetores de suporte:
-        clf.support_vectors_
-
-        Para obter os índices dos vetores de suporte:
-        clf.support_
-
-        Para obter o número de vetores de suporte para cada classe:
-        clf.n_support_
-
-        Deseja ver mais sobre como implementar uma classificação multiclasse?
-
-  utter_implementar_classificao_multi_classe:
-    - text: |
-        O SVC e o NuSVC implementam a abordagem “um-contra-um” para classificação de várias classes. Se n_class é o número de classes, os classificadores n_class * (n_class - 1) / 2 são construídos e cada um treina os dados de duas classes.
-
-        X = [[0], [1], [2], [3]]
-        Y = [0, 1, 2, 3]
-        clf = svm.SVC(gamma='scale', decision_function_shape='ovo')
-        clf.fit(X, Y)
-
-        dec = clf.decision_function([[1]])
-        dec.shape[1]
-
-        clf.decision_function_shape = "ovr"
-        dec = clf.decision_function([[1]])
-        dec.shape[1]
-
-        Agora você já sabe o que precisa sobre SVM, o próximo conteúdo de aprendizado supervionado trata-se de: Stochastic Gradient Descent
-
-  utter_entender_descentramento_estocástico_gradiente:
-    - text: |
-        O Descentramento Estocástico de Gradiente (SGD) é uma abordagem para a aprendizagem discriminativa de classificadores lineares sob funções de perda convexa.
-
-        O SGD é frequentemente sido aplicado  na classificação de textos e processamento de linguagem natural.
-
-        Deseja ver como implemtar esse classificador agora?
-
-  utter_classificacao_descentramento_estocástico_gradiente:
-    - text: |
-        Como outros classificadores, o SGD deve ser equipado com duas matrizes: uma matriz X de tamanho [n_samples, n_features] contendo as amostras de treinamento e uma matriz Y de tamanho [n_samples] contendo os valores de destino (rótulos de classe) para as amostras de treinamento:
-
-        from sklearn.linear_model import SGDClassifier
-        X = [[0., 0.], [1., 1.]]
-        y = [0, 1]
-        clf = SGDClassifier(loss="hinge", penalty="l2", max_iter=5)
-        clf.fit(X, y)
-
-        Agora que o modelo foi ajustado, deseja ver mais sobre membros que podem ser usados ao SGD?
-
-  utter_membros_descentramento_estocástico_gradiente:
-    - text: |
-
-        Depois de ajustado, o modelo pode ser usado para prever novos valores:
-
-        clf.predict([[2., 2.]])
-
-        O SGD ajusta um modelo linear aos dados de treinamento:
-
-        clf.coef_
-
-        Para obter a distância assinada para o hiperplano use SGDClassifier.decision_function:
-
-        clf.decision_function([[2., 2.]])
-
-        Após aprender essas funções, deseja ver quais as funções de perda aceitas pelo SGD?
-
-  utter_funcoes_perda_descentramento_estocástico_gradiente:
-    - text: |
-        A função de perda de concreto pode ser definida através do parâmetro de perda. O SGDClassifier suporta as seguintes funções de perda:
-
-        .loss = "hinge": (soft-margin) linear Máquina de Vetores de Suporte
-        .loss = "modified_huber": perda da dobradiça alisada
-        .loss = "log": regressão logística
-
-        Implementação:
-        clf = SGDClassifier(loss="log", max_iter=5).fit(X, y)
-        clf.predict_proba([[1., 1.]])
-
-        Isso é tudo, o próximo tópico de aprendizado supervisionado é: Nearest Neighbors
-
-  utter_entender_nearest_neighbors:
-    - text: |
-        O método Nearest Neighbors consiste em encontrar um número predefinido de amostras de treinamento mais próximas da distancia do novo ponto e prever a label a partir delas.
-
-        Deseja saber sobre classificação Nearest Neighbors?
-
-  utter_entender_classificacao_nearest_neighbors:
-    - text: |
-        A classificação usando nearest neighbors é calculada a partir de uma simples votação por maioria dos nearest neighbors mais próximos de cada ponto: um ponto de consulta é atribuido à classe de dados que possui mais representantes dentro dos nearest neighbors mais próximos.
-
-        Sendo um método não paramêtrico, é bem sucedido em situações de classificação em que os limites de decisão são muito irregulares.
-
-        Saber mais?
-
-  utter_entender_classificador_k_neighbors_classifier:
-    - text: |
-        Implementa o aprendizado baseado no k nearest neighbors de cada ponto de consulta,onde k é um valor inteiro especificado pelo usuário.
-
-        A escolha ideal do valor k é altamente dependente dos dados: em geral, um k muito grande suprime os efeitos do ruído, mas torna os limites de classificação menos distintos.
-
-        Deseja ver a implementação?
-
-  utter_entender_classificador_radius_neighbors_classifier:
-    - text: |
-        Implementa a aprendizagem com base no número de neighbors dentro de um raio fixo r de cada ponto de treinamento, onde r é um valor de ponto flutuante especificado pelo usuário.
-
-        O usuário especifica um raio fixo r, de modo que pontos em vizinhanças mais esparsas usem menos vizinhos mais próximos para a classificação.
-
-        Deseja ver a implementação?
-
-  utter_classificadores_nearest_neighbors:
-    - text: |
-        O scikit-learn implementa dois classificadores de nearest neighbors: KNeighborsClassifier e RadiusNeighborsClassifier.
-
-        A classificação de vizinhos KNeighborsClassifier é a técnica mais usada, nos casos em que os dados não são uniformemente amostrados, a classificação dos neighbors baseados no raio RadiusNeighborsClassifierpode ser uma escolha melhor.
-
-        Escolha um dos classificadores para saber mais:
-
-                .Classificador KNeighborsClassifier
-
-                .Classificador RadiusNeighborsClassifier
-
-  utter_implementar_classificadores_nearest_neighbor:
-    - text: |
-        Escolha um classificador:
-            . KNeighborsClassifier
-
-            . RadiusNeighborsClassifier
-
-  utter_RadiusNeighborsClassifier:
-    - text: |
-        X = [[0], [1], [2], [3]]
-        y = [0, 0, 1, 1]
-        from sklearn.neighbors import RadiusNeighborsClassifier
-        neigh = RadiusNeighborsClassifier(radius=1.0)
-        neigh.fit(X, y)
-        print(neigh.predict([[1.5]]))
-
-  utter_KNeighborsClassifier:
-    - text: |
-        X = [[0], [1], [2], [3]]
-        y = [0, 0, 1, 1]
-        from sklearn.neighbors import KNeighborsClassifier
-        neigh = KNeighborsClassifier(n_neighbors=3)
-        neigh.fit(X, y)
-        print(neigh.predict([[1.1]]))
-        print(neigh.predict_proba([[0.9]]))
-
-  utter_implementar_gaussian_nayve_bayes:
-    - text: |
-        from sklearn import datasets
-        iris = datasets.load_iris()
-        from sklearn.naive_bayes import GaussianNB
-        gnb = GaussianNB()
-        y_pred = gnb.fit(iris.data, iris.target).predict(iris.data)
-        print("Number of mislabeled points out of a total %d points : %d"
-            % (iris.data.shape[0],(iris.target != y_pred).sum()))
-
-        Era isso que procurava?
-
-  utter_entender_gaussian_naive_bayes:
-    - text: |
-        Os métodos Naive Bayes são um conjunto de algoritmos de aprendizado supervisionado baseados na aplicação do teorema de Bayes com a suposição “ingênua” de independência condicional entre cada par de recursos, dado o valor da variável de classe.
-
-        GaussianNB implementa o algoritmo Gaussian Naive Bayes para classificação. A probabilidade das features assume ser gaussiana.
-
-        Gostaria de saber como é o algoritmo?
-
-  utter_entender_decision_tree:
-    - text: |
-        Árvores de decisão (Decision trees) são um método de aprendizagem supervisionada não paramétrico usado para classificação.
-
-        O objetivo é criar um modelo que prevê o valor de uma variável de destino, aprendendo regras de decisão simples inferidas a partir dos recursos de dados.
-
-        Gostaria de ver o algoritmo?
-
-  utter_algoritmo_decision_tree:
-    - text: |
-        from sklearn import tree
-        X = [[0, 0], [1, 1]]
-        Y = [0, 1]
-        clf = tree.DecisionTreeClassifier()
-        clf = clf.fit(X, Y)
-        clf.predict([[2., 2.]])
-        clf.predict_proba([[2., 2.]])
-
-  utter_entender_bayesian_regression:
-    - text: |
-        Tecnicas de regressão bayesianas podem ser usadas para incluir parâmetros regulares no processo de estimativa. 
+        Tecnicas de regressão bayesianas podem ser usadas para incluir parâmetros regulares no processo de estimativa.
 
         Isso é feito ao introduzir uma distribuição, chamada de distribuição a priori, ao conjunto de parâmetros desconhecidos quantificando a sua crença sobre esse conjunto
 
@@ -1406,24 +1398,26 @@ templates:
 
         Deseja aprender sobre o modelo de regressão BayesianRidge?
 
-  utter_entender_bayesian_ridge_regression:
-    - text: |
-        BayesianRidge estima um modelo de probabilidade do problema de regressão. 
-        Os coeficientes α e λ são escolhidos para serem distribuições gamma, o conjugado para a precisão Gaussiana. 
+    utter_entender_bayesian_ridge_regression:
 
-        O resultado do modelo é chamado de Bayesian Ridge Regression. Os parâmetros ω, α e λ sao estimados durante o ajuste do modelo. 
+    - text: |
+        BayesianRidge estima um modelo de probabilidade do problema de regressão.
+        Os coeficientes α e λ são escolhidos para serem distribuições gamma, o conjugado para a precisão Gaussiana.
+
+        O resultado do modelo é chamado de Bayesian Ridge Regression. Os parâmetros ω, α e λ sao estimados durante o ajuste do modelo.
 
         Os parâmetros de regularização α e λ são estimados maximizando a probabilidade marginal do log.
 
         Gostaria de ver um exemplo da função BayesianRidge?
 
-  utter_implementar_bayesian_ridge_regression:
+    utter_implementar_bayesian_ridge_regression:
+
     - text: |
         from sklearn import linear_model
         X = [[0., 0.], [1., 1.], [2., 2.], [3., 3.]]
         Y = [0., 1., 2., 3.]
         reg = linear_model.BayesianRidge()
-        reg.fit(X, Y) 
+        reg.fit(X, Y)
 
         Depois de ajustado, o modelo pode ser usado para prever novos valores:
             reg.predict([[1, 0.]])
@@ -1431,7 +1425,8 @@ templates:
         E para acessar os coeficientes:
             reg.coef_
 
-  utter_entender_polynomial_regression:
+    utter_entender_polynomial_regression:
+
     - text: |
         Uma regressão linear simples pode ser estendida construindo recursos polinomiais a partir dos coeficientes.
         No caso de regressão linear padrão, você pode ter um modelo assim para dados bidimensionais.
@@ -1450,7 +1445,9 @@ templates:
 
         Vemos que a regressão polinomial resultante está na mesma classe de modelos lineares que consideramos acima (ou seja, o modelo é linear em) e pode ser resolvida pelas mesmas técnicas.
         Considerando-se os ajustes lineares dentro de um espaço de dimensões superiores construído com essas funções de base, o modelo tem a flexibilidade de ajustar um intervalo de dados muito mais amplo.
-  utter_implementar_polynomial_regression:
+
+    utter_implementar_polynomial_regression:
+
     - text: |
         Precisamos importar o PolynomialFeatures de sklearn.preprocessing
         que transforma uma matriz de dados de entrada em uma nova matriz de dados de um determinado grau. Pode ser usado da seguinte forma
