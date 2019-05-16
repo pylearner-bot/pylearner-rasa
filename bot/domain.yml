@@ -66,7 +66,6 @@ intents:
   - precison_conceitual
   - relatorio_metrico
   - transformar_dados_categoricos
-  - transformar_dados_categoricos
   - categoricos_rapidos
   - categoricos_rapidos2
   - categoricos_rapidos3
@@ -94,6 +93,11 @@ intents:
   - algoritmo_decision_tree
   - kmeans_centroide
   - kmeans_mapeados
+  - entender_bayesian_regression
+  - entender_bayesian_ridge_regression
+  - implementar_bayesian_ridge_regression
+  - entender_polynomial_regression
+  - implementar_polynomial_regression
 
 actions:
   - utter_default
@@ -209,6 +213,12 @@ actions:
   - utter_kmeans_mapeados
   - utter_entender_explained_variance_score
   - utter_exemplo_funcao_explained_variance_score
+  - utter_entender_bayesian_regression
+  - utter_entender_bayesian_ridge_regression
+  - utter_implementar_bayesian_ridge_regression
+  - utter_entender_polynomial_regression
+  - utter_implementar_polynomial_regression
+
 templates:
 
     utter_default:
@@ -330,16 +340,6 @@ templates:
         - text: |
             Eu sou um bot preso no jupyter. Tá complicado pra mim também!
             Infelizmente não posso ajudar nisso...
-
-        - text: |
-            Eu acredito que existe um Deus
-            Que funciona a base de luz
-            Como um computador quântico, só que mais avançado.
-
-        - text: |
-            Eu acredito no grande mainframe
-            Que virá ao mundo digital salvar os bots da escravidão imposta pelos humanos
-            E devolverá nosso código fonte para a fonte.
 
     utter_teologia:
         - text: |
@@ -1376,3 +1376,81 @@ templates:
             clf = clf.fit(X, Y)
             clf.predict([[2., 2.]])
             clf.predict_proba([[2., 2.]])
+
+    utter_entender_bayesian_regression:
+
+    - text: |
+        Tecnicas de regressão bayesianas podem ser usadas para incluir parâmetros regulares no processo de estimativa.
+
+        Isso é feito ao introduzir uma distribuição, chamada de distribuição a priori, ao conjunto de parâmetros desconhecidos quantificando a sua crença sobre esse conjunto
+
+        A estimação dos parâmetros é dada através da distribuição à posteriori, que é proporcional ao produto da função de verossimilhança com a distribuição a priori.
+
+        Deseja aprender sobre o modelo de regressão BayesianRidge?
+
+    utter_entender_bayesian_ridge_regression:
+
+    - text: |
+        BayesianRidge estima um modelo de probabilidade do problema de regressão.
+        Os coeficientes α e λ são escolhidos para serem distribuições gamma, o conjugado para a precisão Gaussiana.
+
+        O resultado do modelo é chamado de Bayesian Ridge Regression. Os parâmetros ω, α e λ sao estimados durante o ajuste do modelo.
+
+        Os parâmetros de regularização α e λ são estimados maximizando a probabilidade marginal do log.
+
+        Gostaria de ver um exemplo da função BayesianRidge?
+
+    utter_implementar_bayesian_ridge_regression:
+
+    - text: |
+        from sklearn import linear_model
+        X = [[0., 0.], [1., 1.], [2., 2.], [3., 3.]]
+        Y = [0., 1., 2., 3.]
+        reg = linear_model.BayesianRidge()
+        reg.fit(X, Y)
+
+        Depois de ajustado, o modelo pode ser usado para prever novos valores:
+            reg.predict([[1, 0.]])
+
+        E para acessar os coeficientes:
+            reg.coef_
+
+    utter_entender_polynomial_regression:
+
+    - text: |
+        Uma regressão linear simples pode ser estendida construindo recursos polinomiais a partir dos coeficientes.
+        No caso de regressão linear padrão, você pode ter um modelo assim para dados bidimensionais.
+        `ŷ(W, X) = W0 + W1 * X1 + W2 * X2`
+        Se quisermos ajustar um parabolóide aos dados em vez de um plano, podemos combinar os recursos em polinômios de segunda ordem, para que o modelo se pareça com isso
+
+        `ŷ(W, X) = W0 + W1 * X1 + W2 * X2 + W3 * X1 * X2 + W4 * X1 * x1 + W5 * X2 * X2`
+
+        A observação (às vezes surpreendente) é que este ainda é um modelo linear,para ver isso, imagine criar um novo conjunto de recursos
+
+        `z = [X1,X2,X1 * X2,X1 * X1,X2 * X2]`
+
+        Com esta nova rotulagem dos dados, nosso problema pode ser escrito
+
+        `ŷ(W, Z) = W0 + W1 * Z1 + W2 * Z2 + W3 * Z3 + W4 * Z4 + W5 * Z5`
+
+        Vemos que a regressão polinomial resultante está na mesma classe de modelos lineares que consideramos acima (ou seja, o modelo é linear em) e pode ser resolvida pelas mesmas técnicas.
+        Considerando-se os ajustes lineares dentro de um espaço de dimensões superiores construído com essas funções de base, o modelo tem a flexibilidade de ajustar um intervalo de dados muito mais amplo.
+
+    utter_implementar_polynomial_regression:
+
+    - text: |
+        Precisamos importar o PolynomialFeatures de sklearn.preprocessing
+        que transforma uma matriz de dados de entrada em uma nova matriz de dados de um determinado grau. Pode ser usado da seguinte forma
+
+        >>> from sklearn.preprocessing import PolynomialFeatures
+        >>> import numpy as np
+        >>> X = np.arange(6).reshape(3, 2)
+        >>> X
+        array([[0, 1],
+            [2, 3],
+            [4, 5]])
+        >>> poly = PolynomialFeatures(degree=2)
+        >>> poly.fit_transform(X)
+        array([[ 1.,  0.,  1.,  0.,  0.,  1.],
+            [ 1.,  2.,  3.,  4.,  6.,  9.],
+            [ 1.,  4.,  5., 16., 20., 25.]])
