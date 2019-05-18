@@ -29,6 +29,10 @@ class ActionSearchOnStackoverflow(Action):
 
     def run(self, dispatcher, tracker, domain):
         question = re.search(r'(buscar|pesquisar)\s(.*)(no)*\s*([sS]tack\s?[oO]verflow)', tracker.latest_message.text).group[2]
+        split = question.split(' ')
+        if(split.length > 1):
+            separator = '%3B'
+            question = separator.join(split)
         URL = 'https://api.stackexchange.com/docs/advanced-search#order=desc&sort=relevance&accepted=True&tagged=python%3B'+ question + '&filter=default&site=stackoverflow'
         res = requests.get(url = URL)
         data = res.json()
