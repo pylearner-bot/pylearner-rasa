@@ -98,6 +98,7 @@ intents:
   - implementar_bayesian_ridge_regression
   - entender_polynomial_regression
   - implementar_polynomial_regression
+  - pesquisar_no_stackoverflow
 
 actions:
   - utter_default
@@ -218,6 +219,7 @@ actions:
   - utter_implementar_bayesian_ridge_regression
   - utter_entender_polynomial_regression
   - utter_implementar_polynomial_regression
+  - actions.ActionSearchOnStackoverflow
 
 templates:
 
@@ -1454,3 +1456,8 @@ templates:
         array([[ 1.,  0.,  1.,  0.,  0.,  1.],
             [ 1.,  2.,  3.,  4.,  6.,  9.],
             [ 1.,  4.,  5., 16., 20., 25.]])
+
+    utter_pesquisar_no_stackoverflow:
+
+    - text: |
+
