@@ -14,10 +14,8 @@
 </p>
 //-->
 
-[![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT) [![Build Status](https://travis-ci.com/pylearner-bot/pylearner-rasa.svg?branch=master)](https://travis-ci.com/pylearner-bot/pylearner-rasa)
+[![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT) [![Build Status](https://travis-ci.com/pylearner-bot/pylearner-rasa.svg?branch=master)](https://travis-ci.com/pylearner-bot/pylearner-rasa)<a href="https://codeclimate.com/github/pylearner-bot/pylearner-rasa/maintainability"><img src="https://api.codeclimate.com/v1/badges/8d809e9a3afb53be6deb/maintainability" /></a>
 ![GitHub watchers](https://img.shields.io/github/watchers/fga-eps-mds/2019.1-PyLearner.svg?style=social)
-
-
 
 <p align="justify">
 O PyLearner surge com a ideia de ter um ambiente web que traga a comodidade de utilizar Jupyter Notebook sem instalar localmente na máquina e que possua também artifícios para ajudar iniciantes em Machine Learning. Para isso, desenvolvemos o chatbot <i>Pyter</i> que tira dúvidas recomenda conteúdos para o usuário estudar e faz demonstrações usando tutoriais.
