@@ -18,5 +18,17 @@
     - pesquisar [stochastic gradient descendent](question) no stackoverflow
     - buscar [maquina de vetores de suporte](question) no stackoverflow
 
+## intent:pesquisar
+    - desejo saber mais sobre isso
+    - pesquise esse erro
+    - estou com um erro
+    - quero pesquisar algo
+    - desejo pesquisar algo
+    - fazer uma pesquisa
+    - quero verificar algo na internet
+    - estou com um bug
+    - tive um problema
+    - tem um erro no codigo
+
 ## lookup:questions
     data/questions/questions.txt
