@@ -223,6 +223,9 @@ actions:
   - utter_pesquisar
   - action_search_on_stackoverflow
 
+entities:
+    - questions
+
 templates:
 
     utter_default:

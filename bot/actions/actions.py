@@ -46,4 +46,5 @@ class SearchOnStackoverflow(Action):
 
         res = requests.get(url, params = payload)
         data = json.loads(res.text)
-        dispatcher.utter_message('Aqui está: ' + data[0].link)    
+        botResponse = 'Aqui está: ' + data[0].link
+        dispatcher.utter_message(botResponse)    
