@@ -221,7 +221,7 @@ actions:
   - utter_entender_polynomial_regression
   - utter_implementar_polynomial_regression
   - utter_pesquisar
-  - ./actions/actions.action_search_on_stackoverflow
+  - action_search_on_stackoverflow
 
 templates:
 

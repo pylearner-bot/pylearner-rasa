@@ -22,7 +22,7 @@ class ActionOTRS(Action):
     def closeTicket(self, dispatcher, tracker, domain):
         return
     
-class ActionSearchOnStackoverflow(Action):
+class SearchOnStackoverflow(Action):
 
     def name(self):
         return "action_search_on_stackoverflow"
