@@ -98,6 +98,7 @@ intents:
   - implementar_bayesian_ridge_regression
   - entender_polynomial_regression
   - implementar_polynomial_regression
+  - pesquisar_no_cross_validated
 
 actions:
   - utter_default
@@ -218,6 +219,7 @@ actions:
   - utter_implementar_bayesian_ridge_regression
   - utter_entender_polynomial_regression
   - utter_implementar_polynomial_regression
+  - action_cross_validated
 
 templates:
 
