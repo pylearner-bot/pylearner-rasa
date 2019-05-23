@@ -33,9 +33,17 @@ class ActionSearchOnStackoverflow(Action):
         if(split.length > 1):
             separator = '%3B'
             question = separator.join(split)
-        URL = 'https://api.stackexchange.com/docs/advanced-search#order=desc&sort=relevance&accepted=True&tagged=python%3B'+ question + '&filter=default&site=stackoverflow'
-        res = requests.get(url = URL)
-        data = res.json()
-        dispatcher.utter_message('Aqui está: ' + data[0].link)
-        return 
-    
+        
+        URL = 'https://api.stackexchange.com/2.2/search'
+        order = 'desc'
+        sort = 'activity'
+        intitle = 'research'
+        site = 'stackoverflow'
+
+        payload = {
+            'order': order, 'sort': sort, 'intitle': intitle, 'site': site
+        }
+
+        res = requests.get(url, params = payload)
+        data = json.loads(res.text)
+        dispatcher.utter_message('Aqui está: ' + data[0].link)    

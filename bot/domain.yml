@@ -100,7 +100,7 @@ intents:
   - implementar_polynomial_regression
   - pesquisar_no_stackoverflow
   - pesquisar
-  
+
 actions:
   - utter_default
   - utter_diga_mais
@@ -221,7 +221,7 @@ actions:
   - utter_entender_polynomial_regression
   - utter_implementar_polynomial_regression
   - utter_pesquisar
-  - action_search_on_stackoverflow
+  - ./actions/actions.action_search_on_stackoverflow
 
 templates:
 
