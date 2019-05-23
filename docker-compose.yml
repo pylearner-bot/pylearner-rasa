@@ -33,7 +33,7 @@ services:
 
   actions:
     build:
-      context: ./bot/actions
+      context: .
       dockerfile: ./docker/actions.Dockerfile
     ports:
       - 5055:5055
