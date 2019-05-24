@@ -1,43 +1,76 @@
-# Contributor Code of Conduct
+# Contributor Covenant Code of Conduct
 
-## Good living together
+## Our Pledge
 
-To maintain an open and inviting environment, we, contributors and maintainers, seek to make our contribution environment respectful to all, regardless of age, ethnicity, nationality, personal appearance, religion, gender identity and expression.
+In the interest of fostering an open and welcoming environment, we as
+contributors and maintainers pledge to making participation in our project and
+our community a harassment-free experience for everyone, regardless of age, body
+size, disability, ethnicity, sex characteristics, gender identity and expression,
+level of experience, education, socio-economic status, nationality, personal
+appearance, race, religion, or sexual identity and orientation.
 
 ## Our Standards
 
-Examples of positive behaviors are:
+Examples of behavior that contributes to creating a positive environment
+include:
 
-* Use inviting and inclusive language
-* Be respectful of different points of view and experiences
-* Good acceptance of constructive criticism
-Focus on what is best for the community
-* Show empathy with other contributors
+* Using welcoming and inclusive language
+* Being respectful of differing viewpoints and experiences
+* Gracefully accepting constructive criticism
+* Focusing on what is best for the community
+* Showing empathy towards other community members
 
-Examples of negative and unacceptable behaviors:
+Examples of unacceptable behavior by participants include:
 
-* Use of sexualized language, either through texts or images
-* Posting offensive comments with personal or political attacks
+* The use of sexualized language or imagery and unwelcome sexual attention or
+ advances
+* Trolling, insulting/derogatory comments, and personal or political attacks
 * Public or private harassment
-* Publish personal information of third parties without prior authorization
-* Any other conduct that may be considered negative for the project or its stakeholders
+* Publishing others' private information, such as a physical or electronic
+ address, without explicit permission
+* Other conduct which could reasonably be considered inappropriate in a
+ professional setting
 
-## Our responsibilities
+## Our Responsibilities
 
-Project maintainers are responsible for making acceptance standards clear. In addition, they are expected to take appropriate and fair corrective action in response to any instance of unacceptable compliance.
+Project maintainers are responsible for clarifying the standards of acceptable
+behavior and are expected to take appropriate and fair corrective action in
+response to any instances of unacceptable behavior.
 
-Project maintainers have the right and responsibility to remove, edit or reject comments, commits, code, edits in documentation, issues, and any other contributions that are not in line with this Code of Conduct, or temporarily or permanently ban any contributor whose behavior is inappropriate, threatening, offensive or harmful.
+Project maintainers have the right and responsibility to remove, edit, or
+reject comments, commits, code, wiki edits, issues, and other contributions
+that are not aligned to this Code of Conduct, or to ban temporarily or
+permanently any contributor for other behaviors that they deem inappropriate,
+threatening, offensive, or harmful.
 
 ## Scope
 
-This Code of Conduct applies to any space in which an individual is representing the project or its community. The definition of the project representation is subject to the maintainers.
+This Code of Conduct applies both within project spaces and in public spaces
+when an individual is representing the project or its community. Examples of
+representing a project or community include using an official project e-mail
+address, posting via an official social media account, or acting as an appointed
+representative at an online or offline event. Representation of a project may be
+further defined and clarified by project maintainers.
 
-## How to report
+## Enforcement
 
-Instances of threats, abuse or any other unacceptable behavior should be reported to project maintainers whose contacts are available in the documentation. The maintainer will review all complaints and will respond in any way that is deemed most appropriate. The maintainer contacted is obliged to maintain confidentiality regarding the identity of the complainant.
+Instances of abusive, harassing, or otherwise unacceptable behavior may be
+reported by contacting the project team at thiagoiferreira@outlook.com. All
+complaints will be reviewed and investigated and will result in a response that
+is deemed necessary and appropriate to the circumstances. The project team is
+obligated to maintain confidentiality with regard to the reporter of an incident.
+Further details of specific enforcement policies may be posted separately.
 
-Project maintainers who do not follow or apply this Code of Conduct may face temporary or permanent repercussions in accordance with the judgment of other maintainers.
+Project maintainers who do not follow or enforce the Code of Conduct in good
+faith may face temporary or permanent repercussions as determined by other
+members of the project's leadership.
 
-## Assignment
+## Attribution
 
-This Code of Conduct is an adaptation of the [opsdroid] project document (https://github.com/opsdroid/opsdroid), accessed March 21, 2019.
+This Code of Conduct is adapted from the [Contributor Covenant][homepage], version 1.4,
+available at https://www.contributor-covenant.org/version/1/4/code-of-conduct.html
+
+[homepage]: https://www.contributor-covenant.org
+
+For answers to common questions about this code of conduct, see
+https://www.contributor-covenant.org/faq
