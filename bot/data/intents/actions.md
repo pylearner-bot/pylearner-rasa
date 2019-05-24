@@ -31,4 +31,23 @@
     - tem um erro no codigo
 
 ## lookup:questions
-    data/questions/questions.txt
+    - regressao bayesiana
+    - dados categoricos
+    - metricas de classificacao
+    - relatorio de classificacao
+    - matriz de confusao
+    - correlacao
+    - arvore de decisao
+    - variancia explicada
+    - normalizacao de dados
+    - modelos lineares generalizados
+    - histograma
+    - interacoes
+    - importacao json
+    - importacao csv
+    - kmeans
+    - dados faltantes
+    - naive bayes
+    - regressao polinomial
+    - stochastic gradient descendent
+    - maquina de vetores de suporte
