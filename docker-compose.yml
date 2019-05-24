@@ -31,6 +31,13 @@ services:
     depends_on:
       - mongo
 
+  kaggle:
+    build:
+      context: ./kaggle-docker
+      dockerfile: ./kaggle.Dockerfile
+    ports:
+      - 6000:6000
+
   actions:
     build:
       context: .
