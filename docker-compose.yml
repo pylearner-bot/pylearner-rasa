@@ -17,6 +17,10 @@ services:
       - ./data/db:/data/db
     command: mongod --smallfiles --oplogSize 128
 
+  kaggle:
+    image: kaggle/python:latest
+    restart: unless-stopped
+
   rocketchat:
     image: rocket.chat:latest
     restart: unless-stopped
@@ -30,13 +34,6 @@ services:
       - 3000:3000
     depends_on:
       - mongo
-
-  kaggle:
-    build:
-      context: ./kaggle-docker
-      dockerfile: ./kaggle.Dockerfile
-    ports:
-      - 6000:6000
 
   actions:
     build:
