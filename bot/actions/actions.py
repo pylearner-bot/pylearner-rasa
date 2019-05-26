@@ -29,23 +29,23 @@ class SearchOnStackoverflow(Action):
         return "action_search_on_stackoverflow"
 
     def run(self, dispatcher, tracker, domain):
-        question = re.search(r'(buscar|pesquisar)\s(.*)(no)*\s*([sS]tack\s?[oO]verflow)', tracker.latest_message.text).group[2]
-        split = question.split(' ')
-        if(split.length > 1):
-            separator = '%3B'
-            question = separator.join(split)
+        question = re.search(r'(buscar|pesquisar)\s(.*)no*\s*([sS]tack\s?[oO]verflow)', tracker.latest_message.text).group(2)
+        #split = question.split(' ')
+        #if(len(split) > 1):
+        #    separator = '%3B'
+        #    question = separator.join(split)
         
-        URL = 'https://api.stackexchange.com/2.2/search'
+        url = 'https://api.stackexchange.com/2.2/search'
         order = 'desc'
         sort = 'activity'
-        intitle = 'research'
+        intitle = question
         site = 'stackoverflow'
 
         payload = {
             'order': order, 'sort': sort, 'intitle': intitle, 'site': site
         }
 
-        res = requests.get(url, params = payload)
+        res = requests.get(url, params=payload)
         data = json.loads(res.text)
         botResponse = 'Aqui está: ' + data[0].link
         dispatcher.utter_message(botResponse)    
