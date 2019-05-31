@@ -17,4 +17,6 @@ run pip install jupyter pygraphviz==1.5
 
 workdir /work/
 
+ADD ../jupyter-docker /work/
+
 cmd jupyter-notebook --allow-root --NotebookApp.token='' --ip=0.0.0.0 --NotebookApp.password=''
