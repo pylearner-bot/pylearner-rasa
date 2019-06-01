@@ -59,13 +59,13 @@
 ## Puxando assunto 2
 * cumprimentar
     - utter_cumprimentar
-* responder_positivamente_direto
+* afirmar
     - utter_conversa_positiva
 
 ## Puxando assunto 3
 * cumprimentar
     - utter_cumprimentar
-* responder_negativamente_diretamente
+* negar
     - utter_animar
 
 ## Puxando assunto 4

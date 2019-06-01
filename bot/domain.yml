@@ -30,9 +30,7 @@ intents:
   - oferecer_ajuda
   - cumprimentar2
   - responder_positivamente
-  - responder_positivamente_direto
   - responder_negativamente
-  - responder_negativamente_diretamente
   - credo_religioso
   - sobre_pyter
   - sobre_jupyter
@@ -1464,6 +1462,6 @@ templates:
 
 
     utter_pesquisar:
-    
+
     - text: |
         Eu posso pesquisar no StackOverflow para você. Escreva o que você deseja pesquisar da seguinte forma: "pesquisar {o conteudo que seja saber} no stackoverflow"
