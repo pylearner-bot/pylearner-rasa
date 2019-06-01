@@ -1,14 +1,8 @@
 services:
   - docker
-
-sudo: required
-
-#notifications:
-#  webhooks: https://fathomless-fjord-24024.herokuapp.com/notify
-
-env:
- - DOCKER_COMPOSE_VERSION=1.23.2
-
+  sudo: required
+  env:
+  - DOCKER_COMPOSE_VERSION=1.23.2
 before_install:
   - sudo rm /usr/local/bin/docker-compose
   - curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > docker-compose
@@ -17,12 +11,8 @@ before_install:
   - sudo apt-get install ruby
   - gem install "rubygems-update:<3.0.0" --no-document
   - gem install bundler:2.0.1
-
 script:
-  - docker-compose up --build -d rocketchat
-  - docker-compose up --build -d jupyter
-  - docker-compose up --build -d bot
+  - docker-compose up --build -d
   - docker-compose exec bot flake8 --filename=*.py --exclude=__pycache__ --ignore=F821, F841
-
 after_script:
   - docker-compose down
