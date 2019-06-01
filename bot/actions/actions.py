@@ -55,7 +55,7 @@ class SearchOnStackoverflow(Action):
 
         res = requests.get(url, params=payload)
         data = json.loads(res.text)
-        links = self.validate_links(data)
+        links = self.validate_answers(data)
 
         if links:
             dispatcher.utter_message('Aqui está:')
@@ -66,3 +66,4 @@ class SearchOnStackoverflow(Action):
             dispatcher.utter_message(
             'Desculpe, mas não encontrei nada sobre o que você pediu.' +
             'Quer tentar com outras palavras?')
+        return []
