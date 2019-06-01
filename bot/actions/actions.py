@@ -1,8 +1,10 @@
 from rasa_core_sdk import Action
+from rasa_core_sdk.events import SlotSet
 import re
 # from rasa_core_sdk.events import SlotSet
 import requests
 import json
+import pandas as pd
 # import random
 
 
@@ -22,27 +24,19 @@ class ActionOTRS(Action):
 
     def closeTicket(self, dispatcher, tracker, domain):
         return
-    
+
 class SearchOnStackoverflow(Action):
 
     def name(self):
         return "action_search_on_stackoverflow"
 
-    def validate_answers(self, dictionary):
-        links = []
-        for item in dictionary['items']:
-            if str(item['is_answered']) == 'True':
-                links.append(item['link'])
-            if len(links) == 4:
-                break
-        return links
-
     def run(self, dispatcher, tracker, domain):
-        question = re.search(r'(buscar|pesquisar)\s(.*)no*\s*([sS]tack\s?[oO]verflow)', tracker.latest_message['text']).group(2)
-        split = question.split(' ')
-        if(len(split) > 1):
-           separator = '%3B'
-           question = separator.join(split)
+        question = re.search(r'(buscar|pesquisar)\s(.*)no*\s*([sS]tack\s?[oO]verflow)', tracker.latest_message.text).group(2)
+        #split = question.split(' ')
+        #if(len(split) > 1):
+        #    separator = '%3B'
+        #    question = separator.join(split)
+
         url = 'https://api.stackexchange.com/2.2/search'
         order = 'desc'
         sort = 'activity'
@@ -54,15 +48,6 @@ class SearchOnStackoverflow(Action):
         }
 
         res = requests.get(url, params=payload)
-        data = json.loads(res.text)
-        links = self.validate_links(data)
-
-        if links:
-            dispatcher.utter_message('Aqui está:')
-            for link in links:
-                dispatcher.utter_message(link)
-
-        else:
-            dispatcher.utter_message(
-            'Desculpe, mas não encontrei nada sobre o que você pediu.' +
-            'Quer tentar com outras palavras?')
+        data = pd.read_json(res.text)
+        botResponse = 'Aqui está: ' + data.loc[0][0]['link']
+        dispatcher.utter_message(botResponse)
