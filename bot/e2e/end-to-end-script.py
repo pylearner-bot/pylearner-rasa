@@ -30,7 +30,8 @@ user_intent = [
     'entender_nearest_neighbors',
     'exemplo_funcao_r2_score',
     'entender_descentramento_estocástico_gradiente',
-    'entender_maquina_de_vetores_de_suporte'
+    'entender_maquina_de_vetores_de_suporte',
+    'entender_polynomial_regression'
 ]
 
 user_input = [
@@ -56,8 +57,9 @@ user_input = [
     'o que e gaussian naive bayes',
     'explique nearest neighbors',
     'como usar r2 score',
-    'o que é descentramento estocástico gradiente',
-    'o que eh maquina de vetores de suporte'
+    'o que e descentramento estocástico gradiente',
+    'o que e maquina de vetores de suporte',
+    'o que e regressao polinomial'
 ]
 
 utter = [
@@ -84,7 +86,8 @@ utter = [
     'utter_entender_nearest_neighbors',
     'utter_exemplo_funcao_r2_score',
     'utter_entender_descentramento_estocástico_gradiente',
-    'utter_entender_maquina_de_vetores_de_suporte'
+    'utter_entender_maquina_de_vetores_de_suporte',
+    'utter_entender_polynomial_regression'
 ]
 
 

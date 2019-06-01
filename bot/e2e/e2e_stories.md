@@ -45,3 +45,7 @@
 	 - utter_exemplo_funcao_r2_score
 * entender_maquina_de_vetores_de_suporte: o que é descentramento estocástico gradiente
 	 - utter_entender_descentramento_estocástico_gradiente
+* entender_polynomial_regression: o que e regressao polinomial
+	 - utter_entender_polynomial_regression
+* entender_maquina_de_vetores_de_suporte: o que e maquina de vetores de suporte
+	 - utter_entender_maquina_de_vetores_de_suporte
