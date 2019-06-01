@@ -48,6 +48,16 @@ class SearchOnStackoverflow(Action):
         }
 
         res = requests.get(url, params=payload)
-        data = pd.read_json(res.text)
-        botResponse = 'Aqui está: ' + data.loc[0][0]['link']
-        dispatcher.utter_message(botResponse)
+        data = json.loads(res.text)
+        links = self.validate_answers(data)
+
+        if links:
+            dispatcher.utter_message('Aqui está:')
+            for link in links:
+                dispatcher.utter_message(link)
+
+        else:
+            dispatcher.utter_message(
+            'Desculpe, mas não encontrei nada sobre o que você pediu.' +
+            'Quer tentar com outras palavras?')
+        return []
