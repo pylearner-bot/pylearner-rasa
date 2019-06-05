@@ -1,7 +1,7 @@
 ## Stories to Pyter Test
 * cumprimentar: oi
 	 - utter_cumprimentar
-* importar_json: csv
+* importar_json: json
 	 - utter_importar_json_pandas
 * transformar_dados_categoricos: dados categoricos
 	 - utter_transformar_dados_categoricos
@@ -45,3 +45,13 @@
 	 - utter_exemplo_funcao_r2_score
 * entender_maquina_de_vetores_de_suporte: o que é descentramento estocástico gradiente
 	 - utter_entender_descentramento_estocástico_gradiente
+* entender_histograma: o que e histograma
+	 - utter_entender_histograma
+* dados_quantitativos: o que e dados quantitativos
+	 - utter_dados_quantitativos
+* data_set: o que e dataset
+	 - utter_data_set
+* entender_arquivo_csv: o que e csv
+	 - utter_explicar_csv
+* fora_do_escopo: hoje tem jogo
+	 - utter_default

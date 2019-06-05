@@ -30,12 +30,18 @@ user_intent = [
     'entender_nearest_neighbors',
     'exemplo_funcao_r2_score',
     'entender_descentramento_estocástico_gradiente',
-    'entender_maquina_de_vetores_de_suporte'
+    'entender_maquina_de_vetores_de_suporte',
+    'entender_histograma',
+    'dados_quantitativos',
+    'data_set',
+    'entender_arquivo_csv',
+    'fora_do_escopo'
+    
 ]
 
 user_input = [
     'oi',
-    'csv',
+    'json',
     'dados categoricos',
     'metricas de classificacao',
     'relatorio de classificacao',
@@ -57,7 +63,12 @@ user_input = [
     'explique nearest neighbors',
     'como usar r2 score',
     'o que é descentramento estocástico gradiente',
-    'o que eh maquina de vetores de suporte'
+    'o que eh maquina de vetores de suporte',
+    'o que e histograma',
+    'o que e dados quantitativos',
+    'o que e dataset'
+    'o que e csv',
+    'hoje tem jogo'
 ]
 
 utter = [
@@ -84,7 +95,12 @@ utter = [
     'utter_entender_nearest_neighbors',
     'utter_exemplo_funcao_r2_score',
     'utter_entender_descentramento_estocástico_gradiente',
-    'utter_entender_maquina_de_vetores_de_suporte'
+    'utter_entender_maquina_de_vetores_de_suporte',
+    'utter_entender_histograma',
+    'utter_dados_quantitativos',
+    'utter_data_set',
+    'utter_explicar_csv',
+    'utter_default'
 ]
 
 
