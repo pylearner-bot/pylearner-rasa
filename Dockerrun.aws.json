@@ -1,4 +1,38 @@
 {
+    "AWSEBDockerrunVersion": 2,
+    "family": "",
+    "volumes": [
+        {
+            "host": {
+                "sourcePath": "./data/db"
+            },
+            "name": "_DataDb"
+        },
+        {
+            "host": {
+                "sourcePath": "./bot/actions"
+            },
+            "name": "_BotActions"
+        },
+        {
+            "host": {
+                "sourcePath": "./bot/Makefile"
+            },
+            "name": "_BotMakefile"
+        },
+        {
+            "host": {
+                "sourcePath": "./bot"
+            },
+            "name": "_Bot"
+        },
+        {
+            "host": {
+                "sourcePath": "./scripts"
+            },
+            "name": "_Scripts"
+        }
+    ],
     "containerDefinitions": [
         {
             "essential": true,
@@ -179,39 +213,6 @@
                     "hostPort": 3000
                 }
             ]
-        }
-    ],
-    "family": "",
-    "volumes": [
-        {
-            "host": {
-                "sourcePath": "./data/db"
-            },
-            "name": "_DataDb"
-        },
-        {
-            "host": {
-                "sourcePath": "./bot/actions"
-            },
-            "name": "_BotActions"
-        },
-        {
-            "host": {
-                "sourcePath": "./bot/Makefile"
-            },
-            "name": "_BotMakefile"
-        },
-        {
-            "host": {
-                "sourcePath": "./bot"
-            },
-            "name": "_Bot"
-        },
-        {
-            "host": {
-                "sourcePath": "./scripts"
-            },
-            "name": "_Scripts"
         }
     ]
 }
