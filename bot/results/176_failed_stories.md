@@ -1,4 +1,4 @@
-## Stories to Pyter Test
+## Stories for Pyter Test - 176
 * cumprimentar: oi
     - utter_cumprimentar
 * importar_json: csv   <!-- predicted: entender_arquivo_csv: csv -->
@@ -12,17 +12,17 @@
 * entender_matriz_confusao: entender matriz de confusão
     - utter_entender_matriz_confusao
 * entender_correlacao: explicar correlacao
-    - utter_entender_correlacao   <!-- predicted: utter_implementar_matriz_confusao_sklearn -->
+    - utter_entender_correlacao   <!-- predicted: action_default_fallback -->
 * entender_decision_tree: decision tree
-    - utter_entender_gaussian_naive_bayes   <!-- predicted: utter_entender_decision_tree -->
+    - utter_entender_gaussian_naive_bayes   <!-- predicted: utter_bons_estudos -->
 * entender_explained_variance_score: entender explained score
-    - utter_entender_explained_variance_score   <!-- predicted: action_default_fallback -->
+    - utter_entender_explained_variance_score
 * entender_feature_scaling: saber sobre feature scaling
     - utter_entender_feature_scaling
 * entender_regressao_logistica: regressao logistica
     - utter_entender_regressao_logistica
 * oferecer_ajuda: preciso de ajuda
-    - utter_ajuda
+    - utter_ajuda   <!-- predicted: utter_implementar_regressao_logistica -->
 * criar_histograma: como criar um histograma
     - utter_criar_histograma
 * duvidas_de_como_implementar: como importar um arquivo csv
