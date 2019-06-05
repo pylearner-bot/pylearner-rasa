@@ -40,3 +40,5 @@
 - o que voce pode oferecer
 - o que voce me ajuda
 - em que voce pode me ajudar
+- pode onde posso começar
+- sugestoes
