@@ -46,3 +46,5 @@ class SearchOnStackoverflow(Action):
         except:
             botResponse = 'Infelizmente não encontrei nada sobre ' + question +' no StackOverflow. Tente escrever de forma mais compacta e em inglês,             para refinar a busca!'
             dispatcher.utter_message(botResponse)
+            dispatcher.utter_message('Tente escrever desta forma:')
+            dispatcher.utter_message('pesquisar sua_duvida_aqui no stackoverflow')
