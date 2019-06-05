@@ -96,3 +96,5 @@ services:
     volumes:
       - ./bot:/bot
       - ./scripts:/scripts
+    entrypoint:
+      - memory_limit=-1
