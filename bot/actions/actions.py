@@ -1,11 +1,10 @@
 from rasa_core_sdk import Action
 from rasa_core_sdk.events import SlotSet
-import re
-# from rasa_core_sdk.events import SlotSet
+from rasa_core_sdk.forms import FormAction
 import requests
+import re
 import json
-import pandas as pd
-# import random
+
 
 
 class ActionOTRS(Action):
@@ -14,16 +13,7 @@ class ActionOTRS(Action):
         return "action_otrs"
 
     def run(self, dispatcher, tracker, domain):
-        try:
-            dispatcher.utter_message("Mensagem enviada por uma custom action.")
-        except ValueError:
-            dispatcher.utter_message(ValueError)
-
-    def createTicket(self, dispatcher, tracker, domain):
-        return
-
-    def closeTicket(self, dispatcher, tracker, domain):
-        return
+            dispatcher.utter_message('Mensagem enviada por uma custom action teste')
 
 class SearchOnStackoverflow(Action):
 
@@ -31,7 +21,7 @@ class SearchOnStackoverflow(Action):
         return "action_search_on_stackoverflow"
 
     def run(self, dispatcher, tracker, domain):
-        question = re.search(r'(buscar|pesquisar)\s(.*)no*\s*([sS]tack\s?[oO]verflow)', tracker.latest_message.text).group(2)
+        question = re.search(r'(buscar|pesquisar)\s(.*)no*\s*([sS]tack\s?[oO]verflow)', tracker.latest_message['text']).group(2)
         #split = question.split(' ')
         #if(len(split) > 1):
         #    separator = '%3B'
@@ -49,15 +39,10 @@ class SearchOnStackoverflow(Action):
 
         res = requests.get(url, params=payload)
         data = json.loads(res.text)
-        links = self.validate_answers(data)
-
-        if links:
-            dispatcher.utter_message('Aqui está:')
-            for link in links:
-                dispatcher.utter_message(link)
-
-        else:
-            dispatcher.utter_message(
-            'Desculpe, mas não encontrei nada sobre o que você pediu.' +
-            'Quer tentar com outras palavras?')
-        return []
+        try:
+       # data = json.loads(res.text)
+            botResponse = 'Aqui está: ' + data['items'][0]['link']
+            dispatcher.utter_message(botResponse)
+        except:
+            botResponse = 'Infelizmente não encontrei nada sobre ' + question +' no StackOverflow. Tente escrever de forma mais compacta e em inglês,             para refinar a busca!'
+            dispatcher.utter_message(botResponse)
