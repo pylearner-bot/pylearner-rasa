@@ -1,26 +1,20 @@
 services:
-  - docker
-
+- docker
 sudo: required
-
-#notifications:
-#  webhooks: https://fathomless-fjord-24024.herokuapp.com/notify
-
 env:
- - DOCKER_COMPOSE_VERSION=1.23.2
-
+- DOCKER_COMPOSE_VERSION=1.23.2
 before_install:
-  - sudo rm /usr/local/bin/docker-compose
-  - curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > docker-compose
-  - chmod +x docker-compose
-  - sudo mv docker-compose /usr/local/bin
-  - sudo apt-get install ruby
-  - gem install "rubygems-update:<3.0.0" --no-document
-  - gem install bundler:2.0.1
-
+- sudo rm /usr/local/bin/docker-compose
+- curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname
+  -s`-`uname -m` > docker-compose
+- chmod +x docker-compose
+- sudo mv docker-compose /usr/local/bin
+- sudo apt-get install ruby
+- gem install "rubygems-update:<3.0.0" --no-document
+- gem install bundler:2.0.1
 script:
-  - docker-compose up --build -d rocketchat
-  - docker-compose up --build -d jupyter
-  - docker-compose up --build -d bot
-  - docker-compose exec bot flake8 --exclude='Makefile, models, data, *.log, __pycache__, *.yml, *.txt' --ignore=F821, F841
-  - docker-compose exec actions flake8 --exclude='__pycache__, *.Dockerfile, *.txt'
+- docker-compose up --build -d
+after_script:
+- docker-compose down
+"#":
+  secure: f3iEp2eVZ/cSiKdV07ZwElauAJZRJrjRbO1HSTyGqBj824uOJ2qWpsfYvThdlzjNRHZukTgyxESzcDwufpUDDweotQJfGflrkY16AI14EY2qoJwKQ0MqTB5Z/S87EGLQ3ixknIQDt+qOlBbYQCHmE7UpCsVht7VvQrdEbRM/3J7rlO9IlmqIRLJme90GQBPCvRb/FD0eMVhCCNRoV5WNddJtGEtXZcyMgzdl+DSo4tYCYcbfz3uZy9al6cLLzo00+d/tUX99EzT1c8zvT2JlM0wwOwIXJ8OdOdeQrkz+EklU4KeZh4BI0+lQLoSS1y/RXJ0FzeIeGNCAuVsOuIfFg1f5mFKrBAGlDlc6tp/2claOVvsV1NOfCVxxHvfF82e/Yl1l955hacw+6Hv4I7wQYw+7cmqubHZXq51I3rVNnmtaMNsU7F2WKgeh1SRbeAPailM1mQ2Oxb0kBIEucuF8XC+wqpC1MsMK7N5BgDV31s8Ksya6zoHpJsVkZN1ID+OUQK4U6lFWDnlvwji/OYjR5dqO9+tROTKFaLQ1rAT6M/JOrZpIUFK1Pxxx85BtIpHkq/a49ZLhGXpjI1VjkYYk/I6asQ+P+pA4cBz94bmAei/lS8e96h8HsVidoXkYjaBHqCWjMvIppoHAKwDWkK1HDOIKbizgc3oH1Z+0u90WKaA=

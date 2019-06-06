@@ -14,10 +14,8 @@
 </p>
 //-->
 
-[![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT) [![Build Status](https://travis-ci.com/pylearner-bot/pylearner-rasa.svg?branch=master)](https://travis-ci.com/pylearner-bot/pylearner-rasa)
+[![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT) [![Build Status](https://travis-ci.com/pylearner-bot/pylearner-rasa.svg?branch=master)](https://travis-ci.com/pylearner-bot/pylearner-rasa)<a href="https://codeclimate.com/github/pylearner-bot/pylearner-rasa/maintainability"><img src="https://api.codeclimate.com/v1/badges/8d809e9a3afb53be6deb/maintainability" /></a>
 ![GitHub watchers](https://img.shields.io/github/watchers/fga-eps-mds/2019.1-PyLearner.svg?style=social)
-
-
 
 <p align="justify">
 O PyLearner surge com a ideia de ter um ambiente web que traga a comodidade de utilizar Jupyter Notebook sem instalar localmente na máquina e que possua também artifícios para ajudar iniciantes em Machine Learning. Para isso, desenvolvemos o chatbot <i>Pyter</i> que tira dúvidas recomenda conteúdos para o usuário estudar e faz demonstrações usando tutoriais.
@@ -44,10 +42,10 @@ O PyLearner surge com a ideia de ter um ambiente web que traga a comodidade de u
 As principais habilidades do _Pyter_ são:
 
 * Pré-processamento de dados.
-    - [ ] Importação de dados [(Pandas)](https://pandas.pydata.org/)
-    - [ ] Tratamento de dados [(Pandas)](https://pandas.pydata.org/), [(SciKit Learn)](https://scikit-learn.org/stable/modules/preprocessing.html)
+    - [x] Importação de dados [(Pandas)](https://pandas.pydata.org/)
+    - [x] Tratamento de dados [(Pandas)](https://pandas.pydata.org/), [(SciKit Learn)](https://scikit-learn.org/stable/modules/preprocessing.html)
 * Modelagem.
-    - [ ] Aprendizado supervisionado [(SciKit Learn)](https://scikit-learn.org/stable/modules/preprocessing.html)
+    - [x] Aprendizado supervisionado [(SciKit Learn)](https://scikit-learn.org/stable/modules/preprocessing.html)
         - Generalized Linear Models
             - Logistic regression
         - Support Vector Machines
@@ -62,12 +60,12 @@ As principais habilidades do _Pyter_ são:
             - Classification
     - [ ] Aprendizado não-supervisionado [(SciKit Learn)](https://scikit-learn.org/stable/modules/preprocessing.html)
 * Visualização.
-    - [ ] Visualização de dados [(Matplotlib)](https://matplotlib.org/), [(Seaborn)](https://seaborn.pydata.org/)
-    - [ ] Visualização de resultados [(SciKit Learn)](https://scikit-learn.org/stable/modules/preprocessing.html)
+    - [x] Visualização de dados [(Matplotlib)](https://matplotlib.org/), [(Seaborn)](https://seaborn.pydata.org/)
+    - [x] Visualização de resultados [(SciKit Learn)](https://scikit-learn.org/stable/modules/preprocessing.html)
 * Tutorial.
-    - [ ] Iris Flower [(SciKit Learn)](https://scikit-learn.org/stable/modules/preprocessing.html)
-    - [ ] MNIST [(SciKit Learn)](https://scikit-learn.org/stable/modules/preprocessing.html)
-    - [ ] Titanic [(SciKit Learn)](https://scikit-learn.org/stable/modules/preprocessing.html)
+    - [x] Iris Flower [(SciKit Learn)](https://scikit-learn.org/stable/modules/preprocessing.html)
+    - [x] MNIST [(SciKit Learn)](https://scikit-learn.org/stable/modules/preprocessing.html)
+    - [x] Titanic [(SciKit Learn)](https://scikit-learn.org/stable/modules/preprocessing.html)
 * Sugestões de conteúdo.
     - [ ] Espaços de conteúdos [(Medium)](https://medium.com/), [(TowardsDataScience)](https://towardsdatascience.com/), [(Kaggle)](https://kaggle.com)
     - [ ] Fórum [(Cross Validated)](https://stats.stackexchange.com/), [(Artificial Intelligence StackExchange)](https://ai.stackexchange.com/)
@@ -101,7 +99,7 @@ Este projeto está licenciado sob a [Licença](https://github.com/pylearner-bot/
 
 Os direitos autorais nos arquivos de definição são respectivos de cada colaborador listado no início de cada arquivo de definição
 
-<!--## Ferramentas utilizadas em desenvolvimento
+## Ferramentas utilizadas em desenvolvimento
 
 <p float="left">
   <img src="https://telegram.org/img/t_logo.png" width="60"/>
@@ -148,4 +146,15 @@ Os direitos autorais nos arquivos de definição são respectivos de cada colabo
   <img src="https://storage.googleapis.com/kaggle-organizations/4/thumbnail.png" width="60"/>
   <img src="https://cdn.sstatic.net/Sites/ai/img/logo.svg?v=99838c31f823" width="60"/>
 </p>
-//-->
+
+## Contributors
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore -->
+<table><tr><td align="center"><a href="https://www.linkedin.com/in/gabriel-ziegler-323121106/"><img src="https://avatars2.githubusercontent.com/u/18370133?v=4" width="100px;" alt="Gabriel Ziegler"/><br /><sub><b>Gabriel Ziegler</b></sub></a><br /><a href="https://github.com/fga-eps-mds/2019.1-PyLearner/commits?author=gabrielziegler3" title="Documentation">📖</a></td><td align="center"><a href="https://github.com/davialvb"><img src="https://avatars3.githubusercontent.com/u/34287081?v=4" width="100px;" alt="Davi Alves"/><br /><sub><b>Davi Alves</b></sub></a><br /><a href="https://github.com/fga-eps-mds/2019.1-PyLearner/commits?author=davialvb" title="Documentation">📖</a></td><td align="center"><a href="https://github.com/Mexazonic"><img src="https://avatars1.githubusercontent.com/u/48650663?v=4" width="100px;" alt="Bruno Duarte"/><br /><sub><b>Bruno Duarte</b></sub></a><br /><a href="https://github.com/fga-eps-mds/2019.1-PyLearner/commits?author=Mexazonic" title="Documentation">📖</a></td><td align="center"><a href="https://www.linkedin.com/in/eug%C3%AAnio-sales-siqueira-19533213b/"><img src="https://avatars0.githubusercontent.com/u/42457772?v=4" width="100px;" alt="Eugenio Sales Siqueira"/><br /><sub><b>Eugenio Sales Siqueira</b></sub></a><br /><a href="https://github.com/fga-eps-mds/2019.1-PyLearner/commits?author=Eugeniosales" title="Documentation">📖</a></td><td align="center"><a href="https://github.com/thiagoiferreira"><img src="https://avatars2.githubusercontent.com/u/26505480?v=4" width="100px;" alt="Thiago Ferreira"/><br /><sub><b>Thiago Ferreira</b></sub></a><br /><a href="https://github.com/fga-eps-mds/2019.1-PyLearner/commits?author=thiagoiferreira" title="Documentation">📖</a></td><td align="center"><a href="https://github.com/ZarathosDeath"><img src="https://avatars0.githubusercontent.com/u/39169676?v=4" width="100px;" alt="Ernando Braga"/><br /><sub><b>Ernando Braga</b></sub></a><br /><a href="https://github.com/fga-eps-mds/2019.1-PyLearner/commits?author=ZarathosDeath" title="Documentation">📖</a></td><td align="center"><a href="https://github.com/alexportof"><img src="https://avatars0.githubusercontent.com/u/45185346?v=4" width="100px;" alt="Álex Porto"/><br /><sub><b>Álex Porto</b></sub></a><br /><a href="https://github.com/fga-eps-mds/2019.1-PyLearner/commits?author=alexportof" title="Documentation">📖</a></td><td align="center"><a href="https://github.com/joao15victor08"><img src="https://avatars2.githubusercontent.com/u/32016154?v=4" width="100px;" alt="Joao Victor de Oliveira Matos"/><br /><sub><b>Joao Victor de Oliveira Matos</b></sub></a><br /><a href="https://github.com/fga-eps-mds/2019.1-PyLearner/commits?author=joao15victor08" title="Documentation">📖</a></td><td align="center"><a href="https://www.linkedin.com/in/carlos-enrique-rodrigues-aragon-084b47b5"><img src="https://avatars2.githubusercontent.com/u/18129918?v=4" width="100px;" alt="Carlos Aragon"/><br /><sub><b>Carlos Aragon</b></sub></a><br /><a href="https://github.com/fga-eps-mds/2019.1-PyLearner/commits?author=carlosaragon" title="Documentation">📖</a></td></tr></table>
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!

@@ -1,20 +1,31 @@
 ## intent:entender_correlacao
 - o que e correlaçao
 - correlaçao
+- correlação
+- o que e correlação?
+- o que e correlacao
+- o que e correlaçao
+- correlacao 
 - para que serve a correlaçao
 - o que e uma matriz de correlaçao
 - o que indica os graus de correlaçao
 - o que sao indices de correlacao
+- o que e correlação
+- correlação
+- para que serve a correlação
+- o que e uma matriz de correlação
+- o que indica os graus de correlação
+- o que sao indices de correlação
 - quais indices eu posso usar
 
 ## intent:calcular_correlacao
-- como calcular a correlaçao
-- calculo correlaçao
+- como calcular a correlação
+- calculo correlação
 - e necessario alguma biblioteca
 - biblioteca
 - qual biblioteca vou usar
-- qual função usa para calcular correlaçao
+- qual função usa para calcular correlação
 - como usar a funçao corr()
-- como utilizar o pandas para calcular correlaçao
-- como interpretar correlaçao
-- qual indice de correlaçao e melhor
+- como utilizar o pandas para calcular correlação
+- como interpretar correlação
+- qual indice de correlação e melhor
