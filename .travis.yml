@@ -13,14 +13,7 @@ before_install:
 - gem install "rubygems-update:<3.0.0" --no-document
 - gem install bundler:2.0.1
 script:
-#- docker-compose up --build -d
-- docker-compose up --build -d jupyter
-- docker-compose up --build -d mongo
-- docker-compose up --build -d mongo-init-replica
-- docker-compose up --build -d rocketchat
-- docker-compose up --build -d actions
-- docker-compose up --build -d bot
-- docker-compose exec bot flake8 --filename=*.py --exclude=__pycache__ --ignore=F821, F841
+- docker-compose up --build -d
 after_script:
 - docker-compose down
 "#":

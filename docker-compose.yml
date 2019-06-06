@@ -54,7 +54,7 @@ services:
     volumes:
       - ./bot/actions:/bot/actions
       - ./bot/Makefile:/bot/Makefile
-    # command: "make run-actions"
+    command: "make run-actions"
 
 
   bot:
@@ -96,5 +96,4 @@ services:
     volumes:
       - ./bot:/bot
       - ./scripts:/scripts
-    entrypoint:
-      - memory_limit=-1
+
