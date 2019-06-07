@@ -18,6 +18,10 @@
     - pesquisar [stochastic gradient descendent](questions) no stackoverflow
     - buscar [maquina de vetores de suporte](questions) no stackoverflow
 
+## intent:action_test
+  - Testar action
+  - testando action
+
 ## intent:pesquisar
     - desejo saber mais sobre isso
     - pesquise esse erro
