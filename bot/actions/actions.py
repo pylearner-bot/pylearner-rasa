@@ -22,7 +22,8 @@ class ActionOTRS(Action):
 
     def closeTicket(self, dispatcher, tracker, domain):
         return
-    
+
+
 class SearchOnStackoverflow(Action):
 
     def name(self):
@@ -30,11 +31,7 @@ class SearchOnStackoverflow(Action):
 
     def run(self, dispatcher, tracker, domain):
         question = re.search(r'(buscar|pesquisar)\s(.*)no*\s*([sS]tack\s?[oO]verflow)', tracker.latest_message.text).group(2)
-        #split = question.split(' ')
-        #if(len(split) > 1):
-        #    separator = '%3B'
-        #    question = separator.join(split)
-        
+
         url = 'https://api.stackexchange.com/2.2/search'
         order = 'desc'
         sort = 'activity'
@@ -48,4 +45,4 @@ class SearchOnStackoverflow(Action):
         res = requests.get(url, params=payload)
         data = json.loads(res.text)
         botResponse = 'Aqui está: ' + data[0].link
-        dispatcher.utter_message(botResponse)    
+        dispatcher.utter_message(botResponse)
