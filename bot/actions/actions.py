@@ -20,12 +20,17 @@ class SearchOnStackoverflow(Action):
     def name(self):
         return "action_search_on_stackoverflow"
 
+    def validate_answered(self, dictionary):
+        links = []
+        for item in dictionary['items']:
+            if str(items['is_answered']) == 'True':
+                links.append(item['link'])
+            if len(links) == 3:
+                break
+        return links
+
     def run(self, dispatcher, tracker, domain):
-        question = re.search(r'(buscar|pesquisar)\s(.*)no*\s*([sS]tack\s?[oO]verflow)', tracker.latest_message['text']).group(2)
-        #split = question.split(' ')
-        #if(len(split) > 1):
-        #    separator = '%3B'
-        #    question = separator.join(split)
+        question = re.search(r'(buscar|pesquisar)\s(.*)no*\s*([sS]tack\s?[oO]verflow)', tracker.latest_message['text']).group(2))
 
         url = 'https://api.stackexchange.com/2.2/search'
         order = 'desc'
@@ -39,12 +44,56 @@ class SearchOnStackoverflow(Action):
 
         res = requests.get(url, params=payload)
         data = json.loads(res.text)
-        try:
-       # data = json.loads(res.text)
-            botResponse = 'Aqui está: ' + data['items'][0]['link']
-            dispatcher.utter_message(botResponse)
-        except:
+        links = self.validate_answered(data)
+        if links:
+            dispatcher.utter_message('Aqui está: ')
+            for link in links:
+                # botResponse = 'Aqui está: ' + data['items'][0]['link']
+                dispatcher.utter_message(link)
+        else:
             botResponse = 'Infelizmente não encontrei nada sobre ' + question +' no StackOverflow. Tente escrever de forma mais compacta e em inglês,             para refinar a busca!'
             dispatcher.utter_message(botResponse)
             dispatcher.utter_message('Tente escrever desta forma:')
-            dispatcher.utter_message('pesquisar sua_duvida_aqui no stackoverflow')
+            dispatcher.utter_message('pesquisar [sua dúvida] no stackoverflow')
+
+
+class SearchOnCrossValidated(Action):
+
+    def name(self):
+        return "action_search_on_crossvalidated"
+
+    def validate_answered(self, dictionary):
+        links = []
+        for item in dictionary['items']:
+            if str(items['is_answered']) == 'True':
+                links.append(item['link'])
+            if len(links) == 3:
+                break
+        return links
+
+    def run(self, dispatcher, tracker, domain):
+        question = re.search(r'(buscar|pesquisar)\s(.*)no*\s*([sS]tack\s?[oO]verflow)', tracker.latest_message['text']).group(2))
+
+        url = 'https://api.stackexchange.com/2.2/search'
+        order = 'desc'
+        sort = 'activity'
+        intitle = question
+        site = 'crossvalidated'
+
+        payload = {
+            'order': order, 'sort': sort, 'intitle': intitle, 'site': site
+        }
+
+        res = requests.get(url, params=payload)
+        data = json.loads(res.text)
+        links = self.validate_answered(data)
+        if links:
+            dispatcher.utter_message('Aqui está: ')
+            for link in links:
+                # botResponse = 'Aqui está: ' + data['items'][0]['link']
+                dispatcher.utter_message(link)
+        else:
+            botResponse = 'Infelizmente não encontrei nada sobre ' + question +' no StackOverflow. Tente escrever de forma mais compacta e em inglês,             para refinar a busca!'
+            dispatcher.utter_message(botResponse)
+            dispatcher.utter_message('Tente escrever desta forma:')
+            dispatcher.utter_message('pesquisar [sua dúvida] no stackoverflow')
