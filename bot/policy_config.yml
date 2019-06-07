@@ -1,6 +1,6 @@
 policies:
   - name: KerasPolicy
-    epochs: 1
+    epochs: 5
     batch_size: 10
     featurizer:
       - name: FullDialogueTrackerFeaturizer
@@ -11,3 +11,4 @@ policies:
     core_threshold: 0.6
   - name: MemoizationPolicy
     max_history: 3
+  - name: FormPolicy
