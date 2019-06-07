@@ -100,8 +100,8 @@ def write_file(stories):
     """
     write story tests to file
     """
-    E2E_FILE = './e2e_stories.md'
-    title = "## Stories for Pyter Test\n"
+    E2E_FILE = './e2e_stories_help_histogram_json_csv_interactions.md'
+    title = "## Stories for Pyter Test - 176\n"
 
     with open(E2E_FILE, "w") as f:
         f.write(title)
