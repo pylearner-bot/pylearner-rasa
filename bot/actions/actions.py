@@ -22,7 +22,7 @@ class SearchOnStackoverflow(Action):
 
 
     def run(self, dispatcher, tracker, domain):
-        question = re.search(r'(buscar|pesquisar)\s(.*)no*\s*([sS]tack\s?[oO]verflow)', tracker.latest_message['text']).group(2))
+        question = re.search(r'(buscar|pesquisar)\s(.*)no*\s*([sS]tack\s?[oO]verflow)', tracker.latest_message['text']).group(2)
 
         url = 'https://api.stackexchange.com/2.2/search'
         order = 'desc'
@@ -36,14 +36,14 @@ class SearchOnStackoverflow(Action):
 
         res = requests.get(url, params=payload)
         data = json.loads(res.text)
-        links = self.validate_answered(data)
-        if links:
-            dispatcher.utter_message('Aqui está: ')
-            for link in links:
-                # botResponse = 'Aqui está: ' + data['items'][0]['link']
-                dispatcher.utter_message(link)
-        else:
-            botResponse = 'Infelizmente não encontrei nada sobre ' + question +' no StackOverflow. Tente escrever de forma mais compacta e em inglês,             para refinar a busca!'
+       # links = self.validate_answered(data)
+        try:
+            #dispatcher.utter_message('Aqui está: ')
+            #for link in links:
+            botResponse = 'Aqui está: ' + data['items'][0]['link']
+            dispatcher.utter_message(botResponse)
+        except:
+            botResponse = 'Infelizmente não encontrei nada sobre ' + question +' no StackOverflow. Tente escrever de forma mais compacta e em inglês para refinar a busca!'
             dispatcher.utter_message(botResponse)
             dispatcher.utter_message('Tente escrever desta forma:')
             dispatcher.utter_message('pesquisar [sua dúvida] no stackoverflow')
@@ -64,7 +64,7 @@ class SearchOnCrossValidated(Action):
         return links
 
     def run(self, dispatcher, tracker, domain):
-        question = re.search(r'(buscar|pesquisar)\s(.*)no*\s*([cC]ross\s?[vV]alidated)', tracker.latest_message['text']).group(2))
+        question = re.search(r'(buscar|pesquisar)\s(.*)no*\s*([cC]ross\s?[vV]alidated)', tracker.latest_message['text']).group(2)
 
         url = 'https://api.stackexchange.com/2.2/search'
         order = 'desc'
@@ -78,13 +78,15 @@ class SearchOnCrossValidated(Action):
 
         res = requests.get(url, params=payload)
         data = json.loads(res.text)
-        links = self.validate_answered(data)
-        if links:
-            dispatcher.utter_message('Aqui está: ')
-            for link in links:
-                # botResponse = 'Aqui está: ' + data['items'][0]['link']
-                dispatcher.utter_message(link)
-        else:
+       # links = self.validate_answered(data)
+        try:
+       # if links:
+       #     dispatcher.utter_message('Aqui está: ')
+        #    for link in links:
+            botResponse = 'Aqui está: ' + data['items'][0]['link']
+            dispatcher.utter_message(botResponse)
+        
+        except:
             botResponse = 'Infelizmente não encontrei nada sobre ' + question +' no CrossValidated. Tente escrever de forma mais compacta e em inglês, para refinar a busca!'
             dispatcher.utter_message(botResponse)
             dispatcher.utter_message('Tente escrever desta forma:')
