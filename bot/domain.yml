@@ -223,7 +223,7 @@ actions:
   - utter_implementar_polynomial_regression
   - utter_pesquisar
   - action_search_on_stackoverflow
-  - actions_search_on_crossvalidated
+  - action_search_on_crossvalidated
   - action_otrs
 
 entities:
