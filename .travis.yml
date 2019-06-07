@@ -14,8 +14,6 @@ before_install:
 - gem install bundler:2.0.1
 script:
 - docker-compose up -d
-- docker-compose exec bot flake8 --filename=*.py --exclude=__pycache__ --ignore=F821,
-  F841
 after_script:
 - docker-compose down
 "#":
