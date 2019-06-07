@@ -8,6 +8,9 @@
 - que dia acaba o curso
 - quando e a pascoa
 - hoje e natal
+- estou com fome
+- qual resultado do jogo
+- disney
 
 ## intent:cumprimentar
 
