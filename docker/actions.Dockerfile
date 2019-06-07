@@ -25,7 +25,7 @@ RUN apt-get -yq remove --purge --auto-remove -y ${BUILD_PACKAGES}; \
     find /bot -name __pycache__ | xargs rm -rf; \
     rm -rf /root/.[acpw]*;
 
-RUN python -m rasa_core_sdk.endpoint --actions actions
+# RUN python -m rasa_core_sdk.endpoint --actions actions
 
 EXPOSE 5055
 HEALTHCHECK --interval=300s --timeout=60s --retries=5 \

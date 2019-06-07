@@ -3,3 +3,4 @@ coverage==4.5.3
 pytest==4.4.1
 pytest-cov==2.7.1
 bs4
+rasa-core-sdk==0.13
