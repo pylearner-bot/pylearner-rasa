@@ -423,6 +423,38 @@ templates:
 
             Introdução ao Jupyter Notebook
 
+            Modelo de Regressão Linear Bayesiana
+
+            Dados Categóricos
+
+            Matriz de Confusão
+
+            Àrvores de Decisão
+
+            Variância Explicada
+
+            Feature Scaling
+
+            Classification Metrics
+
+            Classification Report
+
+            Modelo Linear Generalizado
+
+            Agrupamento k-means
+
+            Classificador Naive Bayes
+
+            Nearest Neighbors
+
+            Regressão Polinomial
+
+            Coeficiente r2-score
+
+            Gradiente Descendente Estocástico
+
+            Máquina de Vetores de Suporte
+
             Em breve vou aprender novas funcionalidades! Mas espero que essas atendam sua necessidade :)
 
     utter_conversa_positiva:
@@ -496,7 +528,7 @@ templates:
 
                 objeto = json.loads(conteudo)
 
-            Enfim a manipulação dos dados é com você, jovem hehe Boa sorte!
+            Enfim a manipulação dos dados é com você, Boa sorte!
 
     utter_importar_json_pandas:
         - text: |
@@ -548,20 +580,15 @@ templates:
 
     utter_explicar_csv:
         - text: |
-            Comma-separated values (ou CSV) é um formato de arquivo que armazena dados tabelados, cujo grande uso data da época dos mainframes.
-            Beleza, bora aprender a manusear um CSV?
+            Comma-separated values (ou CSV) é um formato de arquivo que armazena dados tabelados, é mais usado para trafegar informações entre diferentes aplicações, como bancos dados.
+            Quer aprender a manusear um CSV?
 
         - text: |
 
-            O CSV é um implementação particular de arquivos de texto separados por um delimitador, que usa a vírgula e a quebra de linha para separar os valores.
+            O CSV é um implementação particular de arquivos de texto separados por um delimitador, que geralmente usa a vírgula e a quebra de linha para separar os valores
+            E intuito do CSV é poder exportar dados complexos de uma aplicação
 
-            Beleza, bora aprender a manusear um CSV?
-
-        - text: |
-
-            Significa Comma-Separated Values ==> CSV :)
-
-            Beleza, bora aprender a manusear um CSV?
+            Quer aprender a manusear um CSV?
 
     utter_tirar_duvidas_de_implementacao:
         - text: |
@@ -569,9 +596,11 @@ templates:
 
                 import pandas as pd
 
-            Logo após, chame a função read_csv():
+            Logo após, chame a função read_csv(), do pandas:
 
-                pd.read_csv(file)
+                data = pd.read_csv(file)
+
+                Onde file é o arquivo csv que você quer ler os dados
 
     utter_entender_correlacao:
         - text: |
