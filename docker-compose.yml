@@ -2,13 +2,12 @@ version: '2'
 
 services:
   jupyter:
-    build:
-      context: ./jupyter-docker
-      dockerfile: ./jupyter.Dockerfile
+    image: gabrielziegler/pylearner-jupyter
     ports:
       - 8888:8888
     depends_on:
       - rocketchat
+    mem_limit: 1000000000
 
 
   mongo:
@@ -17,6 +16,7 @@ services:
     volumes:
       - ./data/db:/data/db
     command: mongod --smallfiles --oplogSize 128 --replSet rs0 --storageEngine=mmapv1
+    mem_limit: 1000000000
 
 
   # this container's job is to just run the command to initialize the replica set.
@@ -26,6 +26,7 @@ services:
     command: 'bash -c "for i in `seq 1 30`; do mongo mongo/rocketchat --eval \"rs.initiate({ _id: ''rs0'', members: [ { _id: 0, host: ''localhost:27017'' } ]})\" && s=$$? && break || s=$$?; echo \"Tried $$i times. Waiting 5 secs...\"; sleep 5; done; (exit $$s)"'
     depends_on:
       - mongo
+    mem_limit: 1000000000
 
 
   rocketchat:
@@ -43,24 +44,22 @@ services:
       - 3000:3000
     depends_on:
       - mongo
+    mem_limit: 1000000000
 
 
   actions:
-    build:
-      context: .
-      dockerfile: ./docker/actions.Dockerfile
+    image: gabrielziegler/pylearner-actions
     ports:
       - 5055:5055
     volumes:
       - ./bot/actions:/bot/actions
       - ./bot/Makefile:/bot/Makefile
     # command: "make run-actions"
+    mem_limit: 1000000000
 
 
   bot:
-    build:
-      context: .
-      dockerfile: ./docker/bot.Dockerfile
+    image: gabrielziegler/pylearner-bot
     restart: unless-stopped
     environment:
       - MAX_TYPING_TIME=8
@@ -96,3 +95,5 @@ services:
     volumes:
       - ./bot:/bot
       - ./scripts:/scripts
+    mem_limit: 1000000000
+

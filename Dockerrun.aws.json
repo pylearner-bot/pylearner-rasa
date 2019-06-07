@@ -36,6 +36,8 @@
     "containerDefinitions": [
         {
             "essential": true,
+            "image": "gabrielziegler/pylearner-actions",
+            "memory": 953,
             "mountPoints": [
                 {
                     "containerPath": "/bot/actions",
@@ -110,6 +112,8 @@
                 }
             ],
             "essential": true,
+            "image": "gabrielziegler/pylearner-bot",
+            "memory": 953,
             "mountPoints": [
                 {
                     "containerPath": "/bot",
@@ -134,6 +138,8 @@
         },
         {
             "essential": true,
+            "image": "gabrielziegler/pylearner-jupyter",
+            "memory": 953,
             "name": "jupyter",
             "portMappings": [
                 {
@@ -154,6 +160,7 @@
             ],
             "essential": true,
             "image": "mongo:3.2",
+            "memory": 953,
             "mountPoints": [
                 {
                     "containerPath": "/data/db",
@@ -170,6 +177,7 @@
             ],
             "essential": true,
             "image": "mongo:3.2",
+            "memory": 953,
             "name": "mongo-init-replica"
         },
         {
@@ -206,6 +214,7 @@
             ],
             "essential": true,
             "image": "rocket.chat:latest",
+            "memory": 953,
             "name": "rocketchat",
             "portMappings": [
                 {
