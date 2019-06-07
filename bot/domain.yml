@@ -98,10 +98,9 @@ intents:
   - implementar_bayesian_ridge_regression
   - entender_polynomial_regression
   - implementar_polynomial_regression
-  - pesquisar_no_cross_validated
+  - pesquisar_no_crossvalidated
   - pesquisar_no_stackoverflow
   - pesquisar
-  - action_test
 
 actions:
   - utter_default
@@ -224,6 +223,7 @@ actions:
   - utter_implementar_polynomial_regression
   - utter_pesquisar
   - action_search_on_stackoverflow
+  - actions_search_on_crossvalidated
   - action_otrs
 
 entities:
@@ -1498,4 +1498,4 @@ templates:
     utter_pesquisar:
 
     - text: |
-        Eu posso pesquisar no StackOverflow para você. Escreva o que você deseja pesquisar da seguinte forma: "pesquisar {o conteudo que seja saber} no stackoverflow"
+        Eu posso pesquisar no StackOverflow ou CrossValidated para você. Escreva o que você deseja pesquisar da seguinte forma: "pesquisar {o conteudo que seja saber} no {stackoverflow | crossvalidated}"
