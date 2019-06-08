@@ -38,18 +38,18 @@ class SearchOnStackoverflow(Action):
 
         res = requests.get(url, params=payload)
         data = json.loads(res.text)
-       # links = self.validate_answered(data)
-        try:
-            #dispatcher.utter_message('Aqui está: ')
-            #for link in links:
-            botResponse = 'Aqui está: ' + data['items'][0]['link']
-            dispatcher.utter_message(botResponse)
-        except:
-            botResponse = 'Infelizmente não encontrei nada sobre ' + question +' no StackOverflow. Tente escrever de forma mais compacta e em inglês para refinar a busca!'
+        links = self.validate_answered(data)
+        if links:
+            dispatcher.utter_message('Aqui está: ')
+            for link in links:
+                # botResponse = 'Aqui está: ' + data['items'][0]['link']
+                dispatcher.utter_message(link)
+        else:
+            botResponse = 'Infelizmente não encontrei nada sobre ' + question +' no StackOverflow. Tente escrever de forma mais compacta e em inglês,             para refinar a busca!'
             dispatcher.utter_message(botResponse)
             dispatcher.utter_message('Tente escrever desta forma:')
             dispatcher.utter_message('pesquisar [sua dúvida] no stackoverflow')
-
+    
     def validate_answered(self, data):
         links = []
         for item in data['items']:
