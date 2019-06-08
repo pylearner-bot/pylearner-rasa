@@ -14,6 +14,8 @@
 - funçao para criar histograma
 - como usar a funçao sns.distplot()
 - como usar a funçao sns.kdeplot()
+- como usar a funçao distplot
+- como usar a funçao kdeplot
 
 ## intent:dados_quantitativos
 - o que sao dados dados quantitativos
@@ -46,7 +48,4 @@
 - datasets significado
 - datasets significa
 - o que quer dizer datasets
-- o q q dizer datasets
-- quem e datasets
-- o q significa datasets
-- o q e significa datasets
+- o que significa datasets
