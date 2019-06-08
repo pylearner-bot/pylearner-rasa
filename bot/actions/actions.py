@@ -45,7 +45,7 @@ class SearchOnStackoverflow(Action):
                 # botResponse = 'Aqui está: ' + data['items'][0]['link']
                 dispatcher.utter_message(link)
         else:
-            botResponse = 'Infelizmente não encontrei nada sobre ' + question +' no StackOverflow. Tente escrever de forma mais compacta e em inglês,             para refinar a busca!'
+            botResponse = 'Infelizmente não encontrei nada sobre ' + question +' no StackOverflow. Tente escrever de forma mais compacta e em inglês para refinar a busca!'
             dispatcher.utter_message(botResponse)
             dispatcher.utter_message('Tente escrever desta forma:')
             dispatcher.utter_message('pesquisar [sua dúvida] no stackoverflow')
@@ -89,10 +89,10 @@ class SearchOnCrossValidated(Action):
                 # botResponse = 'Aqui está: ' + data['items'][0]['link']
                 dispatcher.utter_message(link)
         else:
-            botResponse = 'Infelizmente não encontrei nada sobre ' + question +' no StackOverflow. Tente escrever de forma mais compacta e em inglês,             para refinar a busca!'
+            botResponse = 'Infelizmente não encontrei nada sobre ' + question +' no Cross Validated. Tente escrever de forma mais compacta e em inglês para refinar a busca!'
             dispatcher.utter_message(botResponse)
             dispatcher.utter_message('Tente escrever desta forma:')
-            dispatcher.utter_message('pesquisar [sua dúvida] no stackoverflow')
+            dispatcher.utter_message('pesquisar [sua dúvida] no crossvalidated')
 
     def validate_answered(self, data):
         links = []
