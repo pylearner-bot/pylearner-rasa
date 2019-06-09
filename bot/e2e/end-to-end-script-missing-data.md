@@ -1,3 +1,27 @@
 ## Stories for Pyter Test
-* entender_dados_faltantesafirmarafirmarafirmarafirmarafirmarafirmarnegariniciar_a_deteccaocorrigir_a_deteccaosubstituicao_constantesubstituicao_imputacaosubstituicao_mediana: O que são dados faltantes?simsimsimsimsimsimNãoComo detectar dados faltantes?Como corrigir dados faltanteS?Substituição por constanteSubstituição por imputaçãoSubstituição por mediana
-	 - utter_entender_dados_faltantesutter_causa_dados_faltantesutter_iniciar_a_deteccaoutter_visualizar_dados_faltantesutter_dados_faltantes_padronizadosutter_Dados_faltantes_nao_padronizadosutter_corrigir_a_deteccaoutter_bons_estudosutter_iniciar_a_deteccaoutter_corrigir_a_deteccaoutter_substituicao_constanteutter_substituicao_imputacaoutter_substituicao_mediana
+* entender_dados_faltantes: O que são dados faltantes?
+	 - utter_entender_dados_faltantes
+* afirmar: sim
+	 - utter_causa_dados_faltantes
+* afirmar: sim
+	 - utter_iniciar_a_deteccao
+* afirmar: sim
+	 - utter_visualizar_dados_faltantes
+* afirmar: sim
+	 - utter_dados_faltantes_padronizados
+* afirmar: sim
+	 - utter_Dados_faltantes_nao_padronizados
+* afirmar: sim
+	 - utter_corrigir_a_deteccao
+* negar: Não
+	 - utter_bons_estudos
+* iniciar_a_deteccao: Como detectar dados faltantes?
+	 - utter_iniciar_a_deteccao
+* corrigir_a_deteccao: Como corrigir dados faltanteS?
+	 - utter_corrigir_a_deteccao
+* substituicao_constante: Substituição por constante
+	 - utter_substituicao_constante
+* substituicao_imputacao: Substituição por imputação
+	 - utter_substituicao_imputacao
+* substituicao_mediana: Substituição por mediana
+	 - utter_substituicao_mediana

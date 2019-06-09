@@ -7,40 +7,50 @@ To add new test cases add the:
 """
 
 user_intent = [
-    'entender_nearest_neighbors'
-    'afirmar'
-    'afirmar'
-    'entender_classificador_k_neighbors_classifier'
-    'classificadores_nearest_neighbors'
-    'entender_classificador_radius_neighbors_classifier'
-    'afirmar'
-    'classificadores_nearest_neighbors'
-    'entender_classificador_k_neighbors_classifier'
-    'afirmar'
-    'implementar_classificadores_nearest_neighbors'
-    'RadiusNeighborsClassifier'
-    'KNeighborsClassifier'
+    'entender_nearest_neighbors',
+    'afirmar',
+    'afirmar',
+    'entender_classificador_k_neighbors_classifier',
+    'classificadores_nearest_neighbors',
+    'entender_classificador_radius_neighbors_classifier',
+    'afirmar',
+    'classificadores_nearest_neighbors',
+    'entender_classificador_k_neighbors_classifier',
+    'afirmar',
+    'implementar_classificadores_nearest_neighbors',
+    'RadiusNeighborsClassifier',
+    'KNeighborsClassifier',
     'entender_classificacao_nearest_neighbors'
 ]
 
 user_input = [
-    
+    'o que eh nearest neighbors',
+    'sim',
+    'ok',
+    'classificação de neighbors classifier',
+    'classificadores de nearest neigbors',
+    'o que eh classificador radius neighbors classifier?',
+    'sim',
+    'como implementar o nearest neighbors?',
+    'Radius neighbors classifier',
+    'kneighbors classifier',
+    'entender classificação neares neighbors'
 ]
 
 utter = [
-    'utter_entender_nearest_neighbors'
-    'utter_entender_classificacao_nearest_neighbors'
-    'utter_classificadores_nearest_neighbors'
-    'utter_entender_classificador_k_neighbors_classifier'
-    'utter_classificadores_nearest_neighbors'
-    'utter_entender_classificador_radius_neighbors_classifier'
-    'utter_RadiusNeighborsClassifier'
-    'utter_classificadores_nearest_neighbors'
-    'utter_entender_classificador_k_neighbors_classifier'
-    'utter_KNeighborsClassifier'
-    'utter_implementar_classificadores_nearest_neighbor'
-    'utter_RadiusNeighborsClassifier'
-    'utter_KNeighborsClassifier'
+    'utter_entender_nearest_neighbors',
+    'utter_entender_classificacao_nearest_neighbors',
+    'utter_classificadores_nearest_neighbors',
+    'utter_entender_classificador_k_neighbors_classifier',
+    'utter_classificadores_nearest_neighbors',
+    'utter_entender_classificador_radius_neighbors_classifier',
+    'utter_RadiusNeighborsClassifier',
+    'utter_classificadores_nearest_neighbors',
+    'utter_entender_classificador_k_neighbors_classifier',
+    'utter_KNeighborsClassifier',
+    'utter_implementar_classificadores_nearest_neighbor',
+    'utter_RadiusNeighborsClassifier',
+    'utter_KNeighborsClassifier',
     'utter_entender_classificacao_nearest_neighbors'
     
 ]
@@ -58,7 +68,7 @@ def write_file(stories):
     """
     write story tests to file
     """
-    E2E_FILE = './end-to-end-script-naive-bayes.md'
+    E2E_FILE = './end-to-end-script-nearest-neighbors.md'
     title = "## Stories for Pyter Test\n"
 
     with open(E2E_FILE, "w") as f:

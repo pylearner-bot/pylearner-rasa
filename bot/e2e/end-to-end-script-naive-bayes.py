@@ -7,23 +7,23 @@ To add new test cases add the:
 """
 
 user_intent = [
-    'entender_gaussian_naive_bayes'
-    'afirmar'
-    'negar'
+    'entender_gaussian_naive_bayes',
+    'afirmar',
+    'negar',
     'implementar_gaussian_nayve_bayes'
 ]
 
 user_input = [
-    'O que é naive bayes?'
-    'Sim'
-    'Não'
+    'O que é naive bayes?',
+    'Sim',
+    'Não',
     'Como implementar naive bayes?'
 ]
 
 utter = [
-    'utter_entender_gaussian_naive_bayes'
-    'utter_implementar_gaussian_nayve_bayes'
-    'utter_bons_estudos'
+    'utter_entender_gaussian_naive_bayes',
+    'utter_implementar_gaussian_nayve_bayes',
+    'utter_bons_estudos',
     'utter_implementar_gaussian_nayve_bayes'
 ]
 

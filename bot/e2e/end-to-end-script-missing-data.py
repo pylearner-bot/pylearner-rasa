@@ -7,50 +7,50 @@ To add new test cases add the:
 """
 
 user_intent = [
-    'entender_dados_faltantes'
-    'afirmar'
-    'afirmar'
-    'afirmar'
-    'afirmar'
-    'afirmar'
-    'afirmar'
-    'negar'
-    'iniciar_a_deteccao'
-    'corrigir_a_deteccao'
-    'substituicao_constante'
-    'substituicao_imputacao'
+    'entender_dados_faltantes',
+    'afirmar',
+    'afirmar',
+    'afirmar',
+    'afirmar',
+    'afirmar',
+    'afirmar',
+    'negar',
+    'iniciar_a_deteccao',
+    'corrigir_a_deteccao',
+    'substituicao_constante',
+    'substituicao_imputacao',
     'substituicao_mediana'
 ]
 
 user_input = [
-    'O que são dados faltantes?'
-    'sim'
-    'sim'
-    'sim'
-    'sim'
-    'sim'
-    'sim'
-    'Não'
-    'Como detectar dados faltantes?'
-    'Como corrigir dados faltanteS?'
-    'Substituição por constante'
-    'Substituição por imputação'
+    'O que são dados faltantes?',
+    'sim',
+    'sim',
+    'sim',
+    'sim',
+    'sim',
+    'sim',
+    'Não',
+    'Como detectar dados faltantes?',
+    'Como corrigir dados faltanteS?',
+    'Substituição por constante',
+    'Substituição por imputação',
     'Substituição por mediana'
 ]
 
 utter = [
-    'utter_entender_dados_faltantes'
-    'utter_causa_dados_faltantes'
-    'utter_iniciar_a_deteccao'
-    'utter_visualizar_dados_faltantes'
-    'utter_dados_faltantes_padronizados'
-    'utter_Dados_faltantes_nao_padronizados'
-    'utter_corrigir_a_deteccao'
-    'utter_bons_estudos'
-    'utter_iniciar_a_deteccao'
-    'utter_corrigir_a_deteccao'
-    'utter_substituicao_constante'
-    'utter_substituicao_imputacao'
+    'utter_entender_dados_faltantes',
+    'utter_causa_dados_faltantes',
+    'utter_iniciar_a_deteccao',
+    'utter_visualizar_dados_faltantes',
+    'utter_dados_faltantes_padronizados',
+    'utter_Dados_faltantes_nao_padronizados',
+    'utter_corrigir_a_deteccao',
+    'utter_bons_estudos',
+    'utter_iniciar_a_deteccao',
+    'utter_corrigir_a_deteccao',
+    'utter_substituicao_constante',
+    'utter_substituicao_imputacao',
     'utter_substituicao_mediana'
 ]
 
