@@ -23,7 +23,7 @@ evaluate:
 	python3 -m rasa_core.evaluate -d models/dialogue -s data/core/
 
 run-actions:
-	python -m rasa_core_sdk.endpoint --actions actions
+	python3 -m rasa_core_sdk.endpoint --actions actions
 
 .PHONY: all e2e clean
 e2e:
