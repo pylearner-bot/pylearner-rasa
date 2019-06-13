@@ -111,7 +111,7 @@ class SearchOnTowardsDataScience(Action):
     def run(self, dispatcher, tracker, domain):
         question = ''
         if re.search(r'(buscar|pesquisar)\s(.*)no*\s*([tT]owards?\s?[dD]ata\s?[sS]cience)', tracker.latest_message['text']):
-            question = re.search(r'(buscar|pesquisar)\s(.*)no*\s*([tT]owards?[dD]ata[sS]cience)', tracker.latest_message['text']).group(2)
+            question = re.search(r'(buscar|pesquisar)\s(.*)no*\s*([tT]owards?\s?[dD]ata\s?[sS]cience)', tracker.latest_message['text']).group(2)
         
         link = 'https://www.googleapis.com/customsearch/v1?key='
         api_key = 'AIzaSyD2q63xBdRyjur_Z5aR6MxWu6xI66YNuj0'
@@ -129,8 +129,8 @@ class SearchOnTowardsDataScience(Action):
         try:
             cont = 0
             for link in data['items']:
-                if (cont == 0): dispatcher.utter_message('Aqui está um material que eu recomendo sobre ' + question)
-                if (cont == 5): break;
+                if (cont == 0): dispatcher.utter_message('Aqui está um material que eu recomendo sobre ' + question + ':')
+                if (cont == 4): break;
                 dispatcher.utter_message(link['link'])
                 cont += 1
             
@@ -138,5 +138,7 @@ class SearchOnTowardsDataScience(Action):
             
         except:
             dispatcher.utter_message ('Infelizmente não encontramos nada relacionado a ' + question + ' no Towards Data Science')
-            dispatcher.utter_message ('Tente digitar: pesquisar [o que voĉe quer] no towardsdatascience')
+            dispatcher.utter_message ('Tente escrever em inglês para refinar sua busca e da seguinte forma:')
+            dispatcher.utter_message ('pesquisar [what you want] no towardsdatascience')
+
 
