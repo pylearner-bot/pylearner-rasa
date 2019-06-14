@@ -10,6 +10,7 @@
 
 ## intent:iniciar_a_deteccao
 - como detectar dados faltantes
+- como detectar dados faltantes?
 - identificar dados faltantes
 - como checar o dataset
 - como exibir o dataset
