@@ -7,6 +7,7 @@ To add new test cases add the:
 """
 
 user_intent = [
+    'cumprimentar',
     'transformar_dados_categoricos',
     'categoricos_rapidos',
     'categoricos_rapidos2',
@@ -17,6 +18,7 @@ user_intent = [
 ]
 
 user_input = [
+    'ola',
     'tratar dados categoricos',
     'scikit-learn',
     'label encoder',
@@ -27,6 +29,7 @@ user_input = [
     ]
 
 utter = [
+    'utter_cumprimentar',
     'utter_transformar_dados_categoricos',
     'utter_categoricos_rapidos',
     'utter_categoricos_rapidos2',
