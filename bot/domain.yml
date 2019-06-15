@@ -6,8 +6,6 @@ intents:
   - afirmar
   - negar
   - diga_mais
-  - bom_humor
-  - mau_humor
   - entender_histograma
   - criar_histograma
   - importar_json
@@ -275,7 +273,9 @@ templates:
 
             Eae, Pyter aqui! Beleza?
 
-        - text: Opa, eu sou o Pyter! Tudo bem?
+        - text: |
+            
+            Opa, eu sou o Pyter! Tudo bem?
 
     utter_despedir:
         - text: |
@@ -294,27 +294,11 @@ templates:
         - text: |
             Foi um prazer te ajudar!
             Quando surgir alguma dúvida, volte aqui!
+            
             Até mais!
 
         - text: |
             Qualquer dúvida, só falar! Até logo!
-
-        - text: |
-
-            Tranquilo! Em que posso te ajudar?
-
-        - text: |
-
-            Passo bem
-
-            Como posso te ajudar?
-
-        - text: |
-
-            Estou sim. Obrigado por perguntar!
-
-            Mas eae, me diz como posso te ajudar?
-
 
     utter_bom_humor:
         - text: |
@@ -421,51 +405,30 @@ templates:
     utter_ajuda:
         - text: |
             Por enquanto eu só posso te ajudar nos seguintes temas:
-
             Importar arquivos JSON
-
             Importar arquivos CSV
-
             Entender e detectar Dados Faltantes
-
             Plotar Histograma
-
             Calcular Correlação
-
             Introdução ao Jupyter Notebook
-
             Modelo de Regressão Linear Bayesiana
-
+            
             Dados Categóricos
-
             Matriz de Confusão
-
             Àrvores de Decisão
-
             Variância Explicada
-
             Feature Scaling
-
             Classification Metrics
-
             Classification Report
 
             Modelo Linear Generalizado
-
             Agrupamento k-means
-
             Classificador Naive Bayes
-
             Nearest Neighbors
-
             Regressão Polinomial
-
             Coeficiente r2-score
-
             Gradiente Descendente Estocástico
-
             Máquina de Vetores de Suporte
-
             Em breve vou aprender novas funcionalidades! Mas espero que essas atendam sua necessidade :)
 
     utter_conversa_positiva:
