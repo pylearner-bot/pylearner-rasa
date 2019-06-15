@@ -135,7 +135,5 @@ class SearchOnTowardsDataScience(Action):
         except:
             if question == '': 
                 dispatcher.utter_message ('Infelizmente não encontramos nada relacionado a isso no Towards Data Science')
-            else: 
-                dispatcher.utter_message ('Infelizmente não encontramos nada relacionado a ' + question + ' no Towards Data Science')
             dispatcher.utter_message ('Tente escrever em inglês para refinar sua busca e da seguinte forma:')
             dispatcher.utter_message ('pesquisar [what you want] no towardsdatascience')
