@@ -8,4 +8,9 @@ engines:
         enabled: false
       MD009:
         enabled: false
+      MD004:
+        enabled: false
+      MD002:
+        enabled: false
+      
 # ... CONFIG CONTENT ...
