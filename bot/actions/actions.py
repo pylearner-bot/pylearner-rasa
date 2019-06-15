@@ -112,6 +112,7 @@ class SearchOnTowardsDataScience(Action):
         question = ''
         if (re.search(r'(buscar|pesquisar)\s(.*)no*\s*([tT]owards?\s?[dD]ata\s?[sS]cience)', tracker.latest_message['text']) != None):
             question = re.search(r'(buscar|pesquisar)\s(.*)no*\s*([tT]owards?\s?[dD]ata\s?[sS]cience)', tracker.latest_message['text']).group(2)            
+        
         link = 'https://www.googleapis.com/customsearch/v1?key='
         api_key = 'AIzaSyD2q63xBdRyjur_Z5aR6MxWu6xI66YNuj0'
         operator = '&'
@@ -120,13 +121,14 @@ class SearchOnTowardsDataScience(Action):
         api_format = link + api_key + operator + cx + operator + query
         result = requests.get(api_format)
         data = json.loads(result.text)
+
         try:
             cont = 0
             for link in data['items']:
-                if (cont == 0): 
+                if cont == 0: 
                     dispatcher.utter_message('Aqui está um material que eu recomendo sobre ' + question + ':')
-                elif (cont == 4): 
-                    break;
+                elif cont == 4: 
+                    break
                 dispatcher.utter_message(link['link'])
                 cont += 1            
             dispatcher.utter_message('Bons estudos!') 
