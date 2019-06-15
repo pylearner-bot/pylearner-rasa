@@ -149,6 +149,10 @@
 - to malzao e voce
 - estou malzao e voce
 - nn to mal e voce
+- não e voce 
+- não e vc
+- nao e vc 
+- nao e voce
 
 ## intent:despedir
 
