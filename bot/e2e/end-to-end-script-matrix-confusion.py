@@ -12,7 +12,8 @@ user_intent = [
     'afirmar',
     'implementar_matriz_confusao_sklearn',
     'afirmar',
-    'entender_verdadeiro_positivo'
+    'entender_verdadeiro_positivo',
+    'despedir'
 
 ]
 
@@ -22,7 +23,8 @@ user_input = [
     'sim',
     'como implementar matriz de confusão?',
     'sim',
-    'verdadeiro positivo'
+    'verdadeiro positivo',
+    'tchau'
     ]
 
 utter = [
@@ -31,7 +33,8 @@ utter = [
     'utter_implementar_matriz_confusao_pandas',
     'utter_implementar_matriz_confusao_sklearn',
     'utter_implementar_matriz_confusao_pandas',
-    'utter_entender_verdadeiro_positivo'
+    'utter_entender_verdadeiro_positivo',
+    'utter_despedir'
     ]
 
 
