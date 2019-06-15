@@ -7,32 +7,30 @@ To add new test cases add the:
 """
 
 user_intent = [
-    'cumprimentar'
-    'afirmar'
+    'cumprimentar',
+    'afirmar',
     'entender_explained_variance_score',
     'afirmar',
     'entender_explained_variance_score',
     'negar',
     'exemplo_funcao_explained_variance_score',
-    'despedir',
-    
+    'despedir'    
 ]
 
 user_input = [
-    'oiii'
-    'sim'
+    'oiii',
+    'sim',
     'o que e explained variance?',
     'quero sim',
     'O que eh pontuação de variância?',
     'quero não, obrigado',
     'como implementar explained variance score',
-    'ate logo'
-    
+    'ate logo'  
     ]
 
 utter = [
-    'utter_cumprimentar'
-    'utter_conversa_positiva'
+    'utter_cumprimentar',
+    'utter_conversa_positiva',
     'utter_entender_explained_variance_score',
     'utter_exemplo_funcao_explained_variance_score',
     'utter_entender_explained_variance_score',
