@@ -3,11 +3,18 @@
 - por que usar classificacao de metricas
 - o que e classificacao dde metricas
 - classificacao de metricas
+- o que são metricas de classificacao
+- metricas de classificação
+- o que metricas de classificação?
+- metricas de classicacao
 
 ## intent:quais_as_metricas_de_classificacao
 - quais sao as metricas de classificacao
 - que metricas de classificacao temos
 - opcoes de metricas de classificacao
+- Citar metricas de Classificação
+- Exemplificar Métricas de Classificação
+- listar métricas de classificação
 
 ## intent:entender_classificacao_accuracy
 
@@ -29,11 +36,24 @@
 - classificacao f1
 - como funciona a f1
 - por que usar a f1
+- f1
+- F1
+- Classificação F1
+- métricas de classificação f1
+- metricas de classificacao
+- Metricas de classificação F1
 
 ## intent:usar_classificacao_f1
 
 - como usar a classificacao f1
 - qual funcao utilizo para f1
+- Implementar classificação f1
+- Parâmetros da Classificação F1
+- codar classificação f1
+- código para classificação F1
+- função classificação f1
+- função classificacao f1
+
 
 ## intent:recall_conceitual
 
@@ -42,33 +62,32 @@
 - recall
 - metrica recall
 - recall metrica
+- o que eh recal
 
 ## intent:precison_conceitual
 
 - o que é precision
 - o que e precision
 - precision
-- metrica precision  
-- precision metrica
+- definir precision
+- defina precision
 
 ## intent:recall
 
 - como calcular recall
-- recall
 - função recall
 - funcao recall
 - funçao recall
 - calculo recall
 - como posso calcular o recall
-- metrica recall
 - como usar a classificacao recall
 - qual função utilizo para recall
 - qual funcao utilizo para recall
+- implementar recall
 
 ## intent:precision
 
 - como calcular o precision
-- precision
 - função precision
 - funcao precision
 - como usar a classificacao precision
