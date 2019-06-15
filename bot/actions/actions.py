@@ -122,20 +122,4 @@ class SearchOnTowardsDataScience(Action):
         result = requests.get(api_format)
         data = json.loads(result.text)
 
-        try:
-            cont = 0
-            for link in data['items']:
-                if cont == 0: 
-                    dispatcher.utter_message('Aqui está um material que eu recomendo sobre ' + question + ':')
-                elif cont == 4: 
-                    break
-                dispatcher.utter_message(link['link'])
-                cont += 1            
-            dispatcher.utter_message('Bons estudos!') 
-        except:
-            if(question == ''): 
-                dispatcher.utter_message ('Infelizmente não encontramos nada relacionado a isso no Towards Data Science')
-            else: 
-                dispatcher.utter_message ('Infelizmente não encontramos nada relacionado a ' + question + ' no Towards Data Science')
-            dispatcher.utter_message ('Tente escrever em inglês para refinar sua busca e da seguinte forma:')
-            dispatcher.utter_message ('pesquisar [what you want] no towardsdatascience')
+       
