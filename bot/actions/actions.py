@@ -118,22 +118,17 @@ class SearchOnTowardsDataScience(Action):
         operator = '&'
         cx = 'cx=' + '014903448052095461784:jlpfd5trt48'
         query = 'q=' + question
-
         api_format = link + api_key + operator + cx + operator + query
-
         result = requests.get(api_format)
-
         data = json.loads(result.text)
 
-        
         try:
             cont = 0
             for link in data['items']:
                 if (cont == 0): dispatcher.utter_message('Aqui está um material que eu recomendo sobre ' + question + ':')
                 if (cont == 4): break;
                 dispatcher.utter_message(link['link'])
-                cont += 1
-            
+                cont += 1            
             dispatcher.utter_message('Bons estudos!') 
             
         except:
