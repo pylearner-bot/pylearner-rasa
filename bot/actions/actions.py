@@ -168,7 +168,11 @@ class SearchOnTowardsDataScience(Action):
                 if cont == 4: break
                 dispatcher.utter_message(link['link'])
                 cont += 1            
+<<<<<<< HEAD
             dispatcher.utter_message('Encontrei estes links que falam sobre ' + question + '! Espero que auxiliem no seu aprendizado. Enfim, bons estudos!') 
+=======
+            dispatcher.utter_message('Bons estudos!') 
+>>>>>>> 01988d3... Code Refactor
         
         except:
             dispatcher.utter_message ('Infelizmente não encontramos nada relacionado a isso no Towards Data Science')
