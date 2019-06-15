@@ -12,7 +12,7 @@ user_intent = [
     'afirmar',
     'implementar_matriz_confusao_sklearn',
     'afirmar',
-    'entender_verdadeiro_positivo',
+    'entender_verdadeiro_positivo'
 
 ]
 

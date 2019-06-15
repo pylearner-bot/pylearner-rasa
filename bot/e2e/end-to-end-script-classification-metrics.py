@@ -10,21 +10,24 @@ user_intent = [
     'entender_metricas_de_classificacao',
     'quais_as_metricas_de_classificacao',
     'usar_classificacao_f1',
-    'recall'
+    'recall',
+    'despedir'
 ]
 
 user_input = [
     'o que são metricas de classificacao',
     'cite as metricas de classificação',
     'classificação f1',
-    'o que eh recall'
+    'o que eh recall',
+    'flw'
     ]
 
 utter = [
     'utter_entender_metricas_de_classificacao',
     'utter_quais_as_metricas_de_classificacao',
     'utter_usar_classificacao_f1',
-    'utter_recall'
+    'utter_recall',
+    'utter_despedir'
     ]
 
 
