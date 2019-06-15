@@ -1,31 +1,6 @@
-## caminho feliz
-* cumprimentar
-    - utter_cumprimentar
-* bom_humor
-    - utter_bom_humor
-
-## caminho triste 1
-* cumprimentar
-    - utter_cumprimentar
-* mau_humor
-    - utter_oferecer_ajuda
-    - utter_animar
-* afirmar
-    - utter_bom_humor
-
-## caminho triste 2
-* cumprimentar
-    - utter_cumprimentar
-* mau_humor
-    - utter_oferecer_ajuda
-    - utter_animar
-* negar
-    - utter_mau_humor
-    - utter_despedir
-
 ## Despedir
 * despedir
-    - utter_despedir    
+    - utter_despedir
 
 ## Apresentacao
 * cumprimentar
@@ -41,7 +16,6 @@
 
 ## negar sem contexto
 * negar
-    - utter_mau_humor
     - utter_despedir
 
 ## Apresentacao e despedida
@@ -77,13 +51,13 @@
 ## Puxando assunto 5
 * cumprimentar2
     - utter_bom_humor2
-* responder_positivamente
+* afirmar
     - utter_conversa_positiva
 
 ## Puxando assunto 6
 * cumprimentar2
     - utter_bom_humor2
-* responder_negativamente
+* negar
     - utter_animar
 
 ## Religião

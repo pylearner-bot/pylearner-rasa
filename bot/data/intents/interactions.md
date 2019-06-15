@@ -16,6 +16,8 @@
 
 - beleza
 - com licenca
+- olá
+- oie
 - tranquilo
 - fala ai
 - bom dia
@@ -40,7 +42,6 @@
 - oi pyter
 - ola pyter
 - eae pyter
-
 
 ## intent:cumprimentar2
 
@@ -85,6 +86,9 @@
 
 ## intent:responder_positivamente
 
+- bem e voce
+- bem e você
+- bem e vc
 - estou bem e voce como vai
 - estou bom e voce como esta
 - to bem sim e vc
@@ -117,6 +121,8 @@
 - estou bem bro e vc
 - estou bem mano e voce
 - tudo certo e voce como esta?
+- tambem
+- to bem tambem
 
 ## intent:responder_negativamente
 
@@ -143,6 +149,10 @@
 - to malzao e voce
 - estou malzao e voce
 - nn to mal e voce
+- não e voce 
+- não e vc
+- nao e vc 
+- nao e voce
 
 ## intent:despedir
 
@@ -174,6 +184,9 @@
 - boa noite
 - fica com Deus
 - flw então
+- bye
+- bye bye 
+- sayonara
 
 ## intent:afirmar
 
@@ -309,6 +322,9 @@
 - to malzao
 - estou malzao
 - nn to mal
+- infelizmente
+- infelizmente não
+- infelizmente nao
 
 ## intent:diga_mais
 
@@ -323,43 +339,6 @@
 - estou perdido
 - nao compreendo
 - pode repetir
-
-## intent:bom_humor
-
-- perfeito
-- muito bom
-- otimo
-- maravilhoso
-- estupendo
-- maravilha
-- excelente
-- estou me sentindo muito bem
-- isso ae
-- boa
-- de boa
-- top
-- topper
-- tranquilo
-- suave
-- dibs
-- bao
-- ok
-- tranqs
-- bem
-- bom
-
-## intent:mau_humor
-
-- triste
-- muito triste
-- infeliz
-- horrivel
-- terrivel
-- nao muito bem
-- extremamente chateado
-- chateado
-- muito triste
-
 
 ## intent:sobre_pyter
 
