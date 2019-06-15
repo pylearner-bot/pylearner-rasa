@@ -97,6 +97,7 @@ intents:
   - pesquisar_no_crossvalidated
   - pesquisar_no_stackoverflow
   - pesquisar
+  - kaggle_exercises
 
 actions:
   - utter_default
@@ -221,6 +222,7 @@ actions:
   - action_search_on_stackoverflow
   - action_search_on_crossvalidated
   - action_otrs
+  - action_kaggle
 
 entities:
     - questions

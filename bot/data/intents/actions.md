@@ -18,6 +18,22 @@
     - pesquisar [stochastic gradient descendent](questions) no stackoverflow
     - buscar [maquina de vetores de suporte](questions) no stackoverflow
 
+## intent:kaggle_exercises
+    - pesquisar no kaggle
+    - gostariar de fazer exercícios
+    - praticar
+    - exercícios no kaggle
+    - exercícios
+    - kaggle
+    - treinar aprendizado
+    - treinar
+    - site para treinar
+    - exercicios kaggle
+    - plataforma kaggle
+    - exercicios 
+    - lista de exercícios 
+    - lista de exercicios 
+    
 ## intent:pesquisar_no_crossvalidated
     - pesquisar [histograma](questions) no crossvalidated
     - buscar [dados categoricos](questions) no crossvalidated
@@ -71,3 +87,4 @@
     - regressao polinomial
     - stochastic gradient descendent
     - maquina de vetores de suporte
+
