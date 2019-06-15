@@ -5,37 +5,32 @@ To add new test cases add the:
     - user_input
     - utter
 """
-
-user_intent = [
+user_intent_tree = [
     'entender_decision_tree',
     'afirmar',
     'entender_decision_tree',
     'negar',
     'algoritmo_decision_tree'
 ]
-
-user_input = [
+user_input_tree = [
     'o que eh decision tree?',
     'beleza',
     'explicar o que eh decision tree',
     'quero não, obrigado',
     'como implementar decision tree'
     ]
-
-utter = [
+utter_tree = [
     'utter_entender_decision_tree',
     'utter_algoritmo_decision_tree',
     'utter_entender_decision_tree',
     'utter_bons_estudos',
     'utter_algoritmo_decision_tree'
     ]
-
-
-def create_stories(user_intent, user_input, utter):
+def create_stories(user_intent_tree, user_input_tree, utter_tree):
     """
     Zip through lists and return them in the e2e test format
     """
-    for intent, inp, utt in zip(user_intent, user_input, utter):
+    for intent, inp, utt in zip(user_intent_tree, user_input_tree, utter_tree):
         yield "* {}: {}\n\t - {}".format(intent, inp, utt)
 
 
@@ -53,5 +48,5 @@ def write_file(stories):
             f.write("%s\n" % story)
 
 
-stories = create_stories(user_intent, user_input, utter)
+stories = create_stories(user_intent_tree, user_input_tree, utter_tree)
 write_file(stories)
