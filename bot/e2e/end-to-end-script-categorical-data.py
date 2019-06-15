@@ -12,7 +12,8 @@ user_intent = [
     'categoricos_rapidos2',
     'categoricos_rapidos3',
     'categoricos_rapidos4',
-    'categoricos_rapidos5'
+    'categoricos_rapidos5',
+    'despedir'
 ]
 
 user_input = [
@@ -21,7 +22,8 @@ user_input = [
     'label encoder',
     'fit transorform',
     'inverse transform',
-    'instanciar'
+    'instanciar',
+    'bye'
     ]
 
 utter = [
@@ -30,7 +32,8 @@ utter = [
     'utter_categoricos_rapidos2',
     'utter_categoricos_rapidos3',
     'utter_categoricos_rapidos4',
-    'utter_categoricos_rapidos5'
+    'utter_categoricos_rapidos5',
+    'utter_despedir'
     ]
 
 
