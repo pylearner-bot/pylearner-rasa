@@ -124,7 +124,7 @@ class SearchOnTowardsDataScience(Action):
 
         try:
             cont = 0
-            dispatcher.utter_message('Aguarde um momento irei pesquisar sobre' + question + 'no Towards Data Science...')
+            dispatcher.utter_message('Aguarde um momento irei pesquisar sobre ' + question + 'no Towards Data Science...')
             for link in data['items']:
                 if cont == 4: break
                 dispatcher.utter_message(link['link'])
