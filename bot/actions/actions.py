@@ -4,7 +4,8 @@ from rasa_core_sdk.forms import FormAction
 import requests
 import re
 import json
-
+import os 
+import subprocess
 
 
 class ActionOTRS(Action):
@@ -102,3 +103,39 @@ class SearchOnCrossValidated(Action):
             if len(links) == 3:
                 break
         return links
+
+
+class KaggleExercises(Action):
+
+    def name(self):
+        return "action_kaggle"
+
+    def run(self, dispatcher, tracker, domain):
+        command = subprocess.getoutput("kaggle competitions list --category gettingStarted")
+        count = 0
+        bar = False
+        format_command = ''
+
+        for c in command:
+            if(c == '\n'): count +=1
+            if (count <= 2): continue
+            if (bar): format_command += c
+            bar = True
+
+        competitions_names = []
+
+        for c in format_command.split('\n'):
+            competition, date_start, date_end, category, category_complement, reward, teamCount, bol = c.split()
+            competitions_names.append(competition)
+
+        url = 'https://www.kaggle.com/c/'
+        url_end = '/overview'
+
+        try:
+            dispatcher_utter_message('Caso você deseje praticar seus conhecimentos recomendo estes exercícios:')
+            for name in competitions_names:
+                dispatcher.utter_message(url + name + url_end)
+        except:
+            dispatcher.utter_message('Infelizmente não encontrei nada no Kaggle :/')
+            dispatcher.utter_message('Treine com algum de nossos tutoriais :)')
+
