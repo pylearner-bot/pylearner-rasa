@@ -111,8 +111,7 @@ class SearchOnTowardsDataScience(Action):
     def run(self, dispatcher, tracker, domain):
         question = ''
         if (re.search(r'(buscar|pesquisar)\s(.*)no*\s*([tT]owards?\s?[dD]ata\s?[sS]cience)', tracker.latest_message['text']) != None):
-            question = re.search(r'(buscar|pesquisar)\s(.*)no*\s*([tT]owards?\s?[dD]ata\s?[sS]cience)', tracker.latest_message['text']).group(2)    
-        
+            question = re.search(r'(buscar|pesquisar)\s(.*)no*\s*([tT]owards?\s?[dD]ata\s?[sS]cience)', tracker.latest_message['text']).group(2)            
         link = 'https://www.googleapis.com/customsearch/v1?key='
         api_key = 'AIzaSyD2q63xBdRyjur_Z5aR6MxWu6xI66YNuj0'
         operator = '&'
@@ -121,7 +120,6 @@ class SearchOnTowardsDataScience(Action):
         api_format = link + api_key + operator + cx + operator + query
         result = requests.get(api_format)
         data = json.loads(result.text)
-
         try:
             cont = 0
             for link in data['items']:
@@ -132,7 +130,6 @@ class SearchOnTowardsDataScience(Action):
                 dispatcher.utter_message(link['link'])
                 cont += 1            
             dispatcher.utter_message('Bons estudos!') 
-            
         except:
             if(question == ''): 
                 dispatcher.utter_message ('Infelizmente não encontramos nada relacionado a isso no Towards Data Science')
