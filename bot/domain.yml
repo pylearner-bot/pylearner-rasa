@@ -97,6 +97,7 @@ intents:
   - pesquisar_no_crossvalidated
   - pesquisar_no_stackoverflow
   - pesquisar
+  - matplotlib
 
 actions:
   - utter_default
@@ -221,6 +222,7 @@ actions:
   - action_search_on_stackoverflow
   - action_search_on_crossvalidated
   - action_otrs
+  - utter_matplotlib
 
 entities:
     - questions
@@ -1460,3 +1462,10 @@ templates:
 
     - text: |
         Eu posso pesquisar no StackOverflow ou CrossValidated para você. Escreva o que você deseja pesquisar da seguinte forma: "pesquisar {o conteudo que seja saber} no {stackoverflow | crossvalidated}"
+
+    utter_matplotlib:
+
+        - text: |
+            Desculpe, não sei lidar com a biblioteca MatPlotLib.
+            Mas posso pesquisar no StackOverflow ou CrossValidated para você. Escreva o que você deseja pesquisar da seguinte forma: "pesquisar {o conteudo que seja saber} no {stackoverflow | crossvalidated}"
+            
