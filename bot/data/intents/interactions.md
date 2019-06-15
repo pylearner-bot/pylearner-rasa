@@ -180,7 +180,7 @@
 - boa noite
 - fica com Deus
 - flw então
-- bye 
+- bye
 - bye bye 
 - sayonara
 
