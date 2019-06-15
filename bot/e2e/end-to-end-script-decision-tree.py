@@ -10,21 +10,24 @@ user_intent_tree = [
     'afirmar',
     'entender_decision_tree',
     'negar',
-    'algoritmo_decision_tree'
+    'algoritmo_decision_tree',
+    'despedir'
 ]
 user_input_tree = [
     'o que eh decision tree?',
     'beleza',
     'explicar o que eh decision tree',
     'quero não, obrigado',
-    'como implementar decision tree'
+    'como implementar decision tree',
+    'tchau'
     ]
 utter_tree = [
     'utter_entender_decision_tree',
     'utter_algoritmo_decision_tree',
     'utter_entender_decision_tree',
     'utter_bons_estudos',
-    'utter_algoritmo_decision_tree'
+    'utter_algoritmo_decision_tree',
+    'utter_despedir'
     ]
 def create_stories(user_intent_tree, user_input_tree, utter_tree):
     """
