@@ -1,4 +1,4 @@
-## Stories for Pyter Test
+## Stories for Bayesian Regression Pyter Test
 * entender_bayesian_regression: o que eh bayesian_regression
 	 - utter_entender_bayesian_regression
 * afirmar: sim
