@@ -12,11 +12,11 @@
 * entender_matriz_confusao: entender matriz de confusão
     - utter_entender_matriz_confusao
 * entender_correlacao: explicar correlacao
-    - utter_entender_correlacao   <!-- predicted: utter_implementar_matriz_confusao_sklearn -->
+    - utter_entender_correlacao   <!-- predicted: action_default_fallback -->
 * entender_decision_tree: decision tree
-    - utter_entender_gaussian_naive_bayes   <!-- predicted: utter_entender_decision_tree -->
+    - utter_entender_gaussian_naive_bayes   <!-- predicted: action_default_fallback -->
 * entender_explained_variance_score: entender explained score
-    - utter_entender_explained_variance_score   <!-- predicted: action_default_fallback -->
+    - utter_entender_explained_variance_score
 * entender_feature_scaling: saber sobre feature scaling
     - utter_entender_feature_scaling
 * entender_regressao_logistica: regressao logistica
@@ -40,7 +40,7 @@
 * entender_nearest_neighbors: o que e gaussian naive bayes   <!-- predicted: entender_gaussian_naive_bayes: o que e gaussian naive bayes -->
     - utter_entender_gaussian_naive_bayes
 * exemplo_funcao_r2_score: explique nearest neighbors   <!-- predicted: entender_nearest_neighbors: explique nearest neighbors -->
-    - utter_entender_nearest_neighbors   <!-- predicted: utter_bons_estudos -->
+    - utter_entender_nearest_neighbors   <!-- predicted: action_default_fallback -->
 * entender_descentramento_estocástico_gradiente: como usar r2 score   <!-- predicted: exemplo_funcao_r2_score: como usar r2 score -->
     - utter_exemplo_funcao_r2_score
 * entender_maquina_de_vetores_de_suporte: o que é descentramento estocástico gradiente   <!-- predicted: entender_descentramento_estocástico_gradiente: o que é descentramento estocástico gradiente -->
