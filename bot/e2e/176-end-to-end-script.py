@@ -67,10 +67,6 @@ user_input = [
 ]
 
 utter = [
-    'utter_cumprimentar',
-    'utter_importar_json_pandas',
-    'utter_transformar_dados_categoricos',
-    'utter_entender_metricas_de_classificacao',
     'utter_entender_relatorio_classificacao',
     'utter_entender_matriz_confusao',
     'utter_entender_correlacao',
