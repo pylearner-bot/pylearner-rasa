@@ -7,10 +7,6 @@ To add new test cases add the:
 """
 
 user_intent = [
-    'cumprimentar',
-    'importar_json',
-    'transformar_dados_categoricos',
-    'entender_metricas_de_classificacao',
     'entender_relatorio_classificacao',
     'entender_matriz_confusao',
     'entender_correlacao',
@@ -67,10 +63,6 @@ user_input = [
 ]
 
 utter = [
-    'utter_entender_relatorio_classificacao',
-    'utter_entender_matriz_confusao',
-    'utter_entender_correlacao',
-    'utter_entender_gaussian_naive_bayes',
     'utter_entender_explained_variance_score',
     'utter_entender_feature_scaling',
     'utter_entender_regressao_logistica',
