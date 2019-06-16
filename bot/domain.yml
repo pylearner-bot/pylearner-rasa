@@ -97,6 +97,7 @@ intents:
   - pesquisar_no_crossvalidated
   - pesquisar_no_stackoverflow
   - pesquisar
+  - pesquisar_no_towards_datascience
   - matplotlib
 
 actions:
@@ -222,8 +223,8 @@ actions:
   - action_search_on_stackoverflow
   - action_search_on_crossvalidated
   - action_otrs
+  - action_search_on_towards_datascience
   - utter_matplotlib
-
 
 entities:
     - questions
@@ -1465,7 +1466,13 @@ templates:
     utter_pesquisar:
 
     - text: |
-        Eu posso pesquisar no StackOverflow ou CrossValidated para você. Escreva o que você deseja pesquisar da seguinte forma: "pesquisar {o conteudo que seja saber} no {stackoverflow | crossvalidated}"
+        Eu posso pesquisar no StackOverflow ou CrossValidated ou no Towards Datascience para você. Escreva o que você deseja pesquisar da seguinte forma: "pesquisar {o conteudo que seja saber} no {stackoverflow | crossvalidated}"
+
+        pesquisar [sua duvida aqui] no crossvalidated
+
+        pesquisar [sua duvida aqui] no stackoverflow
+
+        pesquisar [sua duvida aqui] no towardsdatascience
 
     utter_matplotlib:
 
