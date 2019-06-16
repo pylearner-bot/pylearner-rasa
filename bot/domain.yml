@@ -1428,6 +1428,9 @@ templates:
 
         `ŷ(W, X) = W0 + W1 * X1 + W2 * X2 + W3 * X1 * X2 + W4 * X1 * x1 + W5 * X2 * X2`
 
+        Deseja saber mais sobre isso?
+
+    - text : |
         A observação (às vezes surpreendente) é que este ainda é um modelo linear,para ver isso, imagine criar um novo conjunto de recursos
 
         `z = [X1,X2,X1 * X2,X1 * X1,X2 * X2]`
