@@ -1,3 +1,6 @@
-rasa-core==0.12.2
-rasa-core-sdk==0.12.1
-flake8==3.7.7
+flake8
+coverage==4.5.3
+pytest==4.4.1
+pytest-cov==2.7.1
+bs4
+rasa-core-sdk==0.13

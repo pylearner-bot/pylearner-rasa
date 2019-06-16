@@ -8,11 +8,16 @@
 - que dia acaba o curso
 - quando e a pascoa
 - hoje e natal
+- estou com fome
+- qual resultado do jogo
+- disney
 
 ## intent:cumprimentar
 
 - beleza
 - com licenca
+- olá
+- oie
 - tranquilo
 - fala ai
 - bom dia
@@ -37,7 +42,6 @@
 - oi pyter
 - ola pyter
 - eae pyter
-
 
 ## intent:cumprimentar2
 
@@ -82,6 +86,9 @@
 
 ## intent:responder_positivamente
 
+- bem e voce
+- bem e você
+- bem e vc
 - estou bem e voce como vai
 - estou bom e voce como esta
 - to bem sim e vc
@@ -114,66 +121,8 @@
 - estou bem bro e vc
 - estou bem mano e voce
 - tudo certo e voce como esta?
-
-## intent:responder_positivamente_direto
-
-- to bem sim
-- tudo bem
-- tudo bom
-- tudo bem por aqui
-- tudo bom aqui sim
-- estou bem sim
-- estou bem
-- eu estou bem
-- eu estou bem sim
-- tudo bom
-- tudo otimo
-- tudo okay
-- tudo joia
-- joia
-- massa
-- legal
-- to suave
-- to de boa
-- to na nice
-- estou good vibes
-- td tranquilo
-- to bem
-- to indo  
-- to bom
-- to bem bro
-- to bem mano
-- to bem meu consagrado
-
-## intent:responder_negativamente_diretamente
-
-- no
-- nao
-- não
-- nao to
-- to mal
-- nao to legal
-- nao to bem
-- nao estou bem
-- to bem nao
-- estou bem nao
-- to bad
-- estou na bad  
-- estou ruim
-- to triste
-- estou triste
-- sou sadboy
-- estou mal
-- estou bem nao
-- estou frustrado
-- to frustrado
-- estou decepcionado
-- estou muito triste
-- to muito triste
-- estou gripado
-- to malzao
-- estou malzao
-- nn to mal
+- tambem
+- to bem tambem
 
 ## intent:responder_negativamente
 
@@ -200,6 +149,10 @@
 - to malzao e voce
 - estou malzao e voce
 - nn to mal e voce
+- não e voce 
+- não e vc
+- nao e vc 
+- nao e voce
 
 ## intent:despedir
 
@@ -231,6 +184,9 @@
 - boa noite
 - fica com Deus
 - flw então
+- bye
+- bye bye 
+- sayonara
 
 ## intent:afirmar
 
@@ -264,10 +220,40 @@
 - desejo sim
 - gostaria sim
 - instalado
+- quero sim valeu
+- quero sim obrigado
+- Sim
+- to bem sim
+- tudo bem
+- tudo bom
+- tudo bem por aqui
+- tudo bom aqui sim
+- estou bem sim
+- estou bem
+- eu estou bem
+- eu estou bem sim
+- tudo bom
+- tudo otimo
+- tudo okay
+- tudo joia
+- joia
+- massa
+- legal
+- to suave
+- to de boa
+- to na nice
+- estou good vibes
+- td tranquilo
+- to bem
+- to indo  
+- to bom
+- to bem bro
+- to bem mano
+- to bem meu consagrado
 
 ## intent:negar
 
-- nao
+- Não
 - nunca
 - eu acho que nao
 - não exatamente
@@ -309,6 +295,36 @@
 - n nao tenho instalado
 - n instalei ainda
 - n quero instalar
+- no
+- nao
+- não
+- nao to
+- to mal
+- nao to legal
+- nao to bem
+- nao estou bem
+- to bem nao
+- estou bem nao
+- to bad
+- estou na bad  
+- estou ruim
+- to triste
+- estou triste
+- sou sadboy
+- estou mal
+- estou bem nao
+- estou frustrado
+- to frustrado
+- estou decepcionado
+- estou muito triste
+- to muito triste
+- estou gripado
+- to malzao
+- estou malzao
+- nn to mal
+- infelizmente
+- infelizmente não
+- infelizmente nao
 
 ## intent:diga_mais
 
@@ -323,43 +339,6 @@
 - estou perdido
 - nao compreendo
 - pode repetir
-
-## intent:bom_humor
-
-- perfeito
-- muito bom
-- otimo
-- maravilhoso
-- estupendo
-- maravilha
-- excelente
-- estou me sentindo muito bem
-- isso ae
-- boa
-- de boa
-- top
-- topper
-- tranquilo
-- suave
-- dibs
-- bao
-- ok
-- tranqs
-- bem
-- bom
-
-## intent:mau_humor
-
-- triste
-- muito triste
-- infeliz
-- horrivel
-- terrivel
-- nao muito bem
-- extremamente chateado
-- chateado
-- muito triste
-
 
 ## intent:sobre_pyter
 
