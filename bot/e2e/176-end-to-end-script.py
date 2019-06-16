@@ -32,16 +32,14 @@ user_intent = [
     'entender_r2_score',
     'entender_descentramento_estocástico_gradiente',
     'entender_maquina_de_vetores_de_suporte',
-    'entender_polynomial_regression',
-    'implementar_polynomial_regression'
+    'entender_histograma',
+    'dados_quantitativos',
+    'data_set',
+    'entender_arquivo_csv',
+    'fora_do_escopo'
 ]
 
 user_input = [
-    'oi',
-    'csv',
-    'dados categoricos',
-    'metricas de classificacao',
-    'relatorio de classificacao',
     'entender matriz de confusão',
     'explicar correlacao',
     'decision tree',
@@ -59,11 +57,13 @@ user_input = [
     'o que e gaussian naive bayes',
     'explique nearest neighbors',
     'como usar r2 score',
-    'o que e r2 score',
-    'o que e descentramento estocástico gradiente',
-    'o que e maquina de vetores de suporte',
-    'o que e regressao polinomial',
-    'como implementar regressao polinomial'
+    'o que é descentramento estocástico gradiente',
+    'o que eh maquina de vetores de suporte',
+    'o que e histograma',
+    'o que e dados quantitativos',
+    'o que e dataset'
+    'o que e csv',
+    'hoje tem jogo'
 ]
 
 utter = [
@@ -92,8 +92,11 @@ utter = [
     'utter_entender_r2_score',
     'utter_entender_descentramento_estocástico_gradiente',
     'utter_entender_maquina_de_vetores_de_suporte',
-    'utter_entender_polynomial_regression',
-    'utter_implementar_polynomial_regression'
+    'utter_entender_histograma',
+    'utter_dados_quantitativos',
+    'utter_data_set',
+    'utter_explicar_csv',
+    'utter_default'
 ]
 
 
