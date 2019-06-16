@@ -40,11 +40,6 @@ user_intent = [
 ]
 
 user_input = [
-    'oi',
-    'json',
-    'dados categoricos',
-    'metricas de classificacao',
-    'relatorio de classificacao',
     'entender matriz de confusão',
     'explicar correlacao',
     'decision tree',
