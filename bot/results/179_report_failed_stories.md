@@ -1,4 +1,5 @@
 ## Stories for Pyter Test 179
+
 * cumprimentar: oi
     - utter_cumprimentar
 * importar_json: csv   <!-- predicted: entender_arquivo_csv: csv -->
@@ -51,5 +52,3 @@
     - utter_entender_maquina_de_vetores_de_suporte
 * implementar_polynomial_regression: o que e regressao polinomial   <!-- predicted: entender_polynomial_regression: o que e regressao polinomial -->
     - utter_entender_polynomial_regression
-
-
