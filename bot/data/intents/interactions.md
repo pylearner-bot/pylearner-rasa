@@ -220,6 +220,9 @@
 - desejo sim
 - gostaria sim
 - instalado
+- quero sim valeu
+- quero sim obrigado
+- Sim
 - to bem sim
 - tudo bem
 - tudo bom
@@ -250,7 +253,7 @@
 
 ## intent:negar
 
-- nao
+- Não
 - nunca
 - eu acho que nao
 - não exatamente

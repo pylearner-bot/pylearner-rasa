@@ -5,6 +5,8 @@
 - como mapear dados categoricos
 - desejo saber como mexer com dados categoricos
 - como tratar valores nao numericos
+- tratar dados categoricos
+- dados categóricos
 - como transformar dados em numeros
 - como tratar dados categoricos de forma simples
 
@@ -36,6 +38,7 @@
 -  Transformar dados categoricos em numericos
 -  Strings para numeros
 -  Função para converter dados categoricos  
+- fit transform
 
 ## intent:categoricos_rapidos4
 
@@ -45,6 +48,7 @@
 -  retornar dados categoricos mapeados
 -  Reverter dados categoricos
 -  Reutilizar dados categoricos
+- inverse transform
 -  Dados categoricos de volta
 -  dados categoricos voltar ao normal
 

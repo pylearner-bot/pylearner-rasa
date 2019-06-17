@@ -1,4 +1,5 @@
 ## intent:entender_maquina_de_vetores_de_suporte
+
 - support vector machines
 - máquina de vetores de suporte
 - maquina de vetores de suporte

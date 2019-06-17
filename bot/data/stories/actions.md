@@ -15,3 +15,8 @@
     - utter_pesquisar
 * kaggle_exercises
     - action_kaggle
+## pesquisar_no_towards_datascience
+  * pesquisar
+      - utter_pesquisar
+  * pesquisar_no_towards_datascience
+      - action_search_on_towards_datascience

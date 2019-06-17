@@ -35,5 +35,3 @@
     - utter_implementar_suporte_svm
 * negar
     - utter_bons_estudos
-
-

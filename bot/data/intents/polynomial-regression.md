@@ -5,9 +5,13 @@
 - pra que serve a regressao polinomial
 - pra que serve polynomial regression
 - tecnicas de regressao polinomiais
+- regressao polinomial
+- polynomial regression
 
 ## intent:implementar_polynomial_regression
 
 - como implementar a regressao polinomial
 - como implementar a polynomial regression
 - implementar polynomial regression
+- como usar regressao polinomial
+- como usar polynomial regression
