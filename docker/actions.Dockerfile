@@ -6,6 +6,7 @@ ADD ./docker/actions.requirements.txt /tmp/
 
 RUN pip install --upgrade pip && \
     pip install -r /tmp/actions.requirements.txt
+RUN pip install kaggle
 
 ADD ./bot/actions/actions.py /bot/actions/actions.py
 ADD ./bot/Makefile /bot/Makefile

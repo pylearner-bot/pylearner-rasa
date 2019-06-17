@@ -58,9 +58,9 @@ services:
     volumes:
       - ./bot/actions:/bot/actions
       - ./bot/Makefile:/bot/Makefile
+      - ./bot/kaggle.json:/root/.kaggle/kaggle.json
     command: "make run-actions"
-
-
+    
   bot:
     build:
       context: .
