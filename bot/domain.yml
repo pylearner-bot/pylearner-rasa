@@ -100,6 +100,10 @@ intents:
   - kaggle_exercises
   - pesquisar_no_towards_datascience
   - matplotlib
+  - fluxo_inicio
+  - preprocessamento_topicos
+  - modelagem_topicos
+  - visualizacao_topicos
 
 actions:
   - utter_default
@@ -227,6 +231,10 @@ actions:
   - action_kaggle
   - action_search_on_towards_datascience
   - utter_matplotlib
+  - utter_listagem_conteudos
+  - utter_preprocessamento_topicos
+  - utter_modelagem_topicos
+  - utter_visualizacao_topicos
 
 entities:
     - questions
@@ -1481,4 +1489,15 @@ templates:
         - text: |
             Desculpe, não sei lidar com a biblioteca MatPlotLib.
             Mas posso pesquisar no StackOverflow ou CrossValidated para você. Escreva o que você deseja pesquisar da seguinte forma: "pesquisar {o conteudo que seja saber} no {stackoverflow | crossvalidated}"
-            
+    
+    utter_listagem_conteudos:
+        - text: |
+
+    utter_preprocessamento_topicos:
+        - text: |
+
+    utter_modelagem_topicos:
+        - text: |
+
+    utter_visualizacao_topicos:
+        - text: |
