@@ -17,7 +17,7 @@
     - buscar [regressao polinomial](questions) no stackoverflow
     - pesquisar [stochastic gradient descendent](questions) no stackoverflow
     - buscar [maquina de vetores de suporte](questions) no stackoverflow
-
+    
 ## intent:pesquisar_no_crossvalidated
     - pesquisar [histograma](questions) no crossvalidated
     - buscar [dados categoricos](questions) no crossvalidated
@@ -38,6 +38,44 @@
     - pesquisar [stochastic gradient descendent](questions) no crossvalidated
     - buscar [maquina de vetores de suporte](questions) no crossvalidated
 
+## intent:pesquisar_no_towards_datascience
+    - pesquisar [histograma](questions) no towardsdatascience
+    - buscar [dados categoricos](questions) no towardsdatascience
+    - pesquisar [correlacao](questions) no towardsdatascience
+    - buscar [arvore de decisao](questions) no towardsdatascience
+    - pesquisar [regressao bayesiana](questions) no towardsdatascience
+    - buscar [variancia explicada](questions) no towardsdatascience
+    - pesquisar [relatorio de classificacao](questions) no towardsdatascience
+    - buscar [normalizacao de dados](questions) no towardsdatascience
+    - pesquisar [modelos lineares generalizados](questions) no towardsdatascience
+    - buscar [histograma](questions) no towardsdatascience
+    - pesquisar [importacao json](questions) no towardsdatascience
+    - buscar [importacao csv](questions) no towardsdatascience
+    - pesquisar [kmeans](questions) no towardsdatascience
+    - buscar [dados faltantes](questions) no towardsdatascience
+    - pesquisar [naive bayes](questions) no towardsdatascience
+    - buscar [regressao polinomial](questions) no towardsdatascience
+    - pesquisar [stochastic gradient descendent](questions) no towardsdatascience
+    - buscar [maquina de vetores de suporte](questions) no towardsdatascience
+    - pesquisar [histograma](questions) no Towards Data Science
+    - buscar [dados categoricos](questions) no Towards Data Science
+    - pesquisar [correlacao](questions) no Towards Data Science
+    - buscar [arvore de decisao](questions) no Towards Data Science
+    - pesquisar [regressao bayesiana](questions) no Towards Data Science
+    - buscar [variancia explicada](questions) no Towards Data Science
+    - pesquisar [relatorio de classificacao](questions) no Towards Data Science
+    - buscar [normalizacao de dados](questions) no Towards Data Science
+    - pesquisar [modelos lineares generalizados](questions) no Towards Data Science
+    - buscar [histograma](questions) no Towards Data Science
+    - pesquisar [importacao json](questions) no Towards Data Science
+    - buscar [importacao csv](questions) no Towards Data Science
+    - pesquisar [kmeans](questions) no Towards Data Science
+    - buscar [dados faltantes](questions) no Towards Data Science
+    - pesquisar [naive bayes](questions) no Towards Data Science
+    - buscar [regressao polinomial](questions) no Towards Data Science
+    - pesquisar [stochastic gradient descendent](questions) no Towards Data Science
+    - buscar [maquina de vetores de suporte](questions) no Towards Data Science
+    
 ## intent:pesquisar
     - desejo saber mais sobre isso
     - pesquise esse erro

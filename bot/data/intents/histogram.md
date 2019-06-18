@@ -1,10 +1,12 @@
 ## intent:entender_histograma
+
 - o que e um histograma
 - para que serve um histograma
 - por que usar um histograma
 - histograma
 
 ## intent:criar_histograma
+
 - como criar um histograma
 - criar histograma
 - fazer um histograma
@@ -18,6 +20,7 @@
 - como usar a funçao kdeplot
 
 ## intent:dados_quantitativos
+
 - o que sao dados dados quantitativos
 - o que e dados quantitativos
 - dados quantitativos
@@ -36,6 +39,7 @@
 - dado significativo
 
 ## intent:data_set
+
 - o que sao datasets
 - o que e datasets
 - datasets

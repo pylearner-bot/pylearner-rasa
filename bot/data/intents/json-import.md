@@ -27,6 +27,7 @@
 - Como utilizar o Data Frame Pandas para arquivos json  
 
 ## intent:importar_json_convencional
+
 - Importar json convencional
 - importar json padrao
 - importar json comum
@@ -38,6 +39,7 @@
 - json padrao
 
 ## intent:json_duvidas_imediatas1
+
 - Qual biblioteca para importar json
 - biblioteca para json
 - biblioteca para importar json
@@ -53,6 +55,7 @@
 - pandas
 
 ## intent:json_duvidas_imediatas2
+
 - Como ler arquivos json
 - como ler arquivos json pandas
 - como ler arquivos json
@@ -60,6 +63,7 @@
 - lendo arquivos em json
 
 ## intent:json_duvidas_imediatas3
+
 - Função para tabular os dados
 - pandarizar os dados
 - tabelar dados json

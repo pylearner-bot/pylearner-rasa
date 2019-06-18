@@ -6,8 +6,6 @@ intents:
   - afirmar
   - negar
   - diga_mais
-  - bom_humor
-  - mau_humor
   - entender_histograma
   - criar_histograma
   - importar_json
@@ -30,9 +28,7 @@ intents:
   - oferecer_ajuda
   - cumprimentar2
   - responder_positivamente
-  - responder_positivamente_direto
   - responder_negativamente
-  - responder_negativamente_diretamente
   - credo_religioso
   - sobre_pyter
   - sobre_jupyter
@@ -101,6 +97,8 @@ intents:
   - pesquisar_no_crossvalidated
   - pesquisar_no_stackoverflow
   - pesquisar
+  - pesquisar_no_towards_datascience
+  - matplotlib
 
 actions:
   - utter_default
@@ -225,6 +223,8 @@ actions:
   - action_search_on_stackoverflow
   - action_search_on_crossvalidated
   - action_otrs
+  - action_search_on_towards_datascience
+  - utter_matplotlib
 
 entities:
     - questions
@@ -274,7 +274,9 @@ templates:
 
             Eae, Pyter aqui! Beleza?
 
-        - text: Opa, eu sou o Pyter! Tudo bem?
+        - text: |
+            
+            Opa, eu sou o Pyter! Tudo bem?
 
     utter_despedir:
         - text: |
@@ -293,27 +295,11 @@ templates:
         - text: |
             Foi um prazer te ajudar!
             Quando surgir alguma dúvida, volte aqui!
+            
             Até mais!
 
         - text: |
             Qualquer dúvida, só falar! Até logo!
-
-        - text: |
-
-            Tranquilo! Em que posso te ajudar?
-
-        - text: |
-
-            Passo bem
-
-            Como posso te ajudar?
-
-        - text: |
-
-            Estou sim. Obrigado por perguntar!
-
-            Mas eae, me diz como posso te ajudar?
-
 
     utter_bom_humor:
         - text: |
@@ -420,51 +406,30 @@ templates:
     utter_ajuda:
         - text: |
             Por enquanto eu só posso te ajudar nos seguintes temas:
-
             Importar arquivos JSON
-
             Importar arquivos CSV
-
             Entender e detectar Dados Faltantes
-
             Plotar Histograma
-
             Calcular Correlação
-
             Introdução ao Jupyter Notebook
-
             Modelo de Regressão Linear Bayesiana
-
+            
             Dados Categóricos
-
             Matriz de Confusão
-
             Àrvores de Decisão
-
             Variância Explicada
-
             Feature Scaling
-
             Classification Metrics
-
             Classification Report
 
             Modelo Linear Generalizado
-
             Agrupamento k-means
-
             Classificador Naive Bayes
-
             Nearest Neighbors
-
             Regressão Polinomial
-
             Coeficiente r2-score
-
             Gradiente Descendente Estocástico
-
             Máquina de Vetores de Suporte
-
             Em breve vou aprender novas funcionalidades! Mas espero que essas atendam sua necessidade :)
 
     utter_conversa_positiva:
@@ -1464,6 +1429,9 @@ templates:
 
         `ŷ(W, X) = W0 + W1 * X1 + W2 * X2 + W3 * X1 * X2 + W4 * X1 * x1 + W5 * X2 * X2`
 
+        Deseja saber mais sobre isso?
+
+    - text : |
         A observação (às vezes surpreendente) é que este ainda é um modelo linear,para ver isso, imagine criar um novo conjunto de recursos
 
         `z = [X1,X2,X1 * X2,X1 * X1,X2 * X2]`
@@ -1498,4 +1466,17 @@ templates:
     utter_pesquisar:
 
     - text: |
-        Eu posso pesquisar no StackOverflow ou CrossValidated para você. Escreva o que você deseja pesquisar da seguinte forma: "pesquisar {o conteudo que seja saber} no {stackoverflow | crossvalidated}"
+        Eu posso pesquisar no StackOverflow ou CrossValidated ou no Towards Datascience para você. Escreva o que você deseja pesquisar da seguinte forma: "pesquisar {o conteudo que seja saber} no {stackoverflow | crossvalidated}"
+
+        pesquisar [sua duvida aqui] no crossvalidated
+
+        pesquisar [sua duvida aqui] no stackoverflow
+
+        pesquisar [sua duvida aqui] no towardsdatascience
+
+    utter_matplotlib:
+
+        - text: |
+            Desculpe, não sei lidar com a biblioteca MatPlotLib.
+            Mas posso pesquisar no StackOverflow ou CrossValidated para você. Escreva o que você deseja pesquisar da seguinte forma: "pesquisar {o conteudo que seja saber} no {stackoverflow | crossvalidated}"
+            
