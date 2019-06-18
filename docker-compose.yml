@@ -27,11 +27,6 @@ services:
     depends_on:
       - mongo
 
-
-  kaggle:
-    image: kaggle/python:latest
-    restart: unless-stopped
-
   rocketchat:
     image: rocket.chat:latest
     restart: unless-stopped

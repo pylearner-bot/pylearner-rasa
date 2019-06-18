@@ -118,11 +118,12 @@ class KaggleExercises(Action):
 
         for c in command:
             if(c == '\n'): count +=1
-            if (count <= 2): continue
+            if (count <= 3): continue
             if (bar): format_command += c
             bar = True
 
         competitions_names = []
+        # dispatcher.utter_message('aqui')
 
         for c in format_command.split('\n'):
             competition, date_start, date_end, category, category_complement, reward, teamCount, bol = c.split()
@@ -130,11 +131,13 @@ class KaggleExercises(Action):
 
         url = 'https://www.kaggle.com/c/'
         url_end = '/overview'
-
+        
+        # dispatcher.utter_message(command)
         try:
-            dispatcher_utter_message('Caso você deseje praticar seus conhecimentos recomendo estes exercícios:')
+            dispatcher.utter_message('Caso você deseje praticar seus conhecimentos recomendo estes exercícios:')
             for name in competitions_names:
                 dispatcher.utter_message(url + name + url_end)
+            dispatcher.utter_message('Acho que esses exercícios são suficientes para praticar seus conhecimentos em ML! Dedique-se e Bons Estudos!')
         except:
             dispatcher.utter_message('Infelizmente não encontrei nada no Kaggle :/')
             dispatcher.utter_message('Treine com algum de nossos tutoriais :)')
