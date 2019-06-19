@@ -101,6 +101,10 @@ intents:
   - pesquisar_no_crossvalidated
   - pesquisar_no_stackoverflow
   - pesquisar
+  - fluxo_inicio
+  - preprocessamento_topicos
+  - modelagem_topicos
+  - visualizacao_topicos
 
 actions:
   - utter_default
@@ -225,6 +229,12 @@ actions:
   - action_search_on_stackoverflow
   - action_search_on_crossvalidated
   - action_otrs
+  - utter_listagem_conteudos
+  - utter_preprocessamento_topicos
+  - utter_modelagem_topicos
+  - utter_visualizacao_topicos
+
+
 
 entities:
     - questions
@@ -1418,84 +1428,138 @@ templates:
 
     utter_entender_bayesian_regression:
 
-    - text: |
-        Tecnicas de regressão bayesianas podem ser usadas para incluir parâmetros regulares no processo de estimativa.
+        - text: |
+            Tecnicas de regressão bayesianas podem ser usadas para incluir parâmetros regulares no processo de estimativa.
 
-        Isso é feito ao introduzir uma distribuição, chamada de distribuição a priori, ao conjunto de parâmetros desconhecidos quantificando a sua crença sobre esse conjunto
+            Isso é feito ao introduzir uma distribuição, chamada de distribuição a priori, ao conjunto de parâmetros desconhecidos quantificando a sua crença sobre esse conjunto
 
-        A estimação dos parâmetros é dada através da distribuição à posteriori, que é proporcional ao produto da função de verossimilhança com a distribuição a priori.
+            A estimação dos parâmetros é dada através da distribuição à posteriori, que é proporcional ao produto da função de verossimilhança com a distribuição a priori.
 
-        Deseja aprender sobre o modelo de regressão BayesianRidge?
+            Deseja aprender sobre o modelo de regressão BayesianRidge?
 
     utter_entender_bayesian_ridge_regression:
 
-    - text: |
-        BayesianRidge estima um modelo de probabilidade do problema de regressão.
-        Os coeficientes α e λ são escolhidos para serem distribuições gamma, o conjugado para a precisão Gaussiana.
+        - text: |
+            BayesianRidge estima um modelo de probabilidade do problema de regressão.
+            Os coeficientes α e λ são escolhidos para serem distribuições gamma, o conjugado para a precisão Gaussiana.
 
-        O resultado do modelo é chamado de Bayesian Ridge Regression. Os parâmetros ω, α e λ sao estimados durante o ajuste do modelo.
+            O resultado do modelo é chamado de Bayesian Ridge Regression. Os parâmetros ω, α e λ sao estimados durante o ajuste do modelo.
 
-        Os parâmetros de regularização α e λ são estimados maximizando a probabilidade marginal do log.
+            Os parâmetros de regularização α e λ são estimados maximizando a probabilidade marginal do log.
 
-        Gostaria de ver um exemplo da função BayesianRidge?
+            Gostaria de ver um exemplo da função BayesianRidge?
 
     utter_implementar_bayesian_ridge_regression:
 
-    - text: |
-        from sklearn import linear_model
-        X = [[0., 0.], [1., 1.], [2., 2.], [3., 3.]]
-        Y = [0., 1., 2., 3.]
-        reg = linear_model.BayesianRidge()
-        reg.fit(X, Y)
+        - text: |
+            from sklearn import linear_model
+            X = [[0., 0.], [1., 1.], [2., 2.], [3., 3.]]
+            Y = [0., 1., 2., 3.]
+            reg = linear_model.BayesianRidge()
+            reg.fit(X, Y)
 
-        Depois de ajustado, o modelo pode ser usado para prever novos valores:
-            reg.predict([[1, 0.]])
+            Depois de ajustado, o modelo pode ser usado para prever novos valores:
+                reg.predict([[1, 0.]])
 
-        E para acessar os coeficientes:
-            reg.coef_
+            E para acessar os coeficientes:
+                reg.coef_
 
     utter_entender_polynomial_regression:
 
-    - text: |
-        Uma regressão linear simples pode ser estendida construindo recursos polinomiais a partir dos coeficientes.
-        No caso de regressão linear padrão, você pode ter um modelo assim para dados bidimensionais.
-        `ŷ(W, X) = W0 + W1 * X1 + W2 * X2`
-        Se quisermos ajustar um parabolóide aos dados em vez de um plano, podemos combinar os recursos em polinômios de segunda ordem, para que o modelo se pareça com isso
+        - text: |
+            Uma regressão linear simples pode ser estendida construindo recursos polinomiais a partir dos coeficientes.
+            No caso de regressão linear padrão, você pode ter um modelo assim para dados bidimensionais.
+            `ŷ(W, X) = W0 + W1 * X1 + W2 * X2`
+            Se quisermos ajustar um parabolóide aos dados em vez de um plano, podemos combinar os recursos em polinômios de segunda ordem, para que o modelo se pareça com isso
 
-        `ŷ(W, X) = W0 + W1 * X1 + W2 * X2 + W3 * X1 * X2 + W4 * X1 * x1 + W5 * X2 * X2`
+            `ŷ(W, X) = W0 + W1 * X1 + W2 * X2 + W3 * X1 * X2 + W4 * X1 * x1 + W5 * X2 * X2`
 
-        A observação (às vezes surpreendente) é que este ainda é um modelo linear,para ver isso, imagine criar um novo conjunto de recursos
+            A observação (às vezes surpreendente) é que este ainda é um modelo linear,para ver isso, imagine criar um novo conjunto de recursos
 
-        `z = [X1,X2,X1 * X2,X1 * X1,X2 * X2]`
+            `z = [X1,X2,X1 * X2,X1 * X1,X2 * X2]`
 
-        Com esta nova rotulagem dos dados, nosso problema pode ser escrito
+            Com esta nova rotulagem dos dados, nosso problema pode ser escrito
 
-        `ŷ(W, Z) = W0 + W1 * Z1 + W2 * Z2 + W3 * Z3 + W4 * Z4 + W5 * Z5`
+            `ŷ(W, Z) = W0 + W1 * Z1 + W2 * Z2 + W3 * Z3 + W4 * Z4 + W5 * Z5`
 
-        Vemos que a regressão polinomial resultante está na mesma classe de modelos lineares que consideramos acima (ou seja, o modelo é linear em) e pode ser resolvida pelas mesmas técnicas.
-        Considerando-se os ajustes lineares dentro de um espaço de dimensões superiores construído com essas funções de base, o modelo tem a flexibilidade de ajustar um intervalo de dados muito mais amplo.
+            Vemos que a regressão polinomial resultante está na mesma classe de modelos lineares que consideramos acima (ou seja, o modelo é linear em) e pode ser resolvida pelas mesmas técnicas.
+            Considerando-se os ajustes lineares dentro de um espaço de dimensões superiores construído com essas funções de base, o modelo tem a flexibilidade de ajustar um intervalo de dados muito mais amplo.
 
     utter_implementar_polynomial_regression:
 
-    - text: |
-        Precisamos importar o PolynomialFeatures de sklearn.preprocessing
-        que transforma uma matriz de dados de entrada em uma nova matriz de dados de um determinado grau. Pode ser usado da seguinte forma
+        - text: |
+            Precisamos importar o PolynomialFeatures de sklearn.preprocessing
+            que transforma uma matriz de dados de entrada em uma nova matriz de dados de um determinado grau. Pode ser usado da seguinte forma
 
-        >>> from sklearn.preprocessing import PolynomialFeatures
-        >>> import numpy as np
-        >>> X = np.arange(6).reshape(3, 2)
-        >>> X
-        array([[0, 1],
-            [2, 3],
-            [4, 5]])
-        >>> poly = PolynomialFeatures(degree=2)
-        >>> poly.fit_transform(X)
-        array([[ 1.,  0.,  1.,  0.,  0.,  1.],
-            [ 1.,  2.,  3.,  4.,  6.,  9.],
-            [ 1.,  4.,  5., 16., 20., 25.]])
+            >>> from sklearn.preprocessing import PolynomialFeatures
+            >>> import numpy as np
+            >>> X = np.arange(6).reshape(3, 2)
+            >>> X
+            array([[0, 1],
+                [2, 3],
+                [4, 5]])
+            >>> poly = PolynomialFeatures(degree=2)
+            >>> poly.fit_transform(X)
+            array([[ 1.,  0.,  1.,  0.,  0.,  1.],
+                [ 1.,  2.,  3.,  4.,  6.,  9.],
+                [ 1.,  4.,  5., 16., 20., 25.]])
 
 
     utter_pesquisar:
 
-    - text: |
-        Eu posso pesquisar no StackOverflow ou CrossValidated para você. Escreva o que você deseja pesquisar da seguinte forma: "pesquisar {o conteudo que seja saber} no {stackoverflow | crossvalidated}"
+        - text: |
+            Eu posso pesquisar no StackOverflow ou CrossValidated para você. Escreva o que você deseja pesquisar da seguinte forma: "pesquisar {o conteudo que seja saber} no {stackoverflow | crossvalidated}"
+
+    utter_listagem_conteudos:
+
+        - text: |
+            Recomendamos que siga os seguintes tópicos em ordem:
+                . Pré-processamento
+                . Modelagem
+                . Visualização
+
+            Deseja ir até o primeiro tópico?
+    
+    utter_preprocessamento_topicos:
+
+        - text: |
+            Importação de dados:
+                . Importação CSV
+                . Importação JSON
+                . Importação Excel
+        
+            Tratamento de dados:
+                . Dados faltantes
+                . Variáveis Categóricas
+                . Feature Scaling
+
+            O próximo tópico trata-se da modelagem de dados, deseja conferir?
+    
+    utter_modelagem_topicos:
+
+        - text: |
+            Aprendizado Supervisionado:
+                . Generalized Linear Models: Logistic regression
+                . Support Vector Machines: Classification
+                . Stochastic Gradient Descent: Classification
+                . Nearest Neighbors: Classification
+                . Naive Bayes: Gaussian Naive Bayes
+                . Decision Trees: Classification
+            
+            Aprendizado Não Supervisionado:
+                . Clusterização: K-means
+
+            O próximo tópico trata-se da visualização, deseja conferir?
+
+    utter_visualizacao_topicos:
+
+        - text: |
+            Visualização de dados:
+                . Matriz de correlação
+                . Histograma
+            
+            Visualização de resultados:
+                . Classification report
+                . Matriz de confusão
+
+        
