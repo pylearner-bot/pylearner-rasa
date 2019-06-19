@@ -1459,19 +1459,59 @@ templates:
 
         - text: |
             Desculpe, não sei lidar com a biblioteca MatPlotLib.
+            
             Mas posso pesquisar no StackOverflow ou CrossValidated para você. Escreva o que você deseja pesquisar da seguinte forma: "pesquisar {o conteudo que seja saber} no {stackoverflow | crossvalidated}"
             
+    utter_listagem_conteudos:
+
+        - text: |
+            Recomendamos que siga os seguintes tópicos em ordem:
+                . Pré-processamento
+                . Modelagem
+                . Visualização
+
+            Deseja ir até o primeiro tópico?
+    
     utter_preprocessamento_topicos:
 
         - text: |
+            Importação de dados:
+                . Importação CSV
+                . Importação JSON
+                . Importação Excel
+        
+            Tratamento de dados:
+                . Dados faltantes
+                . Variáveis Categóricas
+                . Feature Scaling
 
+            O próximo tópico trata-se da modelagem de dados, deseja conferir?
+    
     utter_modelagem_topicos:
 
         - text: |
+            Aprendizado Supervisionado:
+                . Generalized Linear Models: Logistic regression
+                . Support Vector Machines: Classification
+                . Stochastic Gradient Descent: Classification
+                . Nearest Neighbors: Classification
+                . Naive Bayes: Gaussian Naive Bayes
+                . Decision Trees: Classification
+            
+            Aprendizado Não Supervisionado:
+                . Clusterização: K-means
+
+            O próximo tópico trata-se da visualização, deseja conferir?
 
     utter_visualizacao_topicos:
+
         - text: |
-    
-    utter_listagem_conteudos:
-        - text: |
-    
+            Visualização de dados:
+                . Matriz de correlação
+                . Histograma
+            
+            Visualização de resultados:
+                . Classification report
+                . Matriz de confusão
+
+            

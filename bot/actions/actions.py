@@ -134,7 +134,7 @@ class KaggleExercises(Action):
         
         # dispatcher.utter_message(command)
         try:
-            dispatcher.utter_message('Caso você deseje praticar seus conhecimentos recomendo estes exercícios:')
+            dispatcher.utter_message('Caso você deseje praticar seus conhecimentos em ML recomendo estes exercícios:')
             for name in competitions_names:
                 dispatcher.utter_message(url + name + url_end)
             dispatcher.utter_message('Acho que esses exercícios são suficientes para praticar seus conhecimentos em ML! Dedique-se e Bons Estudos!')
