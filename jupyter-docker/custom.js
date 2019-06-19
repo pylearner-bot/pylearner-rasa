@@ -2,10 +2,13 @@ var importJQuery = document.createElement('script')
 importJQuery.src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"
 importJQuery.type = "text/javascript"
 document.getElementsByTagName('head')[0].appendChild(importJQuery)
+var logoContainer = document.createElement('div')
+    logoContainer.setAttribute('id','logo')
 
 var logo = document.createElement('img')
     logo.setAttribute('id', 'logo')
     logo.setAttribute('src', 'https://i.imgur.com/vqxQKTP.png')
+    logoContainer.append(logo)
 
   var waitForRocketchat = function(selector, callback){
     if (jQuery(selector).length){
@@ -42,9 +45,9 @@ var logo = document.createElement('img')
         var header = document.getElementById('header')
         notebook.setAttribute('class', 'display__side')
         var chat_window = document.getElementsByClassName('rocketchat-widget')
-        container.append(logo)
         container.append(chat_window[0])
         container.append(notebookContainer)
+        container.append(logoContainer)
         notebookContainer.append(header)
         notebookContainer.append(notebook)
       })
