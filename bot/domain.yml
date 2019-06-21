@@ -99,6 +99,11 @@ intents:
   - pesquisar
   - pesquisar_no_towards_datascience
   - matplotlib
+  - fluxo_inicio
+  - preprocessamento_topicos
+  - modelagem_topicos
+  - visualizacao_topicos  
+  - kaggle_exercises
 
 actions:
   - utter_default
@@ -106,9 +111,7 @@ actions:
   - utter_cumprimentar
   - utter_despedir
   - utter_bom_humor
-  - utter_mau_humor
   - utter_animar
-  - utter_oferecer_ajuda
   - utter_entender_histograma
   - utter_criar_histograma
   - utter_criar_histograma2
@@ -224,8 +227,13 @@ actions:
   - action_search_on_crossvalidated
   - action_otrs
   - action_search_on_towards_datascience
+  - action_kaggle
   - utter_matplotlib
-
+  - utter_listagem_conteudos
+  - utter_preprocessamento_topicos
+  - utter_modelagem_topicos
+  - utter_visualizacao_topicos
+  
 entities:
     - questions
 
@@ -331,12 +339,6 @@ templates:
             Estou bem! Obrigado por perguntar!
             E você está bem?
 
-
-    utter_mau_humor:
-        - text: |
-            Eu sou um bot preso no jupyter. Tá complicado pra mim também!
-            Infelizmente não posso ajudar nisso...
-
     utter_teologia:
         - text: |
             Eu infelizmente não sei no que acreditar
@@ -381,27 +383,6 @@ templates:
             Poxa... eu estou bem, obrigado!
             Mas espero que você fique bem também :/
             Em que posso te ajudar?
-
-    utter_oferecer_ajuda:
-        - text: |
-            Por enquanto eu só posso te ajudar nos seguintes temas:
-
-            Importar arquivos JSON
-
-            Importar arquivos CSV
-
-            Entender e detectar Dados Faltantes
-
-            Plotar Histograma
-
-            Calcular Correlação
-
-            Uma introdução ao Jupyter Notebook
-
-             Métricas de Regressão(R2 score, explained variance score)
-
-             Em breve vou aprender novas funcionalidades! Mas espero que essas atendam sua necessidade :)
-
 
     utter_ajuda:
         - text: |
@@ -1478,5 +1459,59 @@ templates:
 
         - text: |
             Desculpe, não sei lidar com a biblioteca MatPlotLib.
+            
             Mas posso pesquisar no StackOverflow ou CrossValidated para você. Escreva o que você deseja pesquisar da seguinte forma: "pesquisar {o conteudo que seja saber} no {stackoverflow | crossvalidated}"
+            
+    utter_listagem_conteudos:
+
+        - text: |
+            Recomendamos que siga os seguintes tópicos em ordem:
+                . Pré-processamento
+                . Modelagem
+                . Visualização
+
+            Deseja ir até o primeiro tópico?
+    
+    utter_preprocessamento_topicos:
+
+        - text: |
+            Importação de dados:
+                . Importação CSV
+                . Importação JSON
+                . Importação Excel
+        
+            Tratamento de dados:
+                . Dados faltantes
+                . Variáveis Categóricas
+                . Feature Scaling
+
+            O próximo tópico trata-se da modelagem de dados, deseja conferir?
+    
+    utter_modelagem_topicos:
+
+        - text: |
+            Aprendizado Supervisionado:
+                . Generalized Linear Models: Logistic regression
+                . Support Vector Machines: Classification
+                . Stochastic Gradient Descent: Classification
+                . Nearest Neighbors: Classification
+                . Naive Bayes: Gaussian Naive Bayes
+                . Decision Trees: Classification
+            
+            Aprendizado Não Supervisionado:
+                . Clusterização: K-means
+
+            O próximo tópico trata-se da visualização, deseja conferir?
+
+    utter_visualizacao_topicos:
+
+        - text: |
+            Visualização de dados:
+                . Matriz de correlação
+                . Histograma
+            
+            Visualização de resultados:
+                . Classification report
+                . Matriz de confusão
+
             

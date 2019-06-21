@@ -27,7 +27,6 @@ services:
     depends_on:
       - mongo
 
-
   rocketchat:
     image: rocket.chat:latest
     restart: unless-stopped
@@ -54,9 +53,9 @@ services:
     volumes:
       - ./bot/actions:/bot/actions
       - ./bot/Makefile:/bot/Makefile
+      - ./bot/kaggle.json:/root/.kaggle/kaggle.json
     command: "make run-actions"
-
-
+    
   bot:
     build:
       context: .
