@@ -38,10 +38,10 @@ class SearchOnStackoverflow(Action):
 
         res = requests.get('https://api.stackexchange.com/2.2/search', params=payload)
         data = json.loads(res.text)
-        links = self.validate_answered(data)
-        if links:
+        linksStack = self.validate_answered(data)
+        if linksStack:
             dispatcher.utter_message('Aqui está: ')
-            for link in links:
+            for link in linksStack:
                 # botResponse = 'Aqui está: ' + data['items'][0]['link']
                 dispatcher.utter_message(link)
         else:
@@ -50,14 +50,14 @@ class SearchOnStackoverflow(Action):
             dispatcher.utter_message('Tente escrever desta forma:')
             dispatcher.utter_message('pesquisar [sua dúvida] no stackoverflow')
     
-    def validate_answered(self, data):
-        links = []
+    def validate_answeredStack(self, data):
+        linksStack = []
         for item in data['items']:
             if str(item['is_answered']) == 'True':
-                links.append(item['link'])
-            if len(links) == 3:
+                linksStack.append(item['link'])
+            if len(linksStack) == 3:
                 break
-        return links
+        return linksStack
 
 
 class SearchOnCrossValidated(Action):
@@ -66,9 +66,9 @@ class SearchOnCrossValidated(Action):
         return "action_search_on_crossvalidated"
 
     def runCross(self, dispatcher, tracker, domain):
-        question = ''
+        questionCross = ''
         if re.search(r'(buscar|pesquisar)\s(.*)no*\s*([cC]ross\s?[vV]alidated)', tracker.latest_message['text']):
-            question = re.search(r'(buscar|pesquisar)\s(.*)no*\s*([cC]ross\s?[vV]alidated)', tracker.latest_message['text']).group(2)
+            questionCross = re.search(r'(buscar|pesquisar)\s(.*)no*\s*([cC]ross\s?[vV]alidated)', tracker.latest_message['text']).group(2)
 
         url = 'https://api.stackexchange.com/2.2/search'
         order = 'desc'
@@ -82,10 +82,10 @@ class SearchOnCrossValidated(Action):
 
         res = requests.get(url, params=payload)
         data = json.loads(res.text)
-        links = self.validate_answered(data)
-        if links:
+        linksCross = self.validate_answered(data)
+        if linksCross:
             dispatcher.utter_message('Aqui está: ')
-            for link in links:
+            for link in linksCross:
                 # botResponse = 'Aqui está: ' + data['items'][0]['link']
                 dispatcher.utter_message(link)
         else:
@@ -94,14 +94,14 @@ class SearchOnCrossValidated(Action):
             dispatcher.utter_message('Tente escrever desta forma:')
             dispatcher.utter_message('pesquisar [sua dúvida] no crossvalidated')
 
-    def validate_answered(self, data):
-        links = []
+    def validate_answered_cross(self, data):
+        linksCross = []
         for item in data['items']:
             if str(item['is_answered']) == 'True':
-                links.append(item['link'])
-            if len(links) == 3:
+                linksCross.append(item['link'])
+            if len(linksCross) == 3:
                 break
-        return links
+        return linksCross
 
 
 class KaggleExercises(Action):
