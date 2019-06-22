@@ -18,16 +18,15 @@ class ActionOTRS(Action):
 
 class SearchOnStackoverflow(Action):
 
-    def name(self):
+    def nameStack(self):
         return "action_search_on_stackoverflow"
 
 
-    def run(self, dispatcher, tracker, domain):
+    def runStack(self, dispatcher, tracker, domain):
         question = ''
         if re.search(r'(buscar|pesquisar)\s(.*)no*\s*([sS]tack\s?[oO]verflow)', tracker.latest_message['text']):
             question = re.search(r'(buscar|pesquisar)\s(.*)no*\s*([sS]tack\s?[oO]verflow)', tracker.latest_message['text']).group(2)
 
-        url = 'https://api.stackexchange.com/2.2/search'
         order = 'desc'
         sort = 'activity'
         intitle = question
@@ -37,7 +36,7 @@ class SearchOnStackoverflow(Action):
             'order': order, 'sort': sort, 'intitle': intitle, 'site': site
         }
 
-        res = requests.get(url, params=payload)
+        res = requests.get('https://api.stackexchange.com/2.2/search', params=payload)
         data = json.loads(res.text)
         links = self.validate_answered(data)
         if links:
@@ -46,7 +45,7 @@ class SearchOnStackoverflow(Action):
                 # botResponse = 'Aqui está: ' + data['items'][0]['link']
                 dispatcher.utter_message(link)
         else:
-            botResponse = 'Infelizmente não encontrei nada sobre ' + question +' no StackOverflow. Tente escrever de forma mais compacta e em inglês para refinar a busca!'
+            botResponse = 'Não encontrei nada sobre ' + question +' no StackOverflow. Tente escrever de forma mais compacta e em inglês para refinar a busca!'
             dispatcher.utter_message(botResponse)
             dispatcher.utter_message('Tente escrever desta forma:')
             dispatcher.utter_message('pesquisar [sua dúvida] no stackoverflow')
@@ -63,10 +62,10 @@ class SearchOnStackoverflow(Action):
 
 class SearchOnCrossValidated(Action):
 
-    def name(self):
+    def nameCross(self):
         return "action_search_on_crossvalidated"
 
-    def run(self, dispatcher, tracker, domain):
+    def runCross(self, dispatcher, tracker, domain):
         question = ''
         if re.search(r'(buscar|pesquisar)\s(.*)no*\s*([cC]ross\s?[vV]alidated)', tracker.latest_message['text']):
             question = re.search(r'(buscar|pesquisar)\s(.*)no*\s*([cC]ross\s?[vV]alidated)', tracker.latest_message['text']).group(2)
