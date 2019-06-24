@@ -27,7 +27,6 @@ services:
     image: rocket.chat:latest
     restart: always
     command: bash -c 'for i in `seq 1 30`; do node main.js && s=$$? && break || s=$$?; echo "Tried $$i times. Waiting 5 secs..."; sleep 5; done; (exit $$s)'
-    env_file: .env
     environment:
       - PORT=3000
       - ROOT_URL=http://localhost:3000
@@ -51,7 +50,6 @@ services:
   bot:
     image: gabrielziegler/pylearner-bot
     restart: always
-    env_file: .env
     environment:
       - MAX_TYPING_TIME=8
       - MIN_TYPING_TIME=1
