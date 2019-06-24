@@ -1,0 +1,227 @@
+{
+    "AWSEBDockerrunVersion": 2,
+    "family": "",
+    "volumes": [
+        {
+            "host": {
+                "sourcePath": "./data/db"
+            },
+            "name": "_DataDb"
+        },
+        {
+            "host": {
+                "sourcePath": "./bot/actions"
+            },
+            "name": "_BotActions"
+        },
+        {
+            "host": {
+                "sourcePath": "./bot/Makefile"
+            },
+            "name": "_BotMakefile"
+        },
+        {
+            "host": {
+                "sourcePath": "./bot"
+            },
+            "name": "_Bot"
+        },
+        {
+            "host": {
+                "sourcePath": "./scripts"
+            },
+            "name": "_Scripts"
+        }
+    ],
+    "containerDefinitions": [
+        {
+            "essential": true,
+            "image": "gabrielziegler/pylearner-actions",
+            "memory": 500,
+            "mountPoints": [
+                {
+                    "containerPath": "/bot/actions",
+                    "sourceVolume": "_BotActions"
+                },
+                {
+                    "containerPath": "/bot/Makefile",
+                    "sourceVolume": "_BotMakefile"
+                }
+            ],
+            "name": "actions",
+            "portMappings": [
+                {
+                    "containerPort": 5055,
+                    "hostPort": 5055
+                }
+            ]
+        },
+        {
+            "environment": [
+                {
+                    "name": "MAX_TYPING_TIME",
+                    "value": "8"
+                },
+                {
+                    "name": "MIN_TYPING_TIME",
+                    "value": "1"
+                },
+                {
+                    "name": "WORDS_PER_SECOND_TYPING",
+                    "value": "10"
+                },
+                {
+                    "name": "ROCKETCHAT_URL",
+                    "value": "rocketchat:3000"
+                },
+                {
+                    "name": "ROCKETCHAT_ADMIN_USERNAME",
+                    "value": "${ROCKETCHAT_ADMIN_USERNAME}"
+                },
+                {
+                    "name": "ROCKETCHAT_ADMIN_PASSWORD",
+                    "value": "${ROCKETCHAT_ADMIN_PASSWORD}"
+                },
+                {
+                    "name": "ROCKETCHAT_BOT_USERNAME",
+                    "value": "${ROCKETCHAT_BOT_USERNAME}"
+                },
+                {
+                    "name": "ROCKETCHAT_BOT_PASSWORD",
+                    "value": "${ROCKETCHAT_BOT_PASSWORD}"
+                },
+                {
+                    "name": "ROCKETCHAT_BOT_EMAIL",
+                    "value": "${ROCKETCHAT_BOT_EMAIL}"
+                },
+                {
+                    "name": "ENVIRONMENT_NAME",
+                    "value": "${ENVIRONMENT_NAME}"
+                },
+                {
+                    "name": "BOT_VERSION",
+                    "value": "0.1.0-alpha"
+                },
+                {
+                    "name": "ENABLE_ANALYTICS",
+                    "value": "False"
+                },
+                {
+                    "name": "ELASTICSEARCH_URL",
+                    "value": "elasticsearch:9200"
+                }
+            ],
+            "essential": true,
+            "image": "gabrielziegler/pylearner-bot",
+            "memory": 500,
+            "mountPoints": [
+                {
+                    "containerPath": "/bot",
+                    "sourceVolume": "_Bot"
+                },
+                {
+                    "containerPath": "/scripts",
+                    "sourceVolume": "_Scripts"
+                }
+            ],
+            "name": "bot",
+            "portMappings": [
+                {
+                    "containerPort": 5005,
+                    "hostPort": 5005
+                },
+                {
+                    "containerPort": 5002,
+                    "hostPort": 5002
+                }
+            ]
+        },
+        {
+            "essential": true,
+            "image": "gabrielziegler/pylearner-jupyter",
+            "memory": 500,
+            "name": "jupyter",
+            "portMappings": [
+                {
+                    "containerPort": 8888,
+                    "hostPort": 8888
+                }
+            ]
+        },
+        {
+            "command": [
+                "mongod",
+                "--smallfiles",
+                "--oplogSize",
+                "128",
+                "--replSet",
+                "rs0",
+                "--storageEngine=mmapv1"
+            ],
+            "essential": true,
+            "image": "mongo:3.2",
+            "memory": 500,
+            "mountPoints": [
+                {
+                    "containerPath": "/data/db",
+                    "sourceVolume": "_DataDb"
+                }
+            ],
+            "name": "mongo"
+        },
+        {
+            "command": [
+                "bash",
+                "-c",
+                "for i in `seq 1 30`; do mongo mongo/rocketchat --eval \"rs.initiate({ _id: 'rs0', members: [ { _id: 0, host: 'localhost:27017' } ]})\" && s=$$? && break || s=$$?; echo \"Tried $$i times. Waiting 5 secs...\"; sleep 5; done; (exit $$s)"
+            ],
+            "essential": true,
+            "image": "mongo:3.2",
+            "memory": 500,
+            "name": "mongo-init-replica"
+        },
+        {
+            "command": [
+                "bash",
+                "-c",
+                "for i in `seq 1 30`; do node main.js && s=$$? && break || s=$$?; echo \"Tried $$i times. Waiting 5 secs...\"; sleep 5; done; (exit $$s)"
+            ],
+            "environment": [
+                {
+                    "name": "PORT",
+                    "value": "3000"
+                },
+                {
+                    "name": "ROOT_URL",
+                    "value": "http://localhost:3000"
+                },
+                {
+                    "name": "MONGO_URL",
+                    "value": "mongodb://mongo:27017/rocketchat"
+                },
+                {
+                    "name": "MONGO_OPLOG_URL",
+                    "value": "mongodb://mongo:27017/local"
+                },
+                {
+                    "name": "ADMIN_USERNAME",
+                    "value": "${ROCKETCHAT_ADMIN_USERNAME}"
+                },
+                {
+                    "name": "ADMIN_PASS",
+                    "value": "${ROCKETCHAT_ADMIN_PASSWORD}"
+                }
+            ],
+            "essential": true,
+            "image": "rocket.chat:latest",
+            "memory": 500,
+            "name": "rocketchat",
+            "portMappings": [
+                {
+                    "containerPort": 3000,
+                    "hostPort": 3000
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert
+    kompose.version: 1.18.0 (06a2e56)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: mongo-init-replica
+  name: mongo-init-replica
+spec:
+  replicas: 1
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        io.kompose.service: mongo-init-replica
+    spec:
+      containers:
+      - args:
+        - bash
+        - -c
+        - 'for i in `seq 1 30`; do mongo mongo/rocketchat --eval "rs.initiate({ _id:
+          ''rs0'', members: [ { _id: 0, host: ''localhost:27017'' } ]})" && s=$? &&
+          break || s=$?; echo "Tried $i times. Waiting 5 secs..."; sleep 5; done;
+          (exit $s)'
+        image: mongo:3.2
+        name: mongo-init-replica
+        resources: {}
+      restartPolicy: Always
+status: {}

@@ -1,0 +1,40 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert
+    kompose.version: 1.18.0 (06a2e56)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: actions
+  name: actions
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        io.kompose.service: actions
+    spec:
+      containers:
+      - image: gabrielziegler/pylearner-actions
+        name: actions
+        ports:
+        - containerPort: 5055
+        resources: {}
+        volumeMounts:
+        - mountPath: /bot/actions
+          name: actions-claim0
+        - mountPath: /bot/Makefile
+          name: actions-claim1
+      restartPolicy: Always
+      volumes:
+      - name: actions-claim0
+        persistentVolumeClaim:
+          claimName: actions-claim0
+      - name: actions-claim1
+        persistentVolumeClaim:
+          claimName: actions-claim1
+status: {}

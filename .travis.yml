@@ -13,7 +13,7 @@ before_install:
 - gem install "rubygems-update:<3.0.0" --no-document
 - gem install bundler:2.0.1
 script:
-- docker-compose up --build -d
+- docker-compose up -d
 after_script:
 - docker-compose down
 "#":

@@ -1,0 +1,72 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert
+    kompose.version: 1.18.0 (06a2e56)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: bot
+  name: bot
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        io.kompose.service: bot
+    spec:
+      containers:
+      - env:
+        - name: BOT_VERSION
+          value: 0.1.0-alpha
+        - name: ELASTICSEARCH_URL
+          value: elasticsearch:9200
+        - name: ENABLE_ANALYTICS
+          value: "False"
+        - name: ENVIRONMENT_NAME
+          value: '''dev'''
+        - name: MAX_TYPING_TIME
+          value: "8"
+        - name: MIN_TYPING_TIME
+          value: "1"
+        - name: NUM_EPOCHS
+          value: "4"
+        - name: ROCKETCHAT_ADMIN_EMAIL
+          value: gabrielziegler3@gmail.com
+        - name: ROCKETCHAT_ADMIN_PASSWORD
+          value: XSjp4iTA7tZJDe9FR
+        - name: ROCKETCHAT_ADMIN_USERNAME
+          value: pyteradmin
+        - name: ROCKETCHAT_BOT_EMAIL
+          value: pyterthebot@gmail.com
+        - name: ROCKETCHAT_BOT_PASSWORD
+          value: MuCzLrDzFEhun97JX
+        - name: ROCKETCHAT_BOT_USERNAME
+          value: PyterTheBot
+        - name: ROCKETCHAT_URL
+          value: rocketchat:3000
+        - name: WORDS_PER_SECOND_TYPING
+          value: "10"
+        image: gabrielziegler/pylearner-bot
+        name: bot
+        ports:
+        - containerPort: 5005
+        - containerPort: 5002
+        resources: {}
+        volumeMounts:
+        - mountPath: /bot
+          name: bot-claim0
+        - mountPath: /scripts
+          name: bot-claim1
+      restartPolicy: Always
+      volumes:
+      - name: bot-claim0
+        persistentVolumeClaim:
+          claimName: bot-claim0
+      - name: bot-claim1
+        persistentVolumeClaim:
+          claimName: bot-claim1
+status: {}
