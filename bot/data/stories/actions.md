@@ -10,6 +10,11 @@
 * pesquisar_no_crossvalidated
     - action_search_on_crossvalidated
 
+## sugerir_kaggle
+* pesquisar 
+    - utter_pesquisar
+* kaggle_exercises
+    - action_kaggle
 ## pesquisar_no_towards_datascience
   * pesquisar
       - utter_pesquisar
