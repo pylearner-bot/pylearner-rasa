@@ -4,7 +4,8 @@ from rasa_core_sdk.forms import FormAction
 import requests
 import re
 import json
-
+import os 
+import subprocess
 
 
 class ActionOTRS(Action):
@@ -103,6 +104,44 @@ class SearchOnCrossValidated(Action):
                 break
         return links
 
+
+class KaggleExercises(Action):
+
+    def name(self):
+        return "action_kaggle"
+
+    def run(self, dispatcher, tracker, domain):
+        command = subprocess.getoutput("kaggle competitions list --category gettingStarted")
+        count = 0
+        bar = False
+        format_command = ''
+
+        for c in command:
+            if(c == '\n'): count +=1
+            if (count <= 3): continue
+            if (bar): format_command += c
+            bar = True
+
+        competitions_names = []
+        # dispatcher.utter_message('aqui')
+
+        for c in format_command.split('\n'):
+            competition, date_start, date_end, category, category_complement, reward, teamCount, bol = c.split()
+            competitions_names.append(competition)
+
+        url = 'https://www.kaggle.com/c/'
+        url_end = '/overview'
+        
+        # dispatcher.utter_message(command)
+        try:
+            dispatcher.utter_message('Caso você deseje praticar seus conhecimentos em ML recomendo estes exercícios:')
+            for name in competitions_names:
+                dispatcher.utter_message(url + name + url_end)
+            dispatcher.utter_message('Acho que esses exercícios são suficientes para praticar seus conhecimentos em ML! Dedique-se e Bons Estudos!')
+        except:
+            dispatcher.utter_message('Infelizmente não encontrei nada no Kaggle :/')
+            dispatcher.utter_message('Treine com algum de nossos tutoriais :)')
+
 class SearchOnTowardsDataScience(Action):
 
     def name(self):
@@ -129,8 +168,9 @@ class SearchOnTowardsDataScience(Action):
                 if cont == 4: break
                 dispatcher.utter_message(link['link'])
                 cont += 1            
+
             dispatcher.utter_message('Encontrei estes links que falam sobre ' + question + '! Espero que auxiliem no seu aprendizado. Enfim, bons estudos!') 
-        
+
         except:
             dispatcher.utter_message ('Infelizmente não encontramos nada relacionado a isso no Towards Data Science')
             dispatcher.utter_message ('Tente escrever em inglês para refinar sua busca e da seguinte forma:')
