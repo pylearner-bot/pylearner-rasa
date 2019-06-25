@@ -165,7 +165,7 @@ def configure_livechat():
 
     # Change Livechat Color
     api_post('settings/Livechat_title_color', {
-        'value': "#039046",
+        'value': "#FFA500",
         'editor': 'color'
     })
 
