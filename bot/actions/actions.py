@@ -7,6 +7,14 @@ import json
 import os 
 import subprocess
 
+def validate_answered(data):
+    links = []
+    for item in data['items']:
+        if str(item['is_answered']) == 'True':
+            links.append(item['link'])
+        if len(links) == 3:
+            break
+    return links
 
 class ActionOTRS(Action):
 
@@ -18,15 +26,16 @@ class ActionOTRS(Action):
 
 class SearchOnStackoverflow(Action):
 
-    def nameStack(self):
+    def name(self):
         return "action_search_on_stackoverflow"
 
 
-    def runStack(self, dispatcher, tracker, domain):
+    def run(self, dispatcher, tracker, domain):
         question = ''
         if re.search(r'(buscar|pesquisar)\s(.*)no*\s*([sS]tack\s?[oO]verflow)', tracker.latest_message['text']):
             question = re.search(r'(buscar|pesquisar)\s(.*)no*\s*([sS]tack\s?[oO]verflow)', tracker.latest_message['text']).group(2)
 
+        url = 'https://api.stackexchange.com/2.2/search'
         order = 'desc'
         sort = 'activity'
         intitle = question
@@ -36,39 +45,29 @@ class SearchOnStackoverflow(Action):
             'order': order, 'sort': sort, 'intitle': intitle, 'site': site
         }
 
-        res = requests.get('https://api.stackexchange.com/2.2/search', params=payload)
+        res = requests.get(url, params=payload)
         data = json.loads(res.text)
-        linksStack = self.validate_answered(data)
-        if linksStack:
+        links = validate_answered(data)
+        if links:
             dispatcher.utter_message('Aqui está: ')
-            for link in linksStack:
+            for link in links:
                 # botResponse = 'Aqui está: ' + data['items'][0]['link']
                 dispatcher.utter_message(link)
         else:
-            botResponse = 'Não encontrei nada sobre ' + question +' no StackOverflow. Tente escrever de forma mais compacta e em inglês para refinar a busca!'
+            botResponse = 'Infelizmente não encontrei nada sobre ' + question +' no StackOverflow. Tente escrever de forma mais compacta e em inglês para refinar a busca!'
             dispatcher.utter_message(botResponse)
             dispatcher.utter_message('Tente escrever desta forma:')
             dispatcher.utter_message('pesquisar [sua dúvida] no stackoverflow')
-    
-    def validate_answeredStack(self, data):
-        linksStack = []
-        for item in data['items']:
-            if str(item['is_answered']) == 'True':
-                linksStack.append(item['link'])
-            if len(linksStack) == 3:
-                break
-        return linksStack
-
 
 class SearchOnCrossValidated(Action):
 
-    def nameCross(self):
+    def name(self):
         return "action_search_on_crossvalidated"
 
-    def runCross(self, dispatcher, tracker, domain):
-        questionCross = ''
+    def run(self, dispatcher, tracker, domain):
+        question = ''
         if re.search(r'(buscar|pesquisar)\s(.*)no*\s*([cC]ross\s?[vV]alidated)', tracker.latest_message['text']):
-            questionCross = re.search(r'(buscar|pesquisar)\s(.*)no*\s*([cC]ross\s?[vV]alidated)', tracker.latest_message['text']).group(2)
+            question = re.search(r'(buscar|pesquisar)\s(.*)no*\s*([cC]ross\s?[vV]alidated)', tracker.latest_message['text']).group(2)
 
         url = 'https://api.stackexchange.com/2.2/search'
         order = 'desc'
@@ -82,10 +81,10 @@ class SearchOnCrossValidated(Action):
 
         res = requests.get(url, params=payload)
         data = json.loads(res.text)
-        linksCross = self.validate_answered(data)
-        if linksCross:
+        links = validate_answered(data)
+        if links:
             dispatcher.utter_message('Aqui está: ')
-            for link in linksCross:
+            for link in links:
                 # botResponse = 'Aqui está: ' + data['items'][0]['link']
                 dispatcher.utter_message(link)
         else:
@@ -93,15 +92,6 @@ class SearchOnCrossValidated(Action):
             dispatcher.utter_message(botResponse)
             dispatcher.utter_message('Tente escrever desta forma:')
             dispatcher.utter_message('pesquisar [sua dúvida] no crossvalidated')
-
-    def validate_answered_cross(self, data):
-        linksCross = []
-        for item in data['items']:
-            if str(item['is_answered']) == 'True':
-                linksCross.append(item['link'])
-            if len(linksCross) == 3:
-                break
-        return linksCross
 
 
 class KaggleExercises(Action):
